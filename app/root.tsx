@@ -7,16 +7,19 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  V2_MetaFunction,
   isRouteErrorResponse,
   useRouteError,
 } from "@remix-run/react";
 
 import main from "./styles/main.css";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1",
-});
+export const meta: V2_MetaFunction = () => {
+  return [
+  {charset: "utf-8"},
+  {viewport: "width=device-width,initial-scale=1"},
+  ];
+};
 
 export const links: LinksFunction = () => {
   return [
@@ -55,14 +58,6 @@ function Document({
 }
 
 export default function App() {
-
-  /* const changeTheme = useHookstate(themePage)
-  const hydrated = useHydrated();
-  if (hydrated) {
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = defaultDark ? 'dark' : 'light';
-    changeTheme.set(theme)
-  } */
 
   return (
     <Document>
