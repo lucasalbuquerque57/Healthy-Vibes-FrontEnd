@@ -31,4 +31,35 @@ header {
 
 footer{
     background-color: var(--background-quaternary);
+    color: var(--text-primary);
+}
+
+
+
+.headerBar {
+    
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+}
+.infoHeader {
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+.logoHeader {
+    width: 20vh !important;
+    height: 20vh !important;
+}
+
+.navSla{
+  padding: 0.3rem 0.3rem;
+  text-align: center;
+  display: inline;
+}
+
+.nav-item{
+  vertical-align: middle;
+  display: inline-block;
+  padding: 1rem 1rem;
+
 }
