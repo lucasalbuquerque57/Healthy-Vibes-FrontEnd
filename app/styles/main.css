@@ -1,0 +1,34 @@
+
+:root
+{--background-primary: white;
+--background-secondary: rgba(140, 235, 152, 0.44);  /*Fundo Login*/
+--background-tertiary: #EFFFF1;  /*Fundo Cadastro*/
+--background-quaternary: #254E24; /*Footer*/
+--background-quinary: #3FAE3C;  /*Header*/
+--background-senary: rgba(238, 255, 255, 0.95);
+--background-septenary: #F9FFD3;
+--background-octonary: #E9F8E7;
+
+--button-primary: #45C53A;
+--button-secondary: #EA4545;
+--button-tertiary: #809F27;
+
+--text-primary: white;
+--text-secondary: black;
+--text-tertiary: white;
+--text-quaternary: white;
+
+}
+
+
+
+
+
+header {
+    background-color: var(--background-quinary);
+    color: var(--text-primary);
+}
+
+footer{
+    background-color: var(--background-quaternary);
+}
