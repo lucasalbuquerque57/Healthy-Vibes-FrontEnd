@@ -32,12 +32,15 @@ export function Header() {
                         </ul>
 
 
-                        {/* <div className="profile">
+                        
+                    </div>
+
+                    <div className="profile">
                             
                                 <ul className="navbar-nav">
-                                    <div className="nav-item dropdown">
+                                    <div className="nav-item">
 
-                                        <button className="nav-link dropleft dropdown-toggle" data-bs-toggle="dropdown">
+                                        <button className="nav-link dropleft">
                                             <img src="" alt="Foto de Perfil" className="imagemPerfil" />
                                         </button>
                                         
@@ -52,8 +55,8 @@ export function Header() {
 
                                 </div>
                             
-                        </div> */}
-                    </div>
+                    </div> 
+
 
                     {/* <div className="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul className="navbar-nav">

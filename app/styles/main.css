@@ -63,3 +63,11 @@ footer{
   padding: 1rem 1rem;
 
 }
+
+.container-fluid{
+    justify-content: space-between;
+}
+
+#collapsibleNavbar{
+    justify-content: center;
+}
