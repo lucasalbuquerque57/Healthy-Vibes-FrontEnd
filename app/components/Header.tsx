@@ -37,15 +37,15 @@ export function Header() {
 
                     <div className="profile">
                             
-                                <ul className="navbar-nav">
+                                {/* <ul className="navbar-nav">
                                     <div className="nav-item">
 
                                         <button className="nav-link dropleft">
-                                            <img src="" alt="Foto de Perfil" className="imagemPerfil" />
+                                            <img src="/User1.jpg" alt="Foto de Perfil" className="imagemPerfil" />
                                         </button>
                                         
                                     </div>
-                                </ul>
+                                </ul> */}
                                 
                                 <div>
 
@@ -53,7 +53,13 @@ export function Header() {
 
                                     <Link to=""><button className="btn  cadButton" >Cadastre-se</button></Link>
 
+                                </div> 
+                                <div className="itensAcessibilidade">
+                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
+                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
+                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
                                 </div>
+                                
                             
                     </div> 
 

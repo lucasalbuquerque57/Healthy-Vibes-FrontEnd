@@ -15,7 +15,7 @@
 
 --text-primary: white;
 --text-secondary: black;
---text-tertiary: white;
+--text-tertiary: #0A9906;
 --text-quaternary: white;
 
 }
@@ -32,6 +32,7 @@ header {
 footer{
     background-color: var(--background-quaternary);
     color: var(--text-primary);
+    
 }
 
 
@@ -48,7 +49,8 @@ footer{
 }
 .logoHeader {
     width: 20vh !important;
-    height: 20vh !important;
+    height: 13vh !important;
+    margin-left: 1rem;
 }
 
 .navSla{
@@ -64,10 +66,51 @@ footer{
 
 }
 
+.nav-link{
+    color: var(--text-primary) !important;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #EBFF38 !important;
+    text-decoration: underline;
+}
+
 .container-fluid{
     justify-content: space-between;
 }
 
 #collapsibleNavbar{
     justify-content: center;
+}
+
+.loginButton{
+    color: var(--text-primary);
+    font-weight: bold;
+    border-color: var(--text-primary);
+    border-radius: 2rem;
+}
+
+.cadButton{
+    color: var(--text-primary);
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.loginButton:hover, .cadButton:hover{
+    color: #EBFF38 !important;
+    text-decoration: underline;
+}
+
+.imagemPerfil{
+    width: 6.5vh !important;
+    height: 6.5vh !important;
+}
+
+.itensAcessibilidade{
+    justify-content: space-evenly !important;
+}
+
+.iconeAcessibilidade{
+    padding-right: 1rem;
 }

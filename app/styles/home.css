@@ -1,0 +1,43 @@
+
+.bannerPrincipal{
+    background-color: purple;
+        
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.textoCentradoBanner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.textoCentradoBannerContent{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+.Title{
+    text-align: center;
+}
+
+.bannerImage{
+    width: 100%;
+    
+}
+
+.parteFuncoes{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.subtitulo{
+    text-align: center;
+    color: var(--text-tertiary);
+    font-weight: bold;
+}
