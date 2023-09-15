@@ -48,9 +48,12 @@ footer{
     vertical-align: middle;
 }
 .logoHeader {
-    width: 20vh !important;
-    height: 13vh !important;
+    width: 19vh !important;
+    height: 12vh !important;
     margin-left: 1rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .navSla{
@@ -103,8 +106,9 @@ footer{
 }
 
 .imagemPerfil{
-    width: 6.5vh !important;
-    height: 6.5vh !important;
+    width: 6vh !important;
+    height: 6vh !important;
+    
 }
 
 .itensAcessibilidade{
@@ -113,4 +117,7 @@ footer{
 
 .iconeAcessibilidade{
     padding-right: 1rem;
+    width: 5vh !important;
+    height: 3vh !important;
+    margin-top: 1.5rem;
 }

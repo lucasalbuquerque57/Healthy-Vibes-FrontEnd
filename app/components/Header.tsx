@@ -55,9 +55,9 @@ export function Header() {
 
                                 </div> 
                                 <div className="itensAcessibilidade">
-                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
-                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
-                                    <img src="/SchwarzIcon.jpg" className="iconeAcessibilidade"/>
+                                    <img src="/AcessFontSizeBigger.png" className="iconeAcessibilidade"/>
+                                    <img src="/AcessFontSizeLower.png" className="iconeAcessibilidade"/>
+                                    <img src="/AcessFontHighConr.png" className="iconeAcessibilidade"/>
                                 </div>
                                 
                             
