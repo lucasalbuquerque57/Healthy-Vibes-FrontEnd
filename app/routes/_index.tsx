@@ -38,21 +38,21 @@ export default function Index() {
             <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">Função 1</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. Integer lobortis augue nec ipsum tristique, sit amet porttitor tellus consectetur.</p>
+              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
             </div>
           </div>
           <div className="card">
             <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">Função 2</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. Integer lobortis augue nec ipsum tristique, sit amet porttitor tellus consectetur.</p>
+              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
             </div>
           </div>
           <div className="card">
             <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
             <div className="card-body">
               <h5 className="card-title">Função 3</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. Integer lobortis augue nec ipsum tristique, sit amet porttitor tellus consectetur.</p>
+              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
             </div>
           </div>
         </div>

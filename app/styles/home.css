@@ -47,3 +47,23 @@
     height: 30vh !important;
     align-self: center;
 }
+
+.card{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-color: red;
+    
+    border-left-width: 10px !important;
+    border-left-color: blue !important;
+}
+
+.card-group{
+    border-left-width: 10px !important;
+}
+
+.card-group > .card + .card {
+
+    border-left-width: 10px !important;
+    border-left-color: blue !important;
+  
+}
