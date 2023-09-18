@@ -16,11 +16,11 @@
 --text-primary: white;
 --text-secondary: black;
 --text-tertiary: #0A9906;
---text-quaternary: white;
+--text-quaternary: #E52F8F;
+
+--misc-primary: #737373;
 
 }
-
-
 
 
 
@@ -36,7 +36,6 @@ footer{
 }
 
 
-
 .headerBar {
     
     padding: 0.5rem 0.5rem;
@@ -49,7 +48,7 @@ footer{
 }
 .logoHeader {
     width: 19vh !important;
-    height: 12vh !important;
+    /* height: 12vh !important; */   /*Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)*/
     margin-left: 1rem;
 
     padding-top: 1rem;
@@ -107,7 +106,7 @@ footer{
 
 .imagemPerfil{
     width: 6vh !important;
-    height: 6vh !important;
+    /* height: 6vh !important; */ /*   Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)    */
     
 }
 
@@ -117,7 +116,7 @@ footer{
 
 .iconeAcessibilidade{
     padding-right: 1rem;
-    width: 5vh !important;
-    height: 3vh !important;
+    width: 6vh !important;
+    /* height: 3vh !important; */  /*   Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)    */
     margin-top: 1.5rem;
 }

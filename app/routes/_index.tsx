@@ -30,32 +30,36 @@ export default function Index() {
         </div>
       </div>
       <div className="parteFuncoes">
-        <h3 className="subtitulo">Navegue entre as </h3>
-        <h3 className="subtitulo">funções do site </h3>
-
-        <div className="card-group">
-          <div className="card">
-            <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-              <h5 className="card-title">Função 1</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
-            </div>
-          </div>
-          <div className="card">
-            <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-              <h5 className="card-title">Função 2</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
-            </div>
-          </div>
-          <div className="card">
-            <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-            <div className="card-body">
-              <h5 className="card-title">Função 3</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis. Nulla feugiat tempus ex id laoreet. </p>
-            </div>
-          </div>
+        <div >
+          <h3 className="subtitulo">Navegue entre as </h3>
+          <h3 className="subtituloPt2">funções do site </h3>
         </div>
+
+        
+
+        <div className="row cardBox">
+          <div className="column">
+            <div className="card">
+              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Função 3</h5>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+            </div>
+          </div>
+          <div className="column">
+            <div className="card">
+              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Função 3</h5>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+            </div>
+          </div>
+          <div className="column">
+            <div className="card">
+              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Função 3</h5>
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+            </div>
+          </div>
+        </div> 
 
       </div>
       
