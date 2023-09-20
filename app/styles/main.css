@@ -116,7 +116,7 @@ footer{
 
 .iconeAcessibilidade{
     padding-right: 1rem;
-    width: 6vh !important;
+    width: 2.5rem !important;  /* Antes eram 6vh, mas tá rolando um problema na proporção, as vzs fica mt grande  */
     /* height: 3vh !important; */  /*   Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)    */
     margin-top: 1.5rem;
 }
