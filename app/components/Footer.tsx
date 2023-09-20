@@ -7,8 +7,8 @@ export function Footer() {
     return (
         <footer>
         <div>
-            <h3 className="footer-logo">Logo</h3>
-            <p>Redes Sociais</p>
+            <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
+            <p className="redesSocTitulo">Redes Sociais</p>
             <div className="footer-socials">
                 <Link to="#" className="footer-link" id="youtube">
                     <i className="fa-brands fa-youtube"></i>
