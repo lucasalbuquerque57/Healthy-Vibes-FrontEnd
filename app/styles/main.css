@@ -8,6 +8,7 @@
 --background-senary: rgba(238, 255, 255, 0.95);
 --background-septenary: #F9FFD3;
 --background-octonary: #E9F8E7;
+--background-nonary: #066404;
 
 --button-primary: #45C53A;
 --button-secondary: #EA4545;
@@ -17,15 +18,16 @@
 --text-secondary: black;
 --text-tertiary: #0A9906;
 --text-quaternary: #E52F8F;
+--text-quinary: aliceblue;
 
 --misc-primary: #737373;
-
+--misc-secondary: #EBFF38;
 }
 
 
 
 header {
-    background-color: var(--background-quinary);
+    background-color: var(--background-nonary);
     color: var(--text-primary);
 }
 
@@ -74,7 +76,7 @@ footer{
 }
 
 .nav-link:hover{
-    color: #EBFF38 !important;
+    color: var(--misc-secondary) !important;
     text-decoration: underline;
 }
 
@@ -97,11 +99,13 @@ footer{
     color: var(--text-primary);
     margin-right: 1rem;
     font-weight: bold;
+    
 }
 
 .loginButton:hover, .cadButton:hover{
-    color: #EBFF38 !important;
+    color: var(--misc-secondary) !important;
     text-decoration: underline;
+    
 }
 
 .imagemPerfil{
@@ -135,8 +139,8 @@ footer{
     letter-spacing: 1px;
     
     
-    color: #ffffff;
-    background-color: #254E24;
+    color: var(--text-primary);
+    background-color: var(--background-quaternary);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
@@ -171,7 +175,7 @@ footer .footer-logo {
     align-items: center;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: var(--text-primary);
     border-radius: 50%;
 }
 
@@ -208,7 +212,7 @@ footer .footer-logo {
 }
 
 .footer-list .footer-link{
-    color: aliceblue;
+    color: var(--text-quinary);
 
 }
 

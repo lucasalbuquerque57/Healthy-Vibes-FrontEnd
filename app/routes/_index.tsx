@@ -40,23 +40,23 @@ export default function Index() {
         <div className="row cardBox">
           <div className="column">
             <div className="card">
-              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-              <h5 className="card-title">Função 3</h5>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+              <img src="/home/calculadora_home.png" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Recursos adicionais</h5>
+              <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
             </div>
           </div>
           <div className="column">
             <div className="card">
-              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-              <h5 className="card-title">Função 3</h5>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+              <img src="/home/exercicio_home.png" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Exercícios</h5>
+              <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
             </div>
           </div>
           <div className="column">
             <div className="card">
-              <img src="/SchwarzIcon.jpg" className="card-img-top" alt="..."/>
-              <h5 className="card-title">Função 3</h5>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet varius mattis.</div>
+              <img src="/home/recursos_home.png" className="card-img-top" alt="..."/>
+              <h5 className="card-title">Calculadora nutricional</h5>
+              <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
             </div>
           </div>
         </div> 
