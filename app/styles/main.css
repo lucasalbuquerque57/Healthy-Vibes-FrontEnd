@@ -229,3 +229,9 @@ footer .footer-logo {
         gap: 2rem;
     }    
 }
+
+
+.backgroundTelaLoginCad{
+    background-image: url("/backgroundLoginTemp.png");
+    background-repeat: repeat;
+}
