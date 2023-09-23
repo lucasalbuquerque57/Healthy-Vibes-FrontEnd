@@ -128,7 +128,8 @@ footer{
 }
 
 .logCadButtons{
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
+    /* Resolveu um problema de alinhamento, mas agr ta causando */
 }
 
 .loginButton:hover, .cadButton:hover{
