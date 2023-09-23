@@ -133,9 +133,14 @@ footer{
 }
 
 .loginButton:hover, .cadButton:hover{
-    color: var(--misc-secondary) !important;
+    color: var(--text-tertiary) !important;
     text-decoration: underline;
     
+}
+
+.loginButton:hover{
+    border-color: var(--text-tertiary);
+    border-radius: 2rem;
 }
 
 .imagemPerfil{
