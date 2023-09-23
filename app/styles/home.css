@@ -19,8 +19,14 @@
 .textoCentradoBannerContent{
     font-weight: bold;
     font-size: 3rem;
+    text-shadow: var(--transparent-primary) 0rem 0.2rem 0.2rem;
 }
 
+.textoCentradoBannerContentSub{
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: var(--transparent-primary) 0rem 0.05rem 0.05rem;
+}
 
 .Title{
     text-align: center;

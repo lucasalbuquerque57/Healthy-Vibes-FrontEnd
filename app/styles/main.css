@@ -9,6 +9,8 @@
 --background-septenary: #F9FFD3;
 --background-octonary: #E9F8E7;
 --background-nonary: #066404;
+--background-denary: #111111;
+--background-undenary: #254e24;
 
 --button-primary: #45C53A;
 --button-secondary: #EA4545;
@@ -22,12 +24,15 @@
 
 --misc-primary: #737373;
 --misc-secondary: #EBFF38;
+
+--transparent-primary: rgba(255, 255, 255, 0.6);
+
 }
 
 
 
 header {
-    background-color: var(--background-nonary);
+    background-color: var(--background-denary);
     color: var(--text-primary);
 }
 
@@ -35,6 +40,25 @@ footer{
     background-color: var(--background-quaternary);
     color: var(--text-primary);
     
+}
+
+
+/* BARRA DE NAVEGAÇÃO -- HEADER */
+
+.trapezio{
+    border-bottom: 7.2rem solid var(--background-undenary);
+    border-right: 5rem solid transparent;
+    height: 0;
+    width: 20rem;
+    
+    /* margin-bottom: -2rem;
+    margin-top: -2rem; */
+}
+
+.baseNav{
+    margin-bottom: -0.55rem !important;
+    margin-top: -0.55rem !important;
+    margin-left: -0.7rem !important;
 }
 
 
@@ -49,7 +73,7 @@ footer{
     vertical-align: middle;
 }
 .logoHeader {
-    width: 19vh !important;
+    width: 9rem !important;
     /* height: 12vh !important; */   /*Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)*/
     margin-left: 1rem;
 
@@ -76,8 +100,9 @@ footer{
 }
 
 .nav-link:hover{
-    color: var(--misc-secondary) !important;
+    color: var(--text-tertiary) !important;
     text-decoration: underline;
+    text-underline-offset: 0.7rem;
 }
 
 .container-fluid{
@@ -100,6 +125,10 @@ footer{
     margin-right: 1rem;
     font-weight: bold;
     
+}
+
+.logCadButtons{
+    padding-top: 1rem;
 }
 
 .loginButton:hover, .cadButton:hover{
@@ -229,6 +258,9 @@ footer .footer-logo {
         gap: 2rem;
     }    
 }
+
+
+/* TELA DE LOGIN E CADASTRO */
 
 
 .backgroundTelaLoginCad{

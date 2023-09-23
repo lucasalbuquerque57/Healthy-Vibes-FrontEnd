@@ -26,7 +26,7 @@ export default function Index() {
         <img src="/BannerPic.png" className="bannerImage"/>
         <div className="textoCentradoBanner">
           <h1 className="Title textoCentradoBannerContent">Melhore sua Vida! </h1>
-          <h2 className="Title textoCentradoBannerContent">Sla </h2>
+          <h2 className="Title textoCentradoBannerContentSub">Com nossa ajuda </h2>
         </div>
       </div>
       <div className="parteFuncoes">

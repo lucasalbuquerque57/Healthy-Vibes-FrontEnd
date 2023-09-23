@@ -7,9 +7,10 @@ export function Header() {
     return (
         <header>
             <nav className="navbar navbar-expand-sm" id="topo">
-                <div className="container-fluid">
-                    <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
-
+                <div className="container-fluid baseNav">
+                    <div className="trapezio">
+                        <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
+                    </div>
                     <div className="collapse navbar-collapse navSla" id="collapsibleNavbar">
                         <ul className="navbar-nav">
 
@@ -47,7 +48,7 @@ export function Header() {
                                     </div>
                                 </ul> */}
                                 
-                                <div>
+                                <div className="logCadButtons">
 
                                     <Link to=""><button className="btn  loginButton">Entrar</button></Link>
 
