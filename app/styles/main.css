@@ -30,7 +30,10 @@
 }
 
 
-
+*{
+    scrollbar-color: rgba(255, 255, 255, 0.6) #111;
+    /* temporario, é só p ajudar a testar os bglhs */
+}
 header {
     background-color: var(--background-denary);
     color: var(--text-primary);
