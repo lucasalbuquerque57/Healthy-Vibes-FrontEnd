@@ -1,0 +1,21 @@
+.barraPerfil {
+    background-color: var(--background-duodenary); 
+    margin-top: 2rem; 
+}
+
+.barraPerfil ul {
+    list-style-type: none; 
+    padding: 0;
+    text-align: center; 
+}
+
+.barraPerfil ul li {
+    display: inline-block; 
+    margin: 0 1.25rem; 
+}
+
+.barraPerfil ul li a {
+    text-decoration: none;
+    color: var(--branco); 
+    font-weight: bold; 
+}

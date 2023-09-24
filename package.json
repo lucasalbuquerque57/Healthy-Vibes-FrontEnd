@@ -8,10 +8,12 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@hookstate/core": "^4.0.1",
     "@remix-run/css-bundle": "^1.19.3",
     "@remix-run/node": "^1.19.3",
     "@remix-run/react": "^1.19.3",
     "@remix-run/serve": "^1.19.3",
+    "@uidotdev/usehooks": "^2.3.1",
     "bootstrap": "^5.3.1",
     "isbot": "^3.6.8",
     "react": "^18.2.0",

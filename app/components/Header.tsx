@@ -9,7 +9,9 @@ export function Header() {
             <nav className="navbar navbar-expand-sm" id="topo">
                 <div className="container-fluid baseNav">
                     <div className="trapezio">
-                        <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
+                        <Link to="/">
+                            <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
+                        </Link>
                     </div>
                     <div className="collapse navbar-collapse navSla" id="collapsibleNavbar">
                         <ul className="navbar-nav">
@@ -21,7 +23,7 @@ export function Header() {
                                 <a className="nav-link" href="">Dietas</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="">Calculadora</a>
+                                <a className="nav-link" href="/CalculadoraNutricional">Calculadora</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="">Exercícios</a>
@@ -56,9 +58,13 @@ export function Header() {
 
                                 </div> 
                                 <div className="itensAcessibilidade">
-                                    <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade"/>
+                                    <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte"/>
                                     <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade"/>
                                     <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade"/>
+                                    <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess"/></Link>
+                                    
+
+                                    {/* <Link to="/Acessibilidade" className="atalhoParaAcessibilidade"><i className="fa-solid fa-circle-info iconeAcessibilidade"></i></Link> */}
                                 </div>
                                 
                             

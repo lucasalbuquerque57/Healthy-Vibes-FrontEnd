@@ -1,6 +1,6 @@
 
 :root
-{--background-primary: white;
+{--background-primary: #fff;
 --background-secondary: rgba(140, 235, 152, 0.44);  /*Fundo Login*/
 --background-tertiary: #EFFFF1;  /*Fundo Cadastro*/
 --background-quaternary: #254E24; /*Footer*/
@@ -11,27 +11,34 @@
 --background-nonary: #066404;
 --background-denary: #111111;
 --background-undenary: #254e24;
+--background-duodenary: #387D37;
+--background-tridenary: #333;
 
 --button-primary: #45C53A;
 --button-secondary: #EA4545;
 --button-tertiary: #809F27;
 
---text-primary: white;
---text-secondary: black;
+--text-primary: #fff;
+--text-secondary: #000;
 --text-tertiary: #0A9906;
 --text-quaternary: #E52F8F;
---text-quinary: aliceblue;
+--text-quinary: #f0f8ff ;
 
 --misc-primary: #737373;
 --misc-secondary: #EBFF38;
 
 --transparent-primary: rgba(255, 255, 255, 0.6);
+--transparent-secondary: rgba(69,197,58, 1);
+--transparent-tertiary: rgba(119, 190, 3, 0.8);
+
+--branco: #fff;
+--branco-creme: #F7F7F7;
 
 }
 
 
 *{
-    scrollbar-color: rgba(255, 255, 255, 0.6) #111;
+    scrollbar-color: #3fae3c #111;
     /* temporario, é só p ajudar a testar os bglhs */
 }
 header {
@@ -49,7 +56,7 @@ footer{
 /* BARRA DE NAVEGAÇÃO -- HEADER */
 
 .trapezio{
-    border-bottom: 7.2rem solid var(--background-undenary);
+    border-bottom: 7.2rem solid var(--text-tertiary);   /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
     border-right: 5rem solid transparent;
     height: 0;
     width: 20rem;
@@ -106,6 +113,7 @@ footer{
     color: var(--text-tertiary) !important;
     text-decoration: underline;
     text-underline-offset: 0.7rem;
+    text-shadow: var(--transparent-secondary) 0rem 1rem 1rem;
 }
 
 .container-fluid{
@@ -163,7 +171,13 @@ footer{
     margin-top: 1.5rem;
 }
 
+.atalhoParaAcessibilidade{
+    color: var(--text-quaternary);
+}
 
+.infoAcess{
+    margin-left: 1.5rem; /* Talvez o distanciamento do botao do Info não fique legal, tenha q deixa-los c a distancia igual msm */
+}
 
 /*  FOOTER */
 
@@ -275,4 +289,15 @@ footer .footer-logo {
 .backgroundTelaLoginCad{
     background-image: url("/backgroundLoginTemp.png");
     background-repeat: repeat;
+}
+
+
+/* MISC PAGINAS EM GERAL */
+
+.tituloPagina{
+    font-size: 4rem;
+    color: var(--text-quaternary);
+    text-align: center;
+    font-weight: bold;
+    /* font-family: Inter; */
 }

@@ -1,5 +1,6 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { LinksFunction, LoaderArgs, json } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -8,12 +9,13 @@ import home from "~/styles/home.css"
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: home },
+    
   ];
 };
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Home" },
   ];
 };
 
@@ -23,7 +25,7 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <Header/>
       <div className="bannerPrincipal">
-        <img src="/BannerPic.png" className="bannerImage"/>
+        <img src="/BannerPicV2.png" className="bannerImage"/>
         <div className="textoCentradoBanner">
           <h1 className="Title textoCentradoBannerContent">Melhore sua Vida! </h1>
           <h2 className="Title textoCentradoBannerContentSub">Com nossa ajuda </h2>
@@ -53,11 +55,13 @@ export default function Index() {
             </div>
           </div>
           <div className="column">
-            <div className="card">
-              <img src="/home/recursos_home.png" className="card-img-top" alt="..."/>
-              <h5 className="card-title">Calculadora nutricional</h5>
-              <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
-            </div>
+            <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
+              <div className="card" >
+                <img src="/home/recursos_home.png" className="card-img-top" alt="..."/>
+                <h5 className="card-title">Calculadora nutricional</h5>
+                <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
+              </div>
+            </Link>
           </div>
         </div> 
 

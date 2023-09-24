@@ -1,29 +1,29 @@
 
 .bannerPrincipal{
-    background-color: purple;
-        
+    box-shadow: 0rem 0.6rem 0.6rem 0rem var(--transparent-tertiary);
     position: relative;
     text-align: center;
-    color: white;
+    color: var(--branco);
 }
+
 
 .textoCentradoBanner{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: bold;
+    font-weight: 900;
     font-size: 3rem;
 }
 
 .textoCentradoBannerContent{
-    font-weight: bold;
+    font-weight: 700;
     font-size: 3rem;
     text-shadow: var(--transparent-primary) 0rem 0.2rem 0.2rem;
 }
 
 .textoCentradoBannerContentSub{
-  font-weight: bold;
+  font-weight: 700;
   font-size: 2rem;
   text-shadow: var(--transparent-primary) 0rem 0.05rem 0.05rem;
 }
@@ -33,8 +33,10 @@
 }
 
 .bannerImage{
-    width: 100%;
-    
+    height: 20rem;
+    width: 100%; 
+    object-fit: cover;   
+    filter: brightness(40%) saturate(1.5) sepia(.5); 
 }
 
 .parteFuncoes{
@@ -45,7 +47,10 @@
 .subtitulo{
     text-align: center;
     color: var(--text-tertiary);
-    font-weight: bold;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .subtituloPt2{
@@ -53,6 +58,9 @@
     color: var(--text-tertiary);
     font-weight: bold;
     margin-bottom: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 
@@ -61,6 +69,9 @@
     /* width: 22rem */
     /* height: 30vh !important; */
     align-self: center;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+    border: 0.3px solid rgba(0, 0, 0, .1);
 }
 
 /* .card{
@@ -102,6 +113,7 @@
     float: left;
     width: 25%;
     padding: 0 10px;
+    margin-right: 2rem;
   }
   
   /* Remove extra left and right margins, due to padding in columns */
@@ -121,12 +133,11 @@
   
   /* Style the counter cards */
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.); /* this adds the "card" effect */
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    
-    
+    text-decoration: none;  
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */
@@ -151,5 +162,9 @@
     padding-bottom: 0.3rem;
     border-bottom: 0.2rem solid;
     border-bottom-color: var(--misc-primary);
+    margin-bottom: 1rem;
+  }
 
+  .column:link{
+    text-decoration: none;
   }
