@@ -1,7 +1,5 @@
-import type { V2_MetaFunction } from "@remix-run/node";
-import { LinksFunction, LoaderArgs, json } from "@remix-run/node";
-import { Footer } from "~/components/Footer";
-import { Header } from "~/components/Header";
+import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+
 
 import home from "~/styles/home.css"
 
@@ -20,11 +18,10 @@ export const meta: V2_MetaFunction = () => {
 export default function Index() {
   return (
 
-      <body className="backgroundTelaLoginCad">
+    <body className="backgroundTelaLoginCad">
 
 
-      </body>
+    </body>
 
-    );
+  );
 }
- 

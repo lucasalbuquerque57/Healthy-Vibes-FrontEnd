@@ -1,7 +1,5 @@
-import type { V2_MetaFunction } from "@remix-run/node";
-import { useHookstate } from "@hookstate/core";
-import { LinksFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
+import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 

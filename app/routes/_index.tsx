@@ -1,5 +1,4 @@
-import type { V2_MetaFunction } from "@remix-run/node";
-import { LinksFunction, LoaderArgs, json } from "@remix-run/node";
+import type { V2_MetaFunction , LinksFunction} from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";

@@ -1,4 +1,6 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction} from "@remix-run/node";
+import type {
+  V2_MetaFunction} from "@remix-run/react";
 import {
   Link,
   Links,
@@ -7,7 +9,6 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  V2_MetaFunction,
   isRouteErrorResponse,
   useRouteError,
 } from "@remix-run/react";
