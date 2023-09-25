@@ -1,6 +1,10 @@
 .barraPerfil {
     background-color: var(--background-duodenary); 
-    margin-top: 2rem; 
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 5rem;
+    height: 2rem;
+
 }
 
 .barraPerfil ul {
@@ -18,4 +22,16 @@
     text-decoration: none;
     color: var(--branco); 
     font-weight: bold; 
+}
+
+.dataperson {
+    background-color: var(--background-quatordenary); 
+    margin-top: -0.1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 7rem;
+    height: 30rem;
+    border-left: 0.07rem solid var(--background-denary); /* Adicionar borda branca à esquerda */
+    border-right: 0.07rem solid var(--background-denary); 
+    border-bottom: 0.07rem solid var(--background-denary); 
 }

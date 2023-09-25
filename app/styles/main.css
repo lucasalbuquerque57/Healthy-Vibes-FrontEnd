@@ -10,9 +10,12 @@
 --background-octonary: #E9F8E7;
 --background-nonary: #066404;
 --background-denary: #111111;
---background-undenary: #254e24;
+--background-undenary: #060c05;
 --background-duodenary: #387D37;
 --background-tridenary: #333;
+--background-quatordenary: #E9F8E7;
+
+--background-card: #D9D9D9;
 
 --button-primary: #45C53A;
 --button-secondary: #EA4545;
@@ -39,6 +42,7 @@
 
 *{
     scrollbar-color: #3fae3c #111;
+    
     /* temporario, é só p ajudar a testar os bglhs */
 }
 header {
@@ -301,3 +305,30 @@ footer .footer-logo {
     font-weight: bold;
     /* font-family: Inter; */
 }
+
+
+
+/* styles.css (ou o nome do seu arquivo CSS) */
+.custom-card {
+    width: 14rem;
+    height: 16rem;
+    background-color: var(--background-card);
+    border-top: 0.07rem solid var(--background-denary);
+    border-left: 0.07rem solid var(--background-denary);
+    border-right: 0.07rem solid var(--background-denary);
+    border-bottom: 0.07rem solid var(--background-denary);
+}
+  
+  .custom-card img {
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.07rem solid var(--background-denary);
+  }
+  
+  .custom-card h2 {
+    font-size: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  

@@ -1,7 +1,6 @@
 import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
 
-
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -28,6 +27,10 @@ export default function Profile() {
             <li><a href="#">Contato</a></li>
           </ul>
         </nav>
+        <div className="dataperson">
+          Aqui vai as Informações, preciso falar com o Dalton. Como fazer aquela porra de Outlet.
+          Erro na porra do Dropdown. 
+        </div>
         <Outlet />
       </main>
       <Footer />
