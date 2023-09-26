@@ -39,12 +39,6 @@
 
 }
 
-
-*{
-    scrollbar-color: #3fae3c #111;
-    
-    /* temporario, é só p ajudar a testar os bglhs */
-}
 header {
     background-color: var(--background-denary);
     color: var(--text-primary);
@@ -55,6 +49,14 @@ footer{
     color: var(--text-primary);
     
 }
+
+
+main{
+    margin: 0;
+    min-height: 65vh !important;
+    width: auto;
+}
+
 
 
 /* BARRA DE NAVEGAÇÃO -- HEADER */
@@ -106,6 +108,15 @@ footer{
   display: inline-block;
   padding: 1rem 1rem;
 
+}
+
+.navBarButton{
+    background-color: var(--text-tertiary);
+}
+
+.navBarIcon{
+    color: var(--background-card);
+    font-size: 2.5rem;
 }
 
 .nav-link{
@@ -179,9 +190,6 @@ footer{
     color: var(--text-quaternary);
 }
 
-.infoAcess{
-    margin-left: 1.5rem; /* Talvez o distanciamento do botao do Info não fique legal, tenha q deixa-los c a distancia igual msm */
-}
 
 /*  FOOTER */
 
@@ -332,3 +340,4 @@ footer .footer-logo {
     text-align: center;
   }
   
+

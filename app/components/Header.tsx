@@ -6,15 +6,18 @@ export function Header() {
     
     return (
         <header>
-            <nav className="navbar navbar-expand-sm" id="topo">
+            <nav className="navbar navbar-expand-xl" id="topo">
                 <div className="container-fluid baseNav">
                     <div className="trapezio">
                         <Link to="/">
                             <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
                         </Link>
                     </div>
+                    <button className="navbar-toggler navBarButton" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i className="fa-solid fa-bars navBarIcon"></i>
+                    </button>
                     <div className="collapse navbar-collapse navSla" id="collapsibleNavbar">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav me-auto">
 
                             <li className="nav-item">
                                 <a className="nav-link" href="">Receitas</a>
@@ -34,25 +37,11 @@ export function Header() {
                             
                         </ul>
 
-
-                        
-                    </div>
-
-                    <div className="profile">
-                            
-                                {/* <ul className="navbar-nav">
-                                    <div className="nav-item">
-
-                                        <button className="nav-link dropleft">
-                                            <img src="/User1.jpg" alt="Foto de Perfil" className="imagemPerfil" />
-                                        </button>
-                                        
-                                    </div>
-                                </ul> */}
+                        <div className="profile nav-item">                                                      
                                 
                                 <div className="logCadButtons">
 
-                                    <Link to=""><button className="btn  loginButton">Entrar</button></Link>
+                                    <Link to="/Login"><button className="btn  loginButton">Entrar</button></Link>
 
                                     <Link to=""><button className="btn  cadButton" >Cadastre-se</button></Link>
 
@@ -69,6 +58,10 @@ export function Header() {
                                 
                             
                     </div> 
+  
+                    </div>
+
+                    
 
 
                     {/* <div className="collapse navbar-collapse" id="collapsibleNavbar">

@@ -1,77 +1,74 @@
-
-.bannerPrincipal{
-    box-shadow: 0rem 0.6rem 0.6rem 0rem var(--transparent-tertiary);
-    position: relative;
-    text-align: center;
-    color: var(--branco);
+.bannerPrincipal {
+  box-shadow: 0rem 0.6rem 0.6rem 0rem var(--transparent-tertiary);
+  position: relative;
+  text-align: center;
+  color: var(--branco);
 }
 
-
-.textoCentradoBanner{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 900;
-    font-size: 3rem;
+.textoCentradoBanner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 3rem;
 }
 
-.textoCentradoBannerContent{
-    font-weight: 700;
-    font-size: 3rem;
-    text-shadow: var(--transparent-primary) 0rem 0.2rem 0.2rem;
+.textoCentradoBannerContent {
+  font-weight: 700;
+  font-size: 3rem;
+  text-shadow: var(--transparent-primary) 0rem 0.2rem 0.2rem;
 }
 
-.textoCentradoBannerContentSub{
+.textoCentradoBannerContentSub {
   font-weight: 700;
   font-size: 2rem;
   text-shadow: var(--transparent-primary) 0rem 0.05rem 0.05rem;
 }
 
-.Title{
-    text-align: center;
+.Title {
+  text-align: center;
 }
 
-.bannerImage{
-    height: 20rem;
-    width: 100%; 
-    object-fit: cover;   
-    filter: brightness(40%) saturate(1.5) sepia(.5); 
+.bannerImage {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(40%) saturate(1.5) sepia(0.5);
 }
 
-.parteFuncoes{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+.parteFuncoes {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.subtitulo{
-    text-align: center;
-    color: var(--text-tertiary);
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.subtitulo {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.subtituloPt2{
-    text-align: center;
-    color: var(--text-tertiary);
-    font-weight: bold;
-    margin-bottom: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.subtituloPt2 {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-weight: bold;
+  margin-bottom: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-
-.card-img-top{
-    width: 95% !important;
-    /* width: 22rem */
-    /* height: 30vh !important; */
-    align-self: center;
-    margin-bottom: 1rem;
-    border-radius: 0.4rem;
-    border: 0.3px solid rgba(0, 0, 0, .1);
+.card-img-top {
+  width: 95% !important;
+  /* width: 22rem */
+  /* height: 30vh !important; */
+  align-self: center;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  border: 0.3px solid rgba(0, 0, 0, 0.1);
 }
 
 /* .card{
@@ -83,88 +80,85 @@
     border-left-color: blue !important;
 } */
 
-.card-group{
-    border-left-width: 10px !important;
+.card-group {
+  border-left-width: 10px !important;
 }
 
 .card-group > .card + .card {
-
-    border-left-width: 10px !important;
-    border-left-color: blue !important;
-  
+  border-left-width: 10px !important;
+  border-left-color: blue !important;
 }
 
-.textoCard{
+.textoCard {
   min-height: 4rem;
 }
 
-
-
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-right: 2rem;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+/* .row {margin: 0 -5px;} */ /* ta adicionando uma barra branca na direita da tela */
+
+.row {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  text-decoration: none;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
   .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-    margin-right: 2rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  /* Remove extra left and right margins, due to padding in columns */
-  /* .row {margin: 0 -5px;} */ /* ta adicionando uma barra branca na direita da tela */
-  
-    .row{
-        margin-right: 0rem !important;
-        margin-left: 0rem !important;
-    }
+}
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.); /* this adds the "card" effect */
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-    text-decoration: none;  
-  }
-  
-  /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
+.cardBox {
+  justify-content: center;
+}
 
-  .cardBox{
-    justify-content: center;
-  }
-
-
-  .card-title{
-    color: var(--text-quaternary);
-    font-weight: bold;
-    /* text-decoration: underline;
+.card-title {
+  color: var(--text-quaternary);
+  font-weight: bold;
+  /* text-decoration: underline;
     text-underline-offset: 0.5rem; */
-    padding-bottom: 0.3rem;
-    border-bottom: 0.2rem solid;
-    border-bottom-color: var(--misc-primary);
-    margin-bottom: 1rem;
-  }
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid;
+  border-bottom-color: var(--misc-primary);
+  margin-bottom: 1rem;
+}
 
-  .column:link{
-    text-decoration: none;
-  }
+.column:link {
+  text-decoration: none;
+}
+
+/* MOBILE */
