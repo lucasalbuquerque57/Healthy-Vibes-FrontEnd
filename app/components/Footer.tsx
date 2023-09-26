@@ -1,77 +1,77 @@
 import { Link } from "@remix-run/react";
-                                                      
+
 
 
 export function Footer() {
-    
+
     return (
-        <footer>
-        <div>
-            <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader"/>
-            <p className="redesSocTitulo">Redes Sociais</p>
-            <div className="footer-socials">
-                <Link to="#" className="footer-link" id="youtube">
-                    <i className="fa-brands fa-youtube"></i>
-                </Link>
+        <footer className="container-fluid">
+            <div className="row">
+                <div className="col pb-4">
+                    <img src="/IconeLogo.png" alt="Imagem Temporária" className="col-12 col-md-6" />
+                    <p className="redesSocTitulo d-none d-md-block fw-bold lh-md">Redes Sociais</p>
+                    <div className="footer-socials">
+                        <Link to="#" className="footer-link" id="youtube" title="YouTube">
+                            <i className="fa-brands fa-youtube"></i>
+                        </Link>
+                        <Link to="#" className="footer-link" id="whatsapp" title="Whatsapp">
+                            <i className="fa-brands fa-whatsapp"></i>
+                        </Link>
+                        <Link to="#" className="footer-link" id="facebook" title="Facebook">
+                            <i className="fa-brands fa-facebook-f"></i>
+                        </Link>
+                        <Link to="#" className="footer-link" id="instagram" title="Instagram">
+                            <i className="fa-brands fa-instagram"></i>
+                        </Link>
+                    </div>
+                </div>
+                <div className="col pb-4 pt-4">
+                    <ul className="footer-list">
+                        <li>
+                            <h3>Deixe-nos ajudar você</h3>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Receita</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Dietas</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Calculadora</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Exercícios</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Controle de Água</Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="col pb-4 pt-4">
+                    <ul className="footer-list">
+                        <li>
+                            <h3>Bem-vindo</h3>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Sobre Nos</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Contato</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Termos de Serviço</Link>
+                        </li>
+                        <li>
+                            <Link to="#" className="footer-link">Política de Privacidade</Link>
+                        </li>
+                    </ul>
+                </div>
 
-                <Link to="#" className="footer-link" id="whatsapp">
-                    <i className="fa-brands fa-whatsapp"></i>
-                </Link>
-
-                <Link to="#" className="footer-link" id="facebook">
-                    <i className="fa-brands fa-facebook-f"></i>
-                </Link>
-                
-                <Link to="#" className="footer-link" id="instagram">
-                    <i className="fa-brands fa-instagram"></i>
-                </Link>
             </div>
-        </div>
-    <div>
-        
-    
-        <ul className="footer-list">
-              <li>
-                  <h3>Deixe-nos ajudar você</h3>
-              </li>
-              <li>
-                  <Link to="#" className="footer-link">Receita</Link>
-              </li>
-              <li>
-                  <Link to="#" className="footer-link">Dietas</Link>
-              </li>
-              <li>
-                  <Link to="#" className="footer-link">Calculadora</Link>
-              </li>
-              <li>
-                  <Link to="#" className="footer-link">Exercícios</Link>
-              </li>
-              <li>
-                  <Link to="#" className="footer-link">Controle de Água</Link>
-              </li>
-        </ul>
-    </div>
-    <div>
-        <ul className="footer-list">
-            <li>
-                <h3>Bem-vindo</h3>
-            </li>
-            <li>
-                <Link to="#" className="footer-link">Sobre Nos</Link>
-            </li>
-            <li>
-                <Link to="#" className="footer-link">Contato</Link>
-            </li>
-            <li>
-                <Link to="#" className="footer-link">Termos de Serviço</Link>
-            </li>
-            <li>
-                <Link to="#" className="footer-link">Política de Privacidade</Link>
-            </li>
-        </ul>
-    </div>
-            
-    </footer>
+
+
+
+        </footer>
     )
 
 }

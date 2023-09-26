@@ -41,7 +41,6 @@ function Document({
       <head>
         <Meta />
         <Links />
-        {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
 
         <script src="https://kit.fontawesome.com/6c49cfa42c.js" crossOrigin="anonymous"></script>
 
