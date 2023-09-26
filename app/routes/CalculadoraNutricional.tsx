@@ -6,6 +6,7 @@ import { useState } from 'react';
 import calculadoras from "~/styles/calculadoras.css"
 
 import Modal from 'react-bootstrap/Modal';
+import Link from 'react-bootstrap/Modal';
 
 
 export const links: LinksFunction = () => {
@@ -53,12 +54,35 @@ export default function CalculadoraNutricional() {
           </Modal.Body>
         </Modal>
 
-        <div className="avisoNutricaoFixo">
-          <p>Essa calculadora utiliza do cálculo Gasto Energético Basal  (GEB) - Fórmula de Miffin-St Jeor, para determinar quantas calorias, proteínas e gorduras deve-se consumir.
-            Utilizamos os resultados para gerar opções de refeições para sua dieta, que pode ser salva se estiver logado
-          </p>
-          <h5>Vale Ressaltar: Este site não substitue uma consulta com especialistas médicos; ESSA PORRA NÃO QUER SER CENTRALIZADA NA TELA</h5>
+        <div>
+            <h6>Qual é o seu tipo de dieta?</h6>
+          </div>
+          <div className="row m-auto cardBox">
+        <div className="column">
+          <div className="card">
+            <img src="/" className="card-img-top img-responsive" alt="..." />
+            <h5 className="card-title">Recursos adicionais</h5>
+            <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
+          </div>
         </div>
+        <div className="column">
+          <div className="card">
+            <img src="/" className="card-img-top" alt="..." />
+            <h5 className="card-title">Exercícios</h5>
+            <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
+          </div>
+        </div>
+        <div className="column">
+          <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
+            <div className="card" >
+              <img src="/" className="card-img-top" alt="..." />
+              <h5 className="card-title">Calculadora nutricional</h5>
+              <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
+            </div>
+          </Link>
+        </div>
+
+      </div>
 
 
 
