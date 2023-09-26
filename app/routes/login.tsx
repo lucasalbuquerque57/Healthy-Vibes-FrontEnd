@@ -1,4 +1,4 @@
-import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import home from "~/styles/home.css"
@@ -10,11 +10,9 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-  ];
-};
+export const meta: MetaFunction = () => ({
+  title: "Home"
+});
 
 export default function Index() {
   return (
@@ -23,7 +21,7 @@ export default function Index() {
 
       <h1>Futura tela de Login?</h1>
       <p>Usando Modal?</p>
-      <div className="modal show" style={{display: "block", position: "initial"}}>
+      <div className="modal show" style={{ display: "block", position: "initial" }}>
         <Modal.Dialog size="lg">
           <Modal.Header>
             <Modal.Title>Login</Modal.Title>
@@ -32,7 +30,7 @@ export default function Index() {
             <Form>
               <Form.Group>
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="nome@exemplo.com" autoFocus/>
+                <Form.Control type="email" placeholder="nome@exemplo.com" autoFocus />
               </Form.Group>
               <Form.Group>
                 <Form.Label>Senha</Form.Label>

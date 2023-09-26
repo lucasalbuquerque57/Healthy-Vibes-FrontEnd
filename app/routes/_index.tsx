@@ -1,6 +1,5 @@
-import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
-import { Row, Col, Card } from "react-bootstrap";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -10,9 +9,9 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: home }];
 };
 
-export const meta: V2_MetaFunction = () => {
-  return [{ title: "Home" }];
-};
+export const meta: MetaFunction = () => ({
+  title: "Home"
+});
 
 export default function Index() {
   return (
@@ -37,53 +36,37 @@ export default function Index() {
         </div>
       </div>
 
-        {/* <Row xs={1} md={3} className="g-4">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <Col key={idx}>
-              <Card>
-                <Card.Img variant="top" />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  <Card.Text>SLA PORRA</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row> */}
-        
 
-        {/* <div className="d-inline-flex flex-column">
-            <div className="row m-auto cardBox">
-              <div className="column col-md-6">
-                <div className="card">
-                  <img src="/home/calculadora_home.png" className="card-img-top" alt="..."/>
-                  <h5 className="card-title">Recursos adicionais</h5>
-                  <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
-                </div>
-              </div>
-              <div className="column col">
-                <div className="card">
-                  <img src="/home/exercicio_home.png" className="card-img-top" alt="..."/>
-                  <h5 className="card-title">Exercícios</h5>
-                  <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
-                </div>
-              </div>
-              <div className="column col">
-                <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
-                  <div className="card" >
-                    <img src="/home/recursos_home.png" className="card-img-top" alt="..."/>
-                    <h5 className="card-title">Calculadora nutricional</h5>
-                    <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
-                  </div>
-                </Link>
-              </div>
-            </div> 
-            
-          </div> */}
+      <div className="row m-auto cardBox">
+        <div className="column">
+          <div className="card">
+            <img src="/home/calculadora_home.png" className="card-img-top" alt="..." />
+            <h5 className="card-title">Recursos adicionais</h5>
+            <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
+          </div>
+        </div>
+        <div className="column">
+          <div className="card">
+            <img src="/home/exercicio_home.png" className="card-img-top" alt="..." />
+            <h5 className="card-title">Exercícios</h5>
+            <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
+          </div>
+        </div>
+        <div className="column">
+          <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
+            <div className="card" >
+              <img src="/home/recursos_home.png" className="card-img-top" alt="..." />
+              <h5 className="card-title">Calculadora nutricional</h5>
+              <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
+            </div>
+          </Link>
+        </div>
+
+      </div>
       {/* </div> */}
 
       <Footer />
-      </main>
+    </main>
 
   );
 }

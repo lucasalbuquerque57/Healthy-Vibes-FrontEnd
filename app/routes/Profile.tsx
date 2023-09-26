@@ -1,4 +1,4 @@
-import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
 
 import { Footer } from "~/components/Footer";
@@ -6,9 +6,10 @@ import { Header } from "~/components/Header";
 
 import profile from "~/styles/profile.css";
 
-export const meta: V2_MetaFunction = () => {
-  return [{ title: "Profile" }];
-};
+
+export const meta: MetaFunction = () => ({
+  title: "Perfil"
+});
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: profile }];

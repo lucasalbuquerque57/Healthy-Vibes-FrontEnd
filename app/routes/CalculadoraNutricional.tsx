@@ -1,4 +1,4 @@
-import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { useState } from 'react';
@@ -15,11 +15,10 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { title: "Calculadora Nutricional" },
-  ];
-};
+
+export const meta: MetaFunction = () => ({
+  title: "Calculadora Nutricional"
+});
 
 
 export default function CalculadoraNutricional() {

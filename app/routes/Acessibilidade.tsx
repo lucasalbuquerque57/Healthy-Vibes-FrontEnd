@@ -1,13 +1,13 @@
-import type { V2_MetaFunction, LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
 import acessibilidade from "~/styles/acessibilidade.css";
 
-export const meta: V2_MetaFunction = () => {
-  return [{ title: "Acessibilidade" }];
-};
+export const meta: MetaFunction = () => ({
+  title: "Acessibilidade"
+});
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: acessibilidade }];
