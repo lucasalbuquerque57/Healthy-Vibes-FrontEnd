@@ -7,10 +7,9 @@ export function Footer() {
     return (
         <footer className="container-fluid">
             <div className="row">
-                <div className="col pb-4">
+                <div className="col pb-4 pt-4">
                     <img src="/IconeLogo.png" alt="Imagem Temporária" className="col-12 col-md-6" />
-                    <p className="redesSocTitulo d-none d-md-block fw-bold lh-md">Redes Sociais</p>
-                    <div className="footer-socials">
+                    <div className="footer-socials px-4 px-md-0 pt-2">
                         <Link to="#" className="footer-link" id="youtube" title="YouTube">
                             <i className="fa-brands fa-youtube"></i>
                         </Link>

@@ -107,11 +107,13 @@ main {
 }
 
 .navBarButton {
-  background-color: var(--text-tertiary);
+  /* background-color: var(--text-tertiary); */
+  background-color: none;
+  border-color: none;
 }
 
 .navBarIcon {
-  color: var(--background-card);
+  color: var(--branco-creme);
   font-size: 2.5rem;
 }
 
@@ -202,7 +204,6 @@ footer {
   grid-template-columns: repeat(3, 1fr); */
   gap: 3rem;
   width: 100%;
-  padding: 3rem 3.5rem;
 }
 
 footer .footer-logo {
@@ -218,6 +219,13 @@ footer .footer-logo {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
+  padding: -.5rem;
+}
+
+@media screen and (max-width : 330px) {
+  .footer-socials{
+    padding: 0;
+  }
 }
 
 .footer-link {
@@ -323,4 +331,134 @@ footer .footer-logo {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+#oopss {
+  background: #222;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  line-height: 1.5em;
+  z-index: 9999;
+  left: 0px;
+}
+
+#error-text {
+  top: 30%;
+  position: relative;
+  font-size: 40px;
+  color: #eee;
+}
+
+#error-text a {
+  color: #eee;
+}
+
+#error-text a:hover {
+  color: #fff;
+}
+
+#error-text p {
+  color: #eee;
+  margin: 70px 0 0 0;
+}
+
+#error-text i {
+  margin-left: 10px;
+}
+
+#error-text p.hmpg {
+  margin: 40px 0 0 0;
+}
+
+#error-text span {
+  position: relative;
+  background: #ef4824;
+  color: #fff;
+  font-size: 300%;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-weight: bolder;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 0 0 40px 0;
+}
+
+#error-text span:hover {
+  background: #d7401f;
+  color: #fff;
+  -webkit-animation: jelly 0.5s;
+  -moz-animation: jelly 0.5s;
+  -ms-animation: jelly 0.5s;
+  -o-animation: jelly 0.5s;
+  animation: jelly 0.5s;
+}
+
+#error-text span:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #ef4824;
+  border-width: 7px;
+  margin-left: -7px;
+}
+
+@-webkit-keyframes jelly {
+  from,
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+
+@keyframes jelly {
+  from,
+  to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+/* CSS Error Page Responsive */
+
+@media only screen and (max-width: 640px) {
+  #error-text span {
+    font-size: 200%;
+  }
+  #error-text a:hover {
+    color: #fff;
+  }
 }

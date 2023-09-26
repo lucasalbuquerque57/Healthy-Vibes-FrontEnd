@@ -37,10 +37,10 @@ export default function Profile() {
           </ul>
         </nav>
         <div className="dataperson">
-          Aqui vai as Informações, preciso falar com o Dalton. Como fazer aquela
-          porra de Outlet. Erro na porra do Dropdown.
-        </div>
+          
         <Outlet />
+        </div>
+        
       </main>
       <Footer />
     </div>
