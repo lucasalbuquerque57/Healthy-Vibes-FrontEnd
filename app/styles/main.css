@@ -37,6 +37,10 @@
   --branco-creme: #f7f7f7;
 }
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 header {
   background-color: var(--background-denary);
   color: var(--text-primary);
