@@ -5,3 +5,34 @@
     width: 35rem;
     background-color: aliceblue; /* só p teste */
 }
+
+.tituloCategoria{
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.cardTeste{
+    width: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: none;
+}
+
+.imgTipoDieta{
+    width: 6rem !important;
+    height: 6rem !important;
+    align-self: center;
+    margin-top: 0.4rem;
+    border-radius: 1rem;
+    filter: drop-shadow( #EDEDE8 0.3rem 0.3rem);
+}
+
+.cardBox {
+    justify-content: center;
+    
+}
+
+.cardTxtTipoDieta{
+    margin-top: -1rem !important;
+    text-align: center !important;
+}
