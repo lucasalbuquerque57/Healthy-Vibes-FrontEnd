@@ -1,7 +1,7 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
-import { useState } from 'react';
+import { useState } from "react";
 
 import calculadoras from "~/styles/calculadoras.css"
 import { Link } from "@remix-run/react";
@@ -13,45 +13,45 @@ import { Modal } from "react-bootstrap";
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: calculadoras },
-    { rel: "shortcut icon", href: "/IconeLogo.png", type: "image/x-icon" }
+    { rel: "shortcut icon", href: "/IconeLogo.png", type: "image/x-icon" },
   ];
 };
 
-
 export const meta: MetaFunction = () => ({
-  title: "Calculadora Nutricional"
+  title: "Calculadora Nutricional",
 });
 
-
 export default function CalculadoraNutricional() {
-
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
 
   return (
-
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-
       <Header />
       <main
         className="modal show"
-        style={{ display: 'block', position: 'initial' }}
+        style={{ display: "block", position: "initial" }}
       >
-
-        <div className="tituloPagina">
-          Calculadora Nutricional
-        </div>
+        <div className="tituloPagina">Calculadora Nutricional</div>
 
         <Modal show={show} onHide={handleClose} centered>
-          <Modal.Header closeButton >
-            <Modal.Title className="text-center">Aviso em nome de sua saúde</Modal.Title>
+          <Modal.Header closeButton>
+            <Modal.Title className="text-center">
+              Aviso em nome de sua saúde
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Essa calculadora utiliza do cálculo Gasto Energético Basal (GEB) para determinar quantas calorias, proteínas e gordura deve-se consumir</p>
-            <h4>Vale Ressaltar: Este site não substitui uma consulta com especialistas médicos</h4>
-
+            <p>
+              Essa calculadora utiliza do cálculo Gasto Energético Basal (GEB)
+              para determinar quantas calorias, proteínas e gordura deve-se
+              consumir
+            </p>
+            <h4>
+              Vale Ressaltar: Este site não substitui uma consulta com
+              especialistas médicos
+            </h4>
           </Modal.Body>
         </Modal>
 

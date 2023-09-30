@@ -1,0 +1,30 @@
+[type='radio'] {
+    display: none; 
+}
+
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active, .btn-secondary:hover{
+    background-color: var(--background-quaternary) !important;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+
+.btn-secondary{
+    border-radius: 0;
+    background-color: var(--background-duodenary);
+    
+}
+
+.btn-secondary:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    background-color: var(--background-quaternary) !important;
+}
+
+
+.pontaEsquerda{
+    border-radius: 1rem 0rem 0rem 1rem !important;
+}
+.pontaDireita{
+    border-radius: 0rem 1rem 1rem 0rem !important;
+}

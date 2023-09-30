@@ -52,7 +52,7 @@ export function Footer() {
                             <h3>Bem-vindo</h3>
                         </li>
                         <li>
-                            <Link to="#" className="footer-link">Sobre Nos</Link>
+                            <Link to="#" className="footer-link">Sobre Nós</Link>
                         </li>
                         <li>
                             <Link to="#" className="footer-link">Contato</Link>
