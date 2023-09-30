@@ -28,6 +28,9 @@
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
+  --misc-tertiary: #A3C24B;
+  --misc-quaternary: #96b346;
+  --misc-quinary: #b0b0b0;
 
   --transparent-primary: rgba(255, 255, 255, 0.6);
   --transparent-secondary: rgba(69, 197, 58, 1);
@@ -311,6 +314,7 @@ footer .footer-logo {
   text-align: center;
   font-weight: bolder;
   letter-spacing: 0.01rem;
+  margin-bottom: 4rem;
   /* font-family: Inter; */
 }
 

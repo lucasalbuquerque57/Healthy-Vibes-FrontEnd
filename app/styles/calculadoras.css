@@ -8,7 +8,7 @@
 
 .tituloCategoria{
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 2rem;
 }
 
 .cardTeste{
@@ -35,4 +35,37 @@
 .cardTxtTipoDieta{
     margin-top: -1rem !important;
     text-align: center !important;
+}
+
+.desejaTipoExe{
+    justify-content: center;
+}
+.btn-secondary { 
+    background-color: var(--brancoCreme) !important;
+    color: var(--background-denary);
+    border-color: var(--misc-quinary);
+    border-radius: 0;
+}
+.pontaDireita{
+    border-radius: 0rem 1rem 1rem 0rem !important;
+    border-left: none;
+}
+.pontaEsquerda{
+    border-radius: 1rem 0rem 0rem 1rem !important;
+    border-right: none;
+}
+.pontaNenhuma{
+    border-right: none;
+    border-left: none;
+}
+
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active{
+    background-color: var(--misc-tertiary) !important;
+    color: var(--background-denary) !important;
+    border-color: var(--misc-quinary);
+}
+
+.btn-secondary:hover{
+    background-color: var(--misc-quaternary) !important;
+    color: var(--background-denary) !important;
 }

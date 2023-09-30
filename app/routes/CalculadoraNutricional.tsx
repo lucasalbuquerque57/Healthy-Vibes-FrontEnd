@@ -54,7 +54,7 @@ export default function CalculadoraNutricional() {
         </Modal>
 
         <div>
-          <h6 className="tituloCategoria">Qual é o seu tipo de dieta?</h6>
+          <h3 className="tituloCategoria">Qual é o seu tipo de dieta?</h3>
         </div>
         <div className="row m-auto cardBox">
           <div className="card cardTeste">
@@ -88,6 +88,20 @@ export default function CalculadoraNutricional() {
             </div>
           </div>
         </div>
+
+        <div>
+          <h3 className="tituloCategoria">Deseja...?</h3>
+        </div>
+        
+        <div className="d-flex justify-content-center">
+          <input type="radio" className="btn-check " name="options" id="option1" autoComplete="off"/>
+          <label className="btn btn-secondary pontaEsquerda" htmlFor="option1">Perder peso</label>
+          <input type="radio" className="btn-check" name="options" id="option2" autoComplete="off"/>
+          <label className="btn btn-secondary pontaNenhuma" htmlFor="option2">Manter-se ativo</label>
+          <input type="radio" className="btn-check " name="options" id="option3" autoComplete="off"/>
+          <label className="btn btn-secondary pontaDireita" htmlFor="option3">Ganhar músculo</label>
+        </div>
+        
       </main>
 
       <Footer />
