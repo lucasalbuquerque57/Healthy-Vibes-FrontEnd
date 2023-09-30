@@ -58,6 +58,7 @@ main {
 .trapezio {
   border-bottom: 7.2rem solid transparent; /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
   height: 0;
+  padding: 0rem 0 0.65rem 0;
   width: min-content;
 }
 
@@ -200,7 +201,7 @@ footer {
 
   color: var(--text-primary);
   background-color: var(--background-quaternary);
-/*   display: grid;
+  /*   display: grid;
   grid-template-columns: repeat(3, 1fr); */
   gap: 3rem;
   width: 100%;
@@ -219,11 +220,11 @@ footer .footer-logo {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
-  padding: -.5rem;
+  padding: -0.5rem;
 }
 
-@media screen and (max-width : 330px) {
-  .footer-socials{
+@media screen and (max-width: 330px) {
+  .footer-socials {
     padding: 0;
   }
 }

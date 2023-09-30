@@ -4,9 +4,10 @@ import { Header } from "~/components/Header";
 import { useState } from 'react';
 
 import calculadoras from "~/styles/calculadoras.css"
+import { Link } from "@remix-run/react";
+import { Modal } from "react-bootstrap";
 
-import Modal from 'react-bootstrap/Modal';
-import Link from 'react-bootstrap/Modal';
+
 
 
 export const links: LinksFunction = () => {
@@ -55,34 +56,34 @@ export default function CalculadoraNutricional() {
         </Modal>
 
         <div>
-            <h6>Qual é o seu tipo de dieta?</h6>
-          </div>
-          <div className="row m-auto cardBox">
-        <div className="column">
-          <div className="card">
-            <img src="/" className="card-img-top img-responsive" alt="..." />
-            <h5 className="card-title">Recursos adicionais</h5>
-            <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
-          </div>
+          <h6>Qual é o seu tipo de dieta?</h6>
         </div>
-        <div className="column">
-          <div className="card">
-            <img src="/" className="card-img-top" alt="..." />
-            <h5 className="card-title">Exercícios</h5>
-            <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
-          </div>
-        </div>
-        <div className="column">
-          <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
-            <div className="card" >
-              <img src="/" className="card-img-top" alt="..." />
-              <h5 className="card-title">Calculadora nutricional</h5>
-              <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
+        <div className="row m-auto cardBox">
+          <div className="column">
+            <div className="card">
+              <img src="/" className="card-img-top img-responsive" alt="..." />
+              <h5 className="card-title">Recursos adicionais</h5>
+              <div className="textoCard">Monitore seu IMC, consumo de água e calorias</div>
             </div>
-          </Link>
-        </div>
+          </div>
+          <div className="column">
+            <div className="card">
+              <img src="/" className="card-img-top" alt="..." />
+              <h5 className="card-title">Exercícios</h5>
+              <div className="textoCard">Escolha entre diversos exercícios de acordo com suas prioridades</div>
+            </div>
+          </div>
+          <div className="column">
+            <Link to="/CalculadoraNutricional" style={{ textDecoration: 'none' }}>
+              <div className="card" >
+                <img src="/" className="card-img-top" alt="..." />
+                <h5 className="card-title">Calculadora nutricional</h5>
+                <div className="textoCard">Monte sua dieta conforme suas necessidades específicas</div>
+              </div>
+            </Link>
+          </div>
 
-      </div>
+        </div>
 
 
 
