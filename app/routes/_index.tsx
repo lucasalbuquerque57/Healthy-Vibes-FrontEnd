@@ -19,7 +19,7 @@ export default function Index() {
 
       <Header />
       <div className="bannerPrincipal">
-        <img src="/BannerPicV2.png" className="bannerImage" />
+        <img src="/BannerPicV2.png" className="bannerImage" alt="Banner com frutas" />
         <div className="textoCentradoBanner">
           <h1 className="Title textoCentradoBannerContent">
             Melhore sua Vida!{" "}

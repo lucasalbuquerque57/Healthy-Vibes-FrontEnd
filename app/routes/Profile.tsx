@@ -23,24 +23,23 @@ export default function Profile() {
         <nav className="barraPerfil">
           <ul>
             <li>
-              <a href="#">Página Inicial</a>
+              <a href="#">Perfil</a>
             </li>
             <li>
-              <a href="#">Sobre Nós</a>
+              <a href="#">Dietas Salvas</a>
             </li>
             <li>
-              <a href="#">Serviços</a>
+              <a href="#">Acompanhar Progresso</a>
             </li>
             <li>
-              <a href="#">Contato</a>
+              <a href="#">Meus Exercícios</a>
             </li>
           </ul>
         </nav>
         <div className="dataperson">
-          
-        <Outlet />
+          <Outlet />
         </div>
-        
+
       </main>
       <Footer />
     </div>

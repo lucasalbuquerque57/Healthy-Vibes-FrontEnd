@@ -13,6 +13,7 @@ import {
 
 import main from "./styles/main.css";
 
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1",

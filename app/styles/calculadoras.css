@@ -1,71 +1,150 @@
-
-
-
-.avisoNutricaoFixo{
-    width: 35rem;
-    background-color: aliceblue; /* só p teste */
+.avisoNutricaoFixo {
+  width: 35rem;
+  background-color: aliceblue; /* só p teste */
 }
 
-.tituloCategoria{
-    text-align: center;
-    margin-top: 2rem;
+.tituloCategoria {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.cardTeste{
-    width: 10rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    border: none;
+.cardTeste {
+  width: 10rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
 }
 
-.imgTipoDieta{
-    width: 6rem !important;
-    height: 6rem !important;
-    align-self: center;
-    margin-top: 0.4rem;
-    border-radius: 1rem;
-    filter: drop-shadow( #EDEDE8 0.3rem 0.3rem);
+.imgTipoDieta {
+  width: 6rem;
+  height: 6rem;
+  align-self: center;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+  filter: drop-shadow(#edede8 0.3rem 0.3rem);
 }
 
 .cardBox {
-    justify-content: center;
-    
+  justify-content: center;
 }
 
-.cardTxtTipoDieta{
-    margin-top: -1rem !important;
-    text-align: center !important;
+.cardTxtTipoDieta {
+  margin-top: -1rem;
+  text-align: center;
 }
 
-.desejaTipoExe{
-    justify-content: center;
+.desejaTipoExe {
+  justify-content: center;
 }
-.btn-secondary { 
-    background-color: var(--brancoCreme) !important;
-    color: var(--background-denary);
-    border-color: var(--misc-quinary);
-    border-radius: 0;
+.btn-secondary {
+  background-color: var(--brancoCreme);
+  color: var(--background-denary);
+  border-color: var(--misc-quinary);
+  border-radius: 0;
 }
-.pontaDireita{
-    border-radius: 0rem 1rem 1rem 0rem !important;
-    border-left: none;
+.pontaDireita {
+  border-radius: 0rem 1rem 1rem 0rem;
+  border-left: none;
 }
-.pontaEsquerda{
-    border-radius: 1rem 0rem 0rem 1rem !important;
-    border-right: none;
+.pontaEsquerda {
+  border-radius: 1rem 0rem 0rem 1rem;
+  border-right: none;
 }
-.pontaNenhuma{
-    border-right: none;
-    border-left: none;
-}
-
-.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active{
-    background-color: var(--misc-tertiary) !important;
-    color: var(--background-denary) !important;
-    border-color: var(--misc-quinary);
+.pontaNenhuma {
+  border-right: none;
+  border-left: none;
 }
 
-.btn-secondary:hover{
-    background-color: var(--misc-quaternary) !important;
-    color: var(--background-denary) !important;
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: var(--misc-tertiary);
+  color: var(--background-denary);
+  border-color: var(--misc-quinary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--misc-quaternary);
+  color: var(--background-denary);
+}
+
+.desejaTipoExe {
+  justify-content: center;
+}
+.btn-secondary {
+  background-color: var(--brancoCreme);
+  color: var(--background-denary);
+  border-color: var(--misc-quinary);
+  border-radius: 0;
+}
+.pontaDireita {
+  border-radius: 0rem 1rem 1rem 0rem;
+  border-left: none;
+}
+.pontaEsquerda {
+  border-radius: 1rem 0rem 0rem 1rem;
+  border-right: none;
+}
+.pontaNenhuma {
+  border-right: none;
+  border-left: none;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: var(--misc-tertiary);
+  color: var(--background-denary);
+  border-color: var(--misc-quinary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--misc-quaternary) !important;
+  color: var(--background-denary) !important;
+}
+
+.sexo {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+input[type="radio"] {
+  background-color: var(--misc-primary);
+}
+
+input[type="radio"]:checked {
+  background-color: var(--background-denary);
+}
+
+.border-secondary,
+.form-select-sm {
+  border-color: var(--misc-quinary) !important;
+}
+
+.botaoCalcular {
+  background-color: var(--button-tertiary);
+  color: var(--branco);
+  border-radius: 1rem;
+  border-color: var(--misc-quinary);
+}
+
+.TipoAli {
+  visibility: hidden;
+}
+
+.TipoAli:checked + label > img {
+  border: 5px solid var(--transparent-tertiary);
+}
+
+/* input[type="radio"]:checked + label {
+  visibility: visible;
+  background-color: rebeccapurple;
+} */
+
+.testclass > input:last-of-type:checked ~ .label-status {
+  visibility: visible;
 }

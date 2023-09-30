@@ -28,7 +28,7 @@
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
-  --misc-tertiary: #A3C24B;
+  --misc-tertiary: #a3c24b;
   --misc-quaternary: #96b346;
   --misc-quinary: #b0b0b0;
 
@@ -41,7 +41,7 @@
 }
 
 * {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -62,18 +62,24 @@ main {
 
 /* BARRA DE NAVEGAÇÃO -- HEADER */
 
+#topo {
+  padding: 0;
+  margin: 0;
+  height: 7rem;
+}
+
 .trapezio {
-  border-bottom: 7.2rem solid transparent; /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
+  border-bottom: 6.9rem solid transparent; /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
   height: 0;
-  padding: 0rem 0 0.65rem 0;
   width: min-content;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 576px) {
   .trapezio {
-    border-bottom: 7.2rem solid var(--text-tertiary); /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
+    border-bottom: 6.9rem solid var(--text-tertiary); /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
     border-right: 5rem solid transparent;
-    height: 0;
     width: min-content;
   }
 }
@@ -156,11 +162,6 @@ main {
   color: var(--text-primary);
   margin-right: 1rem;
   font-weight: bold;
-}
-
-.logCadButtons {
-  /* padding-top: 1rem; */
-  /* Resolveu um problema de alinhamento, mas agr ta causando */
 }
 
 .loginButton:hover,
@@ -310,7 +311,7 @@ footer .footer-logo {
 /* MISC PAGINAS EM GERAL */
 
 .tituloPagina {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--text-quaternary);
   text-align: center;
   font-weight: bolder;
