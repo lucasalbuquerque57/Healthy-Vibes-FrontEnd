@@ -24,7 +24,7 @@ export default function homeProfile() {
                     <div>
                         <label className="rotulo">Senha</label>
                     </div>
-                    <input type="password" id="senha" name="senha" placeholder="" />
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" />
                 </div>
                 <div className="button">
                     <button type="button" className="stylebutton">Salvar Alterações</button>

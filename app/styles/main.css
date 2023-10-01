@@ -473,3 +473,38 @@ footer .footer-logo {
     color: #fff;
   }
 }
+
+
+/* EstiloCardDieta */
+.card_dieta{
+  padding-left: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.iconsstyle {
+  display: flex;
+  flex-direction: column; /* Define a direção do eixo principal para vertical */
+  align-items: center; /* Alinha os ícones horizontalmente ao centro */
+}
+
+.iconsstyle img {
+  margin-bottom: 1rem; /* Adiciona espaço entre os ícones (pode ajustar conforme necessário) */
+}
+
+/* Estilos para a imagem principal (PastaIcon), se necessário */
+.container img {
+  /* Adicione estilos conforme necessário */
+}
+
+.titledieta{
+  
+}

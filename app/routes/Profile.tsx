@@ -26,7 +26,7 @@ export default function Profile() {
               <a href="#">Perfil</a>
             </li>
             <li>
-              <a href="#">Dietas Salvas</a>
+              <a href="*">Dietas Salvas</a>
             </li>
             <li>
               <a href="#">Acompanhar Progresso</a>
