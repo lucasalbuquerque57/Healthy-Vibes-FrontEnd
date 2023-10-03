@@ -474,16 +474,13 @@ footer .footer-logo {
   }
 }
 
-
 /* EstiloCardDieta */
-.card_dieta{
+.card_dieta {
   padding-left: 2rem;
   padding-top: 3rem;
   padding-bottom: 2rem;
   padding-right: 2rem;
-
 }
-
 
 .container {
   display: flex;
@@ -498,13 +495,4 @@ footer .footer-logo {
 
 .iconsstyle img {
   margin-bottom: 1rem; /* Adiciona espaço entre os ícones (pode ajustar conforme necessário) */
-}
-
-/* Estilos para a imagem principal (PastaIcon), se necessário */
-.container img {
-  /* Adicione estilos conforme necessário */
-}
-
-.titledieta{
-  
 }

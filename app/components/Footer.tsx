@@ -24,7 +24,7 @@ export function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className="col pb-4 pt-4">
+                <div className="col d-flex justify-content-center align-items-center pb-4 pt-4">
                     <ul className="footer-list">
                         <li>
                             <h3>Deixe-nos ajudar você</h3>
