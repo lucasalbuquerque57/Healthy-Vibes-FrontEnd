@@ -3,7 +3,6 @@ import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
 import exercicios from "~/styles/exercicios.css";
-import { Button, Modal } from "react-bootstrap";
 
 export const links: LinksFunction = () => {
     return [
@@ -22,6 +21,8 @@ export default function Exercicios() {
     return (
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
             <Header />
+
+            {/* Tenta usar o do react bootstrap */}
 
             <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
 

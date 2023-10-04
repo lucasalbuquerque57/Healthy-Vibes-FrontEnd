@@ -8,7 +8,7 @@ export function Header() {
                 <div className="container-fluid baseNav">
                     <div className="trapezio">
                         <Link to="/">
-                            <img src="/IconeLogo.png" alt="Imagem Temporária" className="logoHeader" />
+                            <img src="/IconeLogo.png" alt="Imagem Logo" className="logoHeader" />
                         </Link>
                     </div>
                     <button className="navbar-toggler navBarButton" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,10 +45,10 @@ export function Header() {
 
                             </div>
                             <div className="itensAcessibilidade">
-                                <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" />
-                                <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" />
-                                <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade" />
-                                <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess" /></Link>
+                                <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" />
+                                <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" />
+                                <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade" title="Alto contraste" alt="Alto contraste" />
+                                <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess" alt="acesso a acessibilidae" /></Link>
 
 
                                 {/* <Link to="/Acessibilidade" className="atalhoParaAcessibilidade"><i className="fa-solid fa-circle-info iconeAcessibilidade"></i></Link> */}

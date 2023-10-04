@@ -35,20 +35,32 @@ export default function DietasDetalhes() {
 
         <div className="Abas">
           <Tabs
-            defaultActiveKey="home"
+            defaultActiveKey="dietasSalvas"
             id="fill-tab-example"
             className="mb-3"
             justify
 
           >
             <Tab eventKey="dietasSalvas" title="Dietas Salvas" className="tab-teste">
-              <div className="tituloDieta">
-                <h1>Dieta Tal</h1>
-              </div>
-              <div>
+
+              <div className="container-fluid">
+                <div>
+                  <h1 className="tituloDieta">Dieta Tal</h1>
+                  <div>
+                    <h2 className="titulo-refeicao">Café da Manhã</h2>
+                  </div>
+                </div>
+                <div className="botoes">
+                  <button className="botao">Favoritar</button>
+                </div>
+                <div className="receita">
+                  <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
+                  <p>teste</p>
+                </div>
 
               </div>
             </Tab>
+
             <Tab eventKey="acompanharProg" title="Acompanhar Progresso" className="tab-teste">
               Tab content for Profile
             </Tab>
