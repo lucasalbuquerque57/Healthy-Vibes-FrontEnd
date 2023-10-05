@@ -37,8 +37,8 @@ export default function Profile() {
           </ul>
         </nav>
         <div className="dataperson">
-          <Outlet />
         </div>
+          <Outlet />
 
       </main>
       <Footer />
