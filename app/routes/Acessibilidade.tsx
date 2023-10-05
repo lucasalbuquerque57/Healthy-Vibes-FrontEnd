@@ -14,6 +14,7 @@ export const links: LinksFunction = () => {
 };
 
 export default function Acessibilidade() {
+
   return (
     <div>
       <Header />

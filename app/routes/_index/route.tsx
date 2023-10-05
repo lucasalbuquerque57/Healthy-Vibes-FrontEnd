@@ -4,6 +4,9 @@ import { Header } from "~/components/Header";
 
 import home from "~/styles/home.css";
 import CardsHome from "./CardsHome";
+import { axiosHealthyApi } from "~/configs/https";
+import { useEffect } from "react";
+import axios from "axios";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: home }];
@@ -14,6 +17,25 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function Index() {
+
+  async function sla() {
+    await axiosHealthyApi('/users')
+      .catch(() => console.log("AAAAAAAA"))
+      .then((response) => console.log(response));
+  }
+
+  useEffect(() => {
+
+    axios.get("https://api.ipify.org?format=json").then(response => {
+      console.log("\nseu ip é =", response.data);
+    })
+
+    sla()
+
+
+  }, []);
+
+
   return (
     <main>
       <Header />

@@ -22,9 +22,36 @@ export default function Exercicios() {
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
             <Header />
 
-            {/* Tenta usar o do react bootstrap */}
+            {/* Tenta usar o do react bootstrap */} {/* Não funcionou */}
 
             <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
+
+
+            <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Link with href
+            </a>
+            <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+            </button>
+
+            <div className="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div className="offcanvas-header">
+                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                    </div>
+                    <div className="dropdown mt-3">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Dropdown button
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
 
             <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div className="offcanvas-header">
@@ -39,12 +66,68 @@ export default function Exercicios() {
 
             <div className="cardExercicio"></div>
 
-
-            <div className="card" style={{ width: "18rem" }}>
-                <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <h5 className="card-title">Abdominal</h5>
-                    <p className="card-text linkExerc">Ver mais</p>
+            <div className="container">
+                <div className="cardRow row">
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="cardRow row">
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
+                    <div className="card cardEx col" >
+                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Abdominal</h5>
+                            <p className="card-text linkExerc">Ver mais</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

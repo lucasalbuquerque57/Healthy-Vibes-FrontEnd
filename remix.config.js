@@ -15,7 +15,7 @@ module.exports = {
     v2_routeConvention: true,
   },
   serverDependenciesToBundle: [
-    /^axios./,
+    /^axios.*/,
 ],
 };
 

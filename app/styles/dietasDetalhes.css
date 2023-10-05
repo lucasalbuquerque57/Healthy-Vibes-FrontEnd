@@ -81,9 +81,8 @@
 }
 
 .botoes {
-  padding-left: 10rem;
+  display: flex;
   text-align: right;
-  padding-right: 7rem;
 }
 
 .botao {
@@ -94,6 +93,7 @@
 
 .receita {
   text-align: left;
+  display: flex;
 }
 
 .imagemComida {

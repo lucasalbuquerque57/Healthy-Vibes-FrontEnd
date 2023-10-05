@@ -44,18 +44,28 @@ export default function DietasDetalhes() {
             <Tab eventKey="dietasSalvas" title="Dietas Salvas" className="tab-teste">
 
               <div className="container-fluid">
-                <div>
-                  <h1 className="tituloDieta">Dieta Tal</h1>
-                  <div>
-                    <h2 className="titulo-refeicao">Café da Manhã</h2>
+
+                <h1 className="tituloDieta">Dieta Tal</h1>
+
+                <div className="titulo-refeicao">
+                  <h2>Café da Manhã</h2>
+                  <div className="botoes">
+                    <p>Adicionar Receitas no Café da Manhã</p>
+                    <button className="botao">+</button>
                   </div>
                 </div>
-                <div className="botoes">
-                  <button className="botao">Favoritar</button>
-                </div>
+
                 <div className="receita">
                   <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
-                  <p>teste</p>
+                  <p className="texto">Torrada Integral com Salsa</p>
+                  <p className="texto">Dificuldade: Fácil</p>
+                  <p className="texto">Porções: 2</p>
+
+                  <div className="botoes2">
+                    <button className="botao">Favoritar</button>
+                    <button className="botao">Opções</button>
+                    <button className="botao">Excluir</button>
+                  </div>
                 </div>
 
               </div>
