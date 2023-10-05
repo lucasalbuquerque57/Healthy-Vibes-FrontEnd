@@ -1,4 +1,3 @@
-import { redirect } from "@remix-run/node";
 import axios from "axios";
 
 export const axiosHealthyApi = axios.create({
@@ -7,7 +6,7 @@ export const axiosHealthyApi = axios.create({
 
 axiosHealthyApi.interceptors.request.use(
     config => {
-        config.headers['Authorization'] = localStorage.getItem("access-token") || "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI0ZDg4MWZmYjliMGM1MGFkMTJiOSIsImlhdCI6MTY5NjQ2OTE0MCwiZXhwIjoxNjk2NTU1NTQwfQ.lEx4tbv3vRIlPYfD3x3fdE6Ne8bYCMkEMHh0g_Nb4JI";
+        config.headers['Authorization'] = localStorage.getItem("access-token") || "";
         return config;
     },
     error => {
@@ -21,10 +20,9 @@ axiosHealthyApi.interceptors.response.use(
     },
     error => {
         console.log(error)
-        return error
-        /* if (error.response.status == 403) {
-            window.location.assign("/login");
-            return redirect('/login')
-        } */
+        if (error.response.status == 403) {
+            return window.location.assign("/login");
+
+        }
     }
 );

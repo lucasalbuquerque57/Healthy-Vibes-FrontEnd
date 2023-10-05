@@ -18,11 +18,6 @@ export const meta: MetaFunction = () => ({
 
 export default function Index() {
 
-  async function sla() {
-    await axiosHealthyApi('/users')
-      .catch(() => console.log("AAAAAAAA"))
-      .then((response) => console.log(response));
-  }
 
   useEffect(() => {
 
@@ -30,7 +25,9 @@ export default function Index() {
       console.log("\nseu ip é =", response.data);
     })
 
-    sla()
+    axiosHealthyApi.get('/users')
+      .catch(() => console.log("AAAAAAAA"))
+      .then((response) => console.log(response));
 
 
   }, []);
