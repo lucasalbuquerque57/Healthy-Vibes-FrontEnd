@@ -10,6 +10,7 @@
   list-style-type: none;
   padding: 0;
   text-align: center;
+  margin-top: -3rem;
 }
 
 .barraPerfil ul li {
@@ -90,4 +91,34 @@ button:active {
 }
 
 /* ------------------------ Dietas --------------------------- */
+/* EstiloCardDieta */
+.card_dieta {
+  padding-left: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+}
 
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.iconsstyle {
+  display: flex; /* Define a direção do eixo principal para vertical */
+  align-items: center; /* Alinha os ícones horizontalmente ao centro */
+}
+
+.iconsstyle img {
+  margin-bottom: 1rem; /* Adiciona espaço entre os ícones (pode ajus    tar conforme necessário) */
+}
+
+.dietaCard{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.caixaDietas{
+  justify-content: center;
+  margin-top: 1rem;
+}

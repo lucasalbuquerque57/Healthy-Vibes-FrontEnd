@@ -36,9 +36,9 @@ export default function Profile() {
             </li>
           </ul>
         </nav>
-        <div className="dataperson">
+        {/* <div className="dataperson">
+        </div> */}
           <Outlet />
-        </div>
 
       </main>
       <Footer />
