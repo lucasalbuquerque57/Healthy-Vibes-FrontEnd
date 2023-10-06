@@ -20,7 +20,7 @@ export default function DietasDetalhes() {
   return (
 
     <main>
-      <div className="fundoTeste">
+      <div>
         <Header />
         {/* <div className="opcoesMenu d-flex justify-content-center">
         <input type="radio" className="btn-check" name="options" id="option1" autoComplete="off" />
@@ -48,19 +48,37 @@ export default function DietasDetalhes() {
                 <h1 className="tituloDieta">Dieta Tal</h1>
 
                 <div className="titulo-refeicao">
-                  <h2>Café da Manhã</h2>
-                  <div className="botoes">
-                    <p>Adicionar Receitas no Café da Manhã</p>
-                    <button className="botao">+</button>
+                  <h2>Café da Manhã</h2>        
+                  <button className="botao adiciona">Adicionar</button>        
+                </div>
+               
+                  
+                
+
+
+                <div className="receita">
+                  <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
+                  <div className="textos-info">
+                    <p className="texto">Torrada Integral com Salsa</p>
+                    <p className="texto">Dificuldade: Fácil</p>
+                    <p className="texto">Porções: 2</p>
+                  </div>
+
+                  <div className="botoes2">
+                    <button className="botao">Favoritar</button>
+                    <button className="botao">Opções</button>
+                    <button className="botao">Excluir</button>
                   </div>
                 </div>
 
                 <div className="receita">
                   <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
-                  <p className="texto">Torrada Integral com Salsa</p>
-                  <p className="texto">Dificuldade: Fácil</p>
-                  <p className="texto">Porções: 2</p>
-
+                  <div className="textos-info">
+                    <p className="texto">Sanduiche de Peito de Frango</p>
+                    <p className="texto">Dificuldade: Fácil</p>
+                    <p className="texto">Porções: 1</p>
+                  </div>
+                  
                   <div className="botoes2">
                     <button className="botao">Favoritar</button>
                     <button className="botao">Opções</button>

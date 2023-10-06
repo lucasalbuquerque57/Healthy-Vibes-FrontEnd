@@ -1,4 +1,4 @@
-[type="radio"] {
+/* [type="radio"] {
   display: none;
 }
 
@@ -34,7 +34,7 @@
 .opcoesMenu {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
+} */
 
 .nav-tabs .nav-link {
   background-color: var(--background-duodenary);
@@ -64,38 +64,70 @@
 .Abas {
   padding-top: 2rem;
   text-align: center;
+  padding-bottom: 3rem;
 }
 
-.Conteudo {
-  background-color: var(--background-secondary);
-  color: var(--background-undenary);
-}
 
-.tab-teste {
+/*Aqui é a cor de fundo das abas que está em verde claro
+  se de fato precisar remover*/
+/* .tab-teste {
   background-color: var(--background-secondary);
-}
+} */
+
 
 .tituloDieta {
   text-align: center;
   padding-bottom: 2rem;
 }
 
-.botoes {
+.titulo-refeicao{
   display: flex;
+  padding-bottom: 3rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.botoes {
+  padding-bottom: 2rem;
   text-align: right;
+}
+
+.botao.adiciona{
+  margin-left: 2rem;
+
 }
 
 .botao {
   background-color: var(--background-quinary);
   border-radius: 1rem;
   width: 6rem;
+  margin-right: 0.5rem;
 }
 
 .receita {
+  font-size: large;
   text-align: left;
   display: flex;
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 10rem;
+  border: 2px solid ;
+  margin-bottom: 2rem;
 }
 
 .imagemComida {
   width: 9rem;
 }
+
+.botoes2{
+  width: 100%;
+  text-align: left;
+}
+
+.textos-info{
+  padding-left: 3rem;
+  width: 60%;
+}
+

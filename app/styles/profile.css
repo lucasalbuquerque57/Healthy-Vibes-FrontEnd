@@ -10,6 +10,7 @@
   list-style-type: none;
   padding: 0;
   text-align: center;
+  margin-top: -3rem;
 }
 
 .barraPerfil ul li {
@@ -112,4 +113,12 @@ button:active {
   margin-bottom: 1rem; /* Adiciona espaço entre os ícones (pode ajus    tar conforme necessário) */
 }
 
+.dietaCard{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 
+.caixaDietas{
+  justify-content: center;
+  margin-top: 1rem;
+}
