@@ -105,8 +105,6 @@ export default function ControleConsumo() {
                         <Doughnut data={water} />
                     </div>
                 </div>
-
-
                 <div className="controlfood">
                     <div>
                         <h1 className="title">O que você comeu?</h1>

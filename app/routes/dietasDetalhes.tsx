@@ -14,8 +14,6 @@ export const links: LinksFunction = () => {
 };
 
 
-
-
 export default function DietasDetalhes() {
   return (
 
