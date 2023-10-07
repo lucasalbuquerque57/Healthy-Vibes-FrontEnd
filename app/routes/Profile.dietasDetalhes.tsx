@@ -24,7 +24,7 @@ export default function DietasDetalhes() {
 
         <div className="Abas">
           <Tabs
-            defaultActiveKey="acompanharProg"
+            defaultActiveKey="config"
             id="fill-tab-example"
             className="mb-3"
             justify
@@ -83,7 +83,7 @@ export default function DietasDetalhes() {
 
               <form className="input-form">
                 <div className="group-input">
-
+                  
                   <label>Altura</label>
                   <input name="altura" />
 
@@ -100,7 +100,19 @@ export default function DietasDetalhes() {
                 <div className="caixa-dados">
                   <p>IMC: 27,5</p>
                   <p>Data: 31/02/2012</p>
+                  <button className="botao dado">excluir</button>
+                  <button className="botao dado">editar</button>
                 </div>
+                <div className="caixa-dados">
+                  <p>IMC: 27,5</p>
+                  <p>Data: 31/02/2012</p>
+                  <button className="botao dado">excluir</button>
+                  <button className="botao dado">editar</button>
+                </div>
+              </div>
+
+              <div className="grafico">
+              Gráfico
               </div>
 
             </Tab>
@@ -108,7 +120,29 @@ export default function DietasDetalhes() {
               Tab content for Contact
             </Tab>
             <Tab eventKey="config" title="Configurações" className="tab-teste" >
-              Tab content for Contact
+              <h2>Alterar Informações de Cadastro</h2>
+
+              <form className="input-form">
+              <div className="edit-group-input">
+                  
+                  <div className="row-input">
+                  <input name="edit-nome" placeholder="Novo nome" />
+                  <button className="botao edit-botao">Salvar</button>
+                  </div>
+
+                  <div className="row-input">
+                  <input name="edit-email" type="email" placeholder="Insira o novo email" />
+                  <button className="botao edit-botao">Salvar</button>
+                  </div>
+
+                  <div className="row-input">
+                  <input name="edit-senha" type="password" placeholder="Insira a nova senha" />
+                  <button className="botao edit-botao">Salvar</button>
+                  </div>
+
+                </div>
+              </form>
+
             </Tab>
           </Tabs>
         </div>

@@ -30,7 +30,7 @@ export const options = {
     responsive: true,
     plugins: {
         title: {
-            display: true,
+            display: false,
             text: 'E aí, já bebeu água?',
         },
     },
@@ -64,14 +64,13 @@ export const optionsfood = {
     responsive: true,
     plugins: {
         title: {
-            display: true,
+            display: false,
             text: 'O que você comeu?',
         },
     },
 };
 
 const food = {
-    optionsfood,
     labels: ["QT. de Calorias Ingeridas", "QT. Ideal de Calorias"],
     datasets: [
         {
@@ -101,12 +100,13 @@ export default function ControleConsumo() {
                             <h1 className="title">E aí, já bebeu água?</h1>
                         </div>
                         <div className="graphicwater">
-                            <Doughnut data={water} />
+                            <Doughnut options={options} data={water} />
                         </div>
     
 
                       <div className='container-fluid d-flex justify-content-center align-items-center'>
                         <div>
+                            
                          <CardAgua
                             horario = "12:20"
                             quantidade= "200"
@@ -132,7 +132,7 @@ export default function ControleConsumo() {
                             <h1 className="titlefood">O que você comeu?</h1>
                         </div>
                         <div className="graphicfood">
-                            <Doughnut data={food} />
+                            <Doughnut options={optionsfood} data={food} />
                         </div>
 
                         <div className='container-fluid d-flex justify-content-center align-items-center'>

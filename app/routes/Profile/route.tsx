@@ -26,7 +26,7 @@ export default function Profile() {
 
       <Header />
 
-      <nav className="d-none d-md-flex container-fluid justify-content-center align-items-center my-4">
+      <nav className="d-flex container-fluid justify-content-center align-items-center my-4">
         <div className="row barraPerfil text-center border rounded-pill py-2 textNav">
           <div className="col"> 
             <Link to="#">
