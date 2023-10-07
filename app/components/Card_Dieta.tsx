@@ -1,43 +1,28 @@
 import { Link } from "@remix-run/react";
 
-
-
 interface CardsProps {
   title: string;
 }
 
-export function Card_Dieta(props: CardsProps) {
+export function CardDieta(props: CardsProps) {
   return (
-    <div className="dietaCard col w-25">
-      <div className="card row">
-        <div className="iconTitDieta col-md-4">
-          <i className="fa-regular fa-folder h1" ></i>
-          <h2 className="titleDieta">{props.title}</h2>
-        </div>
-        <div className=" interacaoDieta col-md-6">
-          <i className="fa-solid fa-ellipsis"></i>
-          <i className="fa-solid fa-plus"></i>
-          <i className="fa-sharp fa-regular fa-trash"></i>
-        </div>                       
-      </div>
-    </div>
 
-    
+    <Link to="" style={{ textDecoration: "none" }}>
+      <div className="card">
+        <div className="card-top">
+          <div className="ImageAdress"><img src="https://images.unsplash.com/photo-1595147389795-37094173bfd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80" alt="Unsplash Photo" /></div>
+        </div>
+        <div className="card-content">
+          <h3 className="title">Under Blue sky</h3>
+          <h6 className="tag tag-travel">TRAVEL</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="text-end iconsCard">
+            <button type="button" title="Excluir" style={{ border: "none" }}><i className="px-2 fa-solid fa-trash text-danger" ></i></button>
+            <button type="button" title="Excluir" style={{ border: "none" }}><i className="px-2 fa-solid fa-ellipsis text-info" title="Atualizar"></i></button>
+          </p>
+        </div>
+      </div >
+    </Link>
   )
 }
-export default Card_Dieta;
 
-
-{/* <div className="card card_dieta">
-      <div className="container" >
-        <img src="/PastaIcon.png" alt={props.title} />
-        <div className="iconsstyle">
-          <img src="/MoreIcon.png" alt="Mais Opções" />
-          <img src="/PlusIcon.png" alt="Mais Conteúdo" />
-          <img src="/LixeiraIcon.png" alt="Lixeira" />
-        </div>
-      </div>
-      <div>
-        <h2 className="titledieta">{props.title}</h2>
-      </div>
-    </div> */}

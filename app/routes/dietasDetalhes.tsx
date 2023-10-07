@@ -20,20 +20,11 @@ export default function DietasDetalhes() {
     <main>
       <div>
         <Header />
-        {/* <div className="opcoesMenu d-flex justify-content-center">
-        <input type="radio" className="btn-check" name="options" id="option1" autoComplete="off" />
-        <label className="btn btn-secondary pontaEsquerda" htmlFor="option1">Dietas salvas</label>
-        <input type="radio" className="btn-check" name="options" id="option2" autoComplete="off" />
-        <label className="btn btn-secondary" htmlFor="option2">Acompanhar Progresso</label>
-        <input type="radio" className="btn-check" name="options" id="option3" autoComplete="off" />
-        <label className="btn btn-secondary" htmlFor="option3">Meus exercicíos</label>
-        <input type="radio" className="btn-check" name="options" id="option4" autoComplete="off" />
-        <label className="btn btn-secondary pontaDireita" htmlFor="option4">Configurações</label>
-      </div> */}
+
 
         <div className="Abas">
           <Tabs
-            defaultActiveKey="dietasSalvas"
+            defaultActiveKey="acompanharProg"
             id="fill-tab-example"
             className="mb-3"
             justify
@@ -46,12 +37,12 @@ export default function DietasDetalhes() {
                 <h1 className="tituloDieta">Dieta Tal</h1>
 
                 <div className="titulo-refeicao">
-                  <h2>Café da Manhã</h2>        
-                  <button className="botao adiciona">Adicionar</button>        
+                  <h2>Café da Manhã</h2>
+                  <button className="botao adiciona">Adicionar</button>
                 </div>
-               
-                  
-                
+
+
+
 
 
                 <div className="receita">
@@ -76,7 +67,7 @@ export default function DietasDetalhes() {
                     <p className="texto">Dificuldade: Fácil</p>
                     <p className="texto">Porções: 1</p>
                   </div>
-                  
+
                   <div className="botoes2">
                     <button className="botao">Favoritar</button>
                     <button className="botao">Opções</button>
@@ -88,7 +79,30 @@ export default function DietasDetalhes() {
             </Tab>
 
             <Tab eventKey="acompanharProg" title="Acompanhar Progresso" className="tab-teste">
-              Tab content for Profile
+
+
+              <form className="input-form">
+                <div className="group-input">
+
+                  <label>Altura</label>
+                  <input name="altura" />
+
+
+                  <label>Peso</label>
+                  <input name="peso" />
+
+
+                  <button className="botao acomp">Adicionar</button>
+                </div>
+              </form>
+
+              <div className="caixas">
+                <div className="caixa-dados">
+                  <p>IMC: 27,5</p>
+                  <p>Data: 31/02/2012</p>
+                </div>
+              </div>
+
             </Tab>
             <Tab eventKey="meusExerc" title="Meus Exercícios" className="tab-teste" >
               Tab content for Contact

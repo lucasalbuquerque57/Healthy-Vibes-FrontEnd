@@ -32,13 +32,9 @@ export const options = {
     },
 };
 
-const opcao = ["QT. de Água", "QT. Ideal de Água"];
-
-const labels = opcao;
-
 const water = {
     options,
-    labels,
+    labels: ["QT. de Água", "QT. Ideal de Água"],
     datasets: [
         {
             label: 'Controle de Água',
@@ -70,17 +66,13 @@ export const optionsfood = {
     },
 };
 
-const opcaofood = ["QT. de Calorias Ingeridas", "QT. Ideal de Calorias"];
-
-const labelsfood = opcaofood;
-
 const food = {
     optionsfood,
-    labelsfood,
+    labels: ["QT. de Calorias Ingeridas", "QT. Ideal de Calorias"],
     datasets: [
         {
-            label: 'Controle de Água',
-            data: [732, 2500],
+            label: 'Controle de Calorias',
+            data: [932, 2500],
             backgroundColor: [
                 'rgba(144, 238, 144, 1.0)',
                 'rgba(211, 211, 211, 1.0)'
@@ -97,21 +89,24 @@ export default function ControleConsumo() {
             <Header />
             <main id="conteudo" className="container-fluid texto">
 
-                <div className="controlwater">
-                    <div>
-                        <h1 className="title">E aí, já bebeu água?</h1>
+                <div className='graphics'>
+                    <div className="controlwater">
+                        <div>
+                            <h1 className="title">E aí, já bebeu água?</h1>
+                        </div>
+                        <div className="graphicwater">
+                            <Doughnut data={water} />
+                        </div>
                     </div>
-                    <div className="graphicwater">
-                        <Doughnut data={water} />
+                    <div className="controlfood">
+                        <div>
+                            <h1 className="titlefood">O que você comeu?</h1>
+                        </div>
+                        <div className="graphicfood">
+                            <Doughnut data={food} />
+                        </div>
                     </div>
-                </div>
-                <div className="controlfood">
-                    <div>
-                        <h1 className="title">O que você comeu?</h1>
-                    </div>
-                    <div className="graphicfood">
-                        <Doughnut data={food} />
-                    </div>
+
                 </div>
 
             </main>

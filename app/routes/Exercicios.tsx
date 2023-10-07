@@ -24,7 +24,7 @@ export default function Exercicios() {
 
             {/* Tenta usar o do react bootstrap */} {/* Não funcionou */}
 
-            <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
+            {/* <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
 
 
             <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -49,7 +49,7 @@ export default function Exercicios() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
@@ -68,13 +68,17 @@ export default function Exercicios() {
 
             <div className="container">
                 <div className="cardRow row">
+
                     <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        <div className="card-img-top-div">
+                            <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
+                        </div>
                         <div className="card-body">
                             <h5 className="card-title">Abdominal</h5>
                             <p className="card-text linkExerc">Ver mais</p>
                         </div>
                     </div>
+
                     <div className="card cardEx col" >
                         <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
                         <div className="card-body">

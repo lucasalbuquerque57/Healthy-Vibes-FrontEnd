@@ -41,7 +41,7 @@ export function Header() {
 
                                 <Link to="/Login"><button className="btn  loginButton">Entrar</button></Link>
 
-                                <Link to=""><button className="btn  cadButton" >Cadastre-se</button></Link>
+                                <Link to="/Cadastro"><button className="btn  cadButton" >Cadastre-se</button></Link>
 
                             </div>
                             <div className="itensAcessibilidade">

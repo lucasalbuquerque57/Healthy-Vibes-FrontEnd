@@ -17,31 +17,30 @@ export const links: LinksFunction = () => {
 
 export default function Profile() {
   return (
-    <div>
-      <Header />
-      <main id="conteudo" className="container-fluid texto">
-        <nav className="barraPerfil">
-          <ul>
-            <li>
-              <a href="#">Perfil</a>
-            </li>
-            <li>
-              <a href="*">Dietas Salvas</a>
-            </li>
-            <li>
-              <a href="#">Acompanhar Progresso</a>
-            </li>
-            <li>
-              <a href="#">Meus Exercícios</a>
-            </li>
-          </ul>
-        </nav>
-        {/* <div className="dataperson">
-        </div> */}
-          <Outlet />
+    <main>
 
-      </main>
+      <Header />
+
+      <nav className="barraPerfil">
+        <ul>
+          <li>
+            <a href="#">Perfil</a>
+          </li>
+          <li>
+            <a href="*">Dietas Salvas</a>
+          </li>
+          <li>
+            <a href="#">Acompanhar Progresso</a>
+          </li>
+          <li>
+            <a href="#">Meus Exercícios</a>
+          </li>
+        </ul>
+      </nav>
+
+      <Outlet />
+
       <Footer />
-    </div>
+    </main>
   );
 }

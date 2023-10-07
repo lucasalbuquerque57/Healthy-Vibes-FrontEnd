@@ -67,26 +67,23 @@
   padding-bottom: 3rem;
 }
 
-
 /*Aqui é a cor de fundo das abas que está em verde claro
   se de fato precisar remover*/
 /* .tab-teste {
   background-color: var(--background-secondary);
 } */
 
-
 .tituloDieta {
   text-align: center;
   padding-bottom: 2rem;
 }
 
-.titulo-refeicao{
+.titulo-refeicao {
   display: flex;
   padding-bottom: 3rem;
   width: 100%;
   text-align: center;
   justify-content: center;
-  
 }
 
 .botoes {
@@ -94,9 +91,8 @@
   text-align: right;
 }
 
-.botao.adiciona{
+.botao.adiciona {
   margin-left: 2rem;
-
 }
 
 .botao {
@@ -106,6 +102,10 @@
   margin-right: 0.5rem;
 }
 
+.botao.acomp {
+  margin-left: 2rem;
+}
+
 .receita {
   font-size: large;
   text-align: left;
@@ -113,7 +113,7 @@
   width: 100%;
   padding-top: 1rem;
   padding-left: 10rem;
-  border: 2px solid ;
+  border: 2px solid;
   margin-bottom: 2rem;
 }
 
@@ -121,13 +121,42 @@
   width: 9rem;
 }
 
-.botoes2{
+.botoes2 {
   width: 100%;
   text-align: left;
 }
 
-.textos-info{
+.textos-info {
   padding-left: 3rem;
   width: 60%;
 }
 
+.group-input {
+  display: flex;
+}
+
+.group-input label {
+  padding-right: 1rem;
+  padding-left: 2rem;
+}
+
+.group-input input {
+  border-radius: 1rem;
+  border: 1px solid;
+}
+
+.input-form {
+  padding-bottom: 5rem;
+}
+
+.caixas {
+  width: 100%;
+}
+
+.caixa-dados {
+  width: fit-content;
+  justify-content: left;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding-top: 1rem;
+}

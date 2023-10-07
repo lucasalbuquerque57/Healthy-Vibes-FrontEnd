@@ -11,9 +11,6 @@ body {
 .box {
   width: 930px;
   min-height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .img-box {
@@ -51,6 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 42.45rem;
 }
 
 .form-box h1 {

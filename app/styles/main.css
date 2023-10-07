@@ -57,7 +57,7 @@ footer {
 main {
   margin: 0;
   min-height: 65vh !important;
-  width: auto;
+  width: 100%;
 }
 
 /* BARRA DE NAVEGAÇÃO -- HEADER */
@@ -473,4 +473,3 @@ footer .footer-logo {
     color: #fff;
   }
 }
-

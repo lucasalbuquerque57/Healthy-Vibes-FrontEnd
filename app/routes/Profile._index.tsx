@@ -32,21 +32,6 @@ export default function homeProfile() {
             </div>
         </div>
 
-        /* 
-        <div className="form-check sexo">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="sexoMasculino"
-          />
-          <label className="form-check-label" htmlFor="sexoMasculino">
-            Masculino
-          </label>
-        </div>
-        
-        
-        */
 
     )
 }
