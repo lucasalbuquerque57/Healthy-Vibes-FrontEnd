@@ -2,6 +2,9 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
+import { Exercicio_Base } from "~/components/Exercicio_Base";
+import { Filtro_Barra } from "~/components/Filtro_Barra";
+
 import exercicios from "~/styles/exercicios.css";
 
 export const links: LinksFunction = () => {
@@ -17,122 +20,41 @@ export const meta: MetaFunction = () => ({
 
 export default function Exercicios() {
 
-
     return (
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
             <Header />
+            
+            
+            
+            <Filtro_Barra/>
 
-            {/* Tenta usar o do react bootstrap */} {/* Não funcionou */}
-
-            {/* <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
-
-
-            <a className="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                Link with href
-            </a>
-            <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                Button with data-bs-target
-            </button>
-
-            <div className="offcanvas offcanvas-start" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div className="offcanvas-body">
-                    <div>
-                        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                    </div>
-                    <div className="dropdown mt-3">
-                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            Dropdown button
-                        </button>
-                    </div>
-                </div>
-            </div> */}
-
-
-
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div className="offcanvas-body">
-                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                </div>
+            <div className="linhaBotaoFiltro">
+                <button type="button" className="btn btn-primary md-2 filtroBtn" data-bs-toggle="collapse" data-bs-target="#barraDeFiltros">Filtros</button>
             </div>
+             {/* botao ta so semifuncionando por algum motivo q n to conseguindo descobrir */}
 
 
-            <div className="cardExercicio"></div>
-
-            <div className="container">
-                <div className="cardRow row">
-
-                    <div className="card cardEx col" >
-                        <div className="card-img-top-div">
-                            <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        </div>
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container">
-                <div className="cardRow row">
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                    <div className="card cardEx col" >
-                        <img src="/treino/abdominal.png" className="card-img-top" alt="..." />
-                        <div className="card-body">
-                            <h5 className="card-title">Abdominal</h5>
-                            <p className="card-text linkExerc">Ver mais</p>
-                        </div>
-                    </div>
-                </div>
+            <div className="container-fluid d-flex justify-content-center align-items-center">
+                <section className="card-container">
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                    <Exercicio_Base
+                        title="Dieta Sla"
+                    />
+                </section>
             </div>
 
             <Footer />

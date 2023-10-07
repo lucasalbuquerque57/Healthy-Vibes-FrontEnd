@@ -14,7 +14,7 @@ export default function CardsHome() {
             altImg: "Uma mulher se alongando",
             cardTitle: "Exercícios",
             textoCard: "Escolha entre diversos exercícios de acordo com suas prioridades",
-            link: "/"
+            link: "/Exercicios"
         },
         {
             imgSrc: "recursos_home.png",

@@ -6,6 +6,10 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
+import { CardAgua } from "~/components/Card_Agua";
+import { CardCalorias } from "~/components/Card_Calorias";
+
+
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 export const meta: MetaFunction = () => ({
@@ -89,6 +93,8 @@ export default function ControleConsumo() {
             <Header />
             <main id="conteudo" className="container-fluid texto">
 
+                <h1 className='first-title'>Controle de Consumo</h1>
+
                 <div className='graphics'>
                     <div className="controlwater">
                         <div>
@@ -97,6 +103,29 @@ export default function ControleConsumo() {
                         <div className="graphicwater">
                             <Doughnut data={water} />
                         </div>
+    
+
+                      <div className='container-fluid d-flex justify-content-center align-items-center'>
+                        <div>
+                         <CardAgua
+                            horario = "12:20"
+                            quantidade= "200"
+                            />
+                         <CardAgua
+                            horario = "15:00"
+                            quantidade ="300"
+                             />
+                        </div>
+
+                        <div className='adiciona'>
+                        <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                        </div>
+
+                      </div>
+                        
+                      
+
+                        
                     </div>
                     <div className="controlfood">
                         <div>
@@ -104,6 +133,18 @@ export default function ControleConsumo() {
                         </div>
                         <div className="graphicfood">
                             <Doughnut data={food} />
+                        </div>
+
+                        <div className='container-fluid d-flex justify-content-center align-items-center'>
+                            <CardCalorias
+                            horario = "14:43"
+                            quantidade = "732"
+                            />
+
+                            <div className='adiciona'>
+                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                            </div>
+
                         </div>
                     </div>
 

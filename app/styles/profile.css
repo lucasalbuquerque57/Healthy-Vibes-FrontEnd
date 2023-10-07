@@ -1,14 +1,11 @@
 .barraPerfil {
   background-color: var(--background-duodenary);
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin-top: 5rem;
-  height: 2rem;
+  height: 2.5rem;
+  width: 60rem;
 }
 
-.barraPerfil ul {
+/* .barraPerfil ul {
   list-style-type: none;
-  padding: 0;
   text-align: center;
   margin-top: -3rem;
 }
@@ -17,13 +14,13 @@
   display: inline-block;
   margin: 0 1.25rem;
 }
-
-.barraPerfil ul li a {
+*/
+.textNav h6{
   text-decoration: none;
   color: var(--branco);
   font-weight: bold;
 }
-
+ 
 .dataperson {
   background-color: var(--background-quatordenary);
   margin-top: -0.1rem;
@@ -79,7 +76,7 @@ input[type="password"] {
   padding: 0.6rem 0.6rem;
 }
 
-button:active {
+.formulario button:active {
   background-color: var(--background-quaternary);
   color: var(
     --background-tertiary

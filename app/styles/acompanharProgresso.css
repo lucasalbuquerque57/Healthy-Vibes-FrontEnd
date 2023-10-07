@@ -1,0 +1,18 @@
+.container-prog{
+  margin-top: 4rem;
+  margin-left: 18rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+}
+
+.buttonAdd{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.campo-prog{
+    align-items: center;
+
+}

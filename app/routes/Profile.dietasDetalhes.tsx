@@ -19,7 +19,7 @@ export default function DietasDetalhes() {
 
     <main>
       <div>
-        <Header />
+        
 
 
         <div className="Abas">
@@ -113,7 +113,6 @@ export default function DietasDetalhes() {
           </Tabs>
         </div>
 
-        <Footer />
       </div>
     </main>
   );

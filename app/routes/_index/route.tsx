@@ -17,21 +17,6 @@ export const meta: MetaFunction = () => ({
 export default function Index() {
 
 
-  /* useEffect(() => {
-
-    axios.get("https://api.ipify.org?format=json").then(response => {
-      console.log("\nseu ip é =", response.data);
-    })
-
-    axiosHealthyApi.get('/users')
-      .catch(() => console.log("AAAAAAAA"))
-      .then((response) => console.log(response));
-
-
-  }, []); 
-  Bom deixar isso comentando
-  */
-
 
   return (
     <main>

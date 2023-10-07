@@ -1,0 +1,15 @@
+.cardag{
+    width: 14rem;
+    height: 16rem;
+    background-color: var(--background-card);
+    border-top: 0.07rem solid var(--background-denary);
+    border-left: 0.07rem solid var(--background-denary);
+    border-right: 0.07rem solid var(--background-denary);
+    border-bottom: 0.07rem solid var(--background-denary);
+  }
+
+
+.icon{
+    text-align: right;
+}
+
