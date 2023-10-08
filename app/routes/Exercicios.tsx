@@ -26,15 +26,16 @@ export default function Exercicios() {
             
             
             
-            <Filtro_Barra/>
+            
 
-            <div className="linhaBotaoFiltro">
+            {/* <div className="linhaBotaoFiltro">
                 <button type="button" className="btn btn-primary md-2 filtroBtn" data-bs-toggle="collapse" data-bs-target="#barraDeFiltros">Filtros</button>
-            </div>
+            </div> */}
              {/* botao ta so semifuncionando por algum motivo q n to conseguindo descobrir */}
 
 
-            <div className="container-fluid d-flex justify-content-center align-items-center">
+            <div className="container-fluid d-flex align-items-center">
+                <Filtro_Barra/>
                 <section className="card-container">
                     <Exercicio_Base
                         title="Dieta Sla"
