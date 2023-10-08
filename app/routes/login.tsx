@@ -31,7 +31,7 @@ export default function Index() {
             </div>
             <div className="input-group w50">
               <label htmlFor="senha">Senha</label>
-              <input type="password" name="senha" placeholder="Digite o sua senha" required />
+              <input type="password" name="senha" placeholder="Digite a sua senha" required />
             </div>
             <div className="input-group w50">
               <Link to="#">Esqueceu a senha?</Link>

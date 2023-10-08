@@ -6,30 +6,37 @@ export default function homeProfile() {
             <div>
                 <h1 className="titulo">Alterar informações de cadastro</h1>
             </div>
-            <div className="formulario">
-                <div className="campo">
-                    <div>
-                        <label className="rotulo">Nome</label>
-                    </div>
-                    <input type="text" id="nome" name="nome" placeholder="Ricardão José Almeida" />
-                </div>
-                <div className="campo">
-                    <div>
-                        <label className="rotulo">Email</label>
-                    </div>
-                    <input type="email" id="email" name="email" placeholder="ricardao.jose@gmail.com" />
-                </div>
 
-                <div className="campo">
-                    <div>
-                        <label className="rotulo">Senha</label>
-                    </div>
-                    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" />
+            <div className="container-fluid d-flex justify-content-center align-items-center box">
+                <div className="img-box">
+                    <img src="/treino/treino.jpg" alt="mulher na esteira" />
                 </div>
-                <div className="button">
-                    <button type="button" className="stylebutton">Salvar Alterações</button>
+                <div className="form-box">
+                    <form>
+                        <div className="input-group">
+                            <label htmlFor="nome">Nome</label>
+                            <input type="text" name="nome" placeholder="Atualize seu nome" required />
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="email">E-mail</label>
+                            <input type="email" name="email" placeholder="Atualize seu e-mail" required />
+                        </div>
+                        <div className="input-group w50">
+                            <label htmlFor="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Atualize a sua senha" required />
+                        </div>
+
+                        <div className="input-group">
+                            <button>Atualizar</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
+
+
+
+
         </div>
 
 
