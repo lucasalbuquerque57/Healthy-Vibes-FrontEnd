@@ -32,6 +32,7 @@
 
 .bannerImage {
   height: 20rem;
+  min-height: 20rem;
   width: 100%;
   object-fit: cover;
   filter: brightness(40%) saturate(1.5) sepia(0.5);
@@ -63,6 +64,8 @@
 
 .card-img-top {
   width: 95% !important;
+  min-width: 95% !important;
+  min-height: 15rem !important;
   /* width: 22rem */
   /* height: 30vh !important; */
   align-self: center;
@@ -81,11 +84,11 @@
 } */
 
 .card-group {
-  border-left-width: 10px !important;
+  border-left-width: 0.625rem !important;
 }
 
 .card-group > .card + .card {
-  border-left-width: 10px !important;
+  border-left-width: 0.625rem !important;
   border-left-color: blue !important;
 }
 
@@ -105,7 +108,7 @@ body {
 .column {
   float: left;
   width: 25%;
-  padding: 0 10px;
+  padding: 0 0.625rem;
   margin-right: 2rem;
   margin-left: 2rem;
 }
@@ -127,8 +130,8 @@ body {
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0); /* this adds the "card" effect */
-  padding: 16px;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0); /* this adds the "card" effect */
+  padding: 1rem;
   text-align: center;
   background-color: #f1f1f1;
   text-decoration: none;
@@ -139,7 +142,7 @@ body {
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 

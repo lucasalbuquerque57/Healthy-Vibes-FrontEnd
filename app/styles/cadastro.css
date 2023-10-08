@@ -23,7 +23,7 @@
     top: 1rem;
     left: 1rem;
     font-size: 4rem;
-    text-shadow: 2px 2px #000;
+    text-shadow: 0.125rem 0.125rem #000;
 }
 
 .box img {
@@ -33,7 +33,7 @@
 }
 
 .form-box{
-    background-color: #d5fff3;
+    background-color: #fff;
     display: flex;
     width: 100%;
     padding: 2rem 1rem;
@@ -57,9 +57,11 @@
 }
 
 .form-box h1{
-    color: #08320ec4;
+    color: var(--text-secondary);
     font-weight: 800;
     margin: 0;
+    letter-spacing: 0.1rem;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .form-box p {
@@ -74,15 +76,15 @@
 
 .form-box form{
     width: 100%;
-    max-width: 450px;
-    margin-top: 20px;
+    max-width: 28rem;
+    margin-top: 3rem;
 }
 
 form .input-group > input::placeholder{
     color: #6b6b6b;
 }
 form .input-group{
-   margin-bottom: 15px;
+   margin-bottom: 1rem;
    width: 100%;
 }
 
@@ -90,46 +92,55 @@ form .input-group label{
     color: #000;
     font-weight: bold;
     display: block;
-    margin-bottom: 10px;
-    padding-left: 10px;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
 }
 form .input-group input{
     width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
     outline: #087f08;
-    border: 1px solid gray;
-    padding: 12px 10px;
-    font-size: 15px;
+    border: 0.063rem solid gray;
+    padding: 1rem 1rem;
+    font-size: 1rem;
     color: #000000;
     transition: all 0.4s ease;
-    border-radius: 10px;
+    border-radius: 1rem !important ;
 }
+
+form .input-group input:focus {
+    border-color: #087f08;
+    background-color: #f7fff3;
+  }
 
 .form-box .link-login{
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .form-box .link-login a {
-    color: #08320ec4;
+    color: var(--text-tertiary);
 }
 
 form .input-group button{
     width: 100%;
-    height: 47px;
-    background: #169b5dc4;
+    height: 3rem;
+    background: var(--text-tertiary);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 2rem;
     border: none;
     outline: none;
-    border-radius: 10px;
-    box-shadow: 0px 10px 40px -12px #00000052;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.625rem 2.5rem -0.75rem #00000052;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-weight: 700;
+}
+
+form .input-group button:active{
+    background: var(--background-nonary);
 }

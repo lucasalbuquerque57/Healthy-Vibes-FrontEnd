@@ -8,7 +8,7 @@ export function Header() {
                 <div className="container-fluid baseNav">
                     <div className="navbar-brand trapezio">
                         <Link to="/">
-                            <img src="/IconeLogo.png" alt="Imagem Logo" className="logoHeader" />
+                            <img src="/IconeLogo.png" alt="Logo do Healthy Vibes" className="logoHeader" />
                         </Link>
                     </div>
                     <button className="navbar-toggler navBarButton" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@ export function Header() {
                                 <Link className="nav-link" to="/CalculadoraNutricional">Calculadora</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="">Exercícios</Link>
+                                <Link className="nav-link" to="/Exercicios">Exercícios</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="">Controle de Consumo</Link>

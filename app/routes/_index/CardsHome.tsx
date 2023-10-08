@@ -3,11 +3,11 @@ import { Link } from "@remix-run/react";
 export default function CardsHome() {
     const cardInfos = [
         {
-            imgSrc: "calculadora_home.png",
-            altImg: "Um pão e copo de água",
-            cardTitle: "Recursos adicionais",
-            textoCard: "Monitore seu IMC, consumo de água e calorias",
-            link: "/"
+            imgSrc: "recursos_home.png",
+            altImg: "Pessoa se pesando na balança",
+            cardTitle: "Calculadora nutricional",
+            textoCard: "Monte sua dieta conforme suas necessidades específicas",
+            link: "/CalculadoraNutricional"
         },
         {
             imgSrc: "exercicio_home.png",
@@ -17,11 +17,11 @@ export default function CardsHome() {
             link: "/Exercicios"
         },
         {
-            imgSrc: "recursos_home.png",
-            altImg: "Pessoa se pesando na balança",
-            cardTitle: "Calculadora nutricional",
-            textoCard: "Monte sua dieta conforme suas necessidades específicas",
-            link: "/CalculadoraNutricional"
+            imgSrc: "calculadora_home.png",
+            altImg: "Um pão e copo de água",
+            cardTitle: "Recursos adicionais",
+            textoCard: "Monitore seu IMC, consumo de água e calorias",
+            link: "/"
         },
     ]
     return (

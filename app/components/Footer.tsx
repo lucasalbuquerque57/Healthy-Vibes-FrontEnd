@@ -8,7 +8,7 @@ export function Footer() {
         <footer className="container-fluid">
             <div className="row">
                 <div className="col pb-4 pt-4">
-                    <img src="/IconeLogo.png" alt="Imagem Temporária" className="col-12 col-md-6" />
+                    <img src="/IconeLogo.png" alt="Logo do HealthyVibes" className="col-12 col-md-6 logoFooter" />
                     <div className="footer-socials px-4 px-md-0 pt-2">
                         <Link to="#" className="footer-link" id="youtube" title="YouTube">
                             <i className="fa-brands fa-youtube"></i>

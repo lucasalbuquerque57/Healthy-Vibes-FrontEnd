@@ -19,11 +19,11 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; /* adicionei 1fr a mais */
-  gap: 40px;
+  gap: 2.5rem;
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 75rem; */  /* Ja q ta numa flexbox, nao tem como centralizar de outro jeito  */
   height: auto;
-  margin: 20px;
+  margin: 1.25rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -33,15 +33,15 @@
 }
 
 .card {
-  height: 470px;
-  border-radius: 10px;
+  height: 29.375rem;
+  border-radius: 0.625rem;
   background-color: #fff;
-  box-shadow: 0 40px 40px -20px #e76f4c17;
+  box-shadow: 0 2.5rem 2.5rem -1.25rem #e76f4c17;
   overflow: hidden;
 }
 
 .card .card-top {
-  height: 236px;
+  height: 14.75rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -66,16 +66,16 @@
 }
 
 .card .card-content {
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .card .card-content .tag {
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 .card .tag-travel {
-  color: #33459b;
+  color: var(--salmao-princip);
 }
 
 .card .title {
@@ -86,7 +86,7 @@
 
 .card p {
   color: #7b8591;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* ---------------------------- */
@@ -109,7 +109,7 @@
   main {
     display: block;
     height: auto;
-    min-height: max(640px, 100vh);
+    min-height: max(40rem, 100vh);
     /* padding: 80px 0; */
   }
 
@@ -117,7 +117,7 @@
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0;
-    padding: 40px;
+    padding: 2.5rem;
   }
 
   .card {
@@ -135,7 +135,7 @@
 /* Display this style when screen-width is lower than 425px */
 @media only screen and (max-width: 425px) {
   .card-container {
-    padding: 20px;
+    padding: 1.25rem;
   }
 }
 
@@ -154,7 +154,7 @@
 /* barra de filtro */
 
 .barraDeFiltros{
-  width: 250px;
+  width: 15.625rem;
 }
 
 /* .barraDeFiltros .nav-link{
@@ -204,14 +204,37 @@
 }
 
 .barraDeFiltros {
+  
   position: relative;
   display: flex;
   z-index: 1;
-  box-shadow: 2px 2px 2px #e9e9e9;
+  box-shadow: 0.188rem 0.25rem 0.125rem #e9e9e9;
   align-self:flex-start;
+  border-radius: 1.25rem;
+  background-color: #f9f9f9 !important;
 }
 
 .linhaBotaoFiltro {
   display: flex;
   justify-content: right;
+}
+
+.custom-range::-webkit-slider-thumb {
+  background: var(--salmao-princip);
+}
+
+
+input[type='range']::-webkit-slider-thumb {
+
+  width: 2rem;
+  background-color: var(--salmao-princip);
+  -webkit-appearance: none;
+}
+
+input[type=checkbox]:checked{
+  background-color: var(--salmao-princip);
+}
+
+input[type=radio]:checked{
+  background-color: var(--salmao-princip);
 }

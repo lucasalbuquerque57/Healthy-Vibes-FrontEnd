@@ -138,7 +138,7 @@ input[type="radio"]:checked {
 }
 
 .TipoAli:checked + label > img {
-  border: 5px solid var(--transparent-tertiary);
+  border: 0.313rem solid var(--transparent-tertiary);
 }
 
 .testclass > input:last-of-type:checked ~ .label-status {

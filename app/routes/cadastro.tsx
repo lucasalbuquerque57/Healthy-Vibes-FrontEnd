@@ -9,7 +9,7 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => ({
-  title: "Home"
+  title: "Cadastro"
 });
 
 export default function Index() {
@@ -20,7 +20,7 @@ export default function Index() {
       <div className="box">
         <div className="box-img">
           <p>Healthy<br />Vibes</p>
-          <img src="/treino/alongamento.png" alt="img temporaria" />
+          <img src="/cadImg1.png" alt="img temporaria" />
         </div>
         <div className="form-box">
           <h1>Cadastro</h1>

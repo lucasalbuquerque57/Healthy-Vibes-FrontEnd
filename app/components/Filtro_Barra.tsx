@@ -1,5 +1,4 @@
 import { Link } from "@remix-run/react";
-import { useState, useEffect } from "react";
 
 interface CardsProps {
   

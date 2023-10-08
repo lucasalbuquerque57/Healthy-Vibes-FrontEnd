@@ -12,7 +12,7 @@
 
 .textNav h6:hover {
   padding-bottom: 0.3rem;
-  border-bottom: var(--background-primary) solid 2.5px;
+  border-bottom: var(--background-primary) solid 0.156rem;
 }
 
 .dataperson {
@@ -87,11 +87,11 @@ input[type="password"] {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 2.5rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   height: auto;
-  margin: 20px;
+  margin: 1.25rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -101,15 +101,15 @@ input[type="password"] {
 }
 
 .card {
-  height: 470px;
-  border-radius: 10px;
+  height:29.3rem;
+  border-radius: 0.7rem;
   background-color: #fff;
-  box-shadow: 0 40px 40px -20px #8fc7d544;
+  box-shadow: 0rem 2.5rem 2.5rem -1.25rem #8fc7d544;
   overflow: hidden;
 }
 
 .card .card-top {
-  height: 236px;
+  height: 14.75rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -134,12 +134,12 @@ input[type="password"] {
 }
 
 .card .card-content {
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .card .card-content .tag {
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 .card .tag-travel {
@@ -154,7 +154,7 @@ input[type="password"] {
 
 .card p {
   color: #7b8591;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /* ---------------------------- */
@@ -183,7 +183,7 @@ input[type="password"] {
     grid-template-columns: 1fr 1fr;
     height: auto;
     margin: 0;
-    padding: 40px;
+    padding: 2.5rem;
   }
 
   .card {
@@ -201,7 +201,7 @@ input[type="password"] {
 /* Display this style when screen-width is lower than 425px */
 @media only screen and (max-width: 425px) {
   .card-container {
-    padding: 20px;
+    padding: 1.25rem;
   }
 }
 
