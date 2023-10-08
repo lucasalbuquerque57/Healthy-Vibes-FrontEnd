@@ -1,15 +1,20 @@
 .barraPerfil {
   background-color: var(--background-duodenary);
-  height: 2.5rem;
+  height: auto;
   width: 60rem;
 }
 
-.textNav h6{
+.textNav h6 {
   text-decoration: none;
   color: var(--branco);
   font-weight: bold;
 }
- 
+
+.textNav h6:hover {
+  padding-bottom: 0.3rem;
+  border-bottom: var(--background-primary) solid 2.5px;
+}
+
 .dataperson {
   background-color: var(--background-quatordenary);
   margin-top: -0.1rem;
@@ -123,7 +128,7 @@ input[type="password"] {
 .card .card-top .ImageAdress img {
   width: 100%;
   height: inherit;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   transition: 300ms;
 }
@@ -172,8 +177,6 @@ input[type="password"] {
   main {
     display: block;
     height: auto;
-    min-height: max(640px, 100vh);
-    padding: 80px 0;
   }
 
   .card-container {

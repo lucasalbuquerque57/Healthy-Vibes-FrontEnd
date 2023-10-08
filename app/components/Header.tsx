@@ -1,5 +1,4 @@
 import { Link } from "@remix-run/react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 
 export function Header() {
 
@@ -19,23 +18,23 @@ export function Header() {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <li className="nav-item">
-                                <a className="nav-link" href="">Receitas</a>
+                                <Link className="nav-link" to="">Receitas</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="">Dietas</a>
+                                <Link className="nav-link" to="">Dietas</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/CalculadoraNutricional">Calculadora</a>
+                                <Link className="nav-link" to="/CalculadoraNutricional">Calculadora</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="">Exercícios</a>
+                                <Link className="nav-link" to="">Exercícios</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="">Controle de Consumo</a>
+                                <Link className="nav-link" to="">Controle de Consumo</Link>
                             </li>
 
                         </ul>
-                        {/* <hr className="nav-item-divider w-100 d-block d-md-none mx-2" /> */}
+                        <hr className="nav-item-divider w-100 d-block d-md-none mx-2" />
                         <div className="profile nav-item">
 
                             <div className="logCadButtons">
@@ -56,11 +55,6 @@ export function Header() {
                         </div>
 
                     </div>
-
-                    
-
-
-
 
 
                 </div>

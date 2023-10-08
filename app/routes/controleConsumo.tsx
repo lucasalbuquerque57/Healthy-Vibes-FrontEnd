@@ -1,4 +1,3 @@
-import React from 'react';
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
@@ -102,30 +101,30 @@ export default function ControleConsumo() {
                         <div className="graphicwater">
                             <Doughnut options={options} data={water} />
                         </div>
-    
 
-                      <div className='container-fluid d-flex justify-content-center align-items-center'>
-                        <div>
-                            
-                         <CardAgua
-                            horario = "12:20"
-                            quantidade= "200"
-                            />
-                         <CardAgua
-                            horario = "15:00"
-                            quantidade ="300"
-                             />
+
+                        <div className='container-fluid d-flex justify-content-center align-items-center'>
+                            <div>
+
+                                <CardAgua
+                                    horario="12:20"
+                                    quantidade="200"
+                                />
+                                <CardAgua
+                                    horario="15:00"
+                                    quantidade="300"
+                                />
+                            </div>
+
+                            <div className='adiciona'>
+                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                            </div>
+
                         </div>
 
-                        <div className='adiciona'>
-                        <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                        </div>
 
-                      </div>
-                        
-                      
 
-                        
+
                     </div>
                     <div className="controlfood">
                         <div>
@@ -137,8 +136,8 @@ export default function ControleConsumo() {
 
                         <div className='container-fluid d-flex justify-content-center align-items-center'>
                             <CardCalorias
-                            horario = "14:43"
-                            quantidade = "732"
+                                horario="14:43"
+                                quantidade="732"
                             />
 
                             <div className='adiciona'>
