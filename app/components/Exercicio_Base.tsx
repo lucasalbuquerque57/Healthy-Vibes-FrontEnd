@@ -7,19 +7,33 @@ interface CardsProps {
 export function Exercicio_Base(props: CardsProps) {
   return (
 
-    <Link to="" style={{ textDecoration: "none" }}>
+    <><Link to="" style={{ textDecoration: "none" }}>
       <div className="card">
         <div className="card-top">
           <div className="ImageAdress"><img src="/treino/abdominal.png" alt="Unsplash Photo" /></div>
         </div>
         <div className="card-content">
-          <h3 className="title">Maromba</h3>
+          <h3 className="title">Abdominal</h3>
           <h6 className="tag tag-travel">Musculação</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
+          <p>Abdominal é um tipo de exercício físico para desenvolver e fortalecer a musculatura do abdômen.</p>
+
         </div>
-      </div >
-    </Link>
+
+      </div>
+    </Link><Link to="" style={{ textDecoration: "none" }}>
+        <div className="card">
+          <div className="card-top">
+            <div className="ImageAdress"><img src="/treino/funcional.png" alt="Unsplash Photo" /></div>
+          </div>
+          <div className="card-content">
+            <h3 className="title">Funcional</h3>
+            <h6 className="tag tag-travel">Musculação</h6>
+            <p>O treinamento funcional é um método de atividade física realizada sem aparelhos da academia.</p>
+
+          </div>
+
+        </div>
+      </Link></>
   )
 }
 
