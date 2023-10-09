@@ -1,43 +1,59 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# This is a workflow which will wget your Remix app 
+# and deploy it to GitHub pages.
 
+name: Static Site Generation from Remix with wget
+
+# Controls when the workflow will run
 on:
-  # Runs on pushes targeting the default branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: ["main"]
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          # Upload entire repository
-          path: '.'
+          node-version: '14'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+     
+      - name: Install dependencies
+        run: yarn 
+      
+      - run: yarn build
+      
+      - name: Start server and mirror it with wget
+        run: |
+              yarn start &
+              sleep 10 &&
+              wget --mirror http://localhost:3000 -P out --no-host-directories --page-requisites --adjust-extension
+  
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./out
+          external_repository: lucasalbuquerque57/lucasalbuquerque57.github.io
+
