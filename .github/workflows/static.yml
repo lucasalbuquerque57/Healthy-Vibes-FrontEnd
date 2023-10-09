@@ -46,9 +46,7 @@ jobs:
       
       - name: Start server and mirror it with wget
         run: |
-              yarn start &
-              sleep 10 &&
-              wget --mirror http://localhost:3000
+              yarn start 
   
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
