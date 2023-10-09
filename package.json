@@ -1,12 +1,11 @@
 {
   "name": "healthyvibes",
-  "version": "0.1",
-  "homepage": "https://lucasalbuquerque57.github.io/Healthy-Vibes-FrontEnd/",
+  "version": "0.2",
+  
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    
     "build": "remix build",
     "dev": "remix dev",
     "start": "remix-serve build",
