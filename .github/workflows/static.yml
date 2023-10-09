@@ -45,10 +45,9 @@ jobs:
       - run: yarn build
       
       - name: Start server and mirror it with wget
-        run: |
-              yarn start &
+        run: yarn start 
               
-              wget --mirror http://localhost:3000 -P out --no-host-directories --page-requisites --adjust-extension
+              
   
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
