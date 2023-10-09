@@ -40,12 +40,12 @@ jobs:
             ${{ runner.os }}-node-
      
       - name: Install dependencies
-        run: yarn 
+        run: npm 
       
-      - run: yarn build
+      - run: npm build
       
       - name: Start server and mirror it with wget
-        run: yarn start &
+        run: npm start &
               sleep 10 &&
               wget --mirror http://localhost:3000 -P out --no-host-directories --page-requisites --adjust-extension
   
