@@ -40,14 +40,15 @@ jobs:
             ${{ runner.os }}-node-
      
       - name: Install dependencies
-        run: npm i
+        run: yarn
       
-      - run: npm build
+      - run: yarn build
       
       - name: Start server and mirror it with wget
-        run: npm start &
+         run: |
+              yarn start &
               sleep 10 &&
-              wget --mirror http://localhost:3000 -P out --no-host-directories --page-requisites --adjust-extension
+              wget --mirror http://localhost:3000 
   
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
