@@ -25,7 +25,7 @@ export default function Index() {
         <img src="/BannerPicV2.png" className="bannerImage" alt="Banner com frutas" />
         <div className="textoCentradoBanner">
           <h1 className="Title textoCentradoBannerContent">
-            Melhore sua Vida krl!{" "}
+            Melhore sua Vida!{" "}
           </h1>
           <h2 className="Title textoCentradoBannerContentSub">
             Com nossa ajuda{" "}
