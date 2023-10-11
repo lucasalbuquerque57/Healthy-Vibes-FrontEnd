@@ -15,7 +15,7 @@ export const meta: MetaFunction = () => ({
 export default function Index() {
   return (
 
-    <body >
+    <main >
 
       <div className="box">
         <div className="box-img">
@@ -49,7 +49,7 @@ export default function Index() {
         </div>
       </div>
 
-    </body>
+    </main>
 
   );
 }

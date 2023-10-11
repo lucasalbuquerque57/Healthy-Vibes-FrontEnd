@@ -27,7 +27,7 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css", integrity: "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter&display=swap", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" },
-    { rel: "shortcut icon", href: "./IconeLogo.png", type: "image/x-icon" },
+    { rel: "shortcut icon", href: "/IconeLogo.png", type: "image/x-icon" },
     { rel: "stylesheet", href: main }
   ];
 };
@@ -51,7 +51,7 @@ function Document({
         {children}
         <ScrollRestoration />
         <Scripts />
-        {/* <LiveReload /> */}
+        <LiveReload />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossOrigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/6c49cfa42c.js" crossOrigin="anonymous"></script>
       </body>

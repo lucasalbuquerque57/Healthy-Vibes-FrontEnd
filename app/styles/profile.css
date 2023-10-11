@@ -100,8 +100,13 @@ input[type="password"] {
   color: #303336;
 }
 
+.buttonCards {
+  border: none;
+  background: none;
+}
+
 .card {
-  height:29.3rem;
+  height: 29.3rem;
   border-radius: 0.7rem;
   background-color: #fff;
   box-shadow: 0rem 2.5rem 2.5rem -1.25rem #8fc7d544;
@@ -208,7 +213,6 @@ input[type="password"] {
 .iconsCard {
   font-size: larger;
 }
-
 
 .box {
   width: 58.125rem;
@@ -326,4 +330,3 @@ form .input-group button {
   letter-spacing: 0.125rem;
   font-weight: 700;
 }
-

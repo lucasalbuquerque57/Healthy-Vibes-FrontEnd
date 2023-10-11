@@ -26,14 +26,14 @@ export function CardDieta(props: CardsProps) {
           <h6 className="tag tag-travel">Dieta Perder Peso</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p className="text-end iconsCard">
-            <button type="button" title="Excluir" style={{ border: "none" }}>
+            <button type="button" title="Excluir" className="buttonCards">
               <i className="px-2 fa-solid fa-trash text-danger"
                 onMouseEnter={changeAnimation}
                 onMouseLeave={changeToDefault}
               >
               </i>
             </button>
-            <button type="button" title="Excluir" style={{ border: "none" }}>
+            <button type="button" title="Excluir" className="buttonCards">
               <i className="px-2 fa-solid fa-ellipsis text-info" title="Atualizar"
                 onMouseEnter={changeAnimation}
                 onMouseLeave={changeToDefault}

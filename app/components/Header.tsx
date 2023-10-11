@@ -1,6 +1,20 @@
 import { Link } from "@remix-run/react";
+import { useState } from "react";
 
 export function Header() {
+
+    const [size, setSize] = useState(1)
+
+    const changeFontSize = (tipoOperacao: string) => {
+
+        if (tipoOperacao == 'aumentar' && size < 2) {
+            setSize(1.3)
+        }
+        else if (tipoOperacao == 'diminuir' && size > 1) {
+            setSize(1)
+        }
+        document.documentElement.style.fontSize = `${size}rem`
+    }
 
     return (
         <header>
@@ -30,11 +44,11 @@ export function Header() {
                                 <Link className="nav-link" to="/Exercicios">Exercícios</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="">Controle de Consumo</Link>
+                                <Link className="nav-link" to="/controleConsumo">Controle de Consumo</Link>
                             </li>
 
                         </ul>
-                        <hr className="nav-item-divider w-100 d-block d-md-none mx-2" />
+                        <hr className="nav-item-divider w-100 d-block d-lg-none mx-2" />
                         <div className="profile nav-item">
 
                             <div className="logCadButtons">
@@ -45,8 +59,12 @@ export function Header() {
 
                             </div>
                             <div className="itensAcessibilidade">
-                                <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" />
-                                <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" />
+                                <button className="buttonAcessibilidade" onClick={() => changeFontSize("aumentar")}>
+                                    <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" />
+                                </button>
+                                <button className="buttonAcessibilidade" onClick={() => changeFontSize("diminuir")}>
+                                    <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" />
+                                </button>
                                 <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade" title="Alto contraste" alt="Alto contraste" />
                                 <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess" alt="acesso a acessibilidae" /></Link>
                             </div>
