@@ -5,8 +5,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
-import { CardAgua } from "~/components/Card_Agua";
-import { CardCalorias } from "~/components/Card_Calorias";
+import { CardAgua } from "~/routes/controleConsumo/Card_Agua";
+import { CardCalorias } from "~/routes/controleConsumo/Card_Calorias";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -29,15 +29,15 @@ export const options = {
     responsive: true,
     plugins: {
         title: {
-            display: false,
-            text: 'E aí, já bebeu água?',
+            display: true,
+            text: 'Quantidade Ideal de água: 2L',
         },
     },
 };
 
 const water = {
     options,
-    labels: ["QT. de Água", "QT. Ideal de Água"],
+    labels: ["QT. de Água", "QT. Restante de Água"],
     datasets: [
         {
             label: 'Controle de Água',
@@ -63,14 +63,14 @@ export const optionsfood = {
     responsive: true,
     plugins: {
         title: {
-            display: false,
-            text: 'O que você comeu?',
+            display: true,
+            text: 'Quantidade de Calorias desejadas: 20Kcal',
         },
     },
 };
 
 const food = {
-    labels: ["QT. de Calorias Ingeridas", "QT. Ideal de Calorias"],
+    labels: ["QT. de Calorias Ingeridas", "QT. Restante de calorias"],
     datasets: [
         {
             label: 'Controle de Calorias',
@@ -93,16 +93,16 @@ export default function ControleConsumo() {
 
                 <h1 className='first-title'>Controle de Consumo</h1>
 
-                <div className='graphics'>
-                    <div className="controlwater">
-                        <div>
-                            <h1 className="title">E aí, já bebeu água?</h1>
-                        </div>
-                        <div className="graphicwater">
+                <div className='graphics row'>
+                    <div className="controlwater col">
+
+                        <h1 className="title text-center my-3">E aí, já bebeu água?</h1>
+
+                        <div className="graphicwater d-flex justify-content-center align-items-center">
                             <Doughnut options={options} data={water} />
                         </div>
 
-
+                        {/* Ainda tem que arrumar a Responsividade nessa parte */}
                         <div className='container-fluid d-flex justify-content-center align-items-center'>
                             <div>
 
@@ -126,14 +126,13 @@ export default function ControleConsumo() {
 
 
                     </div>
-                    <div className="controlfood">
-                        <div>
-                            <h1 className="titlefood">O que você comeu?</h1>
-                        </div>
-                        <div className="graphicfood">
+                    <div className="controlfood col">
+                        <h1 className="titlefood text-center my-3">O que você comeu?</h1>
+                        <div className="graphicfood d-flex justify-content-center align-items-center">
                             <Doughnut options={optionsfood} data={food} />
                         </div>
 
+                        {/* Nessa tb */}
                         <div className='container-fluid d-flex justify-content-center align-items-center'>
                             <CardCalorias
                                 horario="14:43"

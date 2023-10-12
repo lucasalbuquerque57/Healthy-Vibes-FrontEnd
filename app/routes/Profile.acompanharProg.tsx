@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { LinksFunction } from "@remix-run/node";
 import acompanharProgresso from "~/styles/acompanharProgresso.css";
 import { CardIMC } from "~/components/Card_IMC";

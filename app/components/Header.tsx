@@ -59,12 +59,9 @@ export function Header() {
 
                             </div>
                             <div className="itensAcessibilidade">
-                                <button className="buttonAcessibilidade" onClick={() => changeFontSize("aumentar")}>
-                                    <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" />
-                                </button>
-                                <button className="buttonAcessibilidade" onClick={() => changeFontSize("diminuir")}>
-                                    <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" />
-                                </button>
+
+                                <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" onClick={() => changeFontSize("aumentar")} />
+                                <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" onClick={() => changeFontSize("diminuir")} />
                                 <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade" title="Alto contraste" alt="Alto contraste" />
                                 <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess" alt="acesso a acessibilidae" /></Link>
                             </div>

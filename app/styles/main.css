@@ -216,13 +216,8 @@ header .nav-link:hover {
   font-size: 0.7rem;
 }
 
-.buttonAcessibilidade {
-  border: none;
-  background: none;
-  margin: 0;
-  padding: 0;
-  height: min-content;
-  width: min-content;
+.iconeAcessibilidade:hover {
+  cursor: pointer;
 }
 
 .atalhoParaAcessibilidade {
