@@ -181,7 +181,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
 
                     <div className="pt-2">
                         <label>Peso</label>
-                        <input className="form-control border border-secondary" type="number" name="peso" placeholder="Peso em Kg" required />
+                        <input className="form-control border border-secondary" type="number" name="peso" placeholder="Peso em Kg" required step="0.01"/>
                     </div>
 
                 </div>
