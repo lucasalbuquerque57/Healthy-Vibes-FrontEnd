@@ -8,7 +8,7 @@ export function Header() {
     const changeFontSize = (tipoOperacao: string) => {
 
         if (tipoOperacao == 'aumentar' && size < 2) {
-            setSize(1.5)
+            setSize(1.3)
         }
         else if (tipoOperacao == 'diminuir' && size > 1) {
             setSize(1)
