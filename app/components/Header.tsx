@@ -1,7 +1,13 @@
 import { Link } from "@remix-run/react";
 import { useState } from "react";
+import { useHookstate } from "@hookstate/core";
+import { useLocalStorage } from "@uidotdev/usehooks";
+import { themePage } from '../script/changeTheme';
+
 
 export function Header() {
+
+    
 
     const [size, setSize] = useState(1)
 
@@ -15,6 +21,17 @@ export function Header() {
         }
         document.documentElement.style.fontSize = `${size}rem`
     }
+
+    /* const changeTheme = useHookstate(themePage)
+    const [theme, setTheme] = useLocalStorage('theme', changeTheme.get());
+
+
+    const switchContraste = () => {
+        const newTheme = theme === 'contraOn' ? 'contraOff' : 'contraOn';
+        setTheme(newTheme)
+    } */
+
+    
 
     return (
         <header>

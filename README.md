@@ -1,72 +1,14 @@
-# Welcome to Remix!
+# Interface Web
+>[!NOTE]
+> Interface web do Healthy Vibes, um projeto feito no 4º semestre, no curso de **Desenvolvimento de Software Multiplataforma**, na Fatec Zona Leste, com o objetivo de oferecer ferramentas para o controle do consumo de calorias
+## Logo do Projeto
+<img src="https://github.com/DaltonGuima/HealthyVibes-REST-API-Back-End/assets/83316074/531844d7-2e14-4847-8ca5-1dcff03811c3" width="300" height="300" />
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions Overview](https://docs.netlify.com/functions/overview)
+## Tecnologias usadas
+[![My Skills](https://skillicons.dev/icons?i=ts,nodejs,html,css,remix,bootstrap,&theme=dark)](https://skillicons.dev)
 
-## Netlify Setup
+## Refências
 
-1. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/):
-
-```sh
-npm i -g netlify-cli
-```
-
-If you have previously installed the Netlify CLI, you should update it to the latest version:
-
-```sh
-npm i -g netlify-cli@latest
-```
-
-2. Sign up and log in to Netlify:
-
-```sh
-netlify login
-```
-
-3. Create a new site:
-
-```sh
-netlify init
-```
-
-## Development
-
-Ensure all packages are installed by running:
-
-```sh
-npm install
-```
-
-Run
-
-```sh
-netlify dev
-```
-
-Open up [http://localhost:8888](http://localhost:8888), and you're ready to go!
-
-### Adding Redirects and Rewrites
-
-To add redirects and rewrites, add them to the `netlify.toml` file or to the [\_app_redirects](_app_redirects) file. For more information about redirects and rewrites, see the [Netlify docs](https://docs.netlify.com/routing/redirects/).
-
-### Serve your site locally
-
-Run
-
-```sh
-npm run start
-```
-
-to serve your site locally at [http://localhost:8888](http://localhost:8888).
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
-netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
-```
+- Link para o Site Hospedado [Site Hospedado](https://healthyv1bez.netlify.app/)
+- Link para REST API [REST API](https://github.com/DaltonGuima/HealthyVibes-REST-API-Back-End)
+- Link para interface Mobile [Mobile Interface](https://github.com/Matheus3788/HealthyVibes-Mobile)
