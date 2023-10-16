@@ -65,7 +65,7 @@
 .card-img-top {
   width: 95% !important;
   min-width: 95% !important;
-  min-height: 15rem !important;
+  /* min-height: 15rem !important; */
   /* width: 22rem */
   /* height: 30vh !important; */
   align-self: center;
