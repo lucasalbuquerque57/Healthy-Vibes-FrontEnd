@@ -2,7 +2,7 @@ interface CardsProps {
 
 }
 
-export function Filtro_Barra(props: CardsProps) {
+export function FiltroBarra(props: CardsProps) {
 
 
     return (

@@ -28,7 +28,6 @@
     "react-bootstrap": "^2.8.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0"
-    
   },
   "devDependencies": {
     "@remix-run/dev": "^2.0.1",

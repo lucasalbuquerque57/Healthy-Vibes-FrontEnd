@@ -32,7 +32,7 @@ export default function Profile() {
             </Link>
           </div>
           <div className="col py-2 pt-md-0">
-            <Link to="/Profile/Dietas" style={{ textDecoration: "none" }}>
+            <Link to="/Profile/acompanharProg" style={{ textDecoration: "none" }}>
               <h6>Acompanhar Progresso</h6>
             </Link>
           </div>

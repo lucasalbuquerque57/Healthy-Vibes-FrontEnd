@@ -1,15 +1,14 @@
 import { Link } from "@remix-run/react";
-import { useState } from "react";
-import { useHookstate } from "@hookstate/core";
-import { useLocalStorage } from "@uidotdev/usehooks";
+import { useEffect, useState } from "react";
 import { themePage } from '../script/changeTheme';
+import { useHookstate } from "@hookstate/core";
 
 
 export function Header() {
 
-    
 
-    const [size, setSize] = useState(1)
+
+    const [size, setSize] = useState(0);
 
     const changeFontSize = (tipoOperacao: string) => {
 
@@ -22,16 +21,21 @@ export function Header() {
         document.documentElement.style.fontSize = `${size}rem`
     }
 
-    /* const changeTheme = useHookstate(themePage)
-    const [theme, setTheme] = useLocalStorage('theme', changeTheme.get());
+    const changeTheme = useHookstate(themePage)
+    const [theme, setTheme] = useState(changeTheme.get())
+
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        changeTheme.set(theme)
+    }, [changeTheme, theme])
 
 
     const switchContraste = () => {
         const newTheme = theme === 'contraOn' ? 'contraOff' : 'contraOn';
         setTheme(newTheme)
-    } */
+    }
 
-    
+
 
     return (
         <header>
@@ -79,7 +83,7 @@ export function Header() {
 
                                 <img src="/AcessFontSizeBiggerV2.png" className="iconeAcessibilidade" title="Aumentar Fonte" alt="Aumentar fonte" onClick={() => changeFontSize("aumentar")} />
                                 <img src="/AcessFontSizeLowerV2.png" className="iconeAcessibilidade" title="Diminuir Fonte" alt="Diminuir Fonte" onClick={() => changeFontSize("diminuir")} />
-                                <img src="/AcessFontHighConrV2.png" className="iconeAcessibilidade" title="Alto contraste" alt="Alto contraste" />
+                                <img src={`/AcessFontHighConrV2${theme == 'contraOn' ? "-inverso" : ""}.png`} className="iconeAcessibilidade" title="Alto contraste" alt="Alto contraste" onClick={switchContraste} />
                                 <Link to="/Acessibilidade"><img src="/AcessFontInfoV2.png" className="iconeAcessibilidade infoAcess" alt="acesso a acessibilidae" /></Link>
                             </div>
 

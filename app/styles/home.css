@@ -112,6 +112,11 @@ body {
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 960px) {
+  .column {
+    width: 40rem;
+  }
+}
 /* Remove extra left and right margins, due to padding in columns */
 /* .row {margin: 0 -5px;} */ /* ta adicionando uma barra branca na direita da tela */
 

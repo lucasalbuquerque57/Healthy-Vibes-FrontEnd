@@ -13,6 +13,8 @@ import {
 
 import main from "./styles/main.css";
 import VLibras from '@moreiraste/react-vlibras'
+import { useHookstate } from "@hookstate/core";
+import { themePage } from "./script/changeTheme";
 
 
 export const meta: MetaFunction = () => ({
@@ -39,6 +41,7 @@ function Document({
 }: {
   children: React.ReactNode;
 }) {
+  const changeTheme = useHookstate(themePage)
   return (
     <html lang="pt-br">
       <head>
@@ -48,7 +51,7 @@ function Document({
         <script src="https://kit.fontawesome.com/6c49cfa42c.js" crossOrigin="anonymous"></script>
 
       </head>
-      <body>
+      <body data-theme={changeTheme.get()}>
         {children}
         <ScrollRestoration />
         <Scripts />

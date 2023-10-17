@@ -16,7 +16,7 @@ export function CardDieta(props: CardsProps) {
 
   return (
 
-    <Link to="" style={{ textDecoration: "none" }}>
+    <Link to="/profile/dietasDetalhes" style={{ textDecoration: "none" }}>
       <div className="card">
         <div className="card-top">
           <div className="ImageAdress"><img src="/PastaIcon.png" alt="Imagem Dieta" /></div>

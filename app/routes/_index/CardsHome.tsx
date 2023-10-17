@@ -29,7 +29,7 @@ export default function CardsHome() {
             {
                 cardInfos.map(card => {
                     return (
-                        <div className="column" key={card.cardTitle}>
+                        <div className="column my-md-4" key={card.cardTitle}>
                             <Link to={card.link} style={{ textDecoration: 'none' }}>
                                 <div className="card" >
                                     <img src={`/home/${card.imgSrc}`} className="card-img-top" alt={card.altImg} />

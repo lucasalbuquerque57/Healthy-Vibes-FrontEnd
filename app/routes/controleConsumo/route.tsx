@@ -7,6 +7,10 @@ import controleConsumo from "~/styles/controleConsumo.css";
 
 import { CardAgua } from "~/routes/controleConsumo/Card_Agua";
 import { CardCalorias } from "~/routes/controleConsumo/Card_Calorias";
+import { useState } from "react";
+import ModalInsertAgua from "./ModalInsert_Agua";
+import { Button } from "react-bootstrap";
+
 
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -86,10 +90,15 @@ const food = {
 
 
 export default function ControleConsumo() {
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
-        <div>
+        <main>
             <Header />
-            <main id="conteudo" className="container-fluid texto">
+            <div id="conteudo" className="container-fluid texto">
 
                 <h1 className='first-title'>Controle de Consumo</h1>
 
@@ -116,9 +125,9 @@ export default function ControleConsumo() {
                                 />
                             </div>
 
-                            <div className='adiciona'>
+                            <Button variant="primary" onClick={handleShow}>
                                 <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                            </div>
+                            </Button>
 
                         </div>
 
@@ -140,7 +149,7 @@ export default function ControleConsumo() {
                             />
 
                             <div className='adiciona'>
-                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
+
                             </div>
 
                         </div>
@@ -148,8 +157,16 @@ export default function ControleConsumo() {
 
                 </div>
 
-            </main>
+            </div>
+
+
+            <ModalInsertAgua
+                modal={{
+                    onHide: handleClose,
+                    show: show,
+                }}
+            />
             <Footer />
-        </div>
+        </main>
     );
 }
