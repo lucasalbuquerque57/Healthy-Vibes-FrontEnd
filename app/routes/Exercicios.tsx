@@ -117,6 +117,14 @@ export default function Exercicios() {
                         link="/"
                     />
 
+                    <ExercicioBase
+                        imgSrc="abraco.png"
+                        altImg="Um pão e copo de água"
+                        cardTitle="Recursos adicionais"
+                        textoCard="Monitore seu IMC, consumo de água e calorias"
+                        link="/"
+                    />
+
 
 
 
