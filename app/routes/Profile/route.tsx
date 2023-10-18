@@ -42,9 +42,9 @@ export default function Profile() {
             </Link>
           </div>
           <div className="col py-2 pt-md-0">
-            <Link to="/Profile" style={{ textDecoration: "none" }}>
-              <h6>Configurações</h6>
-            </Link>
+              <Link to="/Profile" style={{ textDecoration: "none" }}>
+                <h6>Configurações</h6>
+              </Link>
           </div>
 
         </div>

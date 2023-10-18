@@ -5,11 +5,10 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
-import { CardAgua } from "~/routes/controleConsumo/Card_Agua";
-import { CardCalorias } from "~/routes/controleConsumo/Card_Calorias";
 import { useState } from "react";
 import ModalInsertAgua from "./ModalInsert_Agua";
 import { Button } from "react-bootstrap";
+import { CardInfos } from "./CardInfos";
 
 
 
@@ -112,25 +111,37 @@ export default function ControleConsumo() {
                         </div>
 
                         {/* Ainda tem que arrumar a Responsividade nessa parte */}
-                        <div className='container-fluid d-flex justify-content-center align-items-center'>
+                        <div className='container-fluid'>
                             <div>
 
-                                <CardAgua
-                                    horario="12:20"
-                                    quantidade="200"
-                                />
-                                <CardAgua
-                                    horario="15:00"
-                                    quantidade="300"
-                                />
+                                
+                                
+                                <div className="row g-2 pt-3">
+
+                                        <CardInfos
+                                            horario="15:00"
+                                            quantidade="300 ml"
+                                        />
+
+                                        <CardInfos
+                                            horario="12:20"
+                                            quantidade="200 ml"
+                                        />
+
+                                        <div className="col">
+                                            <Button variant="success" onClick={handleShow} className="m-md-4 float-end float-md-none">
+                                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                                            </Button>
+                                        </div>
+
+                                </div>
+
                             </div>
 
-                            <Button variant="primary" onClick={handleShow}>
-                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                            </Button>
 
                         </div>
 
+                    
 
 
 
@@ -142,14 +153,23 @@ export default function ControleConsumo() {
                         </div>
 
                         {/* Nessa tb */}
-                        <div className='container-fluid d-flex justify-content-center align-items-center'>
-                            <CardCalorias
-                                horario="14:43"
-                                quantidade="732"
-                            />
+                        <div className='container-fluid'>
+                           
 
-                            <div className='adiciona'>
-
+                            <div className="row g-2 pt-3">
+                                <CardInfos
+                                    horario="15:00"
+                                    quantidade="300 Kcal"
+                                />
+                                <CardInfos
+                                    horario="12:20"
+                                    quantidade="200 Kcal"
+                                />
+                                <div className="col">
+                                    <Button variant="success" onClick={handleShow} className="m-md-4 float-end float-md-none">
+                                        <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                                    </Button>
+                                </div>
                             </div>
 
                         </div>

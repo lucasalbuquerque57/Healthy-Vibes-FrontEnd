@@ -10,7 +10,7 @@
   --background-nonary: #066404;
   --background-denary: #111111;
   --background-undenary: #060c05;
-  --background-duodenary: #387d37;
+  --background-duodenary: #387d37; 
   --background-tridenary: #333;
   --background-quatordenary: #e9f8e7;
 
@@ -25,12 +25,18 @@
   --text-tertiary: #0a9906;
   --text-quaternary: #e52f8f;
   --text-quinary: #f0f8ff;
+  --text-senary: #060c05;
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
   --misc-tertiary: #a3c24b;
   --misc-quaternary: #96b346;
   --misc-quinary: #b0b0b0;
+  --misc-senary: #087f08;
+
+  --link-dark: #000000c4;
+  --placeholder: #6b6b6b;
+  --talvez-nada: none;
 
   --transparent-primary: rgba(255, 255, 255, 0.6);
   --transparent-secondary: rgba(69, 197, 58, 1);
@@ -46,8 +52,30 @@
 
 [data-theme="contraOn"] {
   --background-primary: #000;
-  --text-tertiary: yellow;
   --background-secondary: red;
+  --background-tertiary: #000;
+  --background-quaternary: #000;
+  --background-nonary: #655205;
+
+  --text-primary: #fff;
+  --text-secondary: #fff;
+  --text-tertiary: #ffff00;
+  --text-senary: #fff;
+
+  --misc-senary: #ffff00;
+
+  --link-dark: #fff;
+  --placeholder: #fff;
+  --talvez-nada: #000;
+
+  --transparent-primary: #fff;
+
+  --branco: #000;
+  --branco-creme: #000;
+  --verde-princip: #000;
+  
+
+  
 }
 
 * {
@@ -62,6 +90,9 @@ header {
 footer {
   background-color: var(--background-quaternary);
   color: var(--text-primary);
+}
+body{
+  background-color: var(--branco);
 }
 
 main {
@@ -96,7 +127,7 @@ main {
 
 @media screen and (min-width: 576px) {
   .trapezio {
-    border-bottom: 7rem solid var(--text-tertiary); /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
+    border-bottom: 7rem solid var(--verde-princip); /* var(--background-undenary) era a cor antiga, mas esse mais escuro n combina tanto c o preto*/
     border-right: 5rem solid transparent;
     width: min-content;
   }

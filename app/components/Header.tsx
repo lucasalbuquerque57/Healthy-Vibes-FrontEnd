@@ -8,7 +8,7 @@ export function Header() {
 
 
 
-    const [size, setSize] = useState(0);
+    const [size, setSize] = useState(1);
 
     const changeFontSize = (tipoOperacao: string) => {
 

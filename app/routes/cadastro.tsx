@@ -18,9 +18,9 @@ export default function Index() {
     <main >
 
       <div className="box">
-        <div className="box-img">
+        <div className="box-img fundoPossivel">
           <p>Healthy<br />Vibes</p>
-          <img src="/cadImg1.png" alt="img temporaria" />
+          <img src="/cadImg1.jpg" alt="img temporaria" />
         </div>
         <div className="form-box">
           <h1>Cadastro</h1>

@@ -17,7 +17,7 @@
 
 .campo-prog{
     align-items: center;
-    margin-left: -1rem;
+    margin-left: 1rem;
 
 }
 
@@ -30,7 +30,9 @@
     margin-top: 0.2rem;
     width: 7rem;
 }
-
+.icon i:hover{
+  cursor: pointer;
+}
 .cardimc{
     width: 17rem;
     height: 6.5rem;

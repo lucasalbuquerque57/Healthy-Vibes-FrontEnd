@@ -21,7 +21,7 @@ export default function CardsHome() {
             altImg: "Um pão e copo de água",
             cardTitle: "Recursos adicionais",
             textoCard: "Monitore seu IMC, consumo de água e calorias",
-            link: "/"
+            link: "/profile"
         },
     ]
     return (
@@ -29,7 +29,7 @@ export default function CardsHome() {
             {
                 cardInfos.map(card => {
                     return (
-                        <div className="column my-md-4" key={card.cardTitle}>
+                        <div className="column my-3" key={card.cardTitle}>
                             <Link to={card.link} style={{ textDecoration: 'none' }}>
                                 <div className="card" >
                                     <img src={`/home/${card.imgSrc}`} className="card-img-top" alt={card.altImg} />

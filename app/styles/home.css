@@ -2,7 +2,7 @@
   box-shadow: 0rem 0.6rem 0.6rem 0rem var(--transparent-tertiary);
   position: relative;
   text-align: center;
-  color: var(--branco);
+  color: var(--text-primary);
 }
 
 .textoCentradoBanner {
@@ -137,8 +137,9 @@ body {
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0); /* this adds the "card" effect */
   padding: 1rem;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: var(--branco-creme);
   text-decoration: none;
+  color: var(--text-senary);
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

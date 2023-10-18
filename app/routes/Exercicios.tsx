@@ -39,96 +39,96 @@ export default function Exercicios() {
                 <section className="card-container">
                     <ExercicioBase
                         imgSrc="peito.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
+                        altImg="Homem_PranchaCurto"
+                        cardTitle="Prancha"
+                        textoCard="É o exercício ideal para trabalhar a musculatura abdominal."
                         link="/"
                     />
 
                     <ExercicioBase
                         imgSrc="abraco.png"
-                        altImg="Mulher fazendo exercício de braço"
-                        cardTitle="Recursos adicionais"
+                        altImg="Mulher_BracoCurto"
+                        cardTitle="Braço"
+                        textoCard="Treinar os braços evita problemas futuros de mobilidade."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="pernas.png"
+                        altImg="Mulher_agachamentoCurto"
+                        cardTitle="Agachamento"
+                        textoCard="Trabalha os membros e músculos inferiores de uma forma bem completa."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="alongamento.png"
+                        altImg="Mulher_alogamentoCurto"
+                        cardTitle="Alongamento"
+                        textoCard="Reduz o encurtamento muscular e melhora a coordenação motora."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="funcional.png"
+                        altImg="Homem_FuncionalCurto"
+                        cardTitle="Funcional"
+                        textoCard="O treino funcional ajuda a fortalecer os músculos, emagrecer ou melhorar o condicionamento físico."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="triceps.png"
+                        altImg="Mulher_tricepsCurto"
+                        cardTitle="Triceps"
+                        textoCard="O treino de tríceps contribui para o crescimento e desenvolvimento dos músculos."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="abdominal.png"
+                        altImg="Homem_AbdominalCurto"
+                        cardTitle="Abdominal"
+                        textoCard="O abdominal pode ajudar na diminuição do desgaste da coluna, reduzindo significativamente as dores nas costas."
+                        link="/"
+                    />
+
+                    <ExercicioBase
+                        imgSrc="peito.png"
+                        altImg="Um pão e copo de água"
+                        cardTitle="Peito"
                         textoCard="Monitore seu IMC, consumo de água e calorias"
                         link="/"
                     />
 
                     <ExercicioBase
-                        imgSrc="abraco.png"
+                        imgSrc="abdominal_avancado.png"
                         altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
+                        cardTitle="Abdominal Avançado"
                         textoCard="Monitore seu IMC, consumo de água e calorias"
                         link="/"
                     />
 
                     <ExercicioBase
-                        imgSrc="abraco.png"
+                        imgSrc="alongamento_avancado.png"
                         altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
+                        cardTitle="Alongamento Avançado"
                         textoCard="Monitore seu IMC, consumo de água e calorias"
                         link="/"
                     />
 
                     <ExercicioBase
-                        imgSrc="abraco.png"
+                        imgSrc="braco_longo.jpg"
                         altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
+                        cardTitle="Braço Avançado"
                         textoCard="Monitore seu IMC, consumo de água e calorias"
                         link="/"
                     />
 
                     <ExercicioBase
-                        imgSrc="abraco.png"
+                        imgSrc="funcional_avancado.png"
                         altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
-
-                    <ExercicioBase
-                        imgSrc="abraco.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Recursos adicionais"
+                        cardTitle="Funcional Avançado"
                         textoCard="Monitore seu IMC, consumo de água e calorias"
                         link="/"
                     />
