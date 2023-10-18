@@ -3149,7 +3149,7 @@ function Exercicios() {
           {
             imgSrc: "peito.png",
             altImg: "Homem_PranchaCurto",
-            cardTitle: "Prancha",
+            cardTitle: "Prancha Avan\xE7ada",
             textoCard: "\xC9 o exerc\xEDcio ideal para trabalhar a musculatura abdominal.",
             link: "/"
           },
@@ -3237,6 +3237,24 @@ function Exercicios() {
         /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
           ExercicioBase,
           {
+            imgSrc: "prancha.jpg",
+            altImg: "Um p\xE3o e copo de \xE1gua",
+            cardTitle: "Prancha",
+            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
+            link: "/"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/Exercicios.tsx",
+            lineNumber: 80,
+            columnNumber: 21
+          },
+          this
+        ),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+          ExercicioBase,
+          {
             imgSrc: "triceps.png",
             altImg: "Mulher_tricepsCurto",
             cardTitle: "Triceps",
@@ -3247,7 +3265,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 80,
+            lineNumber: 88,
             columnNumber: 21
           },
           this
@@ -3265,7 +3283,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 88,
+            lineNumber: 96,
             columnNumber: 21
           },
           this
@@ -3283,24 +3301,6 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 96,
-            columnNumber: 21
-          },
-          this
-        ),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
-          ExercicioBase,
-          {
-            imgSrc: "abdominal_avancado.png",
-            altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Recursos adicionais",
-            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
-            link: "/"
-          },
-          void 0,
-          !1,
-          {
-            fileName: "app/routes/Exercicios.tsx",
             lineNumber: 104,
             columnNumber: 21
           },
@@ -3311,7 +3311,7 @@ function Exercicios() {
           {
             imgSrc: "alongamento_avancado.png",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Recursos adicionais",
+            cardTitle: "Alongamento Avan\xE7ado",
             textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
             link: "/"
           },
@@ -3319,7 +3319,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 112,
+            lineNumber: 113,
             columnNumber: 21
           },
           this
@@ -3329,7 +3329,7 @@ function Exercicios() {
           {
             imgSrc: "braco_longo.jpg",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Recursos adicionais",
+            cardTitle: "Bra\xE7o Avan\xE7ado",
             textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
             link: "/"
           },
@@ -3337,7 +3337,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 120,
+            lineNumber: 121,
             columnNumber: 21
           },
           this
@@ -3347,7 +3347,7 @@ function Exercicios() {
           {
             imgSrc: "funcional_avancado.png",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Recursos adicionais",
+            cardTitle: "Funcional Avan\xE7ado",
             textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
             link: "/"
           },
@@ -3355,7 +3355,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 128,
+            lineNumber: 129,
             columnNumber: 21
           },
           this
@@ -3372,7 +3372,7 @@ function Exercicios() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Exercicios.tsx",
-      lineNumber: 142,
+      lineNumber: 143,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
@@ -3926,7 +3926,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-AWYBP2OF.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-V75ELX2M.js", "/build/_shared/chunk-KXGQR6J5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-475DYBHV.js", imports: ["/build/_shared/chunk-NH37YFB2.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-BJZFF7UY.js", imports: ["/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-C2WK7HH3.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-723XP6J2.js", imports: ["/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-KL2ILXB7.js", imports: ["/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-BU6WG67V.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-RPUWKPDT.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-KS766AO4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-O7EHIYSZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-CHUY2WIT.js", imports: ["/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-25C6RXP2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo": { id: "routes/controleConsumo", parentId: "root", path: "controleConsumo", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo-77HMAQFW.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-WBEUDHEZ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-VBHKTHVF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "aa1bdf93", hmr: { runtime: "/build/_shared\\chunk-KXGQR6J5.js", timestamp: 1697589784294 }, url: "/build/manifest-AA1BDF93.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-TQRMMDF3.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-2KPZXGDX.js", "/build/_shared/chunk-UDH6CJF7.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-7RMY2RWV.js", imports: ["/build/_shared/chunk-3F62QG6F.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-R7KQ6V3B.js", imports: ["/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-O6LLETHM.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-446SFJ4U.js", imports: ["/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-BWIZLG3D.js", imports: ["/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-HXJ4NCT4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-PQXNASIJ.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-T5PWVIHF.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-JUWC5PFJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-E5DO5RET.js", imports: ["/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-5AG5TZ7I.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo": { id: "routes/controleConsumo", parentId: "root", path: "controleConsumo", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo-RIP7O7DQ.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-2OWHDWAE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-GBRHSTF2.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "0b10b320", hmr: { runtime: "/build/_shared\\chunk-UDH6CJF7.js", timestamp: 1697670650799 }, url: "/build/manifest-0B10B320.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

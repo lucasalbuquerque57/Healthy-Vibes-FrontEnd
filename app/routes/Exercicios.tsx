@@ -40,7 +40,7 @@ export default function Exercicios() {
                     <ExercicioBase
                         imgSrc="peito.png"
                         altImg="Homem_PranchaCurto"
-                        cardTitle="Prancha"
+                        cardTitle="Prancha Avançada"
                         textoCard="É o exercício ideal para trabalhar a musculatura abdominal."
                         link="/"
                     />
@@ -78,6 +78,14 @@ export default function Exercicios() {
                     />
 
                     <ExercicioBase
+                        imgSrc="prancha.jpg"
+                        altImg="Um pão e copo de água"
+                        cardTitle="Prancha"
+                        textoCard="Monitore seu IMC, consumo de água e calorias"
+                        link="/"
+                    />
+
+                    <ExercicioBase
                         imgSrc="triceps.png"
                         altImg="Mulher_tricepsCurto"
                         cardTitle="Triceps"
@@ -101,13 +109,6 @@ export default function Exercicios() {
                         link="/"
                     />
 
-                    <ExercicioBase
-                        imgSrc="abdominal_avancado.png"
-                        altImg="Um pão e copo de água"
-                        cardTitle="Abdominal Avançado"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
-                        link="/"
-                    />
 
                     <ExercicioBase
                         imgSrc="alongamento_avancado.png"
