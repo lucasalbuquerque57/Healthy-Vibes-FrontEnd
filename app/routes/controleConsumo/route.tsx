@@ -91,8 +91,13 @@ const food = {
 export default function ControleConsumo() {
 
     const [show, setShow] = useState(false);
+    const [contentModal, setContentModal] = useState("");
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+
+    function handleShow(typeOperation: string) {
+        setShow(true);
+        setContentModal(typeOperation)
+    }
 
     return (
         <main>
@@ -114,25 +119,25 @@ export default function ControleConsumo() {
                         <div className='container-fluid'>
                             <div>
 
-                                
-                                
+
+
                                 <div className="row g-2 pt-3">
 
-                                        <CardInfos
-                                            horario="15:00"
-                                            quantidade="300 ml"
-                                        />
+                                    <CardInfos
+                                        horario="15:00"
+                                        quantidade="300 ml"
+                                    />
 
-                                        <CardInfos
-                                            horario="12:20"
-                                            quantidade="200 ml"
-                                        />
+                                    <CardInfos
+                                        horario="12:20"
+                                        quantidade="200 ml"
+                                    />
 
-                                        <div className="col">
-                                            <Button variant="success" onClick={handleShow} className="m-md-4 float-end float-md-none">
-                                                <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                                            </Button>
-                                        </div>
+                                    <div className="col">
+                                        <Button variant="success" onClick={() => handleShow("Água")} className="m-md-4 float-end float-md-none">
+                                            <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                                        </Button>
+                                    </div>
 
                                 </div>
 
@@ -141,7 +146,7 @@ export default function ControleConsumo() {
 
                         </div>
 
-                    
+
 
 
 
@@ -154,7 +159,7 @@ export default function ControleConsumo() {
 
                         {/* Nessa tb */}
                         <div className='container-fluid'>
-                           
+
 
                             <div className="row g-2 pt-3">
                                 <CardInfos
@@ -166,7 +171,7 @@ export default function ControleConsumo() {
                                     quantidade="200 Kcal"
                                 />
                                 <div className="col">
-                                    <Button variant="success" onClick={handleShow} className="m-md-4 float-end float-md-none">
+                                    <Button variant="success" onClick={() => handleShow("Calorias")} className="m-md-4 float-end float-md-none">
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
                                     </Button>
                                 </div>
@@ -185,6 +190,7 @@ export default function ControleConsumo() {
                     onHide: handleClose,
                     show: show,
                 }}
+                formFor={contentModal}
             />
             <Footer />
         </main>

@@ -130,7 +130,7 @@ export default function Exercicios() {
                         imgSrc="funcional_avancado.png"
                         altImg="Um pão e copo de água"
                         cardTitle="Funcional Avançado"
-                        textoCard="Monitore seu IMC, consumo de água e calorias"
+                        textoCard="O treino usa os músculos para movimentos naturais do corpo para melhorar a força e a resistência."
                         link="/"
                     />
 
