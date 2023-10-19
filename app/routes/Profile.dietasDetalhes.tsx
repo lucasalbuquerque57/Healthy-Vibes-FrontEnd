@@ -12,6 +12,9 @@ export const links: LinksFunction = () => {
   ];
 };
 
+export const meta: MetaFunction = () => ({
+  title: "Exercícios Generico",
+});
 
 export default function DietasDetalhes() {
   return (

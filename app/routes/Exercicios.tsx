@@ -42,7 +42,7 @@ export default function Exercicios() {
                         altImg="Homem_PranchaCurto"
                         cardTitle="Prancha Avançada"
                         textoCard="É o exercício ideal para trabalhar a musculatura abdominal."
-                        link="/"
+                        link="/ExercicioDetalhes"
                     />
 
                     <ExercicioBase

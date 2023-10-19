@@ -6,9 +6,9 @@ import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
 import { useState } from "react";
-import ModalInsertAgua from "./ModalInsert_Agua";
 import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
+import ModalInsert from "./ModalInsert";
 
 
 
@@ -115,40 +115,32 @@ export default function ControleConsumo() {
                             <Doughnut options={options} data={water} />
                         </div>
 
-                        {/* Ainda tem que arrumar a Responsividade nessa parte */}
-                        <div className='container-fluid'>
-                            <div>
+                        <div className='container d-flex justify-content-center align-items-center'>
+
+                            <div className="row g-2 pt-3">
+
+                                <CardInfos
+                                    horario="15:00"
+                                    quantidade="300 Ml"
+                                />
+
+                                <CardInfos
+                                    horario="12:20"
+                                    quantidade="200 Ml"
+                                />
 
 
-
-                                <div className="row g-2 pt-3">
-
-                                    <CardInfos
-                                        horario="15:00"
-                                        quantidade="300 ml"
-                                    />
-
-                                    <CardInfos
-                                        horario="12:20"
-                                        quantidade="200 ml"
-                                    />
-
-                                    <div className="col">
-                                        <Button variant="success" onClick={() => handleShow("Água")} className="m-md-4 float-end float-md-none">
-                                            <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                                        </Button>
-                                    </div>
-
+                                <div className="col">
+                                    <Button variant="success" onClick={() => handleShow("Água")} className="m-md-4 float-end float-md-none">
+                                        <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                                    </Button>
                                 </div>
+
 
                             </div>
 
 
                         </div>
-
-
-
-
 
                     </div>
                     <div className="controlfood col">
@@ -157,11 +149,8 @@ export default function ControleConsumo() {
                             <Doughnut options={optionsfood} data={food} />
                         </div>
 
-                        {/* Nessa tb */}
-                        <div className='container-fluid'>
-
-
-                            <div className="row g-2 pt-3">
+                        <div className='container d-flex justify-content-center align-items-center'>
+                            <div className="row g-2 pt-3 ">
                                 <CardInfos
                                     horario="15:00"
                                     quantidade="300 Kcal"
@@ -170,6 +159,7 @@ export default function ControleConsumo() {
                                     horario="12:20"
                                     quantidade="200 Kcal"
                                 />
+
                                 <div className="col">
                                     <Button variant="success" onClick={() => handleShow("Calorias")} className="m-md-4 float-end float-md-none">
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
@@ -184,14 +174,14 @@ export default function ControleConsumo() {
 
             </div>
 
-
-            <ModalInsertAgua
+            <ModalInsert
                 modal={{
                     onHide: handleClose,
                     show: show,
                 }}
                 formFor={contentModal}
             />
+
             <Footer />
         </main>
     );
