@@ -14,8 +14,6 @@ export function Header() {
         debug: true
     })
 
-
-
     const [size, setSize] = useState(1);
 
     const changeFontSize = (tipoOperacao: string) => {
@@ -104,7 +102,11 @@ export function Header() {
                 </div>
             </nav>
 
+            
+
         </header>
+
+
     )
 
 }

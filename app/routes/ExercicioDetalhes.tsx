@@ -33,6 +33,8 @@ export default function ExercicioDetalhes() {
                     </video>
                 </div>
 
+                
+
                 <div>
                     <h5 className="text-justify py-2 px-3">
                         4x 30s
