@@ -15,7 +15,7 @@ import ModalInsert from "./ModalInsert";
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 export const meta: MetaFunction = () => ({
-    title: "controleConsumo"
+    title: "controle Consumo"
 });
 
 export const links: LinksFunction = () => {
