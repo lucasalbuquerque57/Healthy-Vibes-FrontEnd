@@ -2,9 +2,17 @@ import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { themePage } from '../script/changeTheme';
 import { useHookstate } from "@hookstate/core";
+import Hotjar from "@hotjar/browser";
 
 
 export function Header() {
+
+    const siteId = 3702227
+    const hotjarVersion = 6
+
+    Hotjar.init(siteId, hotjarVersion, {
+        debug: true
+    })
 
 
 
