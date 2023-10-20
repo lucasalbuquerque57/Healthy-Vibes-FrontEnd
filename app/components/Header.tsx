@@ -2,7 +2,8 @@ import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { themePage } from '../script/changeTheme';
 import { useHookstate } from "@hookstate/core";
-
+ import { hotjar } from 'react-hotjar';
+ 
 
 export function Header() {
 
@@ -96,7 +97,14 @@ export function Header() {
                 </div>
             </nav>
 
+            
+            
+
+            <script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=2a0c8a30"></script>
+
         </header>
+
+
     )
 
 }
