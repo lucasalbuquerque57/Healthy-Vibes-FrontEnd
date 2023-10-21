@@ -2,7 +2,6 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Link,
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -15,7 +14,6 @@ import main from "./styles/main.css";
 import VLibras from '@moreiraste/react-vlibras'
 import { useHookstate } from "@hookstate/core";
 import { themePage } from "./script/changeTheme";
-
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -55,7 +53,6 @@ function Document({
         {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
         <VLibras forceOnload={true} />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossOrigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/6c49cfa42c.js" crossOrigin="anonymous"></script>
@@ -109,4 +106,5 @@ export function ErrorBoundary() {
       return <p>Unknown Error</p>;
     }
   }
-} 
+}
+
