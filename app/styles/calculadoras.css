@@ -1,6 +1,5 @@
 .avisoNutricaoFixo {
   width: 35rem;
-  background-color: aliceblue; /* só p teste */
 }
 
 .tituloCategoria {
@@ -8,11 +7,17 @@
   margin-top: 2rem;
 }
 
+.tituloPagina, .tituloCategoria{
+  color: var(--text-octonary);
+}
+
 .cardTeste {
   width: 10rem;
   margin-left: 2rem;
   margin-right: 2rem;
   border: none;
+  background-color: var(--background-primary);
+  color: var(--text-octonary) !important;
 }
 
 .imgTipoDieta {
@@ -21,7 +26,7 @@
   align-self: center;
   margin-top: 0.4rem;
   border-radius: 1rem;
-  filter: drop-shadow(#edede8 0.3rem 0.3rem);
+  filter: drop-shadow(var(--sombra-clara-effect) 0.3rem 0.3rem);
 }
 
 .cardBox {
@@ -56,13 +61,38 @@
   border-left: none;
 }
 
+.textoOscuro{
+  color: var(--text-octonary);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color: var(--placeholder) !important;
+}
+
+.form-control{
+  background-color: var(--background-primary) !important;
+  color: var(--text-octonary);
+  /* color: */
+}
+
+.form-select{
+  background-color: var(--background-primary) !important;
+  color: var(--text-octonary);
+}
+
+
+.btn-secondary{
+  color: var(--text-octonary) !important;
+}
+
 .btn-check:checked + .btn,
 .btn.active,
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
   background-color: var(--misc-tertiary);
-  color: var(--background-denary);
+  color: var(--background-denary) !important;
+  font-weight: bolder;
   border-color: var(--misc-quinary);
 }
 
@@ -113,12 +143,18 @@
   margin-left: 1rem;
 }
 
+
+
 input[type="radio"] {
-  background-color: var(--misc-primary);
+  background-color: var(--background-primary);
 }
 
 input[type="radio"]:checked {
-  background-color: var(--background-denary);
+  background-color: var(--background-undenary);
+}
+
+.form-check-input:checked{
+  border-color: var(--background-undenary) !important;
 }
 
 .border-secondary,
@@ -126,8 +162,20 @@ input[type="radio"]:checked {
   border-color: var(--misc-quinary) !important;
 }
 
+.form-control:focus {
+  color: var(--text-primary) !important;
+  font-weight: bolder;
+  background-color: var(--background-primary) !important;
+  border-color: var(--button-tertiary) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--button-tertiary) !important;
+}
+
+
+
 .botaoCalcular {
   background-color: var(--button-tertiary);
+  font-weight: bold;
   color: var(--branco);
   border-radius: 1rem;
   border-color: var(--misc-quinary);

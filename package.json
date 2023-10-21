@@ -2,10 +2,11 @@
   "name": "teste",
   "private": true,
   "sideEffects": false,
+  "type": "commonjs",
   "scripts": {
     "build": "remix build",
     "predev": "rimraf ./public/_redirects",
-    "dev": "remix dev",
+    "dev": "remix dev --manual",
     "start": "netlify serve",
     "typecheck": "tsc -b"
   },

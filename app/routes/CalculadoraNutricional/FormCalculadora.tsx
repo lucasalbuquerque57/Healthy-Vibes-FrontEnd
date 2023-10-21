@@ -139,7 +139,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
             </div>
 
             <h3 className="tituloCategoria">Sexo</h3>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center textoOscuro">
                 <div className="form-check sexo">
                     <input
                         className="form-check-input"
@@ -166,7 +166,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                 </div>
             </div>
 
-            <div className="container col-md-3 col-lg-2 pt-1">
+            <div className="container col-md-3 col-lg-2 pt-1 textoOscuro">
                 <div className="row d-flex justify-content-center">
 
                     <div className="pt-2">
