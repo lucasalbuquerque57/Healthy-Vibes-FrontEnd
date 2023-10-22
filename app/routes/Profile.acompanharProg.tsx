@@ -47,12 +47,6 @@ export const data = {
 };
 
 
-
-
-
-
-
-
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: acompanharProgresso },

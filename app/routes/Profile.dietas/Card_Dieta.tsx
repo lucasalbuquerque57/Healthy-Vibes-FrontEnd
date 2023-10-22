@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import Swal from 'sweetalert2'
 
 interface CardsProps {
   title: string;
@@ -14,6 +15,27 @@ export function CardDieta(props: CardsProps) {
     e.currentTarget.className = e.currentTarget.className.replace(" fa-shake", "")
   }
 
+  function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+
+    // Vou colocar os bglhs do axios aqui
+    e.preventDefault();
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    })
+
+  }
+
   return (
 
     <Link to="/profile/dietasDetalhes" style={{ textDecoration: "none" }}>
@@ -26,14 +48,14 @@ export function CardDieta(props: CardsProps) {
           <h6 className="tag tag-travel">Dieta Perder Peso</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p className="text-end iconsCard">
-            <button type="button" title="Excluir" className="buttonCards">
+            <button type="button" title="Excluir" className="buttonCards" onClick={handleDelete}>
               <i className="px-2 fa-solid fa-trash text-danger"
                 onMouseEnter={changeAnimation}
                 onMouseLeave={changeToDefault}
               >
               </i>
             </button>
-            <button type="button" title="Excluir" className="buttonCards">
+            <button type="button" title="Atualizar" className="buttonCards">
               <i className="px-2 fa-solid fa-ellipsis text-info" title="Atualizar"
                 onMouseEnter={changeAnimation}
                 onMouseLeave={changeToDefault}

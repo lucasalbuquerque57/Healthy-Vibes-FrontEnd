@@ -59,10 +59,7 @@ export function Header() {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <li className="nav-item">
-                                <Link className="nav-link" to="">Receitas</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="">Dietas</Link>
+                                <Link className="nav-link" to="/profile/dietas">Dietas</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/CalculadoraNutricional">Calculadora</Link>
@@ -102,7 +99,7 @@ export function Header() {
                 </div>
             </nav>
 
-            
+
 
         </header>
 

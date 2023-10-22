@@ -10,7 +10,7 @@
   --background-nonary: #066404;
   --background-denary: #111111;
   --background-undenary: #060c05;
-  --background-duodenary: #387d37; 
+  --background-duodenary: #387d37;
   --background-tridenary: #333;
   --background-quatordenary: #e9f8e7;
   --background-quinodenary: #c3ffdb;
@@ -29,6 +29,8 @@
   --text-quinary: #f0f8ff;
   --text-senary: #060c05;
   --text-octonary: #212529;
+  --text-nonary: #212529;
+  --text-denary: #fff;
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
@@ -38,7 +40,6 @@
   --misc-senary: #087f08;
   --misc-octonary: #858585;
 
-
   --link-dark: #000000c4;
   --placeholder: #6b6b6b;
   --talvez-nada: none;
@@ -46,7 +47,7 @@
   --transparent-primary: rgba(255, 255, 255, 0.6);
   --transparent-secondary: rgba(69, 197, 58, 1);
   --transparent-tertiary: rgba(119, 190, 3, 0.8);
-  
+
   --branco: #fff;
   --branco-creme: #f7f7f7;
 
@@ -58,11 +59,13 @@
   --verde-princip: #0a9906;
   --salmao-princip: #ff785a;
   --azul-princip: #33459b;
+
+  --background-warning-modal: #b7e1ea;
 }
 
 [data-theme="contraOn"] {
   --background-primary: #000;
-  --background-secondary: red;
+  --background-secondary: #ffff00;
   --background-tertiary: #000;
   --background-quaternary: #000;
   --background-nonary: #655205;
@@ -77,6 +80,8 @@
   --text-tertiary: #ffff00;
   --text-senary: #fff;
   --text-octonary: #fff;
+  --text-nonary: #ffff00;
+  --text-denary: #000;
 
   --misc-primary: #fff;
   --misc-tertiary: #ffff00;
@@ -95,11 +100,19 @@
   --branco: #000;
   --branco-creme: #000;
   --verde-princip: #000;
-  
+
   --sombra-clara-effect: none;
-  
+
+  --background-warning-modal: #000;
   --bs-border-color-translucent: #ffff00;
-  
+  --bs-modal-border-color: #ffff00 !important;
+  --bs-info-text-emphasis: #ffff00 !important;
+  --bs-info-bg-subtle: #ffff00 !important;
+  --bs-info-border-subtle: #ffff00 !important;
+  --bs-info-text-emphasis: #ffff00 !important;
+  --bs-info-rgb: #ffff00 !important;
+  --bs-btn-color: #000 !important;
+  --bs-btn-bg: #ffff00 !important;
 }
 
 * {
@@ -115,7 +128,7 @@ footer {
   background-color: var(--background-quaternary);
   color: var(--text-primary);
 }
-body{
+body {
   background-color: var(--branco);
 }
 
@@ -567,4 +580,20 @@ footer .footer-logo {
   #error-text a:hover {
     color: #fff;
   }
+}
+
+/* COMPONENTES */
+
+.btn-comum {
+  background-color: var(--text-tertiary) !important;
+  border-color: var(--background-secondary) !important;
+  color: var(--text-denary) !important;
+  font-weight: bold !important;
+}
+
+.btn-comum:hover {
+  background-color: var(--background-secondary) !important;
+}
+.btn-comum:active {
+  background-color: var(--background-nonary) !important;
 }

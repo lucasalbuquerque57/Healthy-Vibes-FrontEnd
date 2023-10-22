@@ -7,7 +7,8 @@
   margin-top: 2rem;
 }
 
-.tituloPagina, .tituloCategoria{
+.tituloPagina,
+.tituloCategoria {
   color: var(--text-octonary);
 }
 
@@ -61,27 +62,27 @@
   border-left: none;
 }
 
-.textoOscuro{
+.textoOscuro {
   color: var(--text-octonary);
 }
 
-::placeholder { /* Most modern browsers support this now. */
+::placeholder {
+  /* Most modern browsers support this now. */
   color: var(--placeholder) !important;
 }
 
-.form-control{
+.form-control {
   background-color: var(--background-primary) !important;
   color: var(--text-octonary);
   /* color: */
 }
 
-.form-select{
+.form-select {
   background-color: var(--background-primary) !important;
   color: var(--text-octonary);
 }
 
-
-.btn-secondary{
+.btn-secondary {
   color: var(--text-octonary) !important;
 }
 
@@ -143,8 +144,6 @@
   margin-left: 1rem;
 }
 
-
-
 input[type="radio"] {
   background-color: var(--background-primary);
 }
@@ -153,7 +152,7 @@ input[type="radio"]:checked {
   background-color: var(--background-undenary);
 }
 
-.form-check-input:checked{
+.form-check-input:checked {
   border-color: var(--background-undenary) !important;
 }
 
@@ -170,8 +169,6 @@ input[type="radio"]:checked {
   outline: 0;
   box-shadow: 0 0 0 0.25rem var(--button-tertiary) !important;
 }
-
-
 
 .botaoCalcular {
   background-color: var(--button-tertiary);
@@ -191,4 +188,15 @@ input[type="radio"]:checked {
 
 .testclass > input:last-of-type:checked ~ .label-status {
   visibility: visible;
+}
+
+p.alert.alert-light,
+.modal-content {
+  background-color: var(--background-primary) !important; /* s */
+  color: var(--text-nonary) !important;
+  border-color: var(--text-nonary) !important;
+}
+
+p.alert.alert-info.border.border-info.border-2.p-2 {
+  background-color: var(--background-warning-modal) !important;
 }

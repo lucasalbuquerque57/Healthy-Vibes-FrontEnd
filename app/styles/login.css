@@ -2,7 +2,7 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
+main {
   background-image: url("/backgroundLoginTemp.png");
   background-repeat: repeat;
 }
@@ -54,12 +54,12 @@ body {
   box-shadow: 0rem 0rem 0.625rem 0.063rem var(--misc-octonary);
 }
 
-.form-box h1{
+.form-box h1 {
   color: var(--text-secondary);
   font-weight: 800;
   margin: 0;
   letter-spacing: 0.1rem;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .form-box p {
@@ -109,7 +109,7 @@ form .input-group input:focus {
   background-color: var(--background-senodenary);
 }
 
-form .input-group button:active{
+form .input-group button:active {
   background: var(--background-nonary);
 }
 
@@ -144,7 +144,7 @@ form .input-group button {
   gap: 0.5rem;
 }
 
-.cadRedirect{
+.cadRedirect {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 
+
 export default function ModalAviso() {
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -34,7 +36,7 @@ export default function ModalAviso() {
                 <p className="alert alert-light"> <span className="fw-bold">Vale Ressaltar:</span> Este site não substitui uma consulta com
                     especialistas médicos
                 </p>
-                <Button variant="success" onClick={handleClose}>
+                <Button className="btn-comum" onClick={handleClose}>
                     Estou Ciente
                 </Button>
             </Modal.Footer>

@@ -24,16 +24,6 @@ export default function Exercicios() {
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
             <Header />
 
-
-
-
-
-            {/* <div className="linhaBotaoFiltro">
-                <button type="button" className="btn btn-primary md-2 filtroBtn" data-bs-toggle="collapse" data-bs-target="#barraDeFiltros">Filtros</button>
-            </div> */}
-            {/* botao ta so semifuncionando por algum motivo q n to conseguindo descobrir */}
-
-
             <div className="container-fluid d-flex align-items-center">
                 <FiltroBarra />
                 <section className="card-container">
