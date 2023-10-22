@@ -61,6 +61,7 @@
   --azul-princip: #33459b;
 
   --background-warning-modal: #b7e1ea;
+  --acessib-mark: rgb(133, 150, 228);
 }
 
 [data-theme="contraOn"] {
@@ -100,6 +101,8 @@
   --branco: #000;
   --branco-creme: #000;
   --verde-princip: #000;
+
+  --acessib-mark: #ffff00;
 
   --sombra-clara-effect: none;
 

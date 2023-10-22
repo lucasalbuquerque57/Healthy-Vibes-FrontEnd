@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 interface CardsProps {
   title: string;

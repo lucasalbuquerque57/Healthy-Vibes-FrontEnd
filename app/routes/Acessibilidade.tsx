@@ -16,9 +16,10 @@ export const links: LinksFunction = () => {
 export default function Acessibilidade() {
 
   return (
-    <div>
-      <Header />
+      
       <main id="conteudo" className="container-fluid texto">
+        <Header />
+
         <div className="headline text">
           <h1 className="text-center py-3">Acessibilidade</h1>
         </div>
@@ -138,8 +139,11 @@ export default function Acessibilidade() {
             </div>
           </div>
         </div>
+
+        <Footer />
+
       </main>
-      <Footer />
-    </div>
+      
+    
   );
 }
