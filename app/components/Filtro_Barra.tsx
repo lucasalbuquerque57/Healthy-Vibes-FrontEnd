@@ -9,7 +9,7 @@ export function FiltroBarra(props: CardsProps) {
 
         /* n to conseguindo fzr esse fdp ser do tamanho do body */
 
-        <div className="d-flex flex-column flex-shrink-0 p-3 bg-light barraDeFiltros" id="barraDeFiltros">
+        <div className="d-flex flex-column flex-shrink-0 p-3 bg-light barraDeFiltros col-md-4" id="barraDeFiltros">
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <svg className="bi me-2" width="40" height="32"></svg>
                 <span className="fs-4">Filtros</span>
