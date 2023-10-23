@@ -35,13 +35,13 @@
 .card {
   height: 29.375rem;
   border-radius: 0.625rem;
-  background-color: #fff;
+  background-color: var(--background-primary);
   box-shadow: 0 2.5rem 2.5rem -1.25rem #e76f4c17;
   overflow: hidden;
 }
 
 .card .card-top {
-  height: 14.75rem;
+  height: 10.5rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -54,13 +54,12 @@
 
 .card .card-top .ImageAdress {
   display: block;
-  height: 100%;
+
 }
 
 .card .card-top .ImageAdress img {
   width: 100%;
-  height: inherit;
-  object-fit: cover;
+  height: fit-content;
   object-position: center;
   transition: 300ms;
 }
@@ -75,17 +74,17 @@
 }
 
 .card .tag-travel {
-  color: var(--salmao-princip);
+  color: var(--text-salmao);
 }
 
 .card .title {
-  color: #303336;
+  color: var(--text-undenary);
   font-weight: 700;
   transition: 300ms;
 }
 
 .card p {
-  color: #7b8591;
+  color: var(--text-duodenary);
   margin-top: 1.25rem;
 }
 

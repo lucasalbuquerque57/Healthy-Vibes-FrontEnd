@@ -31,6 +31,8 @@
   --text-octonary: #212529;
   --text-nonary: #212529;
   --text-denary: #fff;
+  --text-undenary: #363530;
+  --text-duodenary: #7b8591;
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
@@ -60,6 +62,8 @@
   --salmao-princip: #ff785a;
   --azul-princip: #33459b;
 
+  --text-salmao: #ff785a;
+
   --background-warning-modal: #b7e1ea;
   --acessib-mark: rgb(133, 150, 228);
 }
@@ -83,6 +87,8 @@
   --text-octonary: #fff;
   --text-nonary: #ffff00;
   --text-denary: #000;
+  --text-undenary: #ffff00;
+  --text-duodenary: #fff;
 
   --misc-primary: #fff;
   --misc-tertiary: #ffff00;
@@ -101,7 +107,7 @@
   --branco: #000;
   --branco-creme: #000;
   --verde-princip: #000;
-
+  --text-salmao: #ffff00;
   --acessib-mark: #ffff00;
 
   --sombra-clara-effect: none;
