@@ -69,7 +69,7 @@ export function FiltroBarra(props: CardsProps) {
                 <button className="btn btn-toggle align-items-center rounded btnCategoriaBarraFiltro" data-bs-toggle="collapse" data-bs-target="#intensidade-collapse" aria-expanded="true">
                     Intensidade
                 </button>
-                <div className="collapse show" id="intensidade-collapse" >
+                <div className="collapse" id="intensidade-collapse" >
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small grupoCategoria">
                         <input type="range" className="form-range" min="0" max="3" defaultValue={"0"} id="customRange2" />
                     </ul>
@@ -80,7 +80,7 @@ export function FiltroBarra(props: CardsProps) {
                 <button className="btn btn-toggle align-items-center rounded btnCategoriaBarraFiltro" data-bs-toggle="collapse" data-bs-target="#duracao-collapse" aria-expanded="true">
                     Duração
                 </button>
-                <div className="collapse show" id="duracao-collapse" >
+                <div className="collapse" id="duracao-collapse" >
                     <div className="form-check">
                         <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
                         <label className="form-check-label" htmlFor="flexRadioDefault1">
