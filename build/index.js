@@ -1872,63 +1872,63 @@ function ExercicioDetalhes() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/ExercicioDetalhes.tsx",
-      lineNumber: 24,
+      lineNumber: 25,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("main", { id: "conteudo", className: "container-fluid texto", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "headline text", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h1", { className: "text-center py-3", children: "Prancha" }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 21
       }, this) }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 17
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "container-video", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("video", { width: "750", height: "500", controls: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("source", { src: "", type: "video/mp4" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { className: "container-video", children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("video", { width: "750", height: "500", controls: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("source", { src: "https://www.pexels.com/pt-br/video/cadeira-catedra-presidente-exercicio-4259087/", type: "video/mp4" }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 32,
+        lineNumber: 33,
         columnNumber: 25
       }, this) }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 21
       }, this) }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h5", { className: "text-justify py-2 px-3", children: "4x 30s" }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 21
       }, this) }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 38,
+        lineNumber: 39,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)("h5", { className: "texto-justificado", children: "Fazer pranchas melhora significativamente uma postura erecta e est\xE1vel. Atrav\xE9s do fortalecimento de core, o corpo ser\xE1 capaz de manter uma postura correcta porque os m\xFAsculos no abd\xF3men t\xEAm grande influ\xEAncia sobre a estabilidade do pesco\xE7o, ombros, peito e costas." }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 21
       }, this) }, void 0, !1, {
         fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 43,
+        lineNumber: 44,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/ExercicioDetalhes.tsx",
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime12.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/ExercicioDetalhes.tsx",
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/ExercicioDetalhes.tsx",
-    lineNumber: 23,
+    lineNumber: 24,
     columnNumber: 5
   }, this);
 }
@@ -3298,7 +3298,7 @@ function Exercicios() {
             altImg: "Mulher_BracoCurto",
             cardTitle: "Bra\xE7o",
             textoCard: "Treinar os bra\xE7os evita problemas futuros de mobilidade.",
-            link: "/"
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3316,7 +3316,7 @@ function Exercicios() {
             altImg: "Mulher_agachamentoCurto",
             cardTitle: "Agachamento",
             textoCard: "Trabalha os membros e m\xFAsculos inferiores de uma forma bem completa.",
-            link: "/"
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3334,7 +3334,7 @@ function Exercicios() {
             altImg: "Mulher_alogamentoCurto",
             cardTitle: "Alongamento",
             textoCard: "Reduz o encurtamento muscular e melhora a coordena\xE7\xE3o motora.",
-            link: "/"
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3352,7 +3352,7 @@ function Exercicios() {
             altImg: "Homem_FuncionalCurto",
             cardTitle: "Funcional",
             textoCard: "O treino funcional ajuda a fortalecer os m\xFAsculos, emagrecer ou melhorar o condicionamento f\xEDsico.",
-            link: "/"
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3369,8 +3369,8 @@ function Exercicios() {
             imgSrc: "prancha.jpg",
             altImg: "Um p\xE3o e copo de \xE1gua",
             cardTitle: "Prancha",
-            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
-            link: "/"
+            textoCard: "Pode auxiliar a coluna lombar e a pelve a manterem a estabilidade do tronco.",
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3388,7 +3388,7 @@ function Exercicios() {
             altImg: "Mulher_tricepsCurto",
             cardTitle: "Triceps",
             textoCard: "O treino de tr\xEDceps contribui para o crescimento e desenvolvimento dos m\xFAsculos.",
-            link: "/"
+            link: "/ExercicioDetalhes"
           },
           void 0,
           !1,
@@ -3423,7 +3423,7 @@ function Exercicios() {
             imgSrc: "peito.png",
             altImg: "Um p\xE3o e copo de \xE1gua",
             cardTitle: "Peito",
-            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
+            textoCard: "o aumento do t\xF4nus abaixo do tecido gorduroso que forma o seio, o que dar\xE1 mais sustenta\xE7\xE3o a ele, al\xE9m de um maior equil\xEDbrio corporal.",
             link: "/"
           },
           void 0,
@@ -3440,8 +3440,9 @@ function Exercicios() {
           {
             imgSrc: "alongamento_avancado.png",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Alongamento Avan\xE7ado",
-            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
+            cardTitle: "Alongamento - Longo",
+            textoCard: `Melhora a circula\xE7\xE3o sangu\xEDnea, prevenindo problemas articulares nos bra\xE7os, pernas e coluna.\r
+                            `,
             link: "/"
           },
           void 0,
@@ -3458,15 +3459,15 @@ function Exercicios() {
           {
             imgSrc: "braco_longo.jpg",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Bra\xE7o Avan\xE7ado",
-            textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
+            cardTitle: "Bra\xE7o - Longo",
+            textoCard: "o treino b\xEDceps ajuda muito a aumentar a estabilidade do corpo.",
             link: "/"
           },
           void 0,
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 101,
+            lineNumber: 103,
             columnNumber: 25
           },
           this
@@ -3476,7 +3477,7 @@ function Exercicios() {
           {
             imgSrc: "funcional_avancado.png",
             altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Funcional Avan\xE7ado",
+            cardTitle: "Funcional - Longo",
             textoCard: "O treino usa os m\xFAsculos para movimentos naturais do corpo para melhorar a for\xE7a e a resist\xEAncia.",
             link: "/"
           },
@@ -3484,7 +3485,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 108,
+            lineNumber: 110,
             columnNumber: 25
           },
           this
@@ -3505,7 +3506,7 @@ function Exercicios() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime22.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Exercicios.tsx",
-      lineNumber: 119,
+      lineNumber: 121,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
@@ -4081,7 +4082,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-76ZQAYLL.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-UCJ2WXGJ.js", "/build/_shared/chunk-NUICH3LQ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-BPOJ2ONP.js", imports: ["/build/_shared/chunk-JTBL5KEY.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-RJ2CASAZ.js", imports: ["/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-VBUV6B2J.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes": { id: "routes/ExercicioDetalhes", parentId: "root", path: "ExercicioDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes-J763RLFH.js", imports: ["/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-IUHXJP4D.js", imports: ["/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-HLHR2ECB.js", imports: ["/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-BQHA2HU4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-WIFQJXPA.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-OYZX3P5X.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-VT6LY3EU.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ADN5KSZD.js", imports: ["/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-J53C5LTO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo": { id: "routes/controleConsumo", parentId: "root", path: "controleConsumo", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo-UOLHR4NP.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-T4C76RLM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-XDPXDWWK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "1550d2d6", hmr: { runtime: "/build/_shared\\chunk-NUICH3LQ.js", timestamp: 1698068252933 }, url: "/build/manifest-1550D2D6.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-FXPKPERO.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-2KPZXGDX.js", "/build/_shared/chunk-UDH6CJF7.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-LU5HPHZP.js", imports: ["/build/_shared/chunk-KSCYGWSW.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-7XROIHVW.js", imports: ["/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-WDR6THFU.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes": { id: "routes/ExercicioDetalhes", parentId: "root", path: "ExercicioDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes-YCXCG2GW.js", imports: ["/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-SA332RDD.js", imports: ["/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-B7ELRKWV.js", imports: ["/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-ASZB3VTP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-CKEH6LGX.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-S6NEQ6C3.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-MLNCQIJB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-Y2Q4TKUI.js", imports: ["/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-Z2SJMY4J.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo": { id: "routes/controleConsumo", parentId: "root", path: "controleConsumo", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo-22TDRXNC.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-H3PFKVZM.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-F3BAEXSV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "28744443", hmr: { runtime: "/build/_shared\\chunk-UDH6CJF7.js", timestamp: 1698099589770 }, url: "/build/manifest-28744443.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

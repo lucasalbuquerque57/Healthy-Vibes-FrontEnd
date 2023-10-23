@@ -4,6 +4,7 @@ import { Header } from "~/components/Header";
 
 
 
+
 import exercicios from "~/styles/exerciciosDetalhes.css";
 
 export const links: LinksFunction = () => {
@@ -27,9 +28,9 @@ export default function ExercicioDetalhes() {
                     <h1 className="text-center py-3">Prancha</h1>
                 </div>
 
-                <div className="container-video">
+                <div className="container-video" >
                     <video width="750" height="500" controls >
-                        <source src={""} type="video/mp4" />
+                        <source src={"https://www.pexels.com/pt-br/video/cadeira-catedra-presidente-exercicio-4259087/"} type="video/mp4" />
                     </video>
                 </div>
 

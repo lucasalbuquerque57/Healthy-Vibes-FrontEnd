@@ -40,42 +40,42 @@ export default function Exercicios() {
                             altImg="Mulher_BracoCurto"
                             cardTitle="Braço"
                             textoCard="Treinar os braços evita problemas futuros de mobilidade."
-                            link="/"
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="pernas.png"
                             altImg="Mulher_agachamentoCurto"
                             cardTitle="Agachamento"
                             textoCard="Trabalha os membros e músculos inferiores de uma forma bem completa."
-                            link="/"
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="alongamento.png"
                             altImg="Mulher_alogamentoCurto"
                             cardTitle="Alongamento"
                             textoCard="Reduz o encurtamento muscular e melhora a coordenação motora."
-                            link="/"
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="funcional.png"
                             altImg="Homem_FuncionalCurto"
                             cardTitle="Funcional"
                             textoCard="O treino funcional ajuda a fortalecer os músculos, emagrecer ou melhorar o condicionamento físico."
-                            link="/"
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="prancha.jpg"
                             altImg="Um pão e copo de água"
                             cardTitle="Prancha"
-                            textoCard="Monitore seu IMC, consumo de água e calorias"
-                            link="/"
+                            textoCard="Pode auxiliar a coluna lombar e a pelve a manterem a estabilidade do tronco."
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="triceps.png"
                             altImg="Mulher_tricepsCurto"
                             cardTitle="Triceps"
                             textoCard="O treino de tríceps contribui para o crescimento e desenvolvimento dos músculos."
-                            link="/"
+                            link="/ExercicioDetalhes"
                         />
                         <ExercicioBase
                             imgSrc="abdominal.png"
@@ -88,27 +88,28 @@ export default function Exercicios() {
                             imgSrc="peito.png"
                             altImg="Um pão e copo de água"
                             cardTitle="Peito"
-                            textoCard="Monitore seu IMC, consumo de água e calorias"
+                            textoCard="o aumento do tônus abaixo do tecido gorduroso que forma o seio, o que dará mais sustentação a ele, além de um maior equilíbrio corporal."
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="alongamento_avancado.png"
                             altImg="Um pão e copo de água"
-                            cardTitle="Alongamento Avançado"
-                            textoCard="Monitore seu IMC, consumo de água e calorias"
+                            cardTitle="Alongamento - Longo"
+                            textoCard="Melhora a circulação sanguínea, prevenindo problemas articulares nos braços, pernas e coluna.
+                            "
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="braco_longo.jpg"
                             altImg="Um pão e copo de água"
-                            cardTitle="Braço Avançado"
-                            textoCard="Monitore seu IMC, consumo de água e calorias"
+                            cardTitle="Braço - Longo"
+                            textoCard="o treino bíceps ajuda muito a aumentar a estabilidade do corpo."
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="funcional_avancado.png"
                             altImg="Um pão e copo de água"
-                            cardTitle="Funcional Avançado"
+                            cardTitle="Funcional - Longo"
                             textoCard="O treino usa os músculos para movimentos naturais do corpo para melhorar a força e a resistência."
                             link="/"
                         />
