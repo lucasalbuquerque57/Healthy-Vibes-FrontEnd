@@ -6,13 +6,13 @@
 
 .textNav h6 {
   text-decoration: none;
-  color: var(--branco);
+  color: var(--text-tridenary);
   font-weight: bold;
 }
 
 .textNav h6:hover {
   padding-bottom: 0.3rem;
-  border-bottom: var(--background-primary) solid 0.156rem;
+  border-bottom: var(--text-tridenary) solid 0.156rem;
 }
 
 .dataperson {
@@ -105,6 +105,7 @@ input[type="password"] {
   background: none;
 }
 
+
 .card {
   height: 29.3rem;
   border-radius: 0.7rem;
@@ -139,6 +140,7 @@ input[type="password"] {
 }
 
 .card .card-content {
+  background-color: var(--background-primary);
   padding: 1.875rem;
 }
 
@@ -148,11 +150,11 @@ input[type="password"] {
 }
 
 .card .tag-travel {
-  color: #33459b;
+  color: var(--text-verde);
 }
 
 .card .title {
-  color: #303336;
+  color: var(--text-quidenary);
   font-weight: 700;
   transition: 300ms;
 }
@@ -171,7 +173,7 @@ input[type="password"] {
 }
 
 .card .title:hover {
-  color: #303336bb;
+  color: var(--background-nonary);
 }
 
 /* Just Copy The Code Above */

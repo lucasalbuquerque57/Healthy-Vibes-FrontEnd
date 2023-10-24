@@ -24,12 +24,9 @@ export function ExercicioBase(props: CardsProps) {
             <h3 className="title">{props.cardTitle}</h3>
             <h6 className="tag tag-travel">Musculação</h6>
             <p>{props.textoCard}</p>
-
           </div>
         </div >
       </Link >
-
-
 
     </div >
   )

@@ -162,7 +162,7 @@ input[type="radio"]:checked {
 }
 
 .form-control:focus {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
   font-weight: bolder;
   background-color: var(--background-primary) !important;
   border-color: var(--button-tertiary) !important;
@@ -193,8 +193,8 @@ input[type="radio"]:checked {
 p.alert.alert-light,
 .modal-content {
   background-color: var(--background-primary) !important; /* s */
-  color: var(--text-nonary) !important;
-  border-color: var(--text-nonary) !important;
+  color: var(--text-octonary) !important;
+  border-color: var(--text-primary) !important;
 }
 
 p.alert.alert-info.border.border-info.border-2.p-2 {

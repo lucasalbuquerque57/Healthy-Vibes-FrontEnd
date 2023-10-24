@@ -1,5 +1,6 @@
 .title {
   font-weight: bold;
+  color: var(--text-secondary);
 }
 
 :root {
@@ -38,4 +39,21 @@ mark {
   padding-right: 8rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+}
+
+.buttonCards{
+  /* color: var(--text-quardenary); */
+  background-color: rgb(0,0,0,0);
+  border: none;
+  margin-top: 2rem;
+  margin-left: 1rem;
+
+}
+
+.barraHoriz{
+  display: flex !important;
+}
+
+.headline .text{
+  text-align: center;
 }

@@ -22,10 +22,16 @@ export default function ExercicioDetalhes() {
 
     return (
         <div>
+            <main id="conteudo" className=" texto">
             <Header />
-            <main id="conteudo" className="container-fluid texto">
-                <div className="headline text">
-                    <h1 className="title text-center py-3">Tríceps</h1>
+                <div className="barraHoriz container-fluid">
+                    <button type="button" title="Excluir" className="buttonCards">
+                    <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{color: "var(--text-quadenary)"}}>
+                    </i>
+                    </button>
+                    <div className="headline text">
+                        <h1 className="title text-center py-3">Tríceps</h1>
+                    </div>
                 </div>
 
                 <div className="container-video text-center pb-4" >
@@ -40,8 +46,8 @@ export default function ExercicioDetalhes() {
                         sobre a estabilidade do pescoço, ombros, peito e costas.
                     </h5>
                 </div>
+                <Footer />
             </main>
-            <Footer />
         </div>
     );
 }

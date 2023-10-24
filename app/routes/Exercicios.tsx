@@ -65,7 +65,7 @@ export default function Exercicios() {
                         />
                         <ExercicioBase
                             imgSrc="prancha.jpg"
-                            altImg="Um pão e copo de água"
+                            altImg="Exercicio_Prancha"
                             cardTitle="Prancha"
                             textoCard="Pode auxiliar a coluna lombar e a pelve a manterem a estabilidade do tronco."
                             link="/ExercicioDetalhes"
@@ -86,29 +86,28 @@ export default function Exercicios() {
                         />
                         <ExercicioBase
                             imgSrc="peito.png"
-                            altImg="Um pão e copo de água"
+                            altImg="Exercicio_Peito"
                             cardTitle="Peito"
-                            textoCard="o aumento do tônus abaixo do tecido gorduroso que forma o seio, o que dará mais sustentação a ele, além de um maior equilíbrio corporal."
+                            textoCard="O aumento do tônus abaixo do tecido gorduroso que forma o seio, o que dará mais sustentação a ele, além de um maior equilíbrio corporal."
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="alongamento_avancado.png"
-                            altImg="Um pão e copo de água"
-                            cardTitle="Alongamento - Longo"
-                            textoCard="Melhora a circulação sanguínea, prevenindo problemas articulares nos braços, pernas e coluna.
-                            "
+                            altImg="Exercicio_Alongamento"
+                            cardTitle="Alongamento"
+                            textoCard=" O alongamento ajuda a Melhorar a circulação do sangue, prevenindo problemas articulares."
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="braco_longo.jpg"
-                            altImg="Um pão e copo de água"
+                            altImg="Exercicio_Braco"
                             cardTitle="Braço - Longo"
-                            textoCard="o treino bíceps ajuda muito a aumentar a estabilidade do corpo."
+                            textoCard="O treino bíceps ajuda muito a aumentar a estabilidade do corpo.E contribui para a realização dos movimentos do dia a dia."
                             link="/"
                         />
                         <ExercicioBase
                             imgSrc="funcional_avancado.png"
-                            altImg="Um pão e copo de água"
+                            altImg="Exercicio_Funcional"
                             cardTitle="Funcional - Longo"
                             textoCard="O treino usa os músculos para movimentos naturais do corpo para melhorar a força e a resistência."
                             link="/"

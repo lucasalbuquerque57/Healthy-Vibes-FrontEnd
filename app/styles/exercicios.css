@@ -46,7 +46,7 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #303336;
-  background-color: #d1e8ee;
+  /* background-color: #d1e8ee; */
   overflow: hidden;
 }
 
@@ -78,6 +78,7 @@
   color: var(--text-undenary);
   font-weight: 700;
   transition: 300ms;
+  font-size: 1.4rem;
 }
 
 .card p {

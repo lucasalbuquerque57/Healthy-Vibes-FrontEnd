@@ -19,11 +19,11 @@
 
 .box-img p {
     position: absolute;
-    color: white;
+    color: var(--text-primary);
     top: 1rem;
     left: 1rem;
     font-size: 4rem;
-    text-shadow: 0.125rem 0.125rem #000;
+    text-shadow: 0.125rem 0.125rem var(--preto-efeitos);
 }
 
 .box img {
@@ -34,12 +34,11 @@
 
 .form-box{
     background-color: var(--branco);
-    display: flex;
     width: 100%;
     padding: 2rem 1rem;
-    align-items: center;
+    display: grid;
     justify-content: center;
-    flex-direction: column;
+    overflow-y: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,6 +60,7 @@
     font-weight: 800;
     margin: 0;
     letter-spacing: 0.1rem;
+    text-align: center;
     font-family: 'Merriweather Sans', sans-serif;
 }
 
@@ -148,4 +148,10 @@ form .input-group button:active{
 
 .fundoPossivel{
     background-color: var(--talvez-nada);
+}
+
+@media screen and (max-width: 768px) {
+    .box-img {
+        display: none;
+    }
 }

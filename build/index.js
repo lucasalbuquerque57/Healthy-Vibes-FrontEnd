@@ -147,7 +147,7 @@ __export(root_exports, {
 var import_react2 = require("@remix-run/react");
 
 // app/styles/main.css
-var main_default = "/build/_assets/main-FKWOH4YR.css";
+var main_default = "/build/_assets/main-KD4BPSTT.css";
 
 // app/root.tsx
 var import_react_vlibras = __toESM(require("@moreiraste/react-vlibras")), import_core2 = require("@hookstate/core");
@@ -684,7 +684,7 @@ function Header() {
 }
 
 // app/styles/calculadoras.css
-var calculadoras_default = "/build/_assets/calculadoras-N5WAA2WN.css";
+var calculadoras_default = "/build/_assets/calculadoras-OVGULBOO.css";
 
 // app/routes/CalculadoraNutricional/FormCalculadora.tsx
 var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
@@ -2328,7 +2328,7 @@ __export(ExercicioDetalhes_exports, {
 });
 
 // app/styles/exerciciosDetalhes.css
-var exerciciosDetalhes_default = "/build/_assets/exerciciosDetalhes-NMLIF2J7.css";
+var exerciciosDetalhes_default = "/build/_assets/exerciciosDetalhes-QPFMSHU6.css";
 
 // app/routes/ExercicioDetalhes.tsx
 var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime"), links7 = () => [
@@ -2338,51 +2338,64 @@ var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime"), links7 = () => 
   title: "Exerc\xEDcios"
 });
 function ExercicioDetalhes() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("main", { id: "conteudo", className: " texto", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Header, {}, void 0, !1, {
-      fileName: "app/routes/ExercicioDetalhes.tsx",
-      lineNumber: 25,
-      columnNumber: 13
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("main", { id: "conteudo", className: "container-fluid texto", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "headline text", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h1", { className: "title text-center py-3", children: "Tr\xEDceps" }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 28,
-        columnNumber: 21
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 27,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "container-video text-center pb-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("iframe", { width: "900", height: "500", src: "https://www.youtube.com/embed/A2FAa4Q-4eg?si=1y-fgwSsrG1coOM5", title: "YouTube video player", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 32,
-        columnNumber: 21
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 31,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h5", { className: "texto-justificado", children: "Fazer pranchas melhora significativamente uma postura erecta e est\xE1vel. Atrav\xE9s do fortalecimento de core, o corpo ser\xE1 capaz de manter uma postura correcta porque os m\xFAsculos no abd\xF3men t\xEAm grande influ\xEAncia sobre a estabilidade do pesco\xE7o, ombros, peito e costas." }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 36,
-        columnNumber: 21
-      }, this) }, void 0, !1, {
-        fileName: "app/routes/ExercicioDetalhes.tsx",
-        lineNumber: 35,
-        columnNumber: 17
-      }, this)
-    ] }, void 0, !0, {
       fileName: "app/routes/ExercicioDetalhes.tsx",
       lineNumber: 26,
       columnNumber: 13
     }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "barraHoriz container-fluid", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("button", { type: "button", title: "Excluir", className: "buttonCards", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("i", { className: "px-2 fa-solid fa-arrow-left fa-2xl", style: { color: "var(--text-quadenary)" } }, void 0, !1, {
+        fileName: "app/routes/ExercicioDetalhes.tsx",
+        lineNumber: 29,
+        columnNumber: 21
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/ExercicioDetalhes.tsx",
+        lineNumber: 28,
+        columnNumber: 21
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "headline text", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h1", { className: "title text-center py-3", children: "Tr\xEDceps" }, void 0, !1, {
+        fileName: "app/routes/ExercicioDetalhes.tsx",
+        lineNumber: 33,
+        columnNumber: 25
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/ExercicioDetalhes.tsx",
+        lineNumber: 32,
+        columnNumber: 21
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/ExercicioDetalhes.tsx",
+      lineNumber: 27,
+      columnNumber: 17
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "container-video text-center pb-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("iframe", { width: "900", height: "500", src: "https://www.youtube.com/embed/A2FAa4Q-4eg?si=1y-fgwSsrG1coOM5", title: "YouTube video player", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" }, void 0, !1, {
+      fileName: "app/routes/ExercicioDetalhes.tsx",
+      lineNumber: 38,
+      columnNumber: 21
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/ExercicioDetalhes.tsx",
+      lineNumber: 37,
+      columnNumber: 17
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("h5", { className: "texto-justificado", children: "Fazer pranchas melhora significativamente uma postura erecta e est\xE1vel. Atrav\xE9s do fortalecimento de core, o corpo ser\xE1 capaz de manter uma postura correcta porque os m\xFAsculos no abd\xF3men t\xEAm grande influ\xEAncia sobre a estabilidade do pesco\xE7o, ombros, peito e costas." }, void 0, !1, {
+      fileName: "app/routes/ExercicioDetalhes.tsx",
+      lineNumber: 42,
+      columnNumber: 21
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/ExercicioDetalhes.tsx",
+      lineNumber: 41,
+      columnNumber: 17
+    }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/ExercicioDetalhes.tsx",
-      lineNumber: 44,
-      columnNumber: 13
+      lineNumber: 49,
+      columnNumber: 17
     }, this)
   ] }, void 0, !0, {
+    fileName: "app/routes/ExercicioDetalhes.tsx",
+    lineNumber: 25,
+    columnNumber: 13
+  }, this) }, void 0, !1, {
     fileName: "app/routes/ExercicioDetalhes.tsx",
     lineNumber: 24,
     columnNumber: 5
@@ -3283,7 +3296,7 @@ function FiltroBarra(props) {
 }
 
 // app/styles/exercicios.css
-var exercicios_default = "/build/_assets/exercicios-QRJSP7AK.css";
+var exercicios_default = "/build/_assets/exercicios-TTQCOVTH.css";
 
 // app/routes/Exercicios.tsx
 var import_jsx_dev_runtime23 = require("react/jsx-dev-runtime"), links9 = () => [
@@ -3400,7 +3413,7 @@ function Exercicios() {
           ExercicioBase,
           {
             imgSrc: "prancha.jpg",
-            altImg: "Um p\xE3o e copo de \xE1gua",
+            altImg: "Exercicio_Prancha",
             cardTitle: "Prancha",
             textoCard: "Pode auxiliar a coluna lombar e a pelve a manterem a estabilidade do tronco.",
             link: "/ExercicioDetalhes"
@@ -3454,9 +3467,9 @@ function Exercicios() {
           ExercicioBase,
           {
             imgSrc: "peito.png",
-            altImg: "Um p\xE3o e copo de \xE1gua",
+            altImg: "Exercicio_Peito",
             cardTitle: "Peito",
-            textoCard: "o aumento do t\xF4nus abaixo do tecido gorduroso que forma o seio, o que dar\xE1 mais sustenta\xE7\xE3o a ele, al\xE9m de um maior equil\xEDbrio corporal.",
+            textoCard: "O aumento do t\xF4nus abaixo do tecido gorduroso que forma o seio, o que dar\xE1 mais sustenta\xE7\xE3o a ele, al\xE9m de um maior equil\xEDbrio corporal.",
             link: "/"
           },
           void 0,
@@ -3472,10 +3485,9 @@ function Exercicios() {
           ExercicioBase,
           {
             imgSrc: "alongamento_avancado.png",
-            altImg: "Um p\xE3o e copo de \xE1gua",
-            cardTitle: "Alongamento - Longo",
-            textoCard: `Melhora a circula\xE7\xE3o sangu\xEDnea, prevenindo problemas articulares nos bra\xE7os, pernas e coluna.\r
-                            `,
+            altImg: "Exercicio_Alongamento",
+            cardTitle: "Alongamento",
+            textoCard: " O alongamento ajuda a Melhorar a circula\xE7\xE3o do sangue, prevenindo problemas articulares.",
             link: "/"
           },
           void 0,
@@ -3491,16 +3503,16 @@ function Exercicios() {
           ExercicioBase,
           {
             imgSrc: "braco_longo.jpg",
-            altImg: "Um p\xE3o e copo de \xE1gua",
+            altImg: "Exercicio_Braco",
             cardTitle: "Bra\xE7o - Longo",
-            textoCard: "o treino b\xEDceps ajuda muito a aumentar a estabilidade do corpo.",
+            textoCard: "O treino b\xEDceps ajuda muito a aumentar a estabilidade do corpo.E contribui para a realiza\xE7\xE3o dos movimentos do dia a dia.",
             link: "/"
           },
           void 0,
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 103,
+            lineNumber: 101,
             columnNumber: 25
           },
           this
@@ -3509,7 +3521,7 @@ function Exercicios() {
           ExercicioBase,
           {
             imgSrc: "funcional_avancado.png",
-            altImg: "Um p\xE3o e copo de \xE1gua",
+            altImg: "Exercicio_Funcional",
             cardTitle: "Funcional - Longo",
             textoCard: "O treino usa os m\xFAsculos para movimentos naturais do corpo para melhorar a for\xE7a e a resist\xEAncia.",
             link: "/"
@@ -3518,7 +3530,7 @@ function Exercicios() {
           !1,
           {
             fileName: "app/routes/Exercicios.tsx",
-            lineNumber: 110,
+            lineNumber: 108,
             columnNumber: 25
           },
           this
@@ -3539,7 +3551,7 @@ function Exercicios() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Exercicios.tsx",
-      lineNumber: 121,
+      lineNumber: 119,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
@@ -3558,7 +3570,7 @@ __export(cadastro_exports, {
 });
 
 // app/styles/cadastro.css
-var cadastro_default = "/build/_assets/cadastro-HX4PQC6S.css";
+var cadastro_default = "/build/_assets/cadastro-JEF3DW7I.css";
 
 // app/routes/cadastro.tsx
 var import_react14 = require("@remix-run/react"), import_jsx_dev_runtime24 = require("react/jsx-dev-runtime"), links10 = () => [
@@ -3715,7 +3727,7 @@ __export(route_exports4, {
 var import_react15 = require("@remix-run/react");
 
 // app/styles/profile.css
-var profile_default = "/build/_assets/profile-UFPWSLUK.css";
+var profile_default = "/build/_assets/profile-MJN6KNL6.css";
 
 // app/routes/Profile/route.tsx
 var import_jsx_dev_runtime25 = require("react/jsx-dev-runtime"), meta10 = () => ({
@@ -3955,7 +3967,7 @@ __export(login_exports, {
 });
 
 // app/styles/login.css
-var login_default = "/build/_assets/login-FJQDTTWV.css";
+var login_default = "/build/_assets/login-TGO74UVM.css";
 
 // app/routes/login.tsx
 var import_react17 = require("@remix-run/react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime"), links13 = () => [{ rel: "stylesheet", href: login_default }], meta12 = () => ({
@@ -4102,7 +4114,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-L3DKMLJE.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-I4OX5LDE.js", "/build/_shared/chunk-3L2JVFDZ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YJJCKQ3J.js", imports: ["/build/_shared/chunk-VKJGLHOE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-XH4VZNYR.js", imports: ["/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-6TQXAQ32.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes": { id: "routes/ExercicioDetalhes", parentId: "root", path: "ExercicioDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes-Y5KLOYNG.js", imports: ["/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-XDYXKXQ7.js", imports: ["/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-XKY7DPKA.js", imports: ["/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-67ZWDWHR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-XERPRHSJ.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-XE6VW4ZQ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-FBA6FPWB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-IMFVFKR6.js", imports: ["/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-ETRAL7CI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$dia": { id: "routes/controleConsumo.$dia", parentId: "root", path: "controleConsumo/:dia", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$dia-LQ6R3KH6.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-TPU4DFJ5.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-Y3L4SNCS.js", imports: ["/build/_shared/chunk-TPU4DFJ5.js", "/build/_shared/chunk-TP4OLL6B.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-EDUAXBQ5.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "90e9d065", hmr: { runtime: "/build/_shared\\chunk-3L2JVFDZ.js", timestamp: 1698109568742 }, url: "/build/manifest-90E9D065.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-LCX6LEXR.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JBDBXNQ4.js", "/build/_shared/chunk-6GABGLAY.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-H4VSCFCK.js", imports: ["/build/_shared/chunk-OUN3ID5X.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-6B3RMDMS.js", imports: ["/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-L3LXUFQS.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes": { id: "routes/ExercicioDetalhes", parentId: "root", path: "ExercicioDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes-6PDUFR6M.js", imports: ["/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-DNOSFCCH.js", imports: ["/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-53UUI666.js", imports: ["/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-6HO2SQLC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-CPWVXVJ4.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietas": { id: "routes/Profile.dietas", parentId: "routes/Profile", path: "dietas", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietas-C4OFBUGT.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-6ZA7KNBN.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-AZ6KWLYS.js", imports: ["/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-LPWOTLPE.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$dia": { id: "routes/controleConsumo.$dia", parentId: "root", path: "controleConsumo/:dia", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$dia-GQRZYYWW.js", imports: ["/build/_shared/chunk-CE5WM4LG.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-TPU4DFJ5.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-PICBA7UJ.js", imports: ["/build/_shared/chunk-TPU4DFJ5.js", "/build/_shared/chunk-HRRPLGPF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-ANRG2DNJ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "aeecfb7c", hmr: { runtime: "/build/_shared\\chunk-6GABGLAY.js", timestamp: 1698156563455 }, url: "/build/manifest-AEECFB7C.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
