@@ -52,6 +52,7 @@
 
   --branco: #fff;
   --branco-creme: #f7f7f7;
+  --branco-clarin: #e9e9e9;
 
   --preto-efeitos: #000;
   --preto-efeito-trans: #00000052;
@@ -106,11 +107,14 @@
 
   --branco: #000;
   --branco-creme: #000;
+  --branco-clarin: #ffff00;
+
   --verde-princip: #000;
   --text-salmao: #ffff00;
   --acessib-mark: #ffff00;
 
   --sombra-clara-effect: none;
+  --amarelo-oportunista: #ffff00;
 
   --background-warning-modal: #000;
   --bs-border-color-translucent: #ffff00;

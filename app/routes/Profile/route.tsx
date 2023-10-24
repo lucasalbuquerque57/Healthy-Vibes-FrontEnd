@@ -36,15 +36,15 @@ export default function Profile() {
               <h6>Acompanhar Progresso</h6>
             </Link>
           </div>
-          <div className="col py-2 pt-md-0">
+          {/*           <div className="col py-2 pt-md-0">
             <Link to="/Profile/Dietas" style={{ textDecoration: "none" }}>
               <h6>Meus Exercícios</h6>
             </Link>
-          </div>
+          </div> */}
           <div className="col py-2 pt-md-0">
-              <Link to="/Profile" style={{ textDecoration: "none" }}>
-                <h6>Configurações</h6>
-              </Link>
+            <Link to="/Profile" style={{ textDecoration: "none" }}>
+              <h6>Configurações</h6>
+            </Link>
           </div>
 
         </div>

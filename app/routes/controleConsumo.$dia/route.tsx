@@ -1,4 +1,5 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LoaderArgs, LinksFunction, MetaFunction } from "@remix-run/node";
+
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
@@ -14,8 +15,28 @@ import ModalInsert from "./ModalInsert";
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
-export const meta: MetaFunction = () => ({
-    title: "controle Consumo"
+
+export async function loader({
+    params,
+}: LoaderArgs) {
+
+    if (params.dia?.includes(".")) {
+
+        const diaMes = params.dia || ""
+
+        return diaMes.replace(".", "/");
+    } else {
+        return ""
+    }
+
+}
+
+
+export const meta: MetaFunction<typeof loader> = ({
+    data,
+}) =>
+({
+    title: "Dia: " + data
 });
 
 export const links: LinksFunction = () => {

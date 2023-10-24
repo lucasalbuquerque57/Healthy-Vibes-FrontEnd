@@ -25,22 +25,13 @@ export default function ExercicioDetalhes() {
             <Header />
             <main id="conteudo" className="container-fluid texto">
                 <div className="headline text">
-                    <h1 className="text-center py-3">Prancha</h1>
+                    <h1 className="title text-center py-3">Tríceps</h1>
                 </div>
 
-                <div className="container-video" >
-                    <video width="750" height="500" controls >
-                        <source src={"https://www.pexels.com/pt-br/video/cadeira-catedra-presidente-exercicio-4259087/"} type="video/mp4" />
-                    </video>
+                <div className="container-video text-center pb-4" >
+                    <iframe width="900" height="500" src="https://www.youtube.com/embed/A2FAa4Q-4eg?si=1y-fgwSsrG1coOM5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                 </div>
 
-                
-
-                <div>
-                    <h5 className="text-justify py-2 px-3">
-                        4x 30s
-                    </h5>
-                </div>
                 <div>
                     <h5 className="texto-justificado">
                         Fazer pranchas melhora significativamente uma postura erecta e estável.

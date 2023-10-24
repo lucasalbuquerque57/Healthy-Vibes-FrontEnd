@@ -1,3 +1,7 @@
+.title {
+  font-weight: bold;
+}
+
 :root {
   --surface-color: #fff;
   --curve: 40;
@@ -21,8 +25,17 @@ mark {
   border-radius: 1000 px;
 }
 
+.rep {
+  text-align: justify;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-bottom: 2rem;
+}
+
 .texto-justificado {
   text-align: justify;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
 }
