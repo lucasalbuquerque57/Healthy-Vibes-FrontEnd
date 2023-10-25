@@ -114,6 +114,7 @@
   --talvez-nada: #000;
 
   --transparent-primary: none;
+  --transparent-secondary: none;
   --transparent-tertiary: #ffff00;
 
   --branco: #000;
@@ -222,6 +223,7 @@ main {
 }
 
 .logoFooter {
+  /* width: 25rem; */
   min-height: 10rem;
 }
 
@@ -268,8 +270,8 @@ header .nav-link:hover {
   justify-content: center;
 }
 
-
-.loginButton, .cadButton{
+.loginButton,
+.cadButton {
   color: var(--text-tridenary);
   font-weight: bold;
   border-radius: 2rem;

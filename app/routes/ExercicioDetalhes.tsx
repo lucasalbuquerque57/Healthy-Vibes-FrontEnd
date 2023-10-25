@@ -5,6 +5,8 @@ import { Header } from "~/components/Header";
 
 
 
+
+
 import exercicios from "~/styles/exerciciosDetalhes.css";
 
 export const links: LinksFunction = () => {
@@ -23,15 +25,16 @@ export default function ExercicioDetalhes() {
     return (
         <div>
             <main id="conteudo" className=" texto">
-            <Header />
+                <Header />
+                <div className="headline text">
+                    <h1 className="title text-center py-3">Tríceps</h1>
+                </div>
                 <div className="barraHoriz container-fluid">
                     <button type="button" title="Excluir" className="buttonCards">
-                    <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{color: "var(--text-quadenary)"}}>
-                    </i>
+                        <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{ color: "var(--text-quadenary)" }}>
+                        </i>
                     </button>
-                    <div className="headline text">
-                        <h1 className="title text-center py-3">Tríceps</h1>
-                    </div>
+
                 </div>
 
                 <div className="container-video text-center pb-4" >

@@ -47,11 +47,12 @@
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  border: 0.1rem solid var(--background-denary);
+  border: 0.1rem solid var(--text-quidenary);
   border-radius: 1rem;
   width: 18rem;
   height: 2.5rem;
   padding-left: 1rem;
+  background-color: var(--background-primary);
 }
 
 ::placeholder {
@@ -65,9 +66,10 @@ input[type="password"] {
 .stylebutton {
   color: var(--background-tertiary);
   background-color: var(--background-quinary);
-  border: 0.05rem solid var(--background-denary);
+  border: none;
   border-radius: 0.5rem;
   padding: 0.6rem 0.6rem;
+  font-weight: bold;
 }
 
 .formulario button:active {
@@ -78,7 +80,13 @@ input[type="password"] {
 }
 
 .rotulo {
+  color: var(--text-secondary);
   padding-left: 0.75rem;
+}
+
+rotulo:focus {
+  color: var(--text-secondary) !important;
+  font-weight: bold;
 }
 
 /* ------------------------ Dietas --------------------------- */
@@ -104,7 +112,6 @@ input[type="password"] {
   border: none;
   background: none;
 }
-
 
 .card {
   height: 29.3rem;
@@ -332,4 +339,3 @@ form .input-group button {
   letter-spacing: 0.125rem;
   font-weight: 700;
 }
-

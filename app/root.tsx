@@ -14,6 +14,10 @@ import main from "./styles/main.css";
 import VLibras from '@moreiraste/react-vlibras'
 import { useHookstate } from "@hookstate/core";
 import { themePage } from "./script/changeTheme";
+import primetheme from "primereact/resources/themes/lara-light-indigo/theme.css"; //theme
+import primecore from "primereact/resources/primereact.min.css"; //core css
+import primeicons from "primeicons/primeicons.css"; //icons
+
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -28,6 +32,9 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css", integrity: "sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter&display=swap", crossOrigin: "anonymous" },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" },
+    { rel: "stylesheet", href: primetheme },
+    { rel: "stylesheet", href: primecore },
+    { rel: "stylesheet", href: primeicons },
     { rel: "shortcut icon", href: "/IconeLogo.png", type: "image/x-icon" },
     { rel: "stylesheet", href: main }
   ];
