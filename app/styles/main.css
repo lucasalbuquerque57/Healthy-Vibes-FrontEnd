@@ -1,6 +1,6 @@
 :root {
   --background-primary: #fff;
-  --background-secondary: rgba(140, 235, 152, 0.44); /*Fundo Login*/
+  --background-secondary: rgba(140, 235, 152, 0.6); /*Fundo Login*/
   --background-tertiary: #effff1; /*Fundo Cadastro*/
   --background-quaternary: #254e24; /*Footer*/
   --background-quinary: #3fae3c; /*Header*/

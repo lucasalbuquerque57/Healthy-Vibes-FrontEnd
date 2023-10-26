@@ -20,7 +20,7 @@ export function CardDieta(props: CardsProps) {
     // Vou colocar os bglhs do axios aqui
     e.preventDefault();
     Swal.fire({
-      title: 'Do you want to save the changes?',
+      title: 'Quer salvar?',
       showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Save',

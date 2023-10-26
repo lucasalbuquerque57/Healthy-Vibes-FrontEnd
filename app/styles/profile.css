@@ -339,3 +339,8 @@ form .input-group button {
   letter-spacing: 0.125rem;
   font-weight: 700;
 }
+
+.inpProg:focus {
+  color: var(--text-octonary);
+  font-weight: bold;
+}

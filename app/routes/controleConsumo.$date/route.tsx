@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
 import ModalInsert from "./ModalInsert";
+import { useLoaderData } from "@remix-run/react";
 
 
 
@@ -20,11 +21,13 @@ export async function loader({
     params,
 }: LoaderArgs) {
 
-    if (params.dia?.includes(".")) {
+    const urlParams = new URLSearchParams(params.date)
 
-        const diaMes = params.dia || ""
+    if (params.date?.includes(".") && urlParams.has('date')) {
 
-        return diaMes.replace(".", "/");
+        const diaMes = urlParams.get("date") || ""
+
+        return diaMes.replaceAll(".", "/");
     } else {
         return ""
     }
@@ -110,7 +113,7 @@ const food = {
 
 
 export default function ControleConsumo() {
-
+    const data = useLoaderData<typeof loader>();
     const [show, setShow] = useState(false);
     const [contentModal, setContentModal] = useState("");
     const handleClose = () => setShow(false);
@@ -126,8 +129,9 @@ export default function ControleConsumo() {
             <div id="conteudo" className="container-fluid texto">
 
                 <h1 className='first-title'>Controle de Consumo</h1>
+                <h2 className='first-title'>{data}</h2>
 
-                <div className='graphics row'>
+                <div className='graphics row mt-3'>
                     <div className="controlwater col">
 
                         <h1 className="title text-center my-3">E aí, já bebeu água?</h1>

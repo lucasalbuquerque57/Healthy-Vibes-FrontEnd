@@ -27,6 +27,6 @@
   border: 0.07rem solid var(--background-denary);
 }
 
-.icon i:hover{
+.icon i:hover {
   cursor: pointer;
 }

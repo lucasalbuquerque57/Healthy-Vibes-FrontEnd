@@ -20,6 +20,10 @@
   margin-left: 1rem;
 }
 
+.campo-prog:focus {
+  color: red;
+}
+
 .stylebuttonadd {
   color: var(--background-tertiary);
   background-color: var(--background-quinary);

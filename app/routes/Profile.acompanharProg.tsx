@@ -65,13 +65,13 @@ export default function AcompanharProgresso() {
             <div>
               <label className="rotulo">Altura</label>
             </div>
-            <input type="text" id="nome" name="nome" placeholder="1.87" />
+            <input className="inpProg" type="text" id="altura" name="nome" placeholder="1.87" />
           </div>
           <div className="campo-prog">
             <div>
               <label className="rotulo">Peso</label>
             </div>
-            <input type="email" id="email" name="email" placeholder="87.6" />
+            <input className="inpProg" type="text" id="peso" name="text" placeholder="87.6" />
           </div>
           <div className="buttonAdd">
             <button type="button" className="stylebuttonadd">Adicionar</button>

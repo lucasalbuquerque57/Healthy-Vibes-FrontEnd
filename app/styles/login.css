@@ -1,11 +1,13 @@
 * {
   font-family: "Inter", sans-serif;
 }
-
-main {
-  background-image: url("/backgroundLoginTemp.png");
-  background-repeat: repeat;
+@media screen and (min-width: 768px) {
+  main {
+    background-image: url("/backgroundLoginTemp.png");
+    background-repeat: repeat;
+  }
 }
+
 /*  */
 
 .box {
@@ -152,11 +154,25 @@ form .input-group button {
   margin-bottom: 0 !important;
 }
 
-@media screen and (max-width: 768px) {
-  .box-img {
+@media (max-width: 768px) {
+  .main {
     display: none;
   }
-  
+  .img-box {
+    display: none;
+  }
+  .img-box p {
+    display: none;
+  }
+  .box {
+    width: 700px;
+  }
+  .form-box {
+    width: 100vh;
+    border-radius: 20px;
+  }
+  .input-group {
+    width: 100vh;
+    border-radius: 20px;
+  }
 }
-
-  
