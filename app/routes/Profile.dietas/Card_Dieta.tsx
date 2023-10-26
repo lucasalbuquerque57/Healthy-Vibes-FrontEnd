@@ -20,17 +20,17 @@ export function CardDieta(props: CardsProps) {
     // Vou colocar os bglhs do axios aqui
     e.preventDefault();
     Swal.fire({
-      title: 'Quer salvar?',
+      title: 'Quer deletar?',
       showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Save',
-      denyButtonText: `Don't save`,
+      /* showCancelButton: true, */
+      confirmButtonText: 'Deletar',
+      denyButtonText: `Cancelar`,
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        Swal.fire('Saved!', '', 'success')
+        Swal.fire('Deletado!', '', 'success')
       } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
+        Swal.fire('Não deletado', '', 'info')
       }
     })
 

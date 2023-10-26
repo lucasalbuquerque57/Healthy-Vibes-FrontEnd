@@ -60,43 +60,44 @@ export default function AcompanharProgresso() {
     <main>
 
       <div className="conteudoprog">
-        <div className="container-prog">
-          <div className="campo-prog">
-            <div>
-              <label className="rotulo">Altura</label>
+        
+          <div className="container-prog">
+            <div className="campo-prog">
+              <div>
+                <label className="rotulo">Altura</label>
+              </div>
+              <input className="inpProg" type="text" id="altura" name="nome" placeholder="1.87" />
             </div>
-            <input className="inpProg" type="text" id="altura" name="nome" placeholder="1.87" />
-          </div>
-          <div className="campo-prog">
-            <div>
-              <label className="rotulo">Peso</label>
+            <div className="campo-prog">
+              <div>
+                <label className="rotulo">Peso</label>
+              </div>
+              <input className="inpProg" type="text" id="peso" name="text" placeholder="87.6" />
             </div>
-            <input className="inpProg" type="text" id="peso" name="text" placeholder="87.6" />
+            <div className="buttonAdd">
+              <button type="button" className="stylebuttonadd">Adicionar</button>
+            </div>
           </div>
-          <div className="buttonAdd">
-            <button type="button" className="stylebuttonadd">Adicionar</button>
+
+          <div className="card-imc-prog">
+            <CardIMC
+              IMC="23.2"
+              data="23/12/2022"
+            />
+            <CardIMC
+              IMC="22.2"
+              data="13/02/2023"
+            />
+            <CardIMC
+              IMC="20.2"
+              data="25/03/2023"
+            />
           </div>
-        </div>
 
-        <div className="card-imc-prog">
-          <CardIMC
-            IMC="23.2"
-            data="23/12/2022"
-          />
-          <CardIMC
-            IMC="22.2"
-            data="13/02/2023"
-          />
-          <CardIMC
-            IMC="20.2"
-            data="25/03/2023"
-          />
-        </div>
-
-        <div className='graphic-imc'>
-          <Line options={options} data={data} />
-        </div>
-
+          <div className='graphic-imc'>
+            <Line options={options} data={data} />
+          </div>
+        
 
 
       </div>

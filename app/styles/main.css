@@ -65,12 +65,18 @@
   --verde-princip: #0a9906;
   --salmao-princip: #ff785a;
   --azul-princip: #33459b;
+  --rouge-princip: #ff0000;
 
   --text-salmao: #ff785a;
   --text-verde: #0a9906;
 
+  --iterac-verde: #0a9906;
+
+  --blue-light: #8fc7d544;
+
   --background-warning-modal: #b7e1ea;
   --acessib-mark: rgb(133, 150, 228);
+  --verde-sucess: rgba(165,220,134,.7);
 }
 
 [data-theme="contraOn"] {
@@ -124,7 +130,14 @@
   --verde-princip: #000;
   --text-salmao: #ffff00;
   --text-verde: #fff;
+  --rouge-princip: #ffff00;
   --acessib-mark: #ffff00;
+  --verde-sucess: #ffff00;
+  --verde-sucess2: #ffff00;
+
+  --iterac-verde: #ffff00;
+
+  --blue-light: none;
 
   --sombra-clara-effect: none;
   --amarelo-oportunista: #ffff00;

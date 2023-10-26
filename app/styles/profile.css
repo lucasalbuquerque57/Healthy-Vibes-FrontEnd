@@ -117,7 +117,7 @@ rotulo:focus {
   height: 29.3rem;
   border-radius: 0.7rem;
   background-color: #fff;
-  box-shadow: 0rem 2.5rem 2.5rem -1.25rem #8fc7d544;
+  box-shadow: 0rem 2.5rem 2.5rem -1.25rem var(--blue-light);
   overflow: hidden;
 }
 
@@ -343,4 +343,47 @@ form .input-group button {
 .inpProg:focus {
   color: var(--text-octonary);
   font-weight: bold;
+}
+
+.text-info{
+  color: var(--iterac-verde) !important;
+}
+
+div:where(.swal2-container).swal2-center>.swal2-popup {
+  background-color: var(--background-primary) !important;
+  border: solid 3px var(--amarelo-oportunista);
+}
+
+h2#swal2-title{
+  color: var(--text-octonary);
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  border: solid 0.15rem green !important;
+  background-color: var(--background-primary) !important;
+  border-color: 0.1rem var(--rouge-princip) !important;
+  color: var(--text-secondary) !important;
+  font-weight: bold;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-deny{
+  background-color: var(--rouge-princip) !important;
+  color: var(--text-denary) !important;
+  font-weight: bold;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+  box-shadow: none !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus{
+  box-shadow: none !important;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring{
+  border: 0.25em solid var(--verde-sucess) !important;
+}
+
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+  color: var(--verde-sucess2) !important;
 }
