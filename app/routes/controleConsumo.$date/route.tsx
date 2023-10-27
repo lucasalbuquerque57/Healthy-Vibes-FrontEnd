@@ -6,16 +6,13 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
 import ModalInsert from "./ModalInsert";
 import { useLoaderData } from "@remix-run/react";
 
-
-
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
-
 
 export async function loader({
     params,
@@ -47,12 +44,6 @@ export const links: LinksFunction = () => {
 };
 
 export const options = {
-    /* scales: {
-        y: {
-            min: 0,
-            max: 100,
-        },
-    }, */
     responsive: true,
     plugins: {
         title: {
@@ -78,15 +69,7 @@ const water = {
     ],
 };
 
-// Gráfico Calorias
-
 export const optionsfood = {
-    /* scales: {
-        y: {
-            min: 0,
-            max: 100,
-        },
-    }, */
     responsive: true,
     plugins: {
         title: {
@@ -115,13 +98,22 @@ const food = {
 export default function ControleConsumo() {
     const data = useLoaderData<typeof loader>();
     const [show, setShow] = useState(false);
-    const [contentModal, setContentModal] = useState("");
+    const [contentModal, setContentModal] = useState("0");
+    const [updateOrInsert, setUpdateOrInsert] = useState("insert");
     const handleClose = () => setShow(false);
 
     function handleShow(typeOperation: string) {
         setShow(true);
         setContentModal(typeOperation)
     }
+
+    const [diet, setDiet] = useState("");
+
+    useEffect(() => {
+        setDiet(localStorage.getItem("selectedDiet") || "")
+    }, [])
+
+    // Requisição de users para saber as dietas
 
     return (
         <main>
@@ -147,16 +139,25 @@ export default function ControleConsumo() {
                                 <CardInfos
                                     horario="15:00"
                                     quantidade="300 Ml"
+                                    setUpdateOrInsert={setUpdateOrInsert}
+                                    handleShow={handleShow}
+                                    typeCard="Água"
                                 />
-
                                 <CardInfos
                                     horario="12:20"
                                     quantidade="200 Ml"
+                                    setUpdateOrInsert={setUpdateOrInsert}
+                                    handleShow={handleShow}
+                                    typeCard="Água"
                                 />
 
-
                                 <div className="col">
-                                    <Button variant="success" onClick={() => handleShow("Água")} className="m-md-4 float-end float-md-none">
+                                    <Button variant="success" className="m-md-4 float-end float-md-none"
+                                        onClick={() => {
+                                            handleShow("Água")
+                                            setUpdateOrInsert("insert")
+                                        }}
+                                    >
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
                                     </Button>
                                 </div>
@@ -170,28 +171,53 @@ export default function ControleConsumo() {
                     </div>
                     <div className="controlfood col">
                         <h1 className="titlefood text-center my-3">O que você comeu?</h1>
+
                         <div className="graphicfood d-flex justify-content-center align-items-center">
                             <Doughnut options={optionsfood} data={food} />
                         </div>
-
                         <div className='container d-flex justify-content-center align-items-center'>
                             <div className="row g-2 pt-3 ">
                                 <CardInfos
                                     horario="15:00"
                                     quantidade="300 Kcal"
+                                    setUpdateOrInsert={setUpdateOrInsert}
+                                    handleShow={handleShow}
+                                    typeCard="Calorias"
                                 />
                                 <CardInfos
                                     horario="12:20"
                                     quantidade="200 Kcal"
+                                    setUpdateOrInsert={setUpdateOrInsert}
+                                    handleShow={handleShow}
+                                    typeCard="Calorias"
                                 />
 
                                 <div className="col">
-                                    <Button variant="success" onClick={() => handleShow("Calorias")} className="m-md-4 float-end float-md-none">
+                                    <Button variant="success" className="m-md-4 float-end float-md-none"
+                                        onClick={() => {
+                                            handleShow("Calorias")
+                                            setUpdateOrInsert("insert")
+                                        }}
+                                    >
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
                                     </Button>
                                 </div>
                             </div>
 
+                        </div>
+                        <div className="d-flex justify-content-center align-items-center my-3">
+                            <label htmlFor="Diet" className="mx-3">Escolha a Dieta:</label>
+                            <select className="form-select selectConsumo" aria-label="Default select example" value={diet} id="Diet"
+                                onChange={(e) => {
+                                    setDiet(e.target.value)
+                                    localStorage.setItem("selectedDiet", e.target.value)
+                                }}
+                            >
+                                <option value="0" disabled>Escolha uma para base</option>
+                                <option value="salve">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
                         </div>
                     </div>
 
@@ -205,6 +231,7 @@ export default function ControleConsumo() {
                     show: show,
                 }}
                 formFor={contentModal}
+                updateOrInsert={updateOrInsert}
             />
 
             <Footer />

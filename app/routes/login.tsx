@@ -10,6 +10,8 @@ export const meta: MetaFunction = () => ({
   title: "Login",
 });
 
+// Login vou precisar botar um localStorage pro Token
+
 export default function Index() {
   return (
     <main>

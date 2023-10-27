@@ -22,7 +22,6 @@ axiosHealthyApi.interceptors.response.use(
         console.log(error)
         if (error.response.status == 403) {
             return window.location.assign("/login");
-
         }
     }
 );

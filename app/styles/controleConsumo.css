@@ -30,3 +30,7 @@
 .icon i:hover {
   cursor: pointer;
 }
+
+.selectConsumo {
+  width: min-content;
+}

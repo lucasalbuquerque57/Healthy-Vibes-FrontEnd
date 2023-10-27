@@ -4,7 +4,8 @@ import { Button, Modal, type ModalProps } from "react-bootstrap";
 
 interface ModalInsert_AguaProps {
     modal: ModalProps
-    formFor: String
+    formFor: string
+    updateOrInsert: string
 }
 
 export default function ModalInsert(props: ModalInsert_AguaProps) {
