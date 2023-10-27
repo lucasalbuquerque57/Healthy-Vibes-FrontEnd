@@ -31,22 +31,6 @@ export const options = {
   },
 };
 
-
-const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "IMC",
-      data: [23.3, 22.2, 20.2, 23, 21.4],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-  ],
-};
-
-
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: acompanharProgresso },
@@ -54,7 +38,25 @@ export const links: LinksFunction = () => {
 };
 
 
+
 export default function AcompanharProgresso() {
+  const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "IMC",
+        data: [23.3, 22.2, 20.2, 23, 21.4],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        color: 'rgba(255,000,000, 1.0',
+      },
+    ],
+  };
+
+
+
   return (
 
     <main>

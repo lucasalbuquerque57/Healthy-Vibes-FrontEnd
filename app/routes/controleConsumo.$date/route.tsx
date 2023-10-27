@@ -11,6 +11,9 @@ import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
 import ModalInsert from "./ModalInsert";
 import { useLoaderData } from "@remix-run/react";
+import { useHookstate } from "@hookstate/core";
+import { themePage } from "~/script/changeTheme";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
@@ -43,57 +46,6 @@ export const links: LinksFunction = () => {
     return [{ rel: "stylesheet", href: controleConsumo }];
 };
 
-export const options = {
-    responsive: true,
-    plugins: {
-        title: {
-            display: true,
-            text: 'Quantidade Ideal de água: 2L',
-        },
-    },
-};
-
-const water = {
-    options,
-    labels: ["QT. de Água", "QT. Restante de Água"],
-    datasets: [
-        {
-            label: 'Controle de Água',
-            data: [500, 2000],
-            backgroundColor: [
-                'rgba(175, 205, 223, 1.0)',
-                'rgba(211, 211, 211, 1.0)'
-
-            ]
-        },
-    ],
-};
-
-export const optionsfood = {
-    responsive: true,
-    plugins: {
-        title: {
-            display: true,
-            text: 'Quantidade de Calorias desejadas: 20Kcal',
-        },
-    },
-};
-
-const food = {
-    labels: ["QT. de Calorias Ingeridas", "QT. Restante de calorias"],
-    datasets: [
-        {
-            label: 'Controle de Calorias',
-            data: [932, 2500],
-            backgroundColor: [
-                'rgba(144, 238, 144, 1.0)',
-                'rgba(211, 211, 211, 1.0)'
-
-            ]
-        },
-    ],
-};
-
 
 export default function ControleConsumo() {
     const data = useLoaderData<typeof loader>();
@@ -101,17 +53,71 @@ export default function ControleConsumo() {
     const [contentModal, setContentModal] = useState("");
     const [updateOrInsert, setUpdateOrInsert] = useState("insert");
     const handleClose = () => setShow(false);
+    const changeTheme = useHookstate(themePage);
 
     function handleShow(typeOperation: string) {
         setShow(true);
         setContentModal(typeOperation)
     }
 
-    const [diet, setDiet] = useState("0");
+    const [diet, setDiet] = useState("");
 
     useEffect(() => {
         setDiet(localStorage.getItem("selectedDiet") || "")
     }, [])
+
+    const options = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Quantidade Ideal de água: 2L',
+                color: 'rgba(255,000,000, 1.0)',
+            },
+        },
+    };
+    const optionsfood = {
+        responsive: true,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Quantidade de Calorias desejadas: 20Kcal',
+            },
+        },
+    };
+
+    const water = {
+        options,
+        labels: ["QT. de Água", "QT. Restante de Água"],
+        datasets: [
+            {
+                label: 'Controle de Água',
+                data: [500, 2000],
+                backgroundColor: [
+                    /* 'rgba(175, 205, 223, 1.0)',
+                    'rgba(211, 211, 211, 1.0)' */
+                    changeTheme.get()=="contraOn"?"rgba(255,000,000)":"rgba(000,255,000)",
+
+    
+                ]
+            },
+        ],
+    };
+
+    const food = {
+        labels: ["QT. de Calorias Ingeridas", "QT. Restante de calorias"],
+        datasets: [
+            {
+                label: 'Controle de Calorias',
+                data: [932, 2500],
+                backgroundColor: [
+                    'rgba(144, 238, 144, 1.0)',
+                    'rgba(211, 211, 211, 1.0)'
+    
+                ]
+            },
+        ],
+    };
 
     // Requisição de users para saber as dietas
 
@@ -207,13 +213,14 @@ export default function ControleConsumo() {
                         </div>
                         <div className="d-flex justify-content-center align-items-center my-3">
                             <label htmlFor="Diet" className="mx-3">Escolha a Dieta:</label>
-                            <select className="form-select selectConsumo" aria-label="Default select example" value={diet} id="Diet"
+                            <select className="form-select selectConsumo" aria-label="Default select example" defaultValue={diet} id="Diet"
                                 onChange={(e) => {
                                     setDiet(e.target.value)
                                     localStorage.setItem("selectedDiet", e.target.value)
                                 }}
+                                
                             >
-                                <option value="0" disabled>Escolha uma para base</option>
+                                <option value="" disabled>Escolha uma para base</option>
                                 <option value="salve">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
