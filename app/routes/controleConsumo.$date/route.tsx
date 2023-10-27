@@ -98,7 +98,7 @@ const food = {
 export default function ControleConsumo() {
     const data = useLoaderData<typeof loader>();
     const [show, setShow] = useState(false);
-    const [contentModal, setContentModal] = useState("0");
+    const [contentModal, setContentModal] = useState("");
     const [updateOrInsert, setUpdateOrInsert] = useState("insert");
     const handleClose = () => setShow(false);
 
@@ -107,7 +107,7 @@ export default function ControleConsumo() {
         setContentModal(typeOperation)
     }
 
-    const [diet, setDiet] = useState("");
+    const [diet, setDiet] = useState("0");
 
     useEffect(() => {
         setDiet(localStorage.getItem("selectedDiet") || "")
