@@ -72,7 +72,7 @@ export default function ControleConsumo() {
             title: {
                 display: true,
                 text: 'Quantidade Ideal de água: 2L',
-                color: 'rgba(255,000,000, 1.0)',
+                color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
         },
     };
@@ -82,6 +82,7 @@ export default function ControleConsumo() {
             title: {
                 display: true,
                 text: 'Quantidade de Calorias desejadas: 20Kcal',
+                color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
         },
     };
@@ -93,12 +94,14 @@ export default function ControleConsumo() {
             {
                 label: 'Controle de Água',
                 data: [500, 2000],
+                color: [changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"],
                 backgroundColor: [
                     /* 'rgba(175, 205, 223, 1.0)',
                     'rgba(211, 211, 211, 1.0)' */
-                    changeTheme.get()=="contraOn"?"rgba(255,000,000)":"rgba(000,255,000)",
+                    changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(51,69,155, 0.61)",
+                    changeTheme.get() == "contraOn" ? "rgba(30,30,30)" : "rgba(211, 211, 211, 1.0)",
 
-    
+
                 ]
             },
         ],
@@ -111,9 +114,8 @@ export default function ControleConsumo() {
                 label: 'Controle de Calorias',
                 data: [932, 2500],
                 backgroundColor: [
-                    'rgba(144, 238, 144, 1.0)',
-                    'rgba(211, 211, 211, 1.0)'
-    
+                    changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(10,153,6,0.60)",
+                    changeTheme.get() == "contraOn" ? "rgba(30,30,30)" : "rgba(211, 211, 211, 1.0)",
                 ]
             },
         ],
@@ -218,7 +220,7 @@ export default function ControleConsumo() {
                                     setDiet(e.target.value)
                                     localStorage.setItem("selectedDiet", e.target.value)
                                 }}
-                                
+
                             >
                                 <option value="" disabled>Escolha uma para base</option>
                                 <option value="salve">One</option>

@@ -1,6 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import acompanharProgresso from "~/styles/acompanharProgresso.css";
-import { CardIMC } from "~/components/Card_IMC";
+import { CardIMC } from "~/routes/Profile.acompanharProg/Card_IMC";
 
 import {
   Chart as ChartJS,
@@ -18,26 +18,12 @@ import { Line } from 'react-chartjs-2';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top' as const,
-    },
-    title: {
-      display: false,
-      text: 'Chart.js Line Chart',
-    },
-  },
-};
 
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: acompanharProgresso },
   ];
 };
-
-
 
 export default function AcompanharProgresso() {
   const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
@@ -55,6 +41,19 @@ export default function AcompanharProgresso() {
     ],
   };
 
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: false,
+        text: 'Chart.js Line Chart',
+      },
+    },
+  };
+
 
 
   return (
@@ -62,26 +61,30 @@ export default function AcompanharProgresso() {
     <main>
 
       <div className="conteudoprog">
-        
-          <div className="container-prog">
-            <div className="campo-prog">
+
+        <div className="container-fluid d-flex justify-content-center align-items-center gap-3">
+          <div className="row gap-3">
+            <div className="campo-prog col p-0">
               <div>
                 <label className="rotulo">Altura</label>
               </div>
-              <input className="inpProg" type="text" id="altura" name="nome" placeholder="1.87" />
+              <input className="inpProg" type="number" id="altura" name="nome" placeholder="1.87" />
             </div>
-            <div className="campo-prog">
+            <div className="campo-prog col p-0">
               <div>
                 <label className="rotulo">Peso</label>
               </div>
-              <input className="inpProg" type="text" id="peso" name="text" placeholder="87.6" />
+              <input className="inpProg" type="number" id="peso" name="text" placeholder="87.6" />
             </div>
-            <div className="buttonAdd">
+            <div className="buttonAdd col p-0">
               <button type="button" className="stylebuttonadd">Adicionar</button>
             </div>
           </div>
+        </div>
 
-          <div className="card-imc-prog">
+        <div className="container-fluid d-flex justify-content-center align-items-center mt-4 ">
+
+          <div className="row mx-1 gap-2">
             <CardIMC
               IMC="23.2"
               data="23/12/2022"
@@ -96,10 +99,12 @@ export default function AcompanharProgresso() {
             />
           </div>
 
-          <div className='graphic-imc'>
-            <Line options={options} data={data} />
-          </div>
-        
+        </div>
+
+        <div className='container-fluid d-flex justify-content-center align-items-center graphic-imc mt-4 w-md-50'>
+          <Line options={options} data={data} />
+        </div>
+
 
 
       </div>

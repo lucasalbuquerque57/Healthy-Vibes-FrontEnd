@@ -46,7 +46,8 @@
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+.inpProg {
   border: 0.1rem solid var(--text-quidenary);
   border-radius: 1rem;
   width: 18rem;
@@ -84,7 +85,7 @@ input[type="password"] {
   padding-left: 0.75rem;
 }
 
-rotulo:focus {
+.rotulo:focus {
   color: var(--text-secondary) !important;
   font-weight: bold;
 }
@@ -345,20 +346,20 @@ form .input-group button {
   font-weight: bold;
 }
 
-.text-info{
+.text-info {
   color: var(--iterac-verde) !important;
 }
 
-div:where(.swal2-container).swal2-center>.swal2-popup {
+div:where(.swal2-container).swal2-center > .swal2-popup {
   background-color: var(--background-primary) !important;
   border: solid 3px var(--amarelo-oportunista);
 }
 
-h2#swal2-title{
+h2#swal2-title {
   color: var(--text-octonary);
 }
 
-div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   border: solid 0.15rem green !important;
   background-color: var(--background-primary) !important;
   border-color: 0.1rem var(--rouge-princip) !important;
@@ -366,7 +367,7 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   font-weight: bold;
 }
 
-div:where(.swal2-container) button:where(.swal2-styled).swal2-deny{
+div:where(.swal2-container) button:where(.swal2-styled).swal2-deny {
   background-color: var(--rouge-princip) !important;
   color: var(--text-denary) !important;
   font-weight: bold;
@@ -376,14 +377,14 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
   box-shadow: none !important;
 }
 
-div:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus{
+div:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus {
   box-shadow: none !important;
 }
 
-div:where(.swal2-icon).swal2-success .swal2-success-ring{
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
   border: 0.25em solid var(--verde-sucess) !important;
 }
 
-div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{
+div:where(.swal2-icon).swal2-success [class^="swal2-success-line"] {
   color: var(--verde-sucess2) !important;
 }

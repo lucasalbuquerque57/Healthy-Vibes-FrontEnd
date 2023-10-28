@@ -1,0 +1,18 @@
+.blocoReceitas {
+  align-items: center;
+  display: flex;
+  border: 1px solid var(--background-denary);
+  justify-content: center;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.blocoReceitas.h1 {
+  position: fixed;
+}
+
+.gerarNov {
+  margin-left: 20rem;
+  margin-right: -20rem;
+}

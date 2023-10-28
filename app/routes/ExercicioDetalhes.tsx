@@ -1,6 +1,7 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
+import { Link } from "@remix-run/react";
 
 
 
@@ -30,11 +31,12 @@ export default function ExercicioDetalhes() {
                     <h1 className="title text-center py-3">Tríceps</h1>
                 </div>
                 <div className="barraHoriz container-fluid">
-                    <button type="button" title="Excluir" className="buttonCards">
-                        <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{ color: "var(--text-quadenary)" }}>
-                        </i>
-                    </button>
-
+                    <Link to="/exercicios">
+                        <button type="button" title="Excluir" className="buttonCards">
+                            <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{ color: "var(--text-quadenary)" }}>
+                            </i>
+                        </button>
+                    </Link>
                 </div>
 
                 <div className="container-video text-center pb-4" >
