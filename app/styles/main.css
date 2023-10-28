@@ -67,6 +67,8 @@
   --azul-princip: #33459b;
   --rouge-princip: #ff0000;
 
+  --rouge-secondary: #EFBBBA;
+
   --text-salmao: #ff785a;
   --text-verde: #0a9906;
 
@@ -97,7 +99,7 @@
   --text-primary: #fff;
   --text-secondary: #fff;
   --text-tertiary: #fff;
-  --text-quaternary: #ffff00;
+  --text-quaternary: #fff;
   --text-senary: #fff;
   --text-octonary: #fff;
   --text-nonary: #ffff00;
@@ -135,12 +137,17 @@
   --verde-sucess: #ffff00;
   --verde-sucess2: #ffff00;
 
+  --rouge-secondary: #524B04;
+
   --iterac-verde: #ffff00;
 
   --blue-light: none;
 
   --sombra-clara-effect: none;
+
   --amarelo-oportunista: #ffff00;
+  --bold-oportunista: bold;
+
 
   --background-warning-modal: #000;
   --bs-border-color-translucent: #ffff00;
@@ -291,7 +298,7 @@ header .nav-link:hover {
 }
 
 .loginButton {
-  border-color: var(--text-primary);
+  border-color: var(--text-tridenary);
 }
 
 .cadButton {

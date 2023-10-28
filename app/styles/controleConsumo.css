@@ -1,7 +1,7 @@
 .first-title {
   text-align: center;
   margin-top: 1.5rem;
-  color: #c4066b;
+  color: var(--text-quaternary);
   font-weight: bold;
 }
 
@@ -34,4 +34,67 @@
 
 .selectConsumo {
   width: min-content;
+}
+
+
+h1.title, h1.titlefood{
+  color: var(--text-octonary);
+}
+
+label.mx-3{
+  color: var(--text-octonary);
+}
+
+select#Diet{
+  background-color: var(--background-primary);
+  border-color: var(--text-undenary);
+  color: var(--text-octonary);
+}
+
+option:focus{
+  background-color: red;
+}
+
+div#emailHelp, .modal-content{
+  background-color: var(--background-primary) !important;
+  color: var(--text-octonary) !important;
+}
+
+input#quantidade{
+  background-color: var(--background-primary) !important;
+  color: var(--text-octonary) !important;
+  border-color: var(--misc-octonary) !important;
+}
+
+.btn-danger{
+  background-color: var(--background-primary) !important;
+  color: var(--rouge-princip) !important;
+  border-color: var(--rouge-princip) !important;
+}
+
+.btn-danger:active{
+  background-color: var(--rouge-secondary) !important;
+}
+
+button.btn.btn-primary {
+  background-color: var(--iterac-verde);
+  color: var(--branco);
+  font-weight: var(--bold-oportunista);
+  border: none;
+}
+
+button.btn.btn-primary:active {
+  background-color: var(--background-nonary);
+}
+
+button.m-md-4.float-end.float-md-none.btn.btn-success{
+  background-color: var(--iterac-verde) !important;
+}
+
+.fa-circle-plus::before{
+  color: var(--background-primary);
+}
+
+.fa-trash, .fa-pen-to-square::before{
+  color: var(--text-quidenary);
 }

@@ -45,7 +45,7 @@ export default function ModalInsert(props: ModalInsert_AguaProps) {
                         Cancelar
                     </Button>
                     <Button variant="primary" type="submit">
-                        Inserir Informação
+                        Confirmar
                     </Button>
                 </Modal.Footer>
             </form >
