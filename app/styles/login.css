@@ -148,7 +148,7 @@ form .input-group button {
   letter-spacing: 0.125rem;
   font-weight: 700;
 }
-@media screen and (min-width: 768px) {
+
   .form-box .link-login {
     text-decoration: none;
     display: flex;
@@ -156,18 +156,17 @@ form .input-group button {
     justify-content: center;
     gap: 0.5rem;
   }
-}
 
-.form-box .link-login a {
+  .form-box .link-login a {
   color: var(--text-tertiary);
-}
+ }
 
 .cadRedirect {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }
 
-@media (max-width: 768px) {
+@media  (max-width: 768px) {
   .main {
     display: none;
   }
@@ -181,9 +180,18 @@ form .input-group button {
   .form-box {
     width: 100vh;
     border-radius: 20px;
+    display: flex;
   }
   .input-group {
     width: 100vh;
     border-radius: 20px;
+  }
+
+  .form-box .link-login{
+    display: flex;
+  }
+
+  .form-box p{
+    display: flex;
   }
 }
