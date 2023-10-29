@@ -1,11 +1,12 @@
 .blocoReceitas {
   align-items: center;
-  display: flex;
+  
   border: 1px solid var(--background-denary);
   justify-content: center;
   margin-top: 3rem;
   margin-left: 5rem;
   margin-right: 5rem;
+  padding-bottom: 3rem;
 }
 
 .blocoReceitas.h1 {
@@ -15,4 +16,20 @@
 .gerarNov {
   margin-left: 20rem;
   margin-right: -20rem;
+}
+
+.container-receita{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-gerar{
+  display: flex;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.container-gerar.p{
+  font-size: 100px;
 }
