@@ -29,7 +29,7 @@ export async function loader({
 
         return diaMes.replaceAll(".", "/");
     } else {
-        return ""
+        throw new Error("Url inválida")
     }
 
 }
@@ -74,6 +74,12 @@ export default function ControleConsumo() {
                 text: 'Quantidade Ideal de água: 2L',
                 color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
+            legend: {
+                display: true,
+                labels: {
+                    color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"
+                }
+            }
         },
     };
     const optionsfood = {
@@ -84,11 +90,16 @@ export default function ControleConsumo() {
                 text: 'Quantidade de Calorias desejadas: 20Kcal',
                 color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
+            legend: {
+                display: true,
+                labels: {
+                    color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"
+                }
+            }
         },
     };
 
     const water = {
-        options,
         labels: ["QT. de Água", "QT. Restante de Água"],
         datasets: [
             {

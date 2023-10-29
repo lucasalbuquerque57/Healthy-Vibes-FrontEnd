@@ -16,7 +16,7 @@ export function CardInfos(props: CardsProps) {
 
     return (
         <div className="col-4" style={{ width: "10rem" }}>
-            <div className="cardcontrole p-2">
+            <div className="cardcontrole p-2 border rounded">
                 <div className="card-body">
                     <div className="conteudo">
                         <p className="card-title">Horário: {props.horario} </p>
@@ -26,7 +26,6 @@ export function CardInfos(props: CardsProps) {
                         <i className="fa-solid fa-trash mx-2"></i>
                         <i className="fa-solid fa-pen-to-square pens" onClick={() => {
                             handleClickUpdate()
-
                         }}></i>
                     </div>
                 </div>

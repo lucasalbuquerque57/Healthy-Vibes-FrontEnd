@@ -67,7 +67,7 @@
   --azul-princip: #33459b;
   --rouge-princip: #ff0000;
 
-  --rouge-secondary: #EFBBBA;
+  --rouge-secondary: #efbbba;
 
   --text-salmao: #ff785a;
   --text-verde: #0a9906;
@@ -78,7 +78,7 @@
 
   --background-warning-modal: #b7e1ea;
   --acessib-mark: rgb(133, 150, 228);
-  --verde-sucess: rgba(165,220,134,.7);
+  --verde-sucess: rgba(165, 220, 134, 0.7);
 }
 
 [data-theme="contraOn"] {
@@ -137,7 +137,7 @@
   --verde-sucess: #ffff00;
   --verde-sucess2: #ffff00;
 
-  --rouge-secondary: #524B04;
+  --rouge-secondary: #524b04;
 
   --iterac-verde: #ffff00;
 
@@ -147,7 +147,6 @@
 
   --amarelo-oportunista: #ffff00;
   --bold-oportunista: bold;
-
 
   --background-warning-modal: #000;
   --bs-border-color-translucent: #ffff00;
@@ -280,10 +279,6 @@ header .nav-link:hover {
   text-decoration: underline;
   text-underline-offset: 0.7rem;
   text-shadow: var(--transparent-secondary) 0rem 1rem 1rem;
-}
-
-.container-fluid {
-  justify-content: space-between;
 }
 
 #collapsibleNavbar {

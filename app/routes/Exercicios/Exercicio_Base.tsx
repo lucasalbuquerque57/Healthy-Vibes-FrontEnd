@@ -5,7 +5,7 @@ interface CardsProps {
   altImg: string
   cardTitle: string
   textoCard: string
-  link: string
+  id: string
 }
 
 export function ExercicioBase(props: CardsProps) {
@@ -13,7 +13,7 @@ export function ExercicioBase(props: CardsProps) {
 
     <div className="card" >
 
-      <Link to={props.link} style={{ textDecoration: "none" }}>
+      <Link to={`/ExercicioDetalhes/exercise=${props.id}`} style={{ textDecoration: "none" }}>
         <div className="card">
           <div className="card-top">
             <div className="ImageAdress">

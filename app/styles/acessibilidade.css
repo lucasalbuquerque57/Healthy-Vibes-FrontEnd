@@ -1,32 +1,16 @@
-:root {
-    --surface-color: #fff;
-    --curve: 40;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Noto Sans JP", sans-serif;
-    background-color: #fef8f8;
-  }
-  
-  .informativoTopo {
-    color: var(--text-senary);
-  }
-  
-  mark {
-    background-color: var(--acessib-mark);
-    border-radius: 1000 px;
-  }
-
-  .texto-justificado {
-    text-align: justify;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.informativoTopo {
+  color: var(--text-senary);
 }
 
-.texto{
+mark {
+  background-color: var(--acessib-mark);
+  border-radius: 1000 px;
+}
+
+.texto-justificado {
+  text-align: justify;
+}
+
+.texto {
   color: var(--text-octonary) !important;
 }
