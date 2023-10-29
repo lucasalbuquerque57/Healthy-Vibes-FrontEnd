@@ -25,8 +25,9 @@ export default function Index() {
           <img src="/treino/mulherLogin.jpg" alt="mulher" />
         </div>
         <div className="form-box">
-          <h1>Login</h1>
+          
           <form>
+            <h1 className="tituloLogin">Login</h1>
             <div className="input-group">
               <label htmlFor="email">E-mail</label>
               <input

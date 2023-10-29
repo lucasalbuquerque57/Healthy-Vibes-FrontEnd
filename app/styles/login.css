@@ -176,6 +176,9 @@ form .input-group button {
   .img-box p {
     display: none;
   }
+  .box{
+    width: 0;
+  }
 
   .form-box {
     width: 100vh;
@@ -194,4 +197,8 @@ form .input-group button {
   .form-box p{
     display: flex;
   }
+}
+
+.tituloLogin{
+  margin-bottom: 2rem !important;
 }

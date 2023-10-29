@@ -147,7 +147,7 @@ __export(root_exports, {
 var import_react2 = require("@remix-run/react");
 
 // app/styles/main.css
-var main_default = "/build/_assets/main-FBAGZDJ2.css";
+var main_default = "/build/_assets/main-22BXDBXR.css";
 
 // app/root.tsx
 var import_react_vlibras = __toESM(require("@moreiraste/react-vlibras")), import_core2 = require("@hookstate/core");
@@ -4354,7 +4354,7 @@ __export(login_exports, {
 });
 
 // app/styles/login.css
-var login_default = "/build/_assets/login-ZXHIK5XE.css";
+var login_default = "/build/_assets/login-WF7BOITP.css";
 
 // app/routes/login.tsx
 var import_react21 = require("@remix-run/react"), import_jsx_dev_runtime30 = require("react/jsx-dev-runtime"), links15 = () => [{ rel: "stylesheet", href: login_default }], meta14 = () => ({
@@ -4386,105 +4386,103 @@ function Index3() {
       lineNumber: 19,
       columnNumber: 9
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "form-box", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("h1", { children: "Login" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "form-box", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("form", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("h1", { className: "tituloLogin", children: "Login" }, void 0, !1, {
         fileName: "app/routes/login.tsx",
-        lineNumber: 28,
-        columnNumber: 11
+        lineNumber: 30,
+        columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("form", { children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("label", { htmlFor: "email", children: "E-mail" }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 31,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
-            "input",
-            {
-              type: "email",
-              name: "email",
-              placeholder: "Digite seu e-mail",
-              required: !0
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/login.tsx",
-              lineNumber: 32,
-              columnNumber: 15
-            },
-            this
-          )
-        ] }, void 0, !0, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("label", { htmlFor: "email", children: "E-mail" }, void 0, !1, {
           fileName: "app/routes/login.tsx",
-          lineNumber: 30,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("label", { htmlFor: "senha", children: "Senha" }, void 0, !1, {
-            fileName: "app/routes/login.tsx",
-            lineNumber: 40,
-            columnNumber: 15
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
-            "input",
-            {
-              type: "password",
-              name: "senha",
-              placeholder: "Digite a sua senha",
-              required: !0
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/login.tsx",
-              lineNumber: 41,
-              columnNumber: 15
-            },
-            this
-          )
-        ] }, void 0, !0, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 39,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(import_react21.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 49,
+          lineNumber: 32,
           columnNumber: 15
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 48,
-          columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("button", { children: "Entrar" }, void 0, !1, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 53,
-          columnNumber: 15
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/login.tsx",
-          lineNumber: 52,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("p", { className: "link-login", children: [
-          "N\xE3o \xE9 um membro?",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(import_react21.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
+          "input",
+          {
+            type: "email",
+            name: "email",
+            placeholder: "Digite seu e-mail",
+            required: !0
+          },
+          void 0,
+          !1,
+          {
             fileName: "app/routes/login.tsx",
-            lineNumber: 57,
+            lineNumber: 33,
             columnNumber: 15
-          }, this)
-        ] }, void 0, !0, {
+          },
+          this
+        )
+      ] }, void 0, !0, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 31,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("label", { htmlFor: "senha", children: "Senha" }, void 0, !1, {
           fileName: "app/routes/login.tsx",
-          lineNumber: 55,
-          columnNumber: 13
+          lineNumber: 41,
+          columnNumber: 15
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
+          "input",
+          {
+            type: "password",
+            name: "senha",
+            placeholder: "Digite a sua senha",
+            required: !0
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/login.tsx",
+            lineNumber: 42,
+            columnNumber: 15
+          },
+          this
+        )
+      ] }, void 0, !0, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 40,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(import_react21.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 50,
+        columnNumber: 15
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 49,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("button", { children: "Entrar" }, void 0, !1, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 54,
+        columnNumber: 15
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 53,
+        columnNumber: 13
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("p", { className: "link-login", children: [
+        "N\xE3o \xE9 um membro?",
+        /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(import_react21.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
+          fileName: "app/routes/login.tsx",
+          lineNumber: 58,
+          columnNumber: 15
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/login.tsx",
-        lineNumber: 29,
-        columnNumber: 11
+        lineNumber: 56,
+        columnNumber: 13
       }, this)
     ] }, void 0, !0, {
+      fileName: "app/routes/login.tsx",
+      lineNumber: 29,
+      columnNumber: 11
+    }, this) }, void 0, !1, {
       fileName: "app/routes/login.tsx",
       lineNumber: 27,
       columnNumber: 9
@@ -4501,7 +4499,7 @@ function Index3() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-ZFJRTOED.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-2KPZXGDX.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-UDH6CJF7.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-C4YE4VUW.js", imports: ["/build/_shared/chunk-BXGFGWAP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-2BMZVFTK.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-M3L54XTV.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-T4UCVWFA.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-I5BIOQII.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-BX437E6I.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-MXAVPVEO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-7RDZ7FTW.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-NVG3QKJR.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-UYIPR2AS.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-FS33ALBN.js", imports: ["/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-33IWJHLD.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-WIQHQYDK.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-S53FQ3RH.js", imports: ["/build/_shared/chunk-5FVIZEQE.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-VMIN74OU.js", "/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-MUFDXXZZ.js", imports: ["/build/_shared/chunk-5FVIZEQE.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-VMIN74OU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-YSRMTSU6.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "8b7dc989", hmr: { runtime: "/build/_shared\\chunk-UDH6CJF7.js", timestamp: 1698617679254 }, url: "/build/manifest-8B7DC989.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-M674U5N7.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-V75ELX2M.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-KXGQR6J5.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-VKS4B6C3.js", imports: ["/build/_shared/chunk-NH37YFB2.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-2FIO33BS.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-KINPWUIM.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-5OMUBAAB.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-5QZ2QX3C.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-LSQ2G7N2.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-XYMPIRMB.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-CXDUTQ2R.js", imports: ["/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-MH537SZZ.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-S3ND5DEM.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-ZISJ74EG.js", imports: ["/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-LUA5734B.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-RHTP333S.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-BJ7E6XSR.js", imports: ["/build/_shared/chunk-5FVIZEQE.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-Z36MIXIU.js", "/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-4M4UMUN5.js", imports: ["/build/_shared/chunk-5FVIZEQE.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-Z36MIXIU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-CAVECCRO.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "60d4f443", hmr: { runtime: "/build/_shared\\chunk-KXGQR6J5.js", timestamp: 1698619995902 }, url: "/build/manifest-60D4F443.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
