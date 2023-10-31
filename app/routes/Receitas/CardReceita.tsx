@@ -21,7 +21,10 @@ export function CardReceita(props: CardsProps){
                 />
               </div>
               <div className="card-body">
-                <h4 className="card-title">{props?.title}</h4>
+                <div className="card-titulo-botoes">
+                  <h4 className="card-title">{props?.title}</h4>
+                  <button>Algo aqui</button>
+                </div>
                 <p className="card-text">
                   Dificuldade: {props?.dificuldade}
                 </p>

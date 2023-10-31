@@ -36,6 +36,7 @@
   --text-tridenary: #fff;
   --text-quadenary: #254e24;
   --text-quidenary: #000;
+  --text-sedenary: #000;
 
   --misc-primary: #737373;
   --misc-secondary: #ebff38;
@@ -44,6 +45,7 @@
   --misc-quinary: #b0b0b0;
   --misc-senary: #087f08;
   --misc-octonary: #858585;
+  --misc-nonary: #a3c24baa;
 
   --link-dark: #000000c4;
   --placeholder: #6b6b6b;
@@ -56,6 +58,9 @@
   --branco: #fff;
   --branco-creme: #f7f7f7;
   --branco-clarin: #e9e9e9;
+  --branco-clarin2: #d5d5d5;
+
+  --preto-branco: #000;
 
   --preto-efeitos: #000;
   --preto-efeito-trans: #00000052;
@@ -68,6 +73,7 @@
   --rouge-princip: #ff0000;
 
   --rouge-secondary: #efbbba;
+  --preto-absoluto: #000;
 
   --text-salmao: #ff785a;
   --text-verde: #0a9906;
@@ -109,6 +115,7 @@
   --text-tridenary: #ffff00;
   --text-quadenary: #ffff00;
   --text-quidenary: #ffff00;
+  --text-sedenary: #000;
 
   --misc-primary: #fff;
   --misc-tertiary: #ffff00;
@@ -116,6 +123,7 @@
   --misc-quinary: none;
   --misc-senary: #ffff00;
   --misc-octonary: #ffff00;
+  --misc-nonary: #655205;
 
   --link-dark: #fff;
   --placeholder: #fff;
@@ -128,6 +136,9 @@
   --branco: #000;
   --branco-creme: #000;
   --branco-clarin: #ffff00;
+  --branco-clarin2: #ffff00;
+
+  --preto-branco: #fff;
 
   --verde-princip: #000;
   --text-salmao: #ffff00;
@@ -635,7 +646,7 @@ footer .footer-logo {
 }
 
 .btn-comum:hover {
-  background-color: var(--background-secondary) !important;
+  background-color: var(--background-nonary) !important;
 }
 .btn-comum:active {
   background-color: var(--background-primary) !important;

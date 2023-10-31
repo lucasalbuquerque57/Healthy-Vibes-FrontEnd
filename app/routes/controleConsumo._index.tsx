@@ -25,7 +25,7 @@ export default function ControleConsumo() {
 
     const dateTemplate = (date: CalendarDateTemplateEvent) => {
         if (date.day > 10 && date.day < 15) {
-            return <strong className="border border-3 border-success rounded-circle px-1">{date.day}</strong>;
+            return <strong className="border border-3 border-selecionado rounded-circle px-1">{date.day}</strong>;
         }
 
         return date.day;

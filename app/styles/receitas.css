@@ -33,3 +33,7 @@
 .container-gerar.p{
   font-size: 100px;
 }
+
+.card-titulo-botoes{
+  display: flex;
+}

@@ -83,6 +83,10 @@ button.btn.btn-primary {
   border: none;
 }
 
+button.btn.btn-primary:hover{
+  background-color: var(--text-quaternary);
+}
+
 button.btn.btn-primary:active {
   background-color: var(--background-nonary);
 }
@@ -97,4 +101,56 @@ button.m-md-4.float-end.float-md-none.btn.btn-success{
 
 .fa-trash, .fa-pen-to-square::before{
   color: var(--text-quidenary);
+}
+
+.p-datepicker, .p-datepicker-header, .p-datepicker-month, .p-datepicker-year{
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+}
+
+img, svg{
+  color: var(--text-octonary);
+}
+
+.p-datepicker-prev:hover > svg{
+  color: var(--text-sedenary);
+}
+
+.p-datepicker-next:hover > svg{
+  color: var(--text-sedenary);
+}
+
+.border-selecionado{
+  border-color: var(--iterac-verde) !important;
+}
+
+.p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover{
+  background: var(--misc-tertiary);
+  color: var(--preto-absoluto);
+}
+
+.p-datepicker table td > span.p-highlight{
+  color: var(--preto-absoluto);
+  background: var(--misc-tertiary);
+}
+
+.p-datepicker-prev:hover, .p-datepicker-next:hover{
+  background-color: var(--branco-clarin2);
+  color: var(--text-sedenary);
+}
+
+.p-datepicker .p-monthpicker .p-monthpicker-month.p-highlight{
+  background-color: var(--branco-clarin2);
+  color: var(--preto-absoluto);
+}
+
+.p-monthpicker-month:hover{
+  background-color: var(--branco-clarin);
+  color: var(--preto-absoluto);
+  font-weight: var(--bold-oportunista);
+}
+
+.p-datepicker table td.p-datepicker-today > span{
+  color: var(--preto-branco);
+  background: var(--misc-nonary);
 }
