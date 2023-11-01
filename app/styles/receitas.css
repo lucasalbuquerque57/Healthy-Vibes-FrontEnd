@@ -1,6 +1,11 @@
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
 .blocoReceitas {
   align-items: center;
-  
+
   border: 1px solid var(--background-denary);
   justify-content: center;
   margin-top: 3rem;
@@ -9,31 +14,40 @@
   padding-bottom: 3rem;
 }
 
-.blocoReceitas.h1 {
+/*.blocoReceitas.h1 {
   position: fixed;
-}
+}*/
 
 .gerarNov {
   margin-left: 20rem;
   margin-right: -20rem;
 }
 
-.container-receita{
+.container-receita {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container-gerar{
+.container-gerar {
   display: flex;
   padding-top: 1rem;
   gap: 1rem;
 }
 
-.container-gerar.p{
+.container-gerar.p {
   font-size: 100px;
 }
 
-.card-titulo-botoes{
+.card-titulo-botoes {
   display: flex;
+}
+
+.opcoes {
+  background: none;
+  border: none;
+}
+
+.card-title {
+  padding-right: 1rem;
 }

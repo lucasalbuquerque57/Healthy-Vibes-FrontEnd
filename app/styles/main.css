@@ -73,6 +73,7 @@
   --rouge-princip: #ff0000;
 
   --rouge-secondary: #efbbba;
+
   --preto-absoluto: #000;
 
   --text-salmao: #ff785a;
@@ -651,4 +652,3 @@ footer .footer-logo {
 .btn-comum:active {
   background-color: var(--background-primary) !important;
 }
-

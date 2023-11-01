@@ -27,7 +27,7 @@ export function Footer() {
                 <div className="col d-flex justify-content-center align-items-center pb-4 pt-4">
                     <ul className="footer-list">
                         <li>
-                            <h3>Deixe-nos ajudar você</h3>
+                            <h3>Deixe-nos ajudar</h3>
                         </li>
                         <li>
                             <Link to="#" className="footer-link">Receita</Link>

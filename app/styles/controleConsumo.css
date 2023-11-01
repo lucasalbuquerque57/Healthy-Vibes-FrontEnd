@@ -24,7 +24,7 @@
 .cardcontrole {
   height: 100%;
   background-color: var(--branco-creme);
-  border: 0.07rem solid var(--text-octonary);
+  border: 0.07rem solid var(--misc-octonary) !important;
   color: var(--text-secondary);
 }
 
@@ -36,43 +36,44 @@
   width: min-content;
 }
 
-
-h1.title, h1.titlefood{
+h1.title,
+h1.titlefood {
   color: var(--text-octonary);
 }
 
-label.mx-3{
+label.mx-3 {
   color: var(--text-octonary);
 }
 
-select#Diet{
+select#Diet {
   background-color: var(--background-primary);
   border-color: var(--text-undenary);
   color: var(--text-octonary);
 }
 
-option:focus{
+option:focus {
   background-color: red;
 }
 
-div#emailHelp, .modal-content{
+div#emailHelp,
+.modal-content {
   background-color: var(--background-primary) !important;
   color: var(--text-octonary) !important;
 }
 
-input#quantidade{
+input#quantidade {
   background-color: var(--background-primary) !important;
   color: var(--text-octonary) !important;
   border-color: var(--misc-octonary) !important;
 }
 
-.btn-danger{
+.btn-danger {
   background-color: var(--background-primary) !important;
   color: var(--rouge-princip) !important;
   border-color: var(--rouge-princip) !important;
 }
 
-.btn-danger:active{
+.btn-danger:active {
   background-color: var(--rouge-secondary) !important;
 }
 
@@ -83,7 +84,7 @@ button.btn.btn-primary {
   border: none;
 }
 
-button.btn.btn-primary:hover{
+button.btn.btn-primary:hover {
   background-color: var(--text-quaternary);
 }
 
@@ -91,66 +92,78 @@ button.btn.btn-primary:active {
   background-color: var(--background-nonary);
 }
 
-button.m-md-4.float-end.float-md-none.btn.btn-success{
+button.m-md-4.float-end.float-md-none.btn.btn-success {
   background-color: var(--iterac-verde) !important;
 }
 
-.fa-circle-plus::before{
+.fa-circle-plus::before {
   color: var(--background-primary);
 }
 
-.fa-trash, .fa-pen-to-square::before{
+.fa-trash::before {
+  color: var(--rouge-princip);
+}
+
+.fa-pen-to-square::before {
   color: var(--text-quidenary);
 }
 
-.p-datepicker, .p-datepicker-header, .p-datepicker-month, .p-datepicker-year{
+.p-datepicker,
+.p-datepicker-header,
+.p-datepicker-month,
+.p-datepicker-year {
   background-color: var(--background-primary);
   color: var(--text-octonary);
 }
 
-img, svg{
+img,
+svg {
   color: var(--text-octonary);
 }
 
-.p-datepicker-prev:hover > svg{
+.p-datepicker-prev:hover > svg {
   color: var(--text-sedenary);
 }
 
-.p-datepicker-next:hover > svg{
+.p-datepicker-next:hover > svg {
   color: var(--text-sedenary);
 }
 
-.border-selecionado{
+.border-selecionado {
   border-color: var(--iterac-verde) !important;
 }
 
-.p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover{
+.p-datepicker:not(.p-disabled)
+  table
+  td
+  span:not(.p-highlight):not(.p-disabled):hover {
   background: var(--misc-tertiary);
   color: var(--preto-absoluto);
 }
 
-.p-datepicker table td > span.p-highlight{
+.p-datepicker table td > span.p-highlight {
   color: var(--preto-absoluto);
   background: var(--misc-tertiary);
 }
 
-.p-datepicker-prev:hover, .p-datepicker-next:hover{
+.p-datepicker-prev:hover,
+.p-datepicker-next:hover {
   background-color: var(--branco-clarin2);
   color: var(--text-sedenary);
 }
 
-.p-datepicker .p-monthpicker .p-monthpicker-month.p-highlight{
+.p-datepicker .p-monthpicker .p-monthpicker-month.p-highlight {
   background-color: var(--branco-clarin2);
   color: var(--preto-absoluto);
 }
 
-.p-monthpicker-month:hover{
+.p-monthpicker-month:hover {
   background-color: var(--branco-clarin);
   color: var(--preto-absoluto);
   font-weight: var(--bold-oportunista);
 }
 
-.p-datepicker table td.p-datepicker-today > span{
+.p-datepicker table td.p-datepicker-today > span {
   color: var(--preto-branco);
   background: var(--misc-nonary);
 }

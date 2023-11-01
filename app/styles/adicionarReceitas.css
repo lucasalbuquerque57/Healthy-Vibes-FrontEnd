@@ -1,0 +1,8 @@
+.inputPadrao {
+  border: 0.1rem solid var(--text-quidenary);
+  border-radius: 1rem;
+  width: 18rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  background-color: var(--background-primary);
+}

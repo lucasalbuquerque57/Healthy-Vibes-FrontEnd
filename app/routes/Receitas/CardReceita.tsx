@@ -1,12 +1,12 @@
-interface CardsProps{
-    title: string;
-    dificuldade: string;
-    porcao: string;
+interface CardsProps {
+  title: string;
+  dificuldade: string;
+  porcao: string;
 }
 
-export function CardReceita(props: CardsProps){
+export function CardReceita(props: CardsProps) {
 
-    return(
+  return (
 
     <div className="container-fluid">
       <div className="row">
@@ -23,7 +23,12 @@ export function CardReceita(props: CardsProps){
               <div className="card-body">
                 <div className="card-titulo-botoes">
                   <h4 className="card-title">{props?.title}</h4>
-                  <button>Algo aqui</button>
+                  <button className="opcoes">
+                    <img src="/FavoriteIcon.png" alt=""></img>
+                  </button>
+                  <button className="opcoes">
+                    <img src="/MoreIcon2.png" alt=""></img>
+                  </button>
                 </div>
                 <p className="card-text">
                   Dificuldade: {props?.dificuldade}
@@ -41,6 +46,6 @@ export function CardReceita(props: CardsProps){
       </div>
     </div>
 
-    );
+  );
 
 }

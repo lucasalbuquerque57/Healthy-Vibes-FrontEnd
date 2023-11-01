@@ -23,7 +23,7 @@ export default function Receitas() {
 
 
             <Header />
-            
+
             <div className="blocoReceitas">
 
                 <div className="container-receita">
@@ -34,10 +34,10 @@ export default function Receitas() {
                     </div>
                 </div>
 
-                <CardReceita title="Pão com Ovo" dificuldade="Fácil" porcao="1"/>
+                <CardReceita title="Pão com Ovo" dificuldade="Fácil" porcao="1" />
 
-                <CardReceita title="Café" dificuldade="Fácil" porcao="2"/>
-          
+                <CardReceita title="Café" dificuldade="Fácil" porcao="2" />
+
             </div>
             <Footer />
 

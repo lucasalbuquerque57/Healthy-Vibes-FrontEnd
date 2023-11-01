@@ -20,6 +20,8 @@ export const meta: MetaFunction = () => ({
 
 export default function Exercicios() {
 
+
+
     return (
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
             <Header />

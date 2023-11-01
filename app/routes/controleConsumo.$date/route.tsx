@@ -107,12 +107,8 @@ export default function ControleConsumo() {
                 data: [500, 2000],
                 color: [changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"],
                 backgroundColor: [
-                    /* 'rgba(175, 205, 223, 1.0)',
-                    'rgba(211, 211, 211, 1.0)' */
                     changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(51,69,155, 0.61)",
                     changeTheme.get() == "contraOn" ? "rgba(30,30,30)" : "rgba(211, 211, 211, 1.0)",
-
-
                 ]
             },
         ],

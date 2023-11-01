@@ -27,7 +27,7 @@ export default function Profile() {
       <nav className="d-flex container-fluid justify-content-center align-items-center my-4">
         <div className="row barraPerfil text-center border rounded pt-3 textNav">
           <div className="col py-2 pt-md-0">
-            <Link to="/Profile/Dietas" style={{ textDecoration: "none" }}>
+            <Link to="/Profile" style={{ textDecoration: "none" }}>
               <h6>Dietas Salvas</h6>
             </Link>
           </div>
@@ -36,11 +36,6 @@ export default function Profile() {
               <h6>Acompanhar Progresso</h6>
             </Link>
           </div>
-          {/*           <div className="col py-2 pt-md-0">
-            <Link to="/Profile/Dietas" style={{ textDecoration: "none" }}>
-              <h6>Meus Exercícios</h6>
-            </Link>
-          </div> */}
           <div className="col py-2 pt-md-0">
             <Link to="/alterarDados" style={{ textDecoration: "none" }}>
               <h6>Configurações</h6>

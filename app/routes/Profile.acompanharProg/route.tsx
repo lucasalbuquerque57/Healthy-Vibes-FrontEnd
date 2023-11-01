@@ -1,6 +1,8 @@
 import type { LinksFunction } from "@remix-run/node";
 import acompanharProgresso from "~/styles/acompanharProgresso.css";
 import { CardIMC } from "~/routes/Profile.acompanharProg/Card_IMC";
+import { useHookstate } from "@hookstate/core";
+import { themePage } from "~/script/changeTheme";
 
 import {
   Chart as ChartJS,
@@ -14,10 +16,8 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 
-
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 );
-
 
 export const links: LinksFunction = () => {
   return [
@@ -26,7 +26,10 @@ export const links: LinksFunction = () => {
 };
 
 export default function AcompanharProgresso() {
+  const changeTheme = useHookstate(themePage);
+
   const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
+
 
   const data = {
     labels,
@@ -34,25 +37,42 @@ export default function AcompanharProgresso() {
       {
         label: "IMC",
         data: [23.3, 22.2, 20.2, 23, 21.4],
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        color: 'rgba(255,000,000, 1.0',
+        borderColor: changeTheme.get() == "contraOn" ? "rgba(101,87,5,0.8)" : "rgba(10,153,6,0.60)",
+        backgroundColor: [changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(10,50,6,0.60)"],
+        color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(70,0,70,1)",
       },
     ],
   };
 
   const options = {
     responsive: true,
+    scales: {
+      y: {
+        ticks: {
+          color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(0,0,0,1)",
+        }
+      },
+      x: {
+        ticks: {
+          color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(0,0,0,1)",
+        }
+      },
+    },
     plugins: {
       legend: {
-        position: 'top' as const,
+        display: true,
+        labels: {
+          color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(70,0,70,1)",
+        }
       },
       title: {
         display: false,
         text: 'Chart.js Line Chart',
+        color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(70,0,70,1)",
       },
-    },
-  };
+
+    }
+  }
 
 
 
@@ -68,7 +88,7 @@ export default function AcompanharProgresso() {
               <div>
                 <label className="rotulo">Altura</label>
               </div>
-              <input className="inpProg" type="number" id="altura" name="nome" placeholder="altura em Cm" />
+              <input className="inpProg" type="number" id="altura" name="nome" placeholder="Altura em Cm" />
             </div>
             <div className="campo-prog col p-0">
               <div>

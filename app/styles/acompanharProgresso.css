@@ -1,11 +1,12 @@
 .stylebuttonadd {
   color: var(--background-tertiary);
   background-color: var(--background-quinary);
-  border: 0.05rem solid var(--background-denary);
+  border: none;
   border-radius: 0.5rem;
   padding: 0.6rem 0.6rem;
   margin-top: 1rem;
   width: 7rem;
+  font-weight: var(--bold-oportunista);
 }
 
 .icon i:hover {
@@ -17,7 +18,7 @@
   height: min-content;
   width: 10rem;
   background-color: var(--branco-creme);
-  border: 0.07rem solid var(--background-denary);
+  border: 0.07rem solid var(--misc-octonary);
   border-radius: 0.5rem;
 }
 
@@ -29,4 +30,16 @@
 
 .graphic-imc {
   height: 30rem;
+}
+
+input#altura,
+input#peso {
+  color: var(--text-quidenary);
+}
+
+.fa-trash::before {
+  color: var(--rouge-princip);
+}
+.fa-pen-to-square::before {
+  color: var(--text-nonary);
 }

@@ -69,6 +69,7 @@
   margin: 0;
   letter-spacing: 0.1rem;
   font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
 }
 
 .form-box p {
@@ -149,24 +150,24 @@ form .input-group button {
   font-weight: 700;
 }
 
-  .form-box .link-login {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
+.form-box .link-login {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
-  .form-box .link-login a {
+.form-box .link-login a {
   color: var(--text-tertiary);
- }
+}
 
 .cadRedirect {
   padding-left: 0 !important;
   margin-bottom: 0 !important;
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .main {
     display: none;
   }
@@ -176,7 +177,7 @@ form .input-group button {
   .img-box p {
     display: none;
   }
-  .box{
+  .box {
     width: 0;
   }
 
@@ -190,15 +191,15 @@ form .input-group button {
     border-radius: 20px;
   }
 
-  .form-box .link-login{
+  .form-box .link-login {
     display: flex;
   }
 
-  .form-box p{
+  .form-box p {
     display: flex;
   }
 }
 
-.tituloLogin{
+.tituloLogin {
   margin-bottom: 2rem !important;
 }
