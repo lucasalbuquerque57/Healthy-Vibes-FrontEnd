@@ -1,10 +1,9 @@
 import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
-import { useState } from "react";
-import { Button } from "react-bootstrap";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
 import adicionarReceitas from "~/styles/adicionarReceitas.css";
+import FormularioReceita from "./FormularioReceita";
 
 export async function loader({
     params,
@@ -50,43 +49,15 @@ export const meta: MetaFunction = () => ({
 
 export default function Index() {
 
-    const [ingredientes, setIngredientes] = useState(1)
-
 
     return (
         <main>
             <Header />
-            {/* <Button variant="primary" onClick={() => setIngredientes((prevCounter) => prevCounter + 1)}>Primary</Button>
-            {
-                Array.from({ length: ingredientes }).map((_, idx) => (
-                    <h2 key={idx}>Faz O L</h2>
-                ))
-            }
- */}
+
             <div className="container-fluid pt-4">
-                <form >
-                    <div className="row">
-                        <div className="col mx-2">
-
-                            <div className="container w-50" >
-                                <label htmlFor="Titulo" className="form-label">Email address</label>
-                                <input type="email" className="inputPadrao form-control" id="Titulo" name="titulo" placeholder="name@example.com" />
-                                <h2>Teste</h2>
-                            </div>
-
-
-                        </div>
-                        <div className="col mx-2">
-                            <div className="container d-flex flex-column align-items-center justify-content-start">
-                                <label htmlFor="Titulo" className="form-label">Email address</label>
-                                <input type="email" className="inputPadrao form-control" id="Titulo" name="titulo" placeholder="name@example.com" />
-                                <h2>Teste</h2>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <FormularioReceita />
             </div>
-            {/* Vou ter que botar bglh de imagem aqui */}
+
             <Footer />
         </main>
 
