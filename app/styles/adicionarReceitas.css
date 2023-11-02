@@ -6,3 +6,53 @@
   padding-left: 1rem;
   background-color: var(--background-primary);
 }
+
+.buttonRemove {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--background-primary);
+  color: var(--button-secondary);
+  border: 1.5px solid var(--text-sedenary);
+}
+
+.buttonAdd {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--background-primary);
+  color: var(--transparent-tertiary);
+  border: 1.5px solid var(--text-sedenary);
+}
+
+.buttonRemove:hover {
+  background-color: var(--button-secondary);
+  border: 1.5px solid var(--text-sedenary);
+}
+
+.buttonAdd:hover {
+  background-color: var(--transparent-tertiary);
+  border: 1.5px solid var(--text-sedenary);
+}
+
+.buttonForm {
+  background-color: var(--button-tertiary);
+  font-weight: bold;
+  color: var(--branco);
+  border-radius: 1rem;
+  border-color: var(--misc-quinary);
+  width: 12rem;
+}
+
+.buttonForm:hover {
+  background-color: var(--button-tertiary);
+  border: 1px solid var(--transparent-tertiary);
+}
+
+.valoresNutricionais {
+  border: 2px solid var(--text-secondary);
+  background-color: var(--rouge-secondary);
+}
+
+.head {
+  border-bottom: 2px solid var(--text-secondary);
+  width: 100%;
+}

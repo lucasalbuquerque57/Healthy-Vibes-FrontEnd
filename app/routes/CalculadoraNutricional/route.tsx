@@ -19,7 +19,6 @@ export const meta: MetaFunction = () => ({
   title: "Calculadora Nutricional",
 });
 
-
 export interface Resultados {
   calorias: number,
   carboidratos: number,

@@ -10,8 +10,9 @@ export async function loader({
 }: LoaderArgs) {
 
     const urlParams = new URLSearchParams(params.dietaID)
-
-    if (urlParams.has('receitaId')) {
+    // Talvez vo ter que botar horário refeicao tb
+    if (urlParams.has('receitaId') && urlParams.has('periodoRef')) {
+        console.log(urlParams.get('periodoRef'))
 
         // consulta axios aqui dp
 
@@ -54,7 +55,7 @@ export default function Index() {
         <main>
             <Header />
 
-            <div className="container-fluid pt-4">
+            <div className="container-fluid pt-5">
                 <FormularioReceita />
             </div>
 

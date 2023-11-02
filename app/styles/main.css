@@ -277,7 +277,7 @@ main {
 }
 
 .navBarIcon {
-  color: var(--branco-creme);
+  color: var(--text-tridenary);
   font-size: 2.5rem;
 }
 
