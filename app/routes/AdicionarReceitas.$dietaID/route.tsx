@@ -4,33 +4,14 @@ import { Header } from "~/components/Header";
 
 import adicionarReceitas from "~/styles/adicionarReceitas.css";
 import FormularioReceita from "./FormularioReceita";
+import { useLoaderData } from "@remix-run/react";
 
 export async function loader({
     params,
 }: LoaderArgs) {
 
     const urlParams = new URLSearchParams(params.dietaID)
-    // Talvez vo ter que botar horário refeicao tb
     if (urlParams.has('receitaId') && urlParams.has('periodoRef')) {
-        console.log(urlParams.get('periodoRef'))
-
-        // consulta axios aqui dp
-
-        /* return axios(`http://127.0.0.1:8080/api/v1/usuarios/${email}`)
-            .catch(() => { return null })
-            .then((response) => {
-                const user: User = response?.data
-                if (!user)
-                    return null
-
-                if (password != user.senha)
-                    return null
-
-                return { id: user.id, email }
-
-            }
-
-            )  Exemplo de codigo*/
 
         return params.dietaID
 
@@ -49,14 +30,21 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function Index() {
+    const data = useLoaderData<typeof loader>();
 
+    const urlParams = new URLSearchParams(data)
+
+    console.log(urlParams.get('receitaId'))
 
     return (
         <main>
             <Header />
 
             <div className="container-fluid pt-5">
-                <FormularioReceita />
+                <FormularioReceita
+                    dietaId={`${urlParams.get('receitaId')}`}
+                    periodoRef={`${urlParams.get('periodoRef')}`}
+                />
             </div>
 
             <Footer />

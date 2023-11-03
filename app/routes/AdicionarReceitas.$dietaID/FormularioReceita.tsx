@@ -2,7 +2,13 @@ import { Button } from "react-bootstrap"
 import { useFieldArray, useForm } from "react-hook-form";
 
 
-export default function FormularioReceita() {
+interface FormularioReceitaProps {
+    dietaId: string,
+    periodoRef: string
+}
+
+
+export default function FormularioReceita(props: FormularioReceitaProps) {
 
 
     type FormValues = {
@@ -12,6 +18,11 @@ export default function FormularioReceita() {
             qtd: number
         }[];
         modoDePreparo: string;
+        calorias: number
+        carboidratos: number
+        gordura: number
+        proteína: number
+        user: string
     };
     // Botar bglh de imagem no formulario
 
@@ -34,6 +45,8 @@ export default function FormularioReceita() {
 
     function onSubmit(data: FormValues) {
         console.log(data)
+        // vou ter que postar a receita dp, botar o id nela na dieta
+        // vou ter que postar a imagem primeiro, antes da receita, FAZ O L
     }
 
     return (
@@ -48,7 +61,7 @@ export default function FormularioReceita() {
                             <input type="text" className="inputPadrao form-control" id="Titulo" {...register(`titulo`)} placeholder="Dieta da Lua" required />
                         </div>
                         <div className="pt-3">
-                            <label htmlFor="ingredientes" className="form-label fs-4">Quais são os ingredientes?</label>
+                            <h4 className="form-label fs-4">Quais são os ingredientes?</h4>
 
                             {
                                 fields.map((field, index) => (
@@ -58,7 +71,7 @@ export default function FormularioReceita() {
                                             {...register(`ingredientes.${index}.nome`)}
                                         />
 
-                                        <input type="text" className="inputPadrao form-control" id="qtd" style={{ width: "4rem" }} required
+                                        <input type="text" className="inputPadrao form-control" id={`qtd${index}`} style={{ width: "4rem" }} required
                                             {...register(`ingredientes.${index}.qtd`)}
                                             placeholder="Qtd"
                                         />
@@ -93,18 +106,49 @@ export default function FormularioReceita() {
                         <div className="head px-5">
                             <h4>Definir Valores Nutricionais</h4>
                         </div>
+                        <div className="body">
+                            <div className="row my-2">
+                                <label htmlFor="calorias" className="form-label labelNutri mx-1 mx-md-2 py-2"><strong>Calorias</strong></label>
+                                <input type="text" className="inputPadrao form-control" id="calorias" style={{ width: "10rem" }} required
+                                    placeholder="qtd em Total"
+                                    {...register(`calorias`)}
+                                />
+                            </div>
+                            <div className="row my-2">
+                                <label htmlFor="carboidratos" className="form-label labelNutri mx-1 mx-md-2 py-2"><strong>Carboidratos</strong></label>
+                                <input type="text" className="inputPadrao form-control" id="carboidratos" style={{ width: "10rem" }} required
+                                    placeholder="qtd em gramas (g)"
+                                    {...register(`carboidratos`)}
+                                />
+                            </div>
+                            <div className="row my-2">
+                                <label htmlFor="gordura" className="form-label labelNutri mx-1 mx-md-2 py-2"><strong>Gordura</strong></label>
+                                <input type="text" className="inputPadrao form-control" id="gordura" style={{ width: "10rem" }} required
+                                    placeholder="qtd em gramas (g)"
+                                    {...register(`gordura`)}
+                                />
+                            </div>
+                            <div className="row my-2">
+                                <label htmlFor="proteina" className="form-label labelNutri mx-1 mx-md-2 py-2"><strong>Proteína</strong></label>
+                                <input type="text" className="inputPadrao form-control" id="proteina" style={{ width: "10rem" }} required
+                                    placeholder="qtd em gramas (g)"
+                                    {...register(`proteína`)}
+                                />
+                            </div>
+                        </div>
 
 
                     </div>
                 </div>
 
             </div>
-            <div className="d-md-flex justify-content-center align-items-center py-5 px-0 mx-3">
-                <div className="col">
-                    <Button type="reset" className="ms-5 buttonForm float-lg-end">Limpar</Button>
-                </div>
-                <div className="col">
-                    <Button type="submit" className="ms-5 buttonForm">Salvar</Button>
+            <div className="container-fluid">
+                <div className="d-flex justify-content-center align-items-center py-5 pe-5">
+
+                    <Button type="reset" className="ms-5 buttonForm float-lg-end col col-md-12" size="lg">Limpar</Button>
+
+                    <Button type="submit" className="ms-5 buttonForm col col-md-12" size="lg">Salvar</Button>
+
                 </div>
             </div>
         </form>
