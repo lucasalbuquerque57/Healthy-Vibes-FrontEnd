@@ -21,14 +21,14 @@ export default function ModalInsert(props: ModalInsert_AguaProps) {
 
     function handleSubmit(e: FormEvent) {
         e.preventDefault()
-        // depois eu boto
+        // depois eu boto se é atualizar ou n
     }
 
     return (
         <Modal {...props.modal} size="sm" centered>
             <form onSubmit={handleSubmit}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Inserir {props.formFor}</Modal.Title>
+                    <Modal.Title>{props.updateOrInsert} {props.formFor}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="mb-3">

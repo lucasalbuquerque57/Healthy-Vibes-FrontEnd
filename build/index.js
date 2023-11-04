@@ -2139,8 +2139,25 @@ __export(route_exports3, {
 var acompanharProgresso_default = "/build/_assets/acompanharProgresso-RW5YY73C.css";
 
 // app/routes/Profile.acompanharProg/Card_IMC.tsx
-var import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
+var import_sweetalert2 = __toESM(require("sweetalert2")), import_jsx_dev_runtime13 = require("react/jsx-dev-runtime");
 function CardIMC(props) {
+  function changeAnimation(e) {
+    e.currentTarget.className += " fa-shake";
+  }
+  function changeToDefault(e) {
+    e.currentTarget.className = e.currentTarget.className.replace(" fa-shake", "");
+  }
+  function handleDelete(e) {
+    e.preventDefault(), import_sweetalert2.default.fire({
+      title: "Quer deletar?",
+      showDenyButton: !0,
+      /* showCancelButton: true, */
+      denyButtonText: "Cancelar",
+      confirmButtonText: "Deletar"
+    }).then((result) => {
+      result.isConfirmed ? import_sweetalert2.default.fire("Deletado!", "", "success") : result.isDenied && import_sweetalert2.default.fire("N\xE3o deletado", "", "info");
+    });
+  }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "col p-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "cardimc", children: /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "card-body p-2", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "conteudo", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("h5", { className: "card-title", children: [
@@ -2148,7 +2165,7 @@ function CardIMC(props) {
         props.IMC
       ] }, void 0, !0, {
         fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-        lineNumber: 13,
+        lineNumber: 44,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("h5", { className: "card-text", children: [
@@ -2156,41 +2173,64 @@ function CardIMC(props) {
         props.data
       ] }, void 0, !0, {
         fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-        lineNumber: 14,
+        lineNumber: 45,
         columnNumber: 25
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-      lineNumber: 12,
+      lineNumber: 43,
       columnNumber: 21
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("div", { className: "icon text-end", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("i", { className: "fa-solid fa-trash mx-2" }, void 0, !1, {
-        fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-        lineNumber: 17,
-        columnNumber: 25
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)("i", { className: "fa-solid fa-pen-to-square" }, void 0, !1, {
-        fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-        lineNumber: 18,
-        columnNumber: 25
-      }, this)
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+        "i",
+        {
+          className: "fa-solid fa-trash mx-2",
+          onClick: handleDelete,
+          onMouseEnter: changeAnimation,
+          onMouseLeave: changeToDefault
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
+          lineNumber: 48,
+          columnNumber: 25
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime13.jsxDEV)(
+        "i",
+        {
+          className: "fa-solid fa-pen-to-square",
+          onMouseEnter: changeAnimation,
+          onMouseLeave: changeToDefault
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
+          lineNumber: 53,
+          columnNumber: 25
+        },
+        this
+      )
     ] }, void 0, !0, {
       fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-      lineNumber: 16,
+      lineNumber: 47,
       columnNumber: 21
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-    lineNumber: 11,
+    lineNumber: 42,
     columnNumber: 17
   }, this) }, void 0, !1, {
     fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-    lineNumber: 10,
+    lineNumber: 41,
     columnNumber: 13
   }, this) }, void 0, !1, {
     fileName: "app/routes/Profile.acompanharProg/Card_IMC.tsx",
-    lineNumber: 9,
+    lineNumber: 40,
     columnNumber: 9
   }, this);
 }
@@ -2292,7 +2332,7 @@ function AcompanharProgresso() {
         lineNumber: 93,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "buttonAdd col p-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("button", { type: "button", className: "stylebuttonadd", children: "Adicionar" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("div", { className: "buttonAdd col my-2 p-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime14.jsxDEV)("button", { type: "button", className: "stylebuttonadd", children: "Adicionar" }, void 0, !1, {
         fileName: "app/routes/Profile.acompanharProg/route.tsx",
         lineNumber: 100,
         columnNumber: 15
@@ -2555,10 +2595,27 @@ var import_chart2 = require("chart.js"), import_react_chartjs_22 = require("reac
 var import_react14 = require("react"), import_react_bootstrap6 = require("react-bootstrap");
 
 // app/routes/controleConsumo.$date/CardInfos.tsx
-var import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
+var import_sweetalert22 = __toESM(require("sweetalert2")), import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
 function CardInfos(props) {
   function handleClickUpdate() {
-    props.setUpdateOrInsert("update"), props.handleShow(props.typeCard);
+    props.setUpdateOrInsert("Atualizar"), props.handleShow(props.typeCard);
+  }
+  function changeAnimation(e) {
+    e.currentTarget.className += " fa-shake";
+  }
+  function changeToDefault(e) {
+    e.currentTarget.className = e.currentTarget.className.replace(" fa-shake", "");
+  }
+  function handleDelete(e) {
+    e.preventDefault(), import_sweetalert22.default.fire({
+      title: "Quer deletar?",
+      showDenyButton: !0,
+      /* showCancelButton: true, */
+      denyButtonText: "Cancelar",
+      confirmButtonText: "Deletar"
+    }).then((result) => {
+      result.isConfirmed ? import_sweetalert22.default.fire("Deletado!", "", "success") : result.isDenied && import_sweetalert22.default.fire("N\xE3o deletado", "", "info");
+    });
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "col-4", style: { width: "10rem" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "cardcontrole p-2 border rounded", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "card-body", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "conteudo", children: [
@@ -2568,7 +2625,7 @@ function CardInfos(props) {
         " "
       ] }, void 0, !0, {
         fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-        lineNumber: 22,
+        lineNumber: 54,
         columnNumber: 25
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("p", { className: "card-text", children: [
@@ -2576,43 +2633,67 @@ function CardInfos(props) {
         props.quantidade
       ] }, void 0, !0, {
         fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-        lineNumber: 23,
+        lineNumber: 55,
         columnNumber: 25
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-      lineNumber: 21,
+      lineNumber: 53,
       columnNumber: 21
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "icon text-end", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("i", { className: "fa-solid fa-trash mx-2" }, void 0, !1, {
-        fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-        lineNumber: 26,
-        columnNumber: 25
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("i", { className: "fa-solid fa-pen-to-square pens", onClick: () => {
-        handleClickUpdate();
-      } }, void 0, !1, {
-        fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-        lineNumber: 27,
-        columnNumber: 25
-      }, this)
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+        "i",
+        {
+          className: "fa-solid fa-trash mx-2",
+          onClick: handleDelete,
+          onMouseEnter: changeAnimation,
+          onMouseLeave: changeToDefault
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
+          lineNumber: 58,
+          columnNumber: 25
+        },
+        this
+      ),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+        "i",
+        {
+          className: "fa-solid fa-pen-to-square pens",
+          onClick: () => {
+            handleClickUpdate();
+          },
+          onMouseEnter: changeAnimation,
+          onMouseLeave: changeToDefault
+        },
+        void 0,
+        !1,
+        {
+          fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
+          lineNumber: 62,
+          columnNumber: 25
+        },
+        this
+      )
     ] }, void 0, !0, {
       fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-      lineNumber: 25,
+      lineNumber: 57,
       columnNumber: 21
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-    lineNumber: 20,
+    lineNumber: 52,
     columnNumber: 17
   }, this) }, void 0, !1, {
     fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-    lineNumber: 19,
+    lineNumber: 51,
     columnNumber: 13
   }, this) }, void 0, !1, {
     fileName: "app/routes/controleConsumo.$date/CardInfos.tsx",
-    lineNumber: 18,
+    lineNumber: 50,
     columnNumber: 9
   }, this);
 }
@@ -2629,7 +2710,8 @@ function ModalInsert(props) {
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react_bootstrap5.Modal, { ...props.modal, size: "sm", centered: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("form", { onSubmit: handleSubmit, children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react_bootstrap5.Modal.Header, { closeButton: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react_bootstrap5.Modal.Title, { children: [
-      "Inserir ",
+      props.updateOrInsert,
+      " ",
       props.formFor
     ] }, void 0, !0, {
       fileName: "app/routes/controleConsumo.$date/ModalInsert.tsx",
@@ -2726,7 +2808,7 @@ function ControleConsumo2() {
   }
   let [diet, setDiet] = (0, import_react14.useState)("");
   (0, import_react14.useEffect)(() => {
-    setDiet(localStorage.getItem("selectedDiet") || "");
+    localStorage.getItem("selectedDiet") && setDiet(localStorage.getItem("selectedDiet") || "");
   }, []);
   let options = {
     responsive: !0,
@@ -2787,34 +2869,34 @@ function ControleConsumo2() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/controleConsumo.$date/route.tsx",
-      lineNumber: 135,
+      lineNumber: 136,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { id: "conteudo", className: "container-fluid texto", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h1", { className: "first-title", children: "Controle de Consumo" }, void 0, !1, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 138,
+        lineNumber: 139,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h2", { className: "first-title", children: data }, void 0, !1, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 139,
+        lineNumber: 140,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "graphics row mt-3", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "controlwater col", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h1", { className: "title text-center my-3", children: "E a\xED, j\xE1 bebeu \xE1gua?" }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 144,
+            lineNumber: 145,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "graphicwater d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_react_chartjs_22.Doughnut, { options, data: water }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 147,
+            lineNumber: 148,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 146,
+            lineNumber: 147,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "container d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "row g-2 pt-3", children: [
@@ -2831,7 +2913,7 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 154,
+                lineNumber: 155,
                 columnNumber: 33
               },
               this
@@ -2849,7 +2931,7 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 161,
+                lineNumber: 162,
                 columnNumber: 33
               },
               this
@@ -2860,11 +2942,11 @@ function ControleConsumo2() {
                 variant: "success",
                 className: "m-md-4 float-end float-md-none",
                 onClick: () => {
-                  handleShow("\xC1gua"), setUpdateOrInsert("insert");
+                  handleShow("\xC1gua"), setUpdateOrInsert("Inserir");
                 },
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("i", { className: "fa-solid fa-circle-plus fa-2xl" }, void 0, !1, {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 176,
+                  lineNumber: 177,
                   columnNumber: 41
                 }, this)
               },
@@ -2872,42 +2954,42 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 170,
+                lineNumber: 171,
                 columnNumber: 37
               },
               this
             ) }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 169,
+              lineNumber: 170,
               columnNumber: 33
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 152,
+            lineNumber: 153,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 150,
+            lineNumber: 151,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/controleConsumo.$date/route.tsx",
-          lineNumber: 142,
+          lineNumber: 143,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "controlfood col", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("h1", { className: "titlefood text-center my-3", children: "O que voc\xEA comeu?" }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 188,
+            lineNumber: 189,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "graphicfood d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(import_react_chartjs_22.Doughnut, { options: optionsfood, data: food }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 191,
+            lineNumber: 192,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 190,
+            lineNumber: 191,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "container d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "row g-2 pt-3 ", children: [
@@ -2924,7 +3006,7 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 195,
+                lineNumber: 196,
                 columnNumber: 33
               },
               this
@@ -2942,7 +3024,7 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 202,
+                lineNumber: 203,
                 columnNumber: 33
               },
               this
@@ -2953,11 +3035,11 @@ function ControleConsumo2() {
                 variant: "success",
                 className: "m-md-4 float-end float-md-none",
                 onClick: () => {
-                  handleShow("Calorias"), setUpdateOrInsert("insert");
+                  handleShow("Calorias"), setUpdateOrInsert("Inserir");
                 },
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("i", { className: "fa-solid fa-circle-plus fa-2xl" }, void 0, !1, {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 217,
+                  lineNumber: 218,
                   columnNumber: 41
                 }, this)
               },
@@ -2965,28 +3047,28 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 211,
+                lineNumber: 212,
                 columnNumber: 37
               },
               this
             ) }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 210,
+              lineNumber: 211,
               columnNumber: 33
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 194,
+            lineNumber: 195,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 193,
+            lineNumber: 194,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("div", { className: "d-flex justify-content-center align-items-center my-3", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("label", { htmlFor: "Diet", className: "mx-3", children: "Escolha a Dieta:" }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 224,
+              lineNumber: 225,
               columnNumber: 29
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
@@ -2994,7 +3076,7 @@ function ControleConsumo2() {
               {
                 className: "form-select selectConsumo",
                 "aria-label": "Default select example",
-                defaultValue: diet,
+                value: diet,
                 id: "Diet",
                 onChange: (e) => {
                   setDiet(e.target.value), localStorage.setItem("selectedDiet", e.target.value);
@@ -3002,22 +3084,22 @@ function ControleConsumo2() {
                 children: [
                   /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("option", { value: "", disabled: !0, children: "Escolha uma para base" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 232,
+                    lineNumber: 233,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("option", { value: "salve", children: "One" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 233,
+                    lineNumber: 234,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("option", { value: "2", children: "Two" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 234,
+                    lineNumber: 235,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)("option", { value: "3", children: "Three" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 235,
+                    lineNumber: 236,
                     columnNumber: 33
                   }, this)
                 ]
@@ -3026,29 +3108,29 @@ function ControleConsumo2() {
               !0,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 225,
+                lineNumber: 226,
                 columnNumber: 29
               },
               this
             )
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 223,
+            lineNumber: 224,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/controleConsumo.$date/route.tsx",
-          lineNumber: 187,
+          lineNumber: 188,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 141,
+        lineNumber: 142,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/controleConsumo.$date/route.tsx",
-      lineNumber: 136,
+      lineNumber: 137,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(
@@ -3065,19 +3147,19 @@ function ControleConsumo2() {
       !1,
       {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 244,
+        lineNumber: 245,
         columnNumber: 13
       },
       this
     ),
     /* @__PURE__ */ (0, import_jsx_dev_runtime18.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/controleConsumo.$date/route.tsx",
-      lineNumber: 253,
+      lineNumber: 254,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/controleConsumo.$date/route.tsx",
-    lineNumber: 134,
+    lineNumber: 135,
     columnNumber: 5
   }, this);
 }
@@ -3331,7 +3413,7 @@ __export(route_exports5, {
 var import_react17 = require("@remix-run/react");
 
 // app/routes/Profile._index/Card_Dieta.tsx
-var import_react16 = require("@remix-run/react"), import_sweetalert2 = __toESM(require("sweetalert2")), import_jsx_dev_runtime20 = require("react/jsx-dev-runtime");
+var import_react16 = require("@remix-run/react"), import_sweetalert23 = __toESM(require("sweetalert2")), import_jsx_dev_runtime20 = require("react/jsx-dev-runtime");
 function CardDieta(props) {
   function changeAnimation(e) {
     e.currentTarget.className += " fa-shake";
@@ -3340,14 +3422,14 @@ function CardDieta(props) {
     e.currentTarget.className = e.currentTarget.className.replace(" fa-shake", "");
   }
   function handleDelete(e) {
-    e.preventDefault(), import_sweetalert2.default.fire({
+    e.preventDefault(), import_sweetalert23.default.fire({
       title: "Quer deletar?",
       showDenyButton: !0,
       /* showCancelButton: true, */
-      confirmButtonText: "Deletar",
-      denyButtonText: "Cancelar"
+      denyButtonText: "Cancelar",
+      confirmButtonText: "Deletar"
     }).then((result) => {
-      result.isConfirmed ? import_sweetalert2.default.fire("Deletado!", "", "success") : result.isDenied && import_sweetalert2.default.fire("N\xE3o deletado", "", "info");
+      result.isConfirmed ? import_sweetalert23.default.fire("Deletado!", "", "success") : result.isDenied && import_sweetalert23.default.fire("N\xE3o deletado", "", "info");
     });
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)(import_react16.Link, { to: "/profile/dietasDetalhes", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime20.jsxDEV)("div", { className: "card", children: [
@@ -4947,7 +5029,7 @@ function Index4() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-GHO26HG4.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-I4OX5LDE.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-3L2JVFDZ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-PIDYZA2I.js", imports: ["/build/_shared/chunk-VKJGLHOE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-SURVLPIP.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-UIRT4ATL.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-P6X6P54I.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-2A7XR7SD.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-MT2ZXTUG.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-3QVFE4ZY.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-RZ7FFJSG.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-LLMS2WDS.js", imports: ["/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-VKJGLHOE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-A3IJKKHY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-74I2HP4V.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-75M5GUSO.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-CKZIVB4D.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-T6W5VYAH.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-7Q7Z5EU3.js", imports: ["/build/_shared/chunk-PTMGBC7M.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js", "/build/_shared/chunk-DXPYZJJI.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-IRNXO2MW.js", imports: ["/build/_shared/chunk-PTMGBC7M.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-OZKYEKPL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "4c29cbbd", hmr: { runtime: "/build/_shared\\chunk-3L2JVFDZ.js", timestamp: 1699033351337 }, url: "/build/manifest-4C29CBBD.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-GHO26HG4.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-I4OX5LDE.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-3L2JVFDZ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-PIDYZA2I.js", imports: ["/build/_shared/chunk-VKJGLHOE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-SURVLPIP.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-UIRT4ATL.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-P6X6P54I.js", imports: ["/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-2A7XR7SD.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-MT2ZXTUG.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-3QVFE4ZY.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-VGLZA4NY.js", imports: ["/build/_shared/chunk-RF5YXODT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-JFI7OJNH.js", imports: ["/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-VKJGLHOE.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-A3IJKKHY.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-74I2HP4V.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-75M5GUSO.js", imports: ["/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-CKZIVB4D.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-T6W5VYAH.js", imports: ["/build/_shared/chunk-3RW55RAI.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-IIJUIK2V.js", imports: ["/build/_shared/chunk-PTMGBC7M.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js", "/build/_shared/chunk-DXPYZJJI.js", "/build/_shared/chunk-RF5YXODT.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-IRNXO2MW.js", imports: ["/build/_shared/chunk-PTMGBC7M.js", "/build/_shared/chunk-VLOXNAGO.js", "/build/_shared/chunk-WQFJ2CRD.js", "/build/_shared/chunk-QYIF7TOP.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-OZKYEKPL.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "9c7eee4e", hmr: { runtime: "/build/_shared\\chunk-3L2JVFDZ.js", timestamp: 1699057203564 }, url: "/build/manifest-9C7EEE4E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

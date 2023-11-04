@@ -63,7 +63,8 @@ export default function ControleConsumo() {
     const [diet, setDiet] = useState("");
 
     useEffect(() => {
-        setDiet(localStorage.getItem("selectedDiet") || "")
+        if (localStorage.getItem("selectedDiet"))
+            setDiet(localStorage.getItem("selectedDiet") || "")
     }, [])
 
     const options = {
@@ -170,7 +171,7 @@ export default function ControleConsumo() {
                                     <Button variant="success" className="m-md-4 float-end float-md-none"
                                         onClick={() => {
                                             handleShow("Água")
-                                            setUpdateOrInsert("insert")
+                                            setUpdateOrInsert("Inserir")
                                         }}
                                     >
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
@@ -211,7 +212,7 @@ export default function ControleConsumo() {
                                     <Button variant="success" className="m-md-4 float-end float-md-none"
                                         onClick={() => {
                                             handleShow("Calorias")
-                                            setUpdateOrInsert("insert")
+                                            setUpdateOrInsert("Inserir")
                                         }}
                                     >
                                         <i className="fa-solid fa-circle-plus fa-2xl"></i>
@@ -222,7 +223,7 @@ export default function ControleConsumo() {
                         </div>
                         <div className="d-flex justify-content-center align-items-center my-3">
                             <label htmlFor="Diet" className="mx-3">Escolha a Dieta:</label>
-                            <select className="form-select selectConsumo" aria-label="Default select example" defaultValue={diet} id="Diet"
+                            <select className="form-select selectConsumo" aria-label="Default select example" value={diet} id="Diet"
                                 onChange={(e) => {
                                     setDiet(e.target.value)
                                     localStorage.setItem("selectedDiet", e.target.value)

@@ -96,7 +96,7 @@ export default function AcompanharProgresso() {
               </div>
               <input className="inpProg" type="number" id="peso" name="text" placeholder="Peso em Kg" step="0.01" />
             </div>
-            <div className="buttonAdd col p-0">
+            <div className="buttonAdd col my-2 p-0">
               <button type="button" className="stylebuttonadd">Adicionar</button>
             </div>
           </div>
@@ -125,11 +125,7 @@ export default function AcompanharProgresso() {
           <Line options={options} data={data} />
         </div>
 
-
-
       </div>
-
-
 
     </main>
   );

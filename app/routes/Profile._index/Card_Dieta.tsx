@@ -23,8 +23,8 @@ export function CardDieta(props: CardsProps) {
       title: 'Quer deletar?',
       showDenyButton: true,
       /* showCancelButton: true, */
-      confirmButtonText: 'Deletar',
       denyButtonText: `Cancelar`,
+      confirmButtonText: 'Deletar',
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
