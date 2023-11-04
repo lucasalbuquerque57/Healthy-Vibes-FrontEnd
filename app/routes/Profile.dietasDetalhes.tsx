@@ -20,50 +20,41 @@ export default function DietasDetalhes() {
   return (
 
     <main>
-      <div className="container-fluid">
-
-        <h1 className="tituloDieta">Dieta Tal</h1>
-
-        <div className="titulo-refeicao">
-          <h2>Café da Manhã</h2>
-          <button className="botao adiciona">Adicionar</button>
-        </div>
-
-
-
-
-
-        <div className="receita">
-          <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
-          <div className="textos-info">
-            <p className="texto">Torrada Integral com Salsa</p>
-            <p className="texto">Dificuldade: Fácil</p>
-            <p className="texto">Porções: 2</p>
-          </div>
-
-          <div className="botoes2">
-            <button className="botao">Favoritar</button>
-            <button className="botao">Opções</button>
-            <button className="botao">Excluir</button>
-          </div>
-        </div>
-
-        <div className="receita">
-          <img className="imagemComida" src="/IconeLogo.png" alt="finge que tem uma imagem aqui" />
-          <div className="textos-info">
-            <p className="texto">Sanduiche de Peito de Frango</p>
-            <p className="texto">Dificuldade: Fácil</p>
-            <p className="texto">Porções: 1</p>
-          </div>
-
-          <div className="botoes2">
-            <button className="botao">Favoritar</button>
-            <button className="botao">Opções</button>
-            <button className="botao">Excluir</button>
+     <div className="container-fluid">
+      <div className="row">
+        <div className="col-13 mt-4">
+          <div className="card">
+            <div className="card-horizontal">
+              <div className="img-square-wrapper">
+                <img
+                  className=""
+                  src="/PastaIcon.png"
+                  alt="Card cap"
+                />
+              </div>
+              <div className="card-body">
+                <div className="card-titulo-botoes">
+                  <h4 className="card-title">Algo vai aqui</h4>
+                  <button className="opcoes">
+                    <img src="/FavoriteIcon.png" alt=""></img>
+                  </button>
+                  <button className="opcoes">
+                    <img src="/MoreIcon2.png" alt=""></img>
+                  </button>
+                </div>
+                <p className="card-text">
+                  Dificuldade: Médio
+                </p>
+                <p>
+                  3 Porção(ões)
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
+    </div>
+
     </main>
   );
 }

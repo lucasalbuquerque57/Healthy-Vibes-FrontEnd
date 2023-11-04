@@ -38,9 +38,6 @@ export function CardReceita(props: CardsProps) {
                 </p>
               </div>
             </div>
-            <div className="card-footer">
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
           </div>
         </div>
       </div>
