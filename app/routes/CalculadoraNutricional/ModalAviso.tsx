@@ -20,7 +20,7 @@ export default function ModalAviso() {
             keyboard={false}
         >
             <Modal.Header>
-                <Modal.Title className="text-center text-warning fw-bold">
+                <Modal.Title className="text-center warning-diferenciado fw-bold">
                     <i className="fa-solid fa-triangle-exclamation"></i> Aviso em nome
                     de sua saúde
                 </Modal.Title>
