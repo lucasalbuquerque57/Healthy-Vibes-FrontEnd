@@ -1,6 +1,8 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import cadastro from "~/styles/cadastro.css";
 import { Link } from "@remix-run/react";
+import ModalConfirmacao from "./modalConfirmacao";
+
 
 export const links: LinksFunction = () => {
     return [
@@ -13,6 +15,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function alterarDados() {
+
     return (
 
         <main >
@@ -29,27 +32,32 @@ export default function alterarDados() {
                     <form>
                         <div className="input-group">
                             <label htmlFor="nome">Nome</label>
-                            <input type="text" name="nome" placeholder="Digite o seu nome completo" required />
+                            <input type="text" name="nome" placeholder="Digite seu nome atualizado"/>
                         </div>
                         <div className="input-group">
-                            <label htmlFor="email">E-mail</label>
-                            <input type="email" name="email" placeholder="Digite seu e-mail" required />
+                            <label htmlFor="email">E-mail*</label>
+                            <input type="email" name="email" placeholder="Digite seu novo e-mail" /* required */ />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Digite nova senha" required />
+                            <label htmlFor="email">Confirmar E-mail*</label>
+                            <input type="email" name="email" placeholder="Confirme seu novo e-mail" /* required */ />
                         </div>
                         <div className="input-group">
-                            <label htmlFor="senha">Confirmar Senha</label>
-                            <input type="password" name="senha" placeholder="Confirme a senha" required />
+                            <label htmlFor="senha">Senha*</label>
+                            <input type="password" name="senha" placeholder="Digite nova senha" /* required */ />
                         </div>
                         <div className="input-group">
-                            <button >Salvar</button>
+                            <label htmlFor="senha">Confirmar Senha*</label>
+                            <input type="password" name="senha" placeholder="Confirme a senha" /* required */ />
+                        </div>
+                        <div className="input-group">
+                            <button>Salvar</button>
                         </div>
                     </form>
+                    
                 </div>
             </div>
-
+            <ModalConfirmacao/>
         </main>
 
     );
