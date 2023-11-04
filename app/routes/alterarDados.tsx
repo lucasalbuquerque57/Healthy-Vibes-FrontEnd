@@ -9,7 +9,7 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => ({
-    title: "sla"
+    title: "Atualização de Dados"
 });
 
 export default function alterarDados() {
@@ -19,11 +19,13 @@ export default function alterarDados() {
 
             <div className="box">
                 <div className="box-img fundoPossivel">
-                    <p>Healthy<br />Vibes</p>
+                    <Link className="nav-link" to="/">
+                        <p>Healthy<br />Vibes</p>
+                    </Link>
                     <img src="/cadImg1.jpg" alt="img temporaria" />
                 </div>
                 <div className="form-box">
-                    <h1>Alteração de Dados</h1>
+                    <h1>Atualização de Dados</h1>
                     <form>
                         <div className="input-group">
                             <label htmlFor="nome">Nome</label>
@@ -35,10 +37,14 @@ export default function alterarDados() {
                         </div>
                         <div className="input-group">
                             <label htmlFor="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Digite o sua senha" required />
+                            <input type="password" name="senha" placeholder="Digite nova senha" required />
                         </div>
                         <div className="input-group">
-                            <button>Salvar</button>
+                            <label htmlFor="senha">Confirmar Senha</label>
+                            <input type="password" name="senha" placeholder="Confirme a senha" required />
+                        </div>
+                        <div className="input-group">
+                            <button >Salvar</button>
                         </div>
                     </form>
                 </div>

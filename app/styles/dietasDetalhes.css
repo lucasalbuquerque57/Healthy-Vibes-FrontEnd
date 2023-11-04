@@ -100,6 +100,12 @@
   border-radius: 1rem;
   width: 6rem;
   margin-right: 0.5rem;
+  font-weight: var(--bold-oportunista);
+  border-color: var(--borda-forms);
+}
+
+.botao:focus{
+  background-color: var(--button-quaternary);
 }
 
 .botao.acomp {
@@ -120,7 +126,7 @@
   width: 100%;
   padding-top: 1rem;
   padding-left: 10rem;
-  border: 2px solid;
+  border: 2px solid var(--borda-forms);
   margin-bottom: 2rem;
 }
 
@@ -186,4 +192,8 @@
 
 .row-input{
   margin-top: 2rem;
+}
+
+.tituloDieta, .titulo-refeicao, .texto, .h2{
+  color: var(--text-octonary);
 }

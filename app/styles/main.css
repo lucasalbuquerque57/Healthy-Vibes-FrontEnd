@@ -1,5 +1,5 @@
 :root {
-  --background-primary: #fff;
+  --background-primary: #f9f9f9f9;
   --background-secondary: rgba(140, 235, 152, 0.6); /*Fundo Login*/
   --background-tertiary: #effff1; /*Fundo Cadastro*/
   --background-quaternary: #254e24; /*Footer*/
@@ -15,12 +15,15 @@
   --background-quatordenary: #e9f8e7;
   --background-quinodenary: #c3ffdb;
   --background-senodenary: #f7fff3;
+  --background-octodenary: #efbbba;
+  --background-nonadenary: #989898;
 
   --background-card: #d9d9d9;
 
   --button-primary: #45c53a;
   --button-secondary: #ea4545;
   --button-tertiary: #809f27;
+  --button-quaternary: #5f791a;
 
   --text-primary: #fff;
   --text-secondary: #000;
@@ -47,6 +50,8 @@
   --misc-octonary: #858585;
   --misc-nonary: #a3c24baa;
 
+  --borda-forms: #6a6969;
+
   --link-dark: #000000c4;
   --placeholder: #6b6b6b;
   --talvez-nada: none;
@@ -61,11 +66,14 @@
   --branco-clarin2: #d5d5d5;
 
   --preto-branco: #000;
+  --branco-preto: #fff;
 
   --preto-efeitos: #000;
   --preto-efeito-trans: #00000052;
   --semi-effect: #a4a6a7;
   --sombra-clara-effect: #edede8;
+  --verde-efeito: #D3F0D7;
+  --verde-efeito2: #9cae95;
 
   --verde-princip: #0a9906;
   --salmao-princip: #ff785a;
@@ -83,25 +91,35 @@
 
   --blue-light: #8fc7d544;
 
+  --bold-oportunista2: 700;
+
   --background-warning-modal: #b7e1ea;
   --acessib-mark: rgb(133, 150, 228);
   --verde-sucess: rgba(165, 220, 134, 0.7);
+
+  --eu-sinto-o-shadow: #c1b9b9;
+  --filter-svgs: invert(10%) sepia(9%) saturate(907%) hue-rotate(169deg) brightness(99%) contrast(90%);
 }
 
 [data-theme="contraOn"] {
   --background-primary: #000;
-  --background-secondary: #ffff00;
+  --background-secondary: #ff0;
   --background-tertiary: #000;
   --background-quaternary: #000;
-  --background-quinary: #ffff00;
+  --background-quinary: #ff0;
   --background-nonary: #655205;
   --background-denary: #000;
-  --background-undenary: #ffff00;
+  --background-undenary: #ff0;
   --background-duodenary: #000;
   --background-tridenary: #fff;
+  --background-quinodenary: #ff0;
   --background-senodenary: #000;
+  --background-octodenary: #000;
+  --background-nonadenary: #2a2a2a;
 
-  --button-tertiary: #ffff00;
+  --button-secondary: #ff0;
+  --button-tertiary: #ff0;
+  --button-quaternary: #a0a00f;
 
   --text-primary: #fff;
   --text-secondary: #fff;
@@ -109,59 +127,68 @@
   --text-quaternary: #fff;
   --text-senary: #fff;
   --text-octonary: #fff;
-  --text-nonary: #ffff00;
+  --text-nonary: #ff0;
   --text-denary: #000;
-  --text-undenary: #ffff00;
+  --text-undenary: #ff0;
   --text-duodenary: #fff;
-  --text-tridenary: #ffff00;
-  --text-quadenary: #ffff00;
-  --text-quidenary: #ffff00;
+  --text-tridenary: #ff0;
+  --text-quadenary: #ff0;
+  --text-quidenary: #ff0;
   --text-sedenary: #000;
 
   --misc-primary: #fff;
-  --misc-tertiary: #ffff00;
-  --misc-quaternary: #ffff00;
+  --misc-tertiary: #ff0;
+  --misc-quaternary: #ff0;
   --misc-quinary: none;
-  --misc-senary: #ffff00;
-  --misc-octonary: #ffff00;
+  --misc-senary: #ff0;
+  --misc-octonary: #ff0;
   --misc-nonary: #655205;
 
+  --borda-forms: #ff0;
+
   --link-dark: #fff;
-  --placeholder: #fff;
+  --placeholder: #ffffffb3;
   --talvez-nada: #000;
+
+  --verde-efeito: #ff0;
+  --verde-efeito2: #655205a3;
 
   --transparent-primary: none;
   --transparent-secondary: none;
-  --transparent-tertiary: #ffff00;
+  --transparent-tertiary: #ff0;
 
   --branco: #000;
   --branco-creme: #000;
-  --branco-clarin: #ffff00;
-  --branco-clarin2: #ffff00;
+  --branco-clarin: #ff0;
+  --branco-clarin2: #ff0;
 
   --preto-branco: #fff;
+  --branco-preto: #000;
 
   --verde-princip: #000;
-  --text-salmao: #ffff00;
+  --text-salmao: #ff0;
   --text-verde: #fff;
-  --rouge-princip: #ffff00;
-  --acessib-mark: #ffff00;
-  --verde-sucess: #ffff00;
-  --verde-sucess2: #ffff00;
+  --rouge-princip: #ff0;
+  --salmao-princip: #ff0;
+  --acessib-mark: #ff0;
+  --verde-sucess: #ff0;
+  --verde-sucess2: #ff0;
 
   --rouge-secondary: #524b04;
 
-  --iterac-verde: #ffff00;
+  --iterac-verde: #ff0;
 
   --blue-light: none;
 
   --sombra-clara-effect: none;
 
-  --amarelo-oportunista: #ffff00;
+  --amarelo-oportunista: #ff0;
   --bold-oportunista: bold;
+  --bold-oportunista2: bold;
+  --sombra-oportunista: #524b04;
 
   --background-warning-modal: #000;
-  --bs-border-color-translucent: #ffff00;
+  --bs-border-color-translucent: #ff0;
   --bs-modal-border-color: #ffff00 !important;
   --bs-info-text-emphasis: #ffff00 !important;
   --bs-info-bg-subtle: #ffff00 !important;
@@ -170,6 +197,9 @@
   --bs-info-rgb: #ffff00 !important;
   --bs-btn-color: #000 !important;
   --bs-btn-bg: #ffff00 !important;
+
+  --eu-sinto-o-shadow: #ff0;
+  --filter-svgs: invert(86%) sepia(100%) saturate(6435%) hue-rotate(354deg) brightness(104%) contrast(103%);
 }
 
 * {
@@ -651,4 +681,30 @@ footer .footer-logo {
 }
 .btn-comum:active {
   background-color: var(--background-primary) !important;
+}
+
+.tituloInput{
+  color: var(--text-octonary);
+}
+
+.labelSimples{
+  color: var(--text-octonary);
+}
+
+.caixaTexto{
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+  border-color: var(--borda-forms);
+}
+
+.caixaTexto:focus{
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+}
+
+.form-control:focus {
+  border-color: var(--verde-efeito) !important;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem var(--verde-efeito2) !important;
+  font-weight: var(--bold-oportunista);
 }

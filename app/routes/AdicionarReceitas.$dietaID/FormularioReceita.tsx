@@ -57,11 +57,11 @@ export default function FormularioReceita(props: FormularioReceitaProps) {
                     <div className="start" >
 
                         <div className="pt-1">
-                            <label htmlFor="Titulo" className="form-label fs-4">Digite o Nome da sua Receita</label>
-                            <input type="text" className="inputPadrao form-control" id="Titulo" {...register(`titulo`)} placeholder="Dieta da Lua" required />
+                            <label htmlFor="Titulo" className="form-label fs-4 tituloInput">Digite o Nome da sua Receita</label>
+                            <input type="text" className="inputPadrao form-control" id="Titulo" {...register(`titulo`)} placeholder="Ex: Dieta da Lua" required />
                         </div>
                         <div className="pt-3">
-                            <h4 className="form-label fs-4">Quais são os ingredientes?</h4>
+                            <h4 className="form-label fs-4 tituloInput">Quais são os ingredientes?</h4>
 
                             {
                                 fields.map((field, index) => (
@@ -88,10 +88,10 @@ export default function FormularioReceita(props: FormularioReceitaProps) {
                         </div>
 
                         <div className="py-md-5 mb-3">
-                            <p className="fs-4">Qual modo de preparo?</p>
+                            <p className="fs-4 tituloInput">Qual modo de preparo?</p>
                             <div className="form-floating">
-                                <textarea className="form-control" placeholder="Descrição de como preparar" id="floatingTextarea" {...register(`modoDePreparo`)} style={{ height: "10rem" }}></textarea>
-                                <label htmlFor="floatingTextarea">Descrição</label>
+                                <textarea className="form-control caixaTexto" placeholder="Descrição de como preparar" id="floatingTextarea" {...register(`modoDePreparo`)} style={{ height: "10rem" }}></textarea>
+                                {/* <label htmlFor="floatingTextarea">Descrição</label> */}  {/* isso aq ta encima do placeholder e n da p enxergar nada */}
                             </div>
                         </div>
 

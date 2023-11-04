@@ -128,7 +128,7 @@ form .input-group input:focus {
 form .input-group button{
     width: 100%;
     height: 3rem;
-    background: var(--text-tertiary);
+    background: var(--iterac-verde);
     cursor: pointer;
     font-size: 1rem;
     color: var(--branco);
@@ -139,7 +139,7 @@ form .input-group button{
     box-shadow: 0rem 0.625rem 2.5rem -0.75rem #00000052;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
-    font-weight: 700;
+    font-weight: var(--bold-oportunista2);
 }
 
 form .input-group button:active{

@@ -130,7 +130,7 @@ svg {
 }
 
 .border-selecionado {
-  border-color: var(--iterac-verde) !important;
+  border-color: var(--misc-tertiary) !important;
 }
 
 .p-datepicker:not(.p-disabled)

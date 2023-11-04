@@ -198,13 +198,16 @@
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
   transition: transform 0.35s ease;
   transform-origin: 0.5em 50%;
+  filter: var(--filter-svgs);
+
+  /* filter: invert(10%) sepia(9%) saturate(907%) hue-rotate(169deg) brightness(99%) contrast(90%); */
 }
 
 .barraDeFiltros {
   position: relative;
   display: flex;
   z-index: 1;
-  box-shadow: 0.188rem 0.25rem 0.125rem var(--branco-clarin);
+  box-shadow: 0.188rem 0.25rem 0.125rem var(--eu-sinto-o-shadow);
   align-self: flex-start;
   border-radius: 1.25rem;
   background-color: var(--branco-creme) !important;
@@ -225,11 +228,27 @@
   background: var(--salmao-princip);
 }
 
+/* ::webkit-slider-thumb não é 100% padrao, entao o firefox ignora ele */
 input[type="range"]::-webkit-slider-thumb {
-  width: 2rem;
+  width: 2rem !important;
   background-color: var(--salmao-princip);
   -webkit-appearance: none;
 }
+
+
+/* teste abaixo, firefox carrega isso mas o chrome */
+
+
+/* input[type="range"]::-moz-range-progress {
+  background-color: var(--salmao-princip); 
+} */
+
+input[type="range"]::-webkit-slider-runnable-track {  
+  background-color: var(--background-nonadenary);
+}
+
+
+/* teste acima */
 
 input[type="checkbox"]:checked {
   background-color: var(--salmao-princip);
@@ -237,4 +256,9 @@ input[type="checkbox"]:checked {
 
 input[type="radio"]:checked {
   background-color: var(--salmao-princip);
+}
+
+.form-check-input {
+  background-color: var(--background-primary);
+  border-color: var(--misc-octonary) !important;
 }

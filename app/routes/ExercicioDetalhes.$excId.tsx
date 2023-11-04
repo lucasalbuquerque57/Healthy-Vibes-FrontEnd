@@ -28,7 +28,7 @@ export default function ExercicioDetalhes() {
             <main id="conteudo" className=" texto">
                 <Header />
                 <div className="headline text">
-                    <h1 className="title text-center py-3">Tríceps</h1>
+                    <h1 className="title text-center py-3 labelSimples">Tríceps</h1>
                 </div>
                 <div className="barraHoriz container-fluid">
                     <Link to="/exercicios">
@@ -44,13 +44,13 @@ export default function ExercicioDetalhes() {
                     </iframe>
                 </div>
 
-                <div className="mx-3 mx-md-5">
+                <div className="mx-3 mx-md-5 labelSimples">
                     <h5>Repetições</h5>
                     <p className="rep rounded">Fazer no mínimo 4 x 10</p>
                 </div>
 
                 <div>
-                    <h5 className="texto-justificado m-md-4 mx-md-5 mx-3">
+                    <h5 className="texto-justificado m-md-4 mx-md-5 mx-3 labelSimples">
                         Fazer pranchas melhora significativamente uma postura erecta e estável.
                         Através do fortalecimento de core, o corpo será capaz de manter uma
                         postura correcta porque os músculos no abdómen têm grande influência

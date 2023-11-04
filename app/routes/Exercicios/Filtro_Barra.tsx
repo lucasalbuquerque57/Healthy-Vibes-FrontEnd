@@ -31,32 +31,32 @@ export function FiltroBarra(props: CardsProps) {
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault2">
                                     Perna
                                 </label>
                             </div>
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault3">
                                     Braço
                                 </label>
                             </div>
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault4">
                                     Tríceps
                                 </label>
                             </div>
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+                                <label className="form-check-label" htmlFor="flexCheckDefault5">
                                     Peito
                                 </label>
                             </div>

@@ -1,10 +1,15 @@
 .inputPadrao {
-  border: 0.1rem solid var(--text-quidenary);
+  border: 0.1rem solid var(--borda-forms);
   border-radius: 1rem;
   width: 18rem;
   height: 2.5rem;
   padding-left: 1rem;
   font-size: small;
+  background-color: var(--background-primary);
+  color: var(--text-octonary) !important;
+}
+
+.inputPadrao:focus{
   background-color: var(--background-primary);
 }
 
@@ -13,7 +18,7 @@
   height: 2rem;
   background-color: var(--background-primary);
   color: var(--button-secondary);
-  border: 1.5px solid var(--text-sedenary);
+  border: 1.5px solid var(--borda-forms);
 }
 
 .buttonAdd {
@@ -21,17 +26,19 @@
   height: 2.5rem;
   background-color: var(--background-primary);
   color: var(--transparent-tertiary);
-  border: 1.5px solid var(--text-sedenary);
+  border: 1.5px solid var(--borda-forms);
 }
 
 .buttonRemove:hover {
   background-color: var(--button-secondary);
-  border: 1.5px solid var(--text-sedenary);
+  border: 1.5px solid var(--borda-forms);
+  color: var(--branco-preto);
 }
 
 .buttonAdd:hover {
   background-color: var(--transparent-tertiary);
-  border: 1.5px solid var(--text-sedenary);
+  border: 1.5px solid var(--borda-forms);
+  color: var(--branco-preto);
 }
 
 .buttonForm {
@@ -44,20 +51,37 @@
 }
 
 .buttonForm:hover {
-  background-color: var(--button-tertiary);
-  border: 1px solid var(--transparent-tertiary);
+  background-color: var(--button-quaternary);
+  border: 1px solid var(--sombra-oportunista);
+  color: var(--branco);
+  
 }
 
 .valoresNutricionais {
   border: 2px solid var(--text-secondary);
-  background-color: var(--rouge-secondary);
+  background-color: var(--background-octodenary);
 }
 
 .head {
   border-bottom: 2px solid var(--text-secondary);
   width: 100%;
+  color: var(--text-octonary);
 }
 
 .labelNutri {
   width: 8rem;
+  color: var(--text-octonary);
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: var(--placeholder) !important;
+}
+
+
+
+/* menor ideia de q porra é essa, so sei q isso fz o texto dancar quando clica, entou vou por em 1rem p parar c essa porra */
+
+.form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown), .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown) {
+  padding-top: 1rem;
 }
