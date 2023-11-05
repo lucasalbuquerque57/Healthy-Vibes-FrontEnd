@@ -11,7 +11,7 @@ export async function loader({
 }: LoaderArgs) {
 
     const urlParams = new URLSearchParams(params.dietaID)
-    if (urlParams.has('receitaId') && urlParams.has('periodoRef')) {
+    if (urlParams.has('dietaId') && urlParams.has('periodoRef')) {
 
         return params.dietaID
 
@@ -34,7 +34,7 @@ export default function Index() {
 
     const urlParams = new URLSearchParams(data)
 
-    console.log(urlParams.get('receitaId'))
+    console.log(urlParams.get('dietaId'))
 
     return (
         <main>
