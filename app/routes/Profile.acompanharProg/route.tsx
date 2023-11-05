@@ -15,7 +15,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import ModalInsertAcompanharProg from "./ModalInsert";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
@@ -82,6 +82,10 @@ export default function AcompanharProgresso() {
     }
   }
 
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+  }
+
 
 
   return (
@@ -91,23 +95,25 @@ export default function AcompanharProgresso() {
       <div className="conteudoprog">
 
         <div className="container-fluid d-flex justify-content-center align-items-center gap-3">
-          <div className="row gap-3">
-            <div className="campo-prog col p-0">
-              <div>
-                <label className="rotulo">Altura</label>
+          <form onSubmit={handleSubmit}>
+            <div className="row gap-3">
+              <div className="campo-prog col p-0">
+                <div>
+                  <label className="rotulo">Altura</label>
+                </div>
+                <input className="inpProg" type="number" id="altura" name="nome" placeholder="Altura em Cm" />
               </div>
-              <input className="inpProg" type="number" id="altura" name="nome" placeholder="Altura em Cm" />
-            </div>
-            <div className="campo-prog col p-0">
-              <div>
-                <label className="rotulo">Peso</label>
+              <div className="campo-prog col p-0">
+                <div>
+                  <label className="rotulo">Peso</label>
+                </div>
+                <input className="inpProg" type="number" id="peso" name="text" placeholder="Peso em Kg" step="0.01" />
               </div>
-              <input className="inpProg" type="number" id="peso" name="text" placeholder="Peso em Kg" step="0.01" />
+              <div className="buttonAdd col my-2 p-0">
+                <button type="submit" className="stylebuttonadd">Adicionar</button>
+              </div>
             </div>
-            <div className="buttonAdd col my-2 p-0">
-              <button type="button" className="stylebuttonadd">Adicionar</button>
-            </div>
-          </div>
+          </form>
         </div>
 
         <div className="container-fluid d-flex justify-content-center align-items-center mt-4 ">
