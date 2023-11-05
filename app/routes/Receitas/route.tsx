@@ -17,6 +17,8 @@ export const meta: MetaFunction = () => ({
     title: "Receitas"
 });
 
+// Vou colocar aqui para pegar localStorage ou hookstate e toda a logica que eu preciso
+
 
 export default function Receitas() {
     const navigate = useNavigate();

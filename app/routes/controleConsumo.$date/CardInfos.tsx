@@ -15,7 +15,6 @@ export function CardInfos(props: CardsProps) {
         props.handleShow(props.typeCard)
     }
 
-
     function changeAnimation(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.currentTarget.className += " fa-shake"
     }
@@ -23,7 +22,6 @@ export function CardInfos(props: CardsProps) {
     function changeToDefault(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.currentTarget.className = e.currentTarget.className.replace(" fa-shake", "")
     }
-
 
     function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 

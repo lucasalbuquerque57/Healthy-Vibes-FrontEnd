@@ -27,16 +27,20 @@ export default function ExercicioDetalhes() {
         <div>
             <main id="conteudo" className=" texto">
                 <Header />
-                <div className="headline text">
-                    <h1 className="title text-center py-3 labelSimples">Tríceps</h1>
-                </div>
-                <div className="barraHoriz container-fluid">
-                    <Link to="/exercicios">
-                        <button type="button" title="Excluir" className="buttonCards m-2">
-                            <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{ color: "var(--text-quadenary)" }}>
-                            </i>
-                        </button>
-                    </Link>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="barraHoriz col-2 mt-4">
+                            <Link to="/exercicios">
+                                <button type="button" title="Excluir" className="buttonCards m-2 ">
+                                    <i className="px-2 fa-solid fa-arrow-left fa-2xl" style={{ color: "var(--text-quadenary)" }}>
+                                    </i>
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="headline text col-8">
+                            <h1 className="title text-center py-3 labelSimples">Tríceps</h1>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="container-fluid text-center py-4" >
@@ -44,18 +48,23 @@ export default function ExercicioDetalhes() {
                     </iframe>
                 </div>
 
-                <div className="mx-3 mx-md-5 labelSimples">
-                    <h5>Repetições</h5>
-                    <p className="rep rounded">Fazer no mínimo 4 x 10</p>
-                </div>
-
-                <div>
-                    <h5 className="texto-justificado m-md-4 mx-md-5 mx-3 labelSimples">
-                        Fazer pranchas melhora significativamente uma postura erecta e estável.
-                        Através do fortalecimento de core, o corpo será capaz de manter uma
-                        postura correcta porque os músculos no abdómen têm grande influência
-                        sobre a estabilidade do pescoço, ombros, peito e costas.
-                    </h5>
+                <div className="container video d-flex justify-content-start align-items-center flex-column">
+                    <div className="exercise">
+                        <div >
+                            <div className="mx-md-2 labelSimples titulo fw-bold">
+                                <h2 className="fw-bold">Repetições</h2>
+                                <p className="rep rounded">Fazer no mínimo 4 x 10</p>
+                            </div>
+                        </div>
+                        <div >
+                            <h5 className="texto-justificado m-md-4 mx-md-3 labelSimples">
+                                Fazer pranchas melhora significativamente uma postura erecta e estável.
+                                Através do fortalecimento de core, o corpo será capaz de manter uma
+                                postura correcta porque os músculos no abdómen têm grande influência
+                                sobre a estabilidade do pescoço, ombros, peito e costas.
+                            </h5>
+                        </div>
+                    </div>
                 </div>
                 <Footer />
             </main>
