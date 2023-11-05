@@ -153,6 +153,7 @@ export default function ControleConsumo() {
                             <div className="row g-2 pt-3">
 
                                 <CardInfos
+                                    // Falta pegar o id
                                     horario="15:00"
                                     quantidade="300 Ml"
                                     setUpdateOrInsert={setUpdateOrInsert}

@@ -15,6 +15,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { useState } from "react";
+import ModalInsertAcompanharProg from "./ModalInsert";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 );
@@ -28,8 +30,14 @@ export const links: LinksFunction = () => {
 export default function AcompanharProgresso() {
   const changeTheme = useHookstate(themePage);
 
-  const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
+  const [imcID, setImcId] = useState("");
 
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
 
   const data = {
     labels,
@@ -108,18 +116,32 @@ export default function AcompanharProgresso() {
             <CardIMC
               IMC="23.2"
               data="23/12/2022"
+              imcId={setImcId}
+              handleShow={handleShow}
             />
             <CardIMC
               IMC="22.2"
               data="13/02/2023"
+              imcId={setImcId}
+              handleShow={handleShow}
             />
             <CardIMC
               IMC="20.2"
               data="25/03/2023"
+              imcId={setImcId}
+              handleShow={handleShow}
             />
           </div>
 
         </div>
+
+        <ModalInsertAcompanharProg
+          imcId={imcID}
+          modal={{
+            show: show,
+            onHide: handleClose
+          }}
+        />
 
         <div className='container-fluid d-flex justify-content-center align-items-center graphic-imc mt-4 w-md-50'>
           <Line options={options} data={data} />

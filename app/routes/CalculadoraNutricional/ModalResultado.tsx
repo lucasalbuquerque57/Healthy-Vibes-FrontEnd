@@ -14,7 +14,7 @@ export default function ModalResultado(props: ModalResultadoProps) {
 
     function navigateReceitas() {
         navigate('/Receitas')
-        // Talvez vou ter que usar o HookState
+        // Provavelmente aqui vai criar um localStorage dos valores obtidos e gerar receit
     }
 
     return (

@@ -3,6 +3,8 @@ import Swal from "sweetalert2";
 interface CardsProps {
     IMC: string;
     data: string;
+    handleShow: Function;
+    imcId: React.Dispatch<string>;
 }
 
 export function CardIMC(props: CardsProps) {
@@ -19,6 +21,7 @@ export function CardIMC(props: CardsProps) {
 
         // Vou colocar os bglhs do axios aqui
         e.preventDefault();
+        props.imcId("")
         Swal.fire({
             title: 'Quer deletar?',
             showDenyButton: true,
@@ -33,6 +36,12 @@ export function CardIMC(props: CardsProps) {
                 Swal.fire('Não deletado', '', 'info')
             }
         })
+
+    }
+
+    function handleUpdate() {
+        props.imcId("")
+        props.handleShow(true)
 
     }
 
@@ -51,6 +60,7 @@ export function CardIMC(props: CardsProps) {
                             onMouseLeave={changeToDefault}
                         ></i>
                         <i className="fa-solid fa-pen-to-square"
+                            onClick={handleUpdate}
                             onMouseEnter={changeAnimation}
                             onMouseLeave={changeToDefault}
                         ></i>
