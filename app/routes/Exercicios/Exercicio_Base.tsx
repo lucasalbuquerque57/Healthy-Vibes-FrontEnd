@@ -1,4 +1,3 @@
-import { useState} from "react";
 import { Link } from "@remix-run/react";
 
 
@@ -11,14 +10,14 @@ interface CardsProps {
 }
 
 export function ExercicioBase(props: CardsProps) {
-  const [lgShow, setLgShow] = useState(false); 
+  
   
 
   return (
 
     <div className="card" >
 
-      <Link /* to={`/ExercicioDetalhes/exercise=${props.id}`} */ to={``} onClick={() => setLgShow(true)} style={{ textDecoration: "none" }}>
+      <Link to={`/ExercicioDetalhes/exercise=${props.id}`}  style={{ textDecoration: "none" }}>
         <div className="card">
           <div className="card-top">
             <div className="ImageAdress">

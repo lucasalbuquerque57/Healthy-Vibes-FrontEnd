@@ -6,7 +6,6 @@ import { ExercicioBase } from "~/routes/Exercicios/Exercicio_Base";
 import { FiltroBarra } from "~/routes/Exercicios/Filtro_Barra";
 
 import exercicios from "~/styles/exercicios.css";
-import ExercicioDescricao from "./Exercicio_Desc";
 
 export const links: LinksFunction = () => {
     return [
@@ -118,7 +117,6 @@ export default function Exercicios() {
             </div>
 
             <Footer />
-            <ExercicioDescricao/>
         </main >
     );
 }
