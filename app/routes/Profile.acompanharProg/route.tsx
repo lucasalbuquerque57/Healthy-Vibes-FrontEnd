@@ -15,7 +15,8 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { FormEvent, useState } from "react";
+import type { FormEvent} from "react";
+import { useState } from "react";
 import ModalInsertAcompanharProg from "./ModalInsert";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend

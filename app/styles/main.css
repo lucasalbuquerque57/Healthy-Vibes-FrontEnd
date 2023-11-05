@@ -17,6 +17,8 @@
   --background-senodenary: #f7fff3;
   --background-octodenary: #efbbba;
   --background-nonadenary: #989898;
+  --background-vigintenary: #faebd7;
+  /* --background-vigintidenary: #  */
 
   --background-card: #d9d9d9;
 
@@ -118,6 +120,7 @@
   --background-senodenary: #000;
   --background-octodenary: #000;
   --background-nonadenary: #2a2a2a;
+  --background-vigintenary: #000;
 
   --button-secondary: #ff0;
   --button-tertiary: #ff0;
@@ -186,6 +189,7 @@
 
   --sombra-clara-effect: none;
 
+  --branco-oportunista: #fff;
   --amarelo-oportunista: #ff0;
   --bold-oportunista: bold;
   --bold-oportunista2: bold;
@@ -715,4 +719,24 @@ footer .footer-logo {
 
 .warning-diferenciado{
   color: var(--text-tertiary);
+}
+
+div:where(.swal2-icon).swal2-success [class^="swal2-success-line"]{
+  background-color: var(--verde-sucess) !important;
+}
+
+div:where(.swal2-icon).swal2-info {
+  border-color: var(--verde-sucess) !important;
+  color: var(--verde-sucess) !important;
+}
+
+
+.swal2-confirm.swal2-styled{
+  border-color: var(--preto-icones) !important;
+}
+
+.popover, .popover-body, .popover-header{
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+  /* border-color: ; */
 }

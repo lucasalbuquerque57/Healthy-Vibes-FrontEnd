@@ -1,47 +1,38 @@
-interface CardsProps {
+import { Card, ListGroup } from "react-bootstrap";
+
+ interface CardsProps {
   title: string;
   dificuldade: string;
   porcao: string;
-}
+  descricao: string;
+} 
 
 export function CardReceita(props: CardsProps) {
 
   return (
 
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-13 mt-4">
-          <div className="card">
-            <div className="card-horizontal">
-              <div className="img-square-wrapper">
-                <img
-                  className=""
-                  src="/PastaIcon.png"
-                  alt="Card cap"
-                />
-              </div>
-              <div className="card-body">
-                <div className="card-titulo-botoes">
-                  <h4 className="card-title">{props?.title}</h4>
-                  <button className="opcoes">
-                    <img src="/FavoriteIcon.png" alt=""></img>
-                  </button>
-                  <button className="opcoes">
-                    <img src="/MoreIcon2.png" alt=""></img>
-                  </button>
-                </div>
-                <p className="card-text">
-                  Dificuldade: {props?.dificuldade}
-                </p>
-                <p>
-                  {props?.porcao} Porção(ões)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Card style={{ width: '18rem' }} className="cardDetalheDieta">
+          <Card.Img variant="top" src="/IconeLogo.png" />
+          <Card.Body>
+            <Card.Title>{props?.title}</Card.Title>
+            <Card.Text>
+            {props?.descricao}
+            </Card.Text>
+          </Card.Body>
+          <ListGroup className="list-group-flush">
+            <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
+            <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>     
+          </ListGroup>
+          <Card.Body>
+            <button type="button" title="Favoritar" className="buttonCards">
+              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
+            </button>  
+            <button type="button" title="Opcoes" className="buttonCards">
+              <i className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais" title="Opcoes"></i>
+            </button>
+         
+          </Card.Body>
+        </Card>
 
   );
 
