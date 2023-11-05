@@ -74,15 +74,14 @@ export default function DietasDetalhes() {
           </Card.Body>
           <ListGroup className="list-group-flush">
             <ListGroup.Item>Dificuldade:  Fácil</ListGroup.Item>
-            <ListGroup.Item>2 Porções</ListGroup.Item>
-            {/* <ListGroup.Item>Vestibulum at eros</ListGroup.Item> */}
+            <ListGroup.Item>2 Porções</ListGroup.Item>     
           </ListGroup>
           <Card.Body>
             <button type="button" title="Favoritar" className="buttonCards">
-              <i className="px-2 fa-regular fa-heart text-danger" title="Favoritar"></i>
+              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>  
             <button type="button" title="Opcoes" className="buttonCards">
-              <i className="px-2 fa-solid fa-ellipsis " title="Opcoes"></i>
+              <i className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais" title="Opcoes"></i>
             </button>
          
           </Card.Body>
@@ -98,15 +97,14 @@ export default function DietasDetalhes() {
           </Card.Body>
           <ListGroup className="list-group-flush">
             <ListGroup.Item>Dificuldade:  Média</ListGroup.Item>
-            <ListGroup.Item>4 Porções</ListGroup.Item>
-            {/* <ListGroup.Item>Vestibulum at eros</ListGroup.Item> */}
+            <ListGroup.Item>4 Porções</ListGroup.Item>        
           </ListGroup>
           <Card.Body>
             <button type="button" title="Favoritar" className="buttonCards">
-              <i className="px-2 fa-regular fa-heart text-danger" title="Favoritar"></i>
+              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>  
             <button type="button" title="Opcoes" className="buttonCards">
-              <i className="px-2 fa-solid fa-ellipsis " title="Opcoes"></i>
+              <i className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais" title="Opcoes"></i>
             </button>
          
           </Card.Body>
@@ -123,14 +121,13 @@ export default function DietasDetalhes() {
           <ListGroup className="list-group-flush">
             <ListGroup.Item>Dificuldade:  Fácil</ListGroup.Item>
             <ListGroup.Item>2 Porções</ListGroup.Item>
-            {/* <ListGroup.Item>Vestibulum at eros</ListGroup.Item> */}
           </ListGroup>
           <Card.Body>
             <button type="button" title="Favoritar" className="buttonCards">
-              <i className="px-2 fa-regular fa-heart text-danger" title="Favoritar"></i>
+              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>  
             <button type="button" title="Opcoes" className="buttonCards">
-              <i className="px-2 fa-solid fa-ellipsis " title="Opcoes"></i>
+              <i className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais" title="Opcoes"></i>
             </button>
          
           </Card.Body>

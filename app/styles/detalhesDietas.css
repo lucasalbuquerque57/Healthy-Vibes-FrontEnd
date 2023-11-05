@@ -6,10 +6,31 @@
 
 .cardDetalheDieta{
     height: auto !important;
-    box-shadow: 0 2.5rem 2.5rem -3rem var(--salmao-princip) !important;
+    box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
+    background-color: var(--background-primary);
+    color: var(--text-octonary);
+}
+
+.list-group-item{
+    background-color: var(--background-primary);
+    color: var(--text-octonary);
 }
 
 .botaoBackdropDieta{
     background-color: none;
 }
+
+.card p{
+    color: var(--text-duodenary);
+}
+
+.iconeCardDetalheFav{
+    color: var(--rouge-princip) !important;
+}
+
+.iconeCardDetalheMais{
+    color: var(--preto-icones) !important;
+}
+
+
 
