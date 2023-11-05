@@ -6,6 +6,7 @@ import { ExercicioBase } from "~/routes/Exercicios/Exercicio_Base";
 import { FiltroBarra } from "~/routes/Exercicios/Filtro_Barra";
 
 import exercicios from "~/styles/exercicios.css";
+import ExercicioDescricao from "./Exercicio_Desc";
 
 export const links: LinksFunction = () => {
     return [
@@ -19,8 +20,6 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function Exercicios() {
-
-
 
     return (
         <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
@@ -119,6 +118,7 @@ export default function Exercicios() {
             </div>
 
             <Footer />
+            <ExercicioDescricao/>
         </main >
     );
 }
