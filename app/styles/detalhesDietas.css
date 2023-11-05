@@ -1,0 +1,15 @@
+.dietaNome{
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-octonary);
+}
+
+.cardDetalheDieta{
+    height: auto !important;
+    box-shadow: 0 2.5rem 2.5rem -3rem var(--salmao-princip) !important;
+}
+
+.botaoBackdropDieta{
+    background-color: none;
+}
+

@@ -120,6 +120,7 @@ input[type="password"],
   background-color: #fff;
   box-shadow: 0rem 2.5rem 2.5rem -1.25rem var(--blue-light);
   overflow: hidden;
+  border-color: #a6a6a6;
 }
 
 .card .card-top {
