@@ -6,6 +6,8 @@ import { Header } from "~/components/Header";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import macro from "~/styles/macro.css";
 import { Link } from "@remix-run/react";
+import { useHookstate } from "@hookstate/core";
+import { themePage } from "~/script/changeTheme";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -20,7 +22,7 @@ export const meta: MetaFunction = () => ({
 
 export default function Index() {
 
-
+    const changeTheme = useHookstate(themePage);
     const data = {
         labels: ['Proteínas', 'Carboidratos', 'Gordura'],
         datasets: [
@@ -28,9 +30,10 @@ export default function Index() {
                 label: '% de calorias',
                 data: [12, 19, 3],
                 backgroundColor: [
-                    'rgba(255, 99, 132,1)',
-                    'rgba(54, 162, 235,1)',
-                    'rgba(255, 206, 86,1)',
+                    changeTheme.get() == "contraOn" ? "rgba(30,000,000, 1.0)" : "rgba(151,255,177, 1.0)",
+                    changeTheme.get() == "contraOn" ? "rgba(30,000,000, 1.0)" : "rgba(255,127,127, 1.0)",
+                    changeTheme.get() == "contraOn" ? "rgba(30,000,000, 1.0)" : "rgba(159,197,232, 1.0)",
+                    /* 'rgba(255, 206, 86,1)', */
                     
                 ]
 
