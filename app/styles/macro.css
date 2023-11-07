@@ -13,3 +13,17 @@
     height: 15rem;
   }
 }
+
+
+.table > :not(caption) > * > *{
+  background-color: var(--background-primary) !important;
+  color: var(--text-octonary) !important;
+}
+
+.table > :not(caption) > * > *{
+  color: var(--text-octonary) !important;
+}
+
+.valTotais{
+  color: var(--text-octonary);
+}

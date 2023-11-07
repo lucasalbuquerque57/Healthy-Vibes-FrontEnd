@@ -22,16 +22,16 @@ export default function Index() {
 
 
     const data = {
-        labels: ['Proteínas', 'Carboidratos', 'Gordura', 'Proteínas'],
+        labels: ['Proteínas', 'Carboidratos', 'Gordura'],
         datasets: [
             {
                 label: '% de calorias',
-                data: [12, 19, 3, 5],
+                data: [12, 19, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132,1)',
                     'rgba(54, 162, 235,1)',
                     'rgba(255, 206, 86,1)',
-                    'rgba(75, 192, 192,1)',
+                    
                 ]
 
             },
@@ -91,7 +91,7 @@ export default function Index() {
                         <div className="end" >
 
                             <div className="px-5">
-                                <h4 className="fw-semibold fs-2">Valores totais</h4>
+                                <h4 className="fw-semibold fs-2 valTotais">Valores totais</h4>
                             </div>
                             <table className="table fs-4">
                                 <tbody>
