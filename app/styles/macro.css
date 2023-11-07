@@ -1,0 +1,15 @@
+.buttonCards {
+  /* color: var(--text-quardenary); */
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+}
+
+.graficoPizza {
+  height: auto;
+}
+
+@media screen and (min-width: 720px) {
+  .graficoPizza {
+    height: 15rem;
+  }
+}
