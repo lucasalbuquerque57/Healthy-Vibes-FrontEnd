@@ -1230,18 +1230,50 @@ __export(route_exports2, {
 // app/styles/calculadoras.css
 var calculadoras_default = "/build/_assets/calculadoras-OVGULBOO.css";
 
+// app/script/BMRequation.ts
+function BRMequation(values) {
+  let caloriasNivelAtiv = 0;
+  switch (values.genero == "M" ? caloriasNivelAtiv = 88.4 + 13.4 * values.peso + 4.8 * values.altura - 5.68 * values.idade : caloriasNivelAtiv = 447.6 + 9.25 * values.peso + 3.1 * values.altura - 4.33 * values.idade, values.nivelAtividade) {
+    case 1:
+      caloriasNivelAtiv *= 1.2;
+      break;
+    case 2:
+      caloriasNivelAtiv *= 1.375;
+      break;
+    case 3:
+      caloriasNivelAtiv *= 1.55;
+      break;
+    case 4:
+      caloriasNivelAtiv *= 1.725;
+      break;
+    case 5:
+      caloriasNivelAtiv *= 1.9;
+      break;
+  }
+  values.opcaoPeso == "Perder Peso" ? caloriasNivelAtiv *= 0.8 : values.opcaoPeso == "Ganhar m\xFAsculo" && (caloriasNivelAtiv *= 1.15);
+  let carboidratos = caloriasNivelAtiv * 0.45 / 4, gorduras = caloriasNivelAtiv * 0.25 / 9, proteinas = caloriasNivelAtiv * 0.3 / 4;
+  return console.log(caloriasNivelAtiv), {
+    calorias: caloriasNivelAtiv,
+    carboidratos,
+    gorduras,
+    proteina: proteinas,
+    opcaoPeso: values.opcaoPeso
+  };
+}
+
 // app/routes/CalculadoraNutricional/FormCalculadora.tsx
 var import_jsx_dev_runtime8 = require("react/jsx-dev-runtime");
 function FormCalculadora(props) {
   function handleForm(event) {
     event.preventDefault();
-    let formData = new FormData(event.target), resultados = {
-      calorias: 50,
-      carboidratos: 50,
-      proteina: 50,
-      gorduras: 50,
-      opcaoPeso: `${Object.fromEntries(formData).options}`
-    };
+    let formData = new FormData(event.target), data = Object.fromEntries(formData), resultados = BRMequation({
+      peso: Number(data.peso),
+      altura: Number(data.altura),
+      idade: Number(data.idade),
+      genero: String(data.flexRadioDefault),
+      nivelAtividade: Number(data.nivelAtiv),
+      opcaoPeso: String(data.options)
+    });
     props.resultados(
       resultados
     ), props.show(!0);
@@ -1263,7 +1295,7 @@ function FormCalculadora(props) {
           !1,
           {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 40,
+            lineNumber: 50,
             columnNumber: 21
           },
           this
@@ -1280,28 +1312,28 @@ function FormCalculadora(props) {
             !1,
             {
               fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-              lineNumber: 49,
+              lineNumber: 59,
               columnNumber: 25
             },
             this
           ),
           /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "card-body", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { className: "card-text cardTxtTipoDieta", children: "Tudo" }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 55,
+            lineNumber: 65,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 54,
+            lineNumber: 64,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 48,
+          lineNumber: 58,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 39,
+        lineNumber: 49,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "card cardTeste", children: [
@@ -1318,7 +1350,7 @@ function FormCalculadora(props) {
           !1,
           {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 60,
+            lineNumber: 70,
             columnNumber: 21
           },
           this
@@ -1335,28 +1367,28 @@ function FormCalculadora(props) {
             !1,
             {
               fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-              lineNumber: 68,
+              lineNumber: 78,
               columnNumber: 25
             },
             this
           ),
           /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "card-body", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { className: "card-text cardTxtTipoDieta", children: "Vegetariana" }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 74,
+            lineNumber: 84,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 73,
+            lineNumber: 83,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 67,
+          lineNumber: 77,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 59,
+        lineNumber: 69,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "card cardTeste", children: [
@@ -1373,7 +1405,7 @@ function FormCalculadora(props) {
           !1,
           {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 80,
+            lineNumber: 90,
             columnNumber: 21
           },
           this
@@ -1390,38 +1422,38 @@ function FormCalculadora(props) {
             !1,
             {
               fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-              lineNumber: 88,
+              lineNumber: 98,
               columnNumber: 25
             },
             this
           ),
           /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "card-body", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("p", { className: "card-text cardTxtTipoDieta", children: "Cetog\xEAnica" }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 94,
+            lineNumber: 104,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 93,
+            lineNumber: 103,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 87,
+          lineNumber: 97,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 79,
+        lineNumber: 89,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 38,
+      lineNumber: 48,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("h3", { className: "tituloCategoria", children: "Deseja...?" }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 100,
+      lineNumber: 110,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "d-flex justify-content-center", children: [
@@ -1440,14 +1472,14 @@ function FormCalculadora(props) {
         !1,
         {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 102,
+          lineNumber: 112,
           columnNumber: 17
         },
         this
       ),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { className: "btn btn-secondary pontaEsquerda", htmlFor: "option1", children: "Perder peso" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 111,
+        lineNumber: 121,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
@@ -1466,14 +1498,14 @@ function FormCalculadora(props) {
         !1,
         {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 114,
+          lineNumber: 124,
           columnNumber: 17
         },
         this
       ),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { className: "btn btn-secondary pontaNenhuma", htmlFor: "option2", children: "Manter-se ativo" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 124,
+        lineNumber: 134,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)(
@@ -1484,31 +1516,31 @@ function FormCalculadora(props) {
           name: "options",
           id: "option3",
           autoComplete: "off",
-          value: "Manter-se ativo",
+          value: "Ganhar m\xFAsculo",
           required: !0
         },
         void 0,
         !1,
         {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 127,
+          lineNumber: 137,
           columnNumber: 17
         },
         this
       ),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { className: "btn btn-secondary pontaDireita", htmlFor: "option3", children: "Ganhar m\xFAsculo" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 137,
+        lineNumber: 147,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 101,
+      lineNumber: 111,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("h3", { className: "tituloCategoria", children: "Sexo" }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 142,
+      lineNumber: 152,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "d-flex justify-content-center textoOscuro", children: [
@@ -1520,25 +1552,26 @@ function FormCalculadora(props) {
             type: "radio",
             name: "flexRadioDefault",
             id: "sexoFeminino",
+            value: "F",
             required: !0
           },
           void 0,
           !1,
           {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 145,
+            lineNumber: 155,
             columnNumber: 21
           },
           this
         ),
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { className: "form-check-label", htmlFor: "sexoFeminino", children: "Feminino" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 152,
+          lineNumber: 163,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 144,
+        lineNumber: 154,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "form-check sexo", children: [
@@ -1549,142 +1582,148 @@ function FormCalculadora(props) {
             type: "radio",
             name: "flexRadioDefault",
             id: "sexoMasculino",
+            value: "M",
             required: !0
           },
           void 0,
           !1,
           {
             fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-            lineNumber: 157,
+            lineNumber: 168,
             columnNumber: 21
           },
           this
         ),
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { className: "form-check-label", htmlFor: "sexoMasculino", children: "Masculino" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 164,
+          lineNumber: 176,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 156,
+        lineNumber: 167,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 143,
+      lineNumber: 153,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "container col-md-3 col-lg-2 pt-1 textoOscuro", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "row d-flex justify-content-center", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "pt-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { children: "Idade:" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 174,
+          lineNumber: 186,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("input", { className: "form-control border border-secondary ", type: "number", name: "idade", placeholder: "Idade", required: !0 }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 175,
+          lineNumber: 187,
           columnNumber: 25
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 173,
+        lineNumber: 185,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "pt-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { children: "Altura" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 179,
+          lineNumber: 191,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("input", { className: "form-control border border-secondary", type: "number", name: "altura", placeholder: "Altura em Cm", required: !0 }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 180,
+          lineNumber: 192,
           columnNumber: 25
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 178,
+        lineNumber: 190,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "pt-2", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("label", { children: "Peso" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 184,
+          lineNumber: 196,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("input", { className: "form-control border border-secondary", type: "number", name: "peso", placeholder: "Peso em Kg", required: !0, step: "0.01" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-          lineNumber: 185,
+          lineNumber: 197,
           columnNumber: 25
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 183,
+        lineNumber: 195,
         columnNumber: 21
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 171,
+      lineNumber: 183,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 170,
+      lineNumber: 182,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("h3", { className: "tituloCategoria", children: "N\xEDvel de Atividade" }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 190,
+      lineNumber: 202,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "container col-lg-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("select", { className: "form-select form-select-sm selectCalculadora", "aria-label": "Default select example", defaultValue: "", required: !0, children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "container col-lg-2", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("select", { name: "nivelAtiv", className: "form-select form-select-sm selectCalculadora", "aria-label": "Default select example", defaultValue: "", required: !0, children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "", disabled: !0, children: "Selecione" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 193,
+        lineNumber: 205,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "1", children: "Sedent\xE1rio" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 194,
+        lineNumber: 206,
         columnNumber: 21
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "2", children: "Baixa atividade" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 195,
+        lineNumber: 207,
         columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "3", children: "Ativo" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "3", children: "Moderada" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 196,
+        lineNumber: 208,
         columnNumber: 21
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "4", children: "Muito ativo" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "4", children: "Ativo" }, void 0, !1, {
         fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-        lineNumber: 197,
+        lineNumber: 209,
+        columnNumber: 21
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("option", { value: "5", children: "Muito ativo" }, void 0, !1, {
+        fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
+        lineNumber: 210,
         columnNumber: 21
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 192,
+      lineNumber: 204,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 191,
+      lineNumber: 203,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("div", { className: "container pt-5 col-lg-2 d-flex justify-content-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime8.jsxDEV)("button", { className: "botaoCalcular w-50", type: "submit", children: "Calcular" }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 201,
+      lineNumber: 214,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-      lineNumber: 200,
+      lineNumber: 213,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/CalculadoraNutricional/FormCalculadora.tsx",
-    lineNumber: 36,
+    lineNumber: 46,
     columnNumber: 9
   }, this);
 }
@@ -1773,6 +1812,7 @@ function ModalResultado(props) {
   function navigateReceitas() {
     navigate("/Receitas");
   }
+  let calorias = Number(props.resultados?.calorias?.toFixed(0)), minCarb = ((props.resultados?.carboidratos || 0) * 0.9).toFixed(0), maxCarb = ((props.resultados?.carboidratos || 0) * 1.1).toFixed(0), minProtein = ((props.resultados?.proteina || 0) * 0.9).toFixed(0), maxProtein = ((props.resultados?.proteina || 0) * 1.1).toFixed(0), minFat = ((props.resultados?.gorduras || 0) * 0.9).toFixed(0), maxFat = ((props.resultados?.gorduras || 0) * 1.1).toFixed(0);
   return /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(
     import_react_bootstrap3.Modal,
     {
@@ -1783,24 +1823,24 @@ function ModalResultado(props) {
         /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react_bootstrap3.Modal.Header, { closeButton: !0, children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react_bootstrap3.Modal.Title, { className: "container-fluid text-center", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { className: "fw-bold", children: "Seu gasto cal\xF3rico por dia \xE9:" }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-            lineNumber: 28,
+            lineNumber: 37,
             columnNumber: 21
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
-            props.resultados?.calorias,
+            calorias,
             " calorias"
           ] }, void 0, !0, {
             fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-            lineNumber: 29,
+            lineNumber: 38,
             columnNumber: 21
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 27,
+          lineNumber: 36,
           columnNumber: 17
         }, this) }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 26,
+          lineNumber: 35,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react_bootstrap3.Modal.Body, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "container-fluid", children: [
@@ -1809,80 +1849,44 @@ function ModalResultado(props) {
             props.resultados?.opcaoPeso
           ] }, void 0, !0, {
             fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-            lineNumber: 35,
+            lineNumber: 44,
             columnNumber: 25
           }, this) }, void 0, !1, {
             fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-            lineNumber: 34,
+            lineNumber: 43,
             columnNumber: 21
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "row text-center pt-2", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3", children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Calorias Sugeridas" }, void 0, !1, {
                 fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 39,
+                lineNumber: 48,
                 columnNumber: 29
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
-                (props.resultados?.calorias || 0) / 1e3,
+                calorias / 1e3,
                 " kcal"
               ] }, void 0, !0, {
                 fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 40,
+                lineNumber: 49,
                 columnNumber: 29
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-              lineNumber: 38,
+              lineNumber: 47,
               columnNumber: 25
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3 pt-3", children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Carboidratos" }, void 0, !1, {
                 fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 43,
-                columnNumber: 29
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
-                props.resultados?.carboidratos,
-                " g"
-              ] }, void 0, !0, {
-                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 44,
-                columnNumber: 29
-              }, this)
-            ] }, void 0, !0, {
-              fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-              lineNumber: 42,
-              columnNumber: 25
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3 pt-3", children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Prote\xEDnas" }, void 0, !1, {
-                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 47,
-                columnNumber: 29
-              }, this),
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
-                props.resultados?.proteina,
-                " g"
-              ] }, void 0, !0, {
-                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-                lineNumber: 48,
-                columnNumber: 29
-              }, this)
-            ] }, void 0, !0, {
-              fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-              lineNumber: 46,
-              columnNumber: 25
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3 pt-3", children: [
-              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Gorduras" }, void 0, !1, {
-                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
                 lineNumber: 52,
                 columnNumber: 29
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
-                props.resultados?.gorduras,
-                " g"
+                minCarb,
+                " - ",
+                maxCarb,
+                "g"
               ] }, void 0, !0, {
                 fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
                 lineNumber: 53,
@@ -1892,28 +1896,70 @@ function ModalResultado(props) {
               fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
               lineNumber: 51,
               columnNumber: 25
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3 pt-3", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Prote\xEDnas" }, void 0, !1, {
+                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+                lineNumber: 56,
+                columnNumber: 29
+              }, this),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
+                minProtein,
+                " - ",
+                maxProtein,
+                " g"
+              ] }, void 0, !0, {
+                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+                lineNumber: 57,
+                columnNumber: 29
+              }, this)
+            ] }, void 0, !0, {
+              fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+              lineNumber: 55,
+              columnNumber: 25
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("div", { className: "col-md-3 pt-3", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("h6", { children: "Gorduras" }, void 0, !1, {
+                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+                lineNumber: 61,
+                columnNumber: 29
+              }, this),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("p", { children: [
+                minFat,
+                " - ",
+                maxFat,
+                " g"
+              ] }, void 0, !0, {
+                fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+                lineNumber: 62,
+                columnNumber: 29
+              }, this)
+            ] }, void 0, !0, {
+              fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
+              lineNumber: 60,
+              columnNumber: 25
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-            lineNumber: 37,
+            lineNumber: 46,
             columnNumber: 21
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 33,
+          lineNumber: 42,
           columnNumber: 17
         }, this) }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 32,
+          lineNumber: 41,
           columnNumber: 13
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)(import_react_bootstrap3.Modal.Footer, { className: "d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime10.jsxDEV)("button", { className: "botaoCalcular w-50", type: "button", onClick: navigateReceitas, children: "Gerar Receitas" }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 60,
+          lineNumber: 69,
           columnNumber: 17
         }, this) }, void 0, !1, {
           fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-          lineNumber: 59,
+          lineNumber: 68,
           columnNumber: 13
         }, this)
       ]
@@ -1922,7 +1968,7 @@ function ModalResultado(props) {
     !0,
     {
       fileName: "app/routes/CalculadoraNutricional/ModalResultado.tsx",
-      lineNumber: 21,
+      lineNumber: 30,
       columnNumber: 9
     },
     this
@@ -1938,7 +1984,7 @@ var import_react10 = require("react"), import_jsx_dev_runtime11 = require("react
 });
 function CalculadoraNutricional() {
   let [show, setShow] = (0, import_react10.useState)(!1), [resultados, setResultados] = (0, import_react10.useState)();
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("main", { style: { fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }, children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime11.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/CalculadoraNutricional/route.tsx",
       lineNumber: 38,
@@ -5660,7 +5706,7 @@ function Index5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-NLVWPRTV.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-UCJ2WXGJ.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-NUICH3LQ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-BBIWUV2K.js", imports: ["/build/_shared/chunk-XGK2LRLO.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-GIOX2BML.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-7SKAMG2A.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-PCMH4OWE.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-JJ5N4WYY.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-SKWPT3E6.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros": { id: "routes/Macros", parentId: "root", path: "Macros", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros-6MBRPHYI.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-VW2WYKXB.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-2MQWJEY5.js", imports: ["/build/_shared/chunk-RF5YXODT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-SVGRXO7X.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-XGK2LRLO.js", "/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-V4EVX5LP.js", imports: ["/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-QW4USRUT.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-TNWDNBMB.js", imports: ["/build/_shared/chunk-5MLB2JHJ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-DHQ5IRGP.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-4U3HBCFR.js", imports: ["/build/_shared/chunk-OZVKPABT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-J6S4AN53.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-GG75SQ5F.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-5MLB2JHJ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-EMA5SJ3Q.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "f8e541aa", hmr: { runtime: "/build/_shared\\chunk-NUICH3LQ.js", timestamp: 1699356329879 }, url: "/build/manifest-F8E541AA.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-D5UP2EYX.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-UZKVQCGF.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-7PWUAQSL.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-AB5T5X57.js", imports: ["/build/_shared/chunk-3L2AZZKU.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-5AWQDFH4.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-X6EXMVCK.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-M535ZXYM.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-LHQAFVWF.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-NHUPTFEP.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros": { id: "routes/Macros", parentId: "root", path: "Macros", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros-QGQQQB2I.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-RNEXIVZ5.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-I7X4KGBL.js", imports: ["/build/_shared/chunk-RF5YXODT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-3ILZ2BCK.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-3L2AZZKU.js", "/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-Z7CTG35W.js", imports: ["/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-S3RGJQD4.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-D6YYUVJY.js", imports: ["/build/_shared/chunk-ZHVRT56Y.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-BZ7LOPYG.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-AT7EA4AQ.js", imports: ["/build/_shared/chunk-OZVKPABT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-WE2WBBXY.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-RF5YXODT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-DPXCPM4H.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-ZHVRT56Y.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-3WB7IVNW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "5e95e871", hmr: { runtime: "/build/_shared\\chunk-7PWUAQSL.js", timestamp: 1699450872864 }, url: "/build/manifest-5E95E871.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

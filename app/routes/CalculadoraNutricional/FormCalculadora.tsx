@@ -1,5 +1,6 @@
 import type { FormEvent } from "react"
 import type { Resultados } from "./route";
+import { BRMequation } from "~/script/BMRequation";
 
 interface FormCalculadoraProps {
     show: React.Dispatch<boolean>,
@@ -15,13 +16,22 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
         const formData = new FormData(event.target as HTMLFormElement)
         const data = Object.fromEntries(formData)
 
-        const resultados: Resultados = {
+        /* const resultados: Resultados = {
             calorias: 50,
             carboidratos: 50,
             proteina: 50,
             gorduras: 50,
             opcaoPeso: `${data.options}`
-        }
+        } */
+
+        const resultados = BRMequation({
+            peso: Number(data.peso),
+            altura: Number(data.altura),
+            idade: Number(data.idade),
+            genero: String(data.flexRadioDefault),
+            nivelAtividade: Number(data.nivelAtiv),
+            opcaoPeso: String(data.options),
+        })
 
         props.resultados(
             resultados
@@ -130,7 +140,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                     name="options"
                     id="option3"
                     autoComplete="off"
-                    value="Manter-se ativo"
+                    value="Ganhar músculo"
                     required
 
                 />
@@ -147,6 +157,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                         type="radio"
                         name="flexRadioDefault"
                         id="sexoFeminino"
+                        value="F"
                         required
                     />
                     <label className="form-check-label" htmlFor="sexoFeminino">
@@ -159,6 +170,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                         type="radio"
                         name="flexRadioDefault"
                         id="sexoMasculino"
+                        value="M"
                         required
                     />
                     <label className="form-check-label" htmlFor="sexoMasculino">
@@ -189,12 +201,13 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
             </div>
             <h3 className="tituloCategoria">Nível de Atividade</h3>
             <div className="container col-lg-2">
-                <select className="form-select form-select-sm selectCalculadora" aria-label="Default select example" defaultValue="" required>
+                <select name="nivelAtiv" className="form-select form-select-sm selectCalculadora" aria-label="Default select example" defaultValue="" required>
                     <option value="" disabled>Selecione</option>
                     <option value="1">Sedentário</option>
                     <option value="2">Baixa atividade</option>
-                    <option value="3">Ativo</option>
-                    <option value="4">Muito ativo</option>
+                    <option value="3">Moderada</option>
+                    <option value="4">Ativo</option>
+                    <option value="5">Muito ativo</option>
                 </select>
             </div>
             <div className="container pt-5 col-lg-2 d-flex justify-content-center">

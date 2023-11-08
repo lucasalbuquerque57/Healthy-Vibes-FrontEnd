@@ -34,7 +34,7 @@ export default function CalculadoraNutricional() {
   const handleClose = () => setShow(false);
 
   return (
-    <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <main>
       <Header />
 
       <div className="tituloPagina pt-4">Calculadora Nutricional</div>

@@ -17,6 +17,15 @@ export default function ModalResultado(props: ModalResultadoProps) {
         // Provavelmente aqui vai criar um localStorage ou um hookstate dos valores obtidos e gerar receit
     }
 
+
+    const calorias = Number((props.resultados?.calorias)?.toFixed(0))
+    const minCarb = ((props.resultados?.carboidratos || 0) * 0.9).toFixed(0)
+    const maxCarb = ((props.resultados?.carboidratos || 0) * 1.1).toFixed(0)
+    const minProtein = ((props.resultados?.proteina || 0) * 0.9).toFixed(0)
+    const maxProtein = ((props.resultados?.proteina || 0) * 1.1).toFixed(0)
+    const minFat = ((props.resultados?.gorduras || 0) * 0.9).toFixed(0)
+    const maxFat = ((props.resultados?.gorduras || 0) * 1.1).toFixed(0)
+
     return (
         <Modal
             {...props.modal}
@@ -26,7 +35,7 @@ export default function ModalResultado(props: ModalResultadoProps) {
             <Modal.Header closeButton>
                 <Modal.Title className="container-fluid text-center">
                     <p className="fw-bold">Seu gasto calórico por dia é:</p>
-                    <p>{props.resultados?.calorias} calorias</p>
+                    <p>{calorias} calorias</p>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -37,20 +46,20 @@ export default function ModalResultado(props: ModalResultadoProps) {
                     <div className="row text-center pt-2">
                         <div className="col-md-3">
                             <h6>Calorias Sugeridas</h6>
-                            <p>{(props.resultados?.calorias || 0) / 1000} kcal</p>
+                            <p>{calorias / 1000} kcal</p>
                         </div>
                         <div className="col-md-3 pt-3">
                             <h6>Carboidratos</h6>
-                            <p>{props.resultados?.carboidratos} g</p>
+                            <p>{minCarb} - {maxCarb}g</p>
                         </div>
                         <div className="col-md-3 pt-3">
                             <h6>Proteínas</h6>
-                            <p>{props.resultados?.proteina} g</p>
+                            <p>{minProtein} - {maxProtein} g</p>
 
                         </div>
                         <div className="col-md-3 pt-3">
                             <h6>Gorduras</h6>
-                            <p>{props.resultados?.gorduras} g</p>
+                            <p>{minFat} - {maxFat} g</p>
 
                         </div>
                     </div>
