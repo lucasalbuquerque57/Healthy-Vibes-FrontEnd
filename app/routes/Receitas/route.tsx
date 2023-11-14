@@ -37,17 +37,19 @@ export interface RecipeInterface {
 
 export default function Receitas() {
   const navigate = useNavigate();
-  const [recipes, setRecipes] = useState<RecipeInterface[]>([])
+  // const [recipes, setRecipes] = useState<RecipeInterface[]>([])
 
-  function generateRecipe() {
+  function generateRecipe(recipes : RecipeInterface[]) {
 
     if (localStorage.getItem("resultsCalc")){
     const result = JSON.parse(localStorage.getItem("resultsCalc") || "")
     console.log(result.calorias)
 
-    return (
+    console.log(recipes[0])
+
+    /* return (
       recipes.filter(teste => teste.calorias)
-    )
+    ) */
     }
 
 
@@ -55,10 +57,9 @@ export default function Receitas() {
 
   useEffect(() => {
     axiosHealthyApi.get("/recipes/recipesWIthNoUser")
-    .then(r => {setRecipes(r.data)})
-    .catch(e => console.log(e))
+    .then(r => {generateRecipe(r.data)})
+    .catch(e => console.log(e));
 
-    generateRecipe()
   }, [])
 
 
