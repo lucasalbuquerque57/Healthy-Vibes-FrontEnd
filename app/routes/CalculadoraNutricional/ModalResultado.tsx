@@ -12,12 +12,6 @@ export default function ModalResultado(props: ModalResultadoProps) {
 
     const navigate = useNavigate();
 
-    function navigateReceitas() {
-        navigate('/Receitas')
-        // Provavelmente aqui vai criar um localStorage ou um hookstate dos valores obtidos e gerar receit
-    }
-
-
     const calorias = Number((props.resultados?.calorias)?.toFixed(0))
     const minCarb = ((props.resultados?.carboidratos || 0) * 0.9).toFixed(0)
     const maxCarb = ((props.resultados?.carboidratos || 0) * 1.1).toFixed(0)
@@ -25,6 +19,35 @@ export default function ModalResultado(props: ModalResultadoProps) {
     const maxProtein = ((props.resultados?.proteina || 0) * 1.1).toFixed(0)
     const minFat = ((props.resultados?.gorduras || 0) * 0.9).toFixed(0)
     const maxFat = ((props.resultados?.gorduras || 0) * 1.1).toFixed(0)
+
+    function navigateReceitas() {
+        // Provavelmente aqui vai criar um localStorage ou um hookstate dos valores obtidos e gerar receit
+
+        const resultStorage = {
+            calorias: calorias,
+            carb: {
+                max: maxCarb,
+                min: minCarb
+            },
+            protein: {
+                max: maxProtein,
+                min: minProtein
+            },
+            fat: {
+                max: maxFat,
+                min: minFat
+            },
+            tipoDieta: props.resultados?.tipoDieta
+        }
+
+        localStorage.setItem("resultsCalc", JSON.stringify(resultStorage))
+
+       /*  const data = localStorage.getItem("userData");
+console.log("data: ", JSON.parse(data)); */
+
+        return navigate('/Receitas')
+    }
+
 
     return (
         <Modal

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosHealthyApi = axios.create({
-    baseURL: "http://127.0.0.1:3333"
+    baseURL: "http://26.198.194.236:3333/"
 });
 
 axiosHealthyApi.interceptors.request.use(

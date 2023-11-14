@@ -24,7 +24,8 @@ export interface Resultados {
   carboidratos: number,
   gorduras: number,
   proteina: number,
-  opcaoPeso: string
+  opcaoPeso: string,
+  tipoDieta: string
 }
 
 export default function CalculadoraNutricional() {

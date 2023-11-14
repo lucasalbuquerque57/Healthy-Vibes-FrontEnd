@@ -15,7 +15,8 @@ type BRMequation =
         genero: string,
         idade: number,
         opcaoPeso: string,
-        nivelAtividade: number
+        nivelAtividade: number,
+        tipoDieta: string
     }
 
 export function BRMequation(values: BRMequation): Resultados {
@@ -61,14 +62,13 @@ export function BRMequation(values: BRMequation): Resultados {
     const gorduras = (caloriasNivelAtiv * 0.25) / 9
     const proteinas = (caloriasNivelAtiv * 0.3) / 4
 
-    console.log(caloriasNivelAtiv)
-
     return {
         calorias: caloriasNivelAtiv,
         carboidratos: carboidratos,
         gorduras: gorduras,
         proteina: proteinas,
-        opcaoPeso: values.opcaoPeso
+        opcaoPeso: values.opcaoPeso,
+        tipoDieta: values.tipoDieta
     }
 
 }

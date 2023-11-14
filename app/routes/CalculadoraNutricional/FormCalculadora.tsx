@@ -16,14 +16,6 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
         const formData = new FormData(event.target as HTMLFormElement)
         const data = Object.fromEntries(formData)
 
-        /* const resultados: Resultados = {
-            calorias: 50,
-            carboidratos: 50,
-            proteina: 50,
-            gorduras: 50,
-            opcaoPeso: `${data.options}`
-        } */
-
         const resultados = BRMequation({
             peso: Number(data.peso),
             altura: Number(data.altura),
@@ -31,6 +23,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
             genero: String(data.flexRadioDefault),
             nivelAtividade: Number(data.nivelAtiv),
             opcaoPeso: String(data.options),
+            tipoDieta: String(data.tipoAli)
         })
 
         props.resultados(
@@ -52,6 +45,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                         type="radio"
                         name="tipoAli"
                         id="tudo"
+                        value="tudo"
                         required
                         defaultChecked
                     />
@@ -71,6 +65,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                         className="form-check-input TipoAli"
                         type="radio"
                         name="tipoAli"
+                        value="vegetariana"
                         id="vegetariana"
                         required
                     />
@@ -92,6 +87,7 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
                         type="radio"
                         name="tipoAli"
                         id="cetogenica"
+                        value="Cetogênica"
                         required
                     />
                     <label htmlFor="cetogenica">
