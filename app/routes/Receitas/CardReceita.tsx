@@ -1,4 +1,4 @@
-import { Card, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, OverlayTrigger, Popover } from "react-bootstrap";
 
  interface CardsProps {
   title: string;
@@ -27,9 +27,32 @@ export function CardReceita(props: CardsProps) {
             <button type="button" title="Favoritar" className="buttonCards">
               <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>  
-            <button type="button" title="Opcoes" className="buttonCards">
-              <i className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais" title="Opcoes"></i>
-            </button>
+            <OverlayTrigger
+          trigger="click"
+          placement="auto"
+          overlay={
+            <Popover id="popover-basic">
+              <Popover.Header as="h3">{props?.title}</Popover.Header>
+              <Popover.Body>
+                Calorias:
+                <br/>
+                Carboidratos:
+                <br/>
+                Lipídios:
+                <br/>
+                Proteina:
+              </Popover.Body>
+            </Popover>
+          }
+          rootClose
+        >
+          <button type="button" title="Opcoes" className="buttonCards">
+            <i
+              className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais"
+              title="Opcoes"
+            ></i>
+          </button>
+        </OverlayTrigger>
          
           </Card.Body>
         </Card>

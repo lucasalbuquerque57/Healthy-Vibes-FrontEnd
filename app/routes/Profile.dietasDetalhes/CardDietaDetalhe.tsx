@@ -63,10 +63,15 @@ export function CardDietaDetalhe() {
           placement="auto"
           overlay={
             <Popover id="popover-basic">
-              <Popover.Header as="h3">Popover</Popover.Header>
+              <Popover.Header as="h3">Receita Genérica</Popover.Header>
               <Popover.Body>
-                And here's some <strong>amazing</strong> content. It's very
-                engaging. right?
+                Calorias:
+                <br/>
+                Carboidratos:
+                <br/>
+                Lipídios:
+                <br/>
+                Proteina:
               </Popover.Body>
             </Popover>
           }
