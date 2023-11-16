@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosHealthyApi = axios.create({
-    baseURL: "http://26.198.194.236:3333/"
+    baseURL: "https://back-nuvem-production.up.railway.app/"
 });
 
 axiosHealthyApi.interceptors.request.use(
