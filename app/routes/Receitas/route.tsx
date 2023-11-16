@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => ({
 // Vou colocar aqui para pegar localStorage ou hookstate e toda a logica que eu preciso
 
 export interface RecipeInterface {
-  id: string
+  _id: string
   periodoRef: string
   titulo: string
   ingredientes: [
@@ -40,13 +40,15 @@ export default function Receitas() {
   const navigate = useNavigate();
   const [recipesFiltered, setRecipesFiltered] = useState<RecipeInterface[]>([])
 
+  // .filter(recipe => recipe.periodoRef == "Café da manhã")
+
   function generateRecipe(recipes: RecipeInterface[]) {
 
     if (localStorage.getItem("resultsCalc")) {
       const result = JSON.parse(localStorage.getItem("resultsCalc") || "")
       console.log(result.calorias)
 
-      console.log(recipes[0])
+      // console.log(recipes[0])
 
       return (
         setRecipesFiltered(recipes)
@@ -60,7 +62,6 @@ export default function Receitas() {
     await axiosHealthyApi.get("/recipes/recipesWIthNoUser")
       .then(r => {
         generateRecipe(r.data)
-        console.log(r.data)
       })
       .catch(e => console.log(e));
   }
@@ -76,9 +77,6 @@ export default function Receitas() {
     <main>
       <Header />
 
-
-
-
       {
         recipesFiltered.length == 0 ?
           <h1 className="py-5 my-5 text-center container-fluid">Não há valores, use a Calculadora Nutricional para obter</h1>
@@ -88,11 +86,11 @@ export default function Receitas() {
             <div className="container-fluid d-flex justify-content-center align-items-center">
               <section className="card-container">
                 {
-                  recipesFiltered.filter(recipe => recipe.periodoRef == "Café da manhã")
+                  recipesFiltered   
                     .map(recipe => {
                       return (
                         <CardReceita
-                          key={recipe.id}
+                          key={recipe._id}
                           title="Pão com Ovo"
                           dificuldade="Fácil"
                           porcao="1"
