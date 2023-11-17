@@ -16,7 +16,6 @@ export const meta: MetaFunction = () => ({
   title: "Receitas",
 });
 
-// Vou colocar aqui para pegar localStorage ou hookstate e toda a logica que eu preciso
 
 export interface RecipeInterface {
   _id: string
@@ -46,12 +45,72 @@ export default function Receitas() {
 
     if (localStorage.getItem("resultsCalc")) {
       const result = JSON.parse(localStorage.getItem("resultsCalc") || "")
-      console.log(result.calorias)
+      const r: RecipeInterface[] = []
+      const caloriasPorRefeicao = {
+        cafeDaManha: result.calorias * 0.25,
+        almoco: result.calorias * 0.30,
+        lanche: result.calorias * 0.15,
+        janta: result.calorias * 0.30,
+      }
 
-      // console.log(recipes[0])
+      let calorias = {
+        cafeDaManha: 0,
+        almoco: 0,
+        lanche: 0,
+        janta: 0,
+        total: 0
+      }
+
+      /* do {
+        const randomIdex = Math.floor(Math.random() * recipes.length);
+        if (recipes[randomIdex].periodoRef == "Café da Manhã") {
+
+            calorias.cafeDaManha += recipes[randomIdex].calorias
+            r.push(recipes[randomIdex])
+        }
+      } while(calorias.cafeDaManha < caloriasPorRefeicao.cafeDaManha)
+ */
+
+      do {
+
+        const randomIdex = Math.floor(Math.random() * recipes.length);
+
+        if (recipes[randomIdex].periodoRef == "Café da Manhã") {
+          if (calorias.cafeDaManha < caloriasPorRefeicao.cafeDaManha) {
+            calorias.cafeDaManha += recipes[randomIdex].calorias
+            calorias.total += calorias.cafeDaManha
+            r.push(recipes[randomIdex])
+          }
+        }
+        if (recipes[randomIdex].periodoRef == "Almoço") {
+          if (calorias.almoco < caloriasPorRefeicao.almoco) {
+            calorias.almoco += recipes[randomIdex].calorias
+            calorias.total += calorias.almoco
+            r.push(recipes[randomIdex])
+          }
+        }
+        if (recipes[randomIdex].periodoRef == "Lanche") {
+          if (calorias.lanche < caloriasPorRefeicao.lanche) {
+            calorias.lanche += recipes[randomIdex].calorias
+            calorias.total += calorias.lanche
+            r.push(recipes[randomIdex])
+          }
+
+        }
+        if (recipes[randomIdex].periodoRef == "Janta") {
+          if (calorias.janta < caloriasPorRefeicao.janta) {
+            calorias.janta += recipes[randomIdex].calorias
+            calorias.total += calorias.janta
+            r.push(recipes[randomIdex])
+          }
+        }
+
+
+      } while (calorias.total < result.calorias);
+
 
       return (
-        setRecipesFiltered(recipes)
+        setRecipesFiltered(r)
       )
 
     }
@@ -63,7 +122,9 @@ export default function Receitas() {
       .then(r => {
         generateRecipe(r.data)
       })
-      .catch(e => console.log(e));
+      .catch(e => {
+        throw new Error("Não foi possível conectar")
+      });
   }
     , [])
 
@@ -86,12 +147,73 @@ export default function Receitas() {
             <div className="container-fluid d-flex justify-content-center align-items-center">
               <section className="card-container">
                 {
-                  recipesFiltered   
-                    .map(recipe => {
+                  recipesFiltered
+                    .filter(recipe => recipe.periodoRef.includes("Café da Manhã"))
+                    .map((recipe, index) => {
                       return (
                         <CardReceita
-                          key={recipe._id}
-                          title="Pão com Ovo"
+                          key={`${recipe._id}${index}`}
+                          title={recipe.titulo}
+                          dificuldade="Fácil"
+                          porcao="1"
+                          descricao="Não esqueça do sal"
+                        />
+                      )
+                    })
+                }
+              </section>
+            </div>
+            <h2 className="dietaNome">Almoço</h2>
+            <div className="container-fluid d-flex justify-content-center align-items-center">
+              <section className="card-container">
+                {
+                  recipesFiltered
+                    .filter(recipe => recipe.periodoRef.includes("Almoço"))
+                    .map((recipe, index) => {
+                      return (
+                        <CardReceita
+                          key={`${recipe._id}${index}`}
+                          title={recipe.titulo}
+                          dificuldade="Fácil"
+                          porcao="1"
+                          descricao="Não esqueça do sal"
+                        />
+                      )
+                    })
+                }
+              </section>
+            </div>
+            <h2 className="dietaNome">Lanche</h2>
+            <div className="container-fluid d-flex justify-content-center align-items-center">
+              <section className="card-container">
+                {
+                  recipesFiltered
+                    .filter(recipe => recipe.periodoRef.includes("Lanche"))
+                    .map((recipe, index) => {
+                      return (
+                        <CardReceita
+                          key={`${recipe._id}${index}`}
+                          title={recipe.titulo}
+                          dificuldade="Fácil"
+                          porcao="1"
+                          descricao="Não esqueça do sal"
+                        />
+                      )
+                    })
+                }
+              </section>
+            </div>
+            <h2 className="dietaNome">Janta</h2>
+            <div className="container-fluid d-flex justify-content-center align-items-center">
+              <section className="card-container">
+                {
+                  recipesFiltered
+                    .filter(recipe => recipe.periodoRef.includes("Janta"))
+                    .map((recipe, index) => {
+                      return (
+                        <CardReceita
+                          key={`${recipe._id}${index}`}
+                          title={recipe.titulo}
                           dificuldade="Fácil"
                           porcao="1"
                           descricao="Não esqueça do sal"
