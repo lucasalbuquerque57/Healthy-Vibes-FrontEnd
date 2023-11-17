@@ -247,7 +247,7 @@ export default function Receitas() {
                   className="ms-5 buttonForm col"
                   size="lg"
                   onClick={() => {
-                    navigate("/Macros/notSaved");
+                    navigate("/Macros");
                   }}
                 >
                   Detalhes Macro
