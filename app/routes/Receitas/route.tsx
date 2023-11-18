@@ -52,44 +52,44 @@ export default function Receitas() {
         almoco: 0,
         lanche: 0,
         janta: 0,
-        total: 0,
       };
 
       do {
         const randomIdex = Math.floor(Math.random() * recipes.length);
-
         if (recipes[randomIdex].periodoRef == "Café da Manhã") {
-          if (calorias.cafeDaManha < caloriasPorRefeicao.cafeDaManha) {
-            calorias.cafeDaManha += recipes[randomIdex].calorias;
-            calorias.total += calorias.cafeDaManha;
-            console.log(calorias.cafeDaManha + "q")
-            r.push(recipes[randomIdex]);
-          }
-        }
-        if (recipes[randomIdex].periodoRef == "Almoço") {
-          if (calorias.almoco < caloriasPorRefeicao.almoco) {
-            calorias.almoco += recipes[randomIdex].calorias;
-            calorias.total += calorias.almoco;
-            r.push(recipes[randomIdex]);
-          }
-        }
-        if (recipes[randomIdex].periodoRef == "Lanche") {
-          if (calorias.lanche < caloriasPorRefeicao.lanche) {
-            calorias.lanche += recipes[randomIdex].calorias;
-            calorias.total += calorias.lanche;
-            r.push(recipes[randomIdex]);
-          }
-        }
-        if (recipes[randomIdex].periodoRef == "Janta") {
-          if (calorias.janta < caloriasPorRefeicao.janta) {
-            calorias.janta += recipes[randomIdex].calorias;
-            calorias.total += calorias.janta;
-            r.push(recipes[randomIdex]);
-          }
-        }
-      } while (calorias.total < result.calorias);
 
-      console.log(calorias.cafeDaManha)
+          calorias.cafeDaManha += recipes[randomIdex].calorias
+          r.push(recipes[randomIdex])
+        }
+      } while (calorias.cafeDaManha < caloriasPorRefeicao.cafeDaManha)
+
+      do {
+        const randomIdex = Math.floor(Math.random() * recipes.length);
+        if (recipes[randomIdex].periodoRef == "Almoço") {
+
+          calorias.almoco += recipes[randomIdex].calorias
+          r.push(recipes[randomIdex])
+        }
+      } while (calorias.almoco < caloriasPorRefeicao.almoco)
+
+      do {
+        const randomIdex = Math.floor(Math.random() * recipes.length);
+        if (recipes[randomIdex].periodoRef == "Lanche") {
+
+          calorias.lanche += recipes[randomIdex].calorias
+          r.push(recipes[randomIdex])
+        }
+      } while (calorias.lanche < caloriasPorRefeicao.lanche)
+
+      do {
+        const randomIdex = Math.floor(Math.random() * recipes.length);
+        if (recipes[randomIdex].periodoRef == "Janta") {
+
+          calorias.janta += recipes[randomIdex].calorias
+          r.push(recipes[randomIdex])
+        }
+      } while (calorias.janta < caloriasPorRefeicao.janta)
+
 
 
       localStorage.setItem("RecipesLocalStorage", JSON.stringify(r))

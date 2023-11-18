@@ -34,6 +34,21 @@ export default function Index() {
     const dataParams = useLoaderData<typeof loader>();
     // const urlParams = new URLSearchParams(dataParams);
     // const [recipes, setRecipes] = useState<RecipeInterface[]>([]);
+    const [valores, setValores] = useState({
+        calorias: 0,
+        proteina: {
+            calorias: 0,
+            gramas: 0,
+        },
+        carboidratos: {
+            calorias: 0,
+            gramas: 0,
+        },
+        gordura: {
+            calorias: 0,
+            gramas: 0,
+        },
+    })
 
     const valoresFunction = (recipes: RecipeInterface[]) => {
         let valores = {
@@ -54,10 +69,12 @@ export default function Index() {
 
         recipes.forEach(r => {
             valores.calorias += r.calorias
+            valores.carboidratos.gramas += r.carboidratos
+            valores.proteina.gramas += r.proteína
+            valores.gordura.gramas += r.gordura
         })
 
-        console.log(valores.calorias)
-
+        setValores(valores)
     }
 
     useEffect(() => {
@@ -153,7 +170,7 @@ export default function Index() {
                                 <tbody>
                                     <tr>
                                         <td>Calorias</td>
-                                        <td>2414</td>
+                                        <td>{valores.calorias}</td>
                                     </tr>
                                     <tr>
                                         <td>Proteínas</td>
