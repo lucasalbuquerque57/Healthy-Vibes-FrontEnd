@@ -24,9 +24,9 @@ export function CardReceita(props: CardsProps) {
             <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>     
           </ListGroup>
           <Card.Body>
-            <button type="button" title="Favoritar" className="buttonCards">
+            {/* <button type="button" title="Favoritar" className="buttonCards">
               <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
-            </button>  
+            </button>   vou engavetar essa ideia*/}
             <OverlayTrigger
           trigger="click"
           placement="auto"
@@ -46,14 +46,19 @@ export function CardReceita(props: CardsProps) {
           }
           rootClose
         >
-          <button type="button" title="Opcoes" className="buttonCards">
+          <button type="button" title="Opcoes" className="buttonCards float-end">
             <i
               className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais"
               title="Opcoes"
             ></i>
           </button>
         </OverlayTrigger>
-         
+        {/* <button type="button" title="Regerar" className="buttonCards float-end">
+              <i
+                className="px-2 fa-solid fa-arrows-rotate iconeCardDetalheMais"
+                title="Regerar"
+              ></i>
+            </button>  */}
           </Card.Body>
         </Card>
 

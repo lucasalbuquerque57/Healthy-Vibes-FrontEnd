@@ -46,10 +46,10 @@ export function CardDietaDetalhe() {
       </ListGroup>
       <Card.Body className="d-flex justify-content-end">
         <button type="button" title="Favoritar" className="buttonCards">
-          <i
+          {/* <i
             className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav"
             title="Favoritar"
-          ></i>
+          ></i> */}
         </button>
         <button
           type="button"
@@ -77,7 +77,7 @@ export function CardDietaDetalhe() {
           }
           rootClose
         >
-          <button type="button" title="Opcoes" className="buttonCards">
+          <button type="button" title="Opcoes" className="buttonCards float-end">
             <i
               className="px-2 fa-solid fa-ellipsis iconeCardDetalheMais"
               title="Opcoes"
