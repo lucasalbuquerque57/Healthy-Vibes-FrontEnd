@@ -20,7 +20,7 @@ export interface RecipeInterface {
   _id: string;
   periodoRef: string;
   titulo: string;
-  ingredientes: [nome: string, qtd: string];
+  ingredientes: [{ nome: string, qtd: string }];
   calorias: number;
   carboidratos: number;
   gordura: number;
@@ -144,6 +144,11 @@ export default function Receitas() {
                       dificuldade="Fácil"
                       porcao="1"
                       descricao="Não esqueça do sal"
+                      calorias={recipe.calorias}
+                      carboidratos={recipe.carboidratos}
+                      gordura={recipe.gordura}
+                      proteína={recipe.proteína}
+                      ingredientes={[{ qtd: "1L", nome: "Água" }]}
                     />
                   );
                 })}
@@ -163,6 +168,10 @@ export default function Receitas() {
                       dificuldade="Fácil"
                       porcao="1"
                       descricao="Não esqueça do sal"
+                      calorias={recipe.calorias}
+                      carboidratos={recipe.carboidratos}
+                      gordura={recipe.gordura}
+                      proteína={recipe.proteína}
                     />
                   );
                 })}
@@ -181,6 +190,10 @@ export default function Receitas() {
                       dificuldade="Fácil"
                       porcao="1"
                       descricao="Não esqueça do sal"
+                      calorias={recipe.calorias}
+                      carboidratos={recipe.carboidratos}
+                      gordura={recipe.gordura}
+                      proteína={recipe.proteína}
                     />
                   );
                 })}
@@ -199,6 +212,10 @@ export default function Receitas() {
                       dificuldade="Fácil"
                       porcao="1"
                       descricao="Não esqueça do sal"
+                      calorias={recipe.calorias}
+                      carboidratos={recipe.carboidratos}
+                      gordura={recipe.gordura}
+                      proteína={recipe.proteína}
                     />
                   );
                 })}

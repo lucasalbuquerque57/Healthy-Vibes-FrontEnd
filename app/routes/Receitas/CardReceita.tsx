@@ -1,46 +1,62 @@
 import { Card, ListGroup, OverlayTrigger, Popover } from "react-bootstrap";
 
- interface CardsProps {
+interface CardsProps {
   title: string;
   dificuldade: string;
   porcao: string;
   descricao: string;
-} 
+  calorias: number,
+  carboidratos: number;
+  gordura: number;
+  proteína: number;
+  ingredientes?: [{ nome: string, qtd: string }];
+}
 
 export function CardReceita(props: CardsProps) {
 
   return (
 
-      <Card style={{ width: '18rem' }} className="cardDetalheDieta">
-          <Card.Img variant="top" src="/IconeLogo.png" />
-          <Card.Body>
-            <Card.Title>{props?.title}</Card.Title>
-            <Card.Text>
-            {props?.descricao}
-            </Card.Text>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
-            <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>     
-          </ListGroup>
-          <Card.Body>
-            {/* <button type="button" title="Favoritar" className="buttonCards">
+    <Card style={{ width: '18rem' }} className="cardDetalheDieta">
+      <Card.Img variant="top" src="/IconeLogo.png" />
+      <Card.Body>
+        <Card.Title>{props?.title}</Card.Title>
+        <Card.Text>
+          {props?.descricao}
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
+        <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>
+      </ListGroup>
+      <Card.Body>
+        {/* <button type="button" title="Favoritar" className="buttonCards">
               <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>   vou engavetar essa ideia*/}
-            <OverlayTrigger
+        <OverlayTrigger
           trigger="click"
           placement="auto"
           overlay={
             <Popover id="popover-basic">
               <Popover.Header as="h3">{props?.title}</Popover.Header>
               <Popover.Body>
-                Calorias:
-                <br/>
-                Carboidratos:
-                <br/>
-                Lipídios:
-                <br/>
-                Proteina:
+                Calorias: {props.calorias}
+                <br />
+                Carboidratos: {props.carboidratos}g
+                <br />
+                Gorduras: {props.gordura}g
+                <br />
+                Proteinas: {props.proteína}g
+                <div className="border-bottom border-dark my-1" />
+                {
+                  props.ingredientes == null ?
+                    "Não há ingredientes salvos"
+                    :
+                    props.ingredientes.map((i, index) => {
+                      return (
+                        <span key={index}>{i.nome} - {i.qtd}</span>
+                      )
+                    })
+                }
               </Popover.Body>
             </Popover>
           }
@@ -59,8 +75,8 @@ export function CardReceita(props: CardsProps) {
                 title="Regerar"
               ></i>
             </button>  */}
-          </Card.Body>
-        </Card>
+      </Card.Body>
+    </Card>
 
   );
 

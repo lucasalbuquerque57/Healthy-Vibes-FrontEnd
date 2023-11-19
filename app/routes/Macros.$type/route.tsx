@@ -74,6 +74,10 @@ export default function Index() {
             valores.gordura.gramas += r.gordura
         })
 
+        valores.gordura.calorias = (valores.gordura.gramas * 9) / 0.25
+        valores.proteina.calorias = (valores.proteina.gramas * 4) / 0.3
+        valores.carboidratos.calorias = (valores.carboidratos.gramas * 4) / 0.45
+
         setValores(valores)
     }
 
@@ -94,7 +98,11 @@ export default function Index() {
         datasets: [
             {
                 label: "% de calorias",
-                data: [12, 19, 3],
+                data: [
+                    ((valores.proteina.calorias / valores.calorias) * 100).toFixed(0),
+                    ((valores.carboidratos.calorias / valores.calorias) * 100).toFixed(0),
+                    ((valores.carboidratos.calorias / valores.calorias) * 100).toFixed(0),
+                ],
                 backgroundColor: [
                     changeTheme.get() == "contraOn"
                         ? "rgba(30,000,000, 1.0)"
@@ -174,15 +182,15 @@ export default function Index() {
                                     </tr>
                                     <tr>
                                         <td>Proteínas</td>
-                                        <td>43 g</td>
+                                        <td>{valores.proteina.gramas} g</td>
                                     </tr>
                                     <tr>
                                         <td>Carboidratos</td>
-                                        <td>43 g</td>
+                                        <td>{valores.carboidratos.gramas} g</td>
                                     </tr>
                                     <tr>
                                         <td>Gorduras</td>
-                                        <td>43 g</td>
+                                        <td>{valores.gordura.gramas} g</td>
                                     </tr>
                                 </tbody>
                             </table>
