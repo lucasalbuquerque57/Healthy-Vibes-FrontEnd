@@ -10,8 +10,19 @@ import Swal from "sweetalert2";
   id: string
 } */
 
+interface CardsProps {
+  title: string;
+  dificuldade: string;
+  porcao: string;
+  descricao: string;
+  calorias: number,
+  carboidratos: number;
+  gordura: number;
+  proteína: number;
+  ingredientes: [{ nome: string, qtd: string }];
+}
 
-export function CardDietaDetalhe() {
+export function CardDietaDetalhe(props: CardsProps) {
 
   function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 
@@ -37,43 +48,37 @@ export function CardDietaDetalhe() {
   return (
 
     <Card className="cardDetalheDieta mx-md-5">
-      < Card.Img variant="top" src="/IconeLogo.png" />
+      <Card.Img variant="top" src="/IconeLogo.png" />
       <Card.Body>
-        <Card.Title>Receita Genérica</Card.Title>
+        <Card.Title>{props?.title}</Card.Title>
         <Card.Text>
+          {props?.descricao}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Dificuldade:  </ListGroup.Item>
-        <ListGroup.Item> Porções</ListGroup.Item>
+        <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
+        <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         {/* <button type="button" title="Favoritar" className="buttonCards">
               <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
             </button>   vou engavetar essa ideia*/}
-        <button
-          type="button"
-          title="Excluir"
-          className="buttonCards" onClick={handleDelete}
-        >
-          <i className="px-2 fa-solid fa-trash apagarDetalheDieta" ></i>
-        </button>
         <OverlayTrigger
           trigger="click"
           placement="auto"
           overlay={
             <Popover id="popover-basic">
-              <Popover.Header as="h3">Receita</Popover.Header>
+              <Popover.Header as="h3">{props?.title}</Popover.Header>
               <Popover.Body>
-                Calorias:
+                Calorias: {props.calorias}
                 <br />
-                Carboidratos: g
+                Carboidratos: {props.carboidratos}g
                 <br />
-                Gorduras: g
+                Gorduras: {props.gordura}g
                 <br />
-                Proteinas: g
+                Proteinas: {props.proteína}g
                 <div className="border-bottom border-dark my-1" />
-                {/*                 {
+                {
                   props.ingredientes.length < 1 ?
                     "Não há ingredientes salvos"
                     :
@@ -82,7 +87,7 @@ export function CardDietaDetalhe() {
                         <span key={index}>{i.nome} - {i.qtd}</span>
                       )
                     })
-                } */}
+                }
               </Popover.Body>
             </Popover>
           }
@@ -102,7 +107,8 @@ export function CardDietaDetalhe() {
               ></i>
             </button>  */}
       </Card.Body>
-    </Card >
+    </Card>
+
 
 
   );

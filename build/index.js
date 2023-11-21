@@ -2671,14 +2671,14 @@ __export(route_exports4, {
 });
 
 // app/styles/detalhesDietas.css
-var detalhesDietas_default = "/build/_assets/detalhesDietas-Q5S2NNA2.css";
+var detalhesDietas_default = "/build/_assets/detalhesDietas-HF4IHYGW.css";
 
 // app/routes/Profile.dietasDetalhes/CardRefeicao.tsx
 var import_react14 = require("@remix-run/react");
 
 // app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx
 var import_react_bootstrap6 = require("react-bootstrap"), import_sweetalert22 = __toESM(require("sweetalert2")), import_jsx_dev_runtime16 = require("react/jsx-dev-runtime");
-function CardDietaDetalhe() {
+function CardDietaDetalhe(props) {
   function handleDelete(e) {
     e.preventDefault(), import_sweetalert22.default.fire({
       title: "Quer deletar?",
@@ -2693,155 +2693,157 @@ function CardDietaDetalhe() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card, { className: "cardDetalheDieta mx-md-5", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Img, { variant: "top", src: "/IconeLogo.png" }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-      lineNumber: 40,
+      lineNumber: 51,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Body, { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Title, { children: "Receita Gen\xE9rica" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Title, { children: props?.title }, void 0, !1, {
         fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-        lineNumber: 42,
+        lineNumber: 53,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Text, {}, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Text, { children: props?.descricao }, void 0, !1, {
         fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-        lineNumber: 43,
+        lineNumber: 54,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-      lineNumber: 41,
+      lineNumber: 52,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.ListGroup, { className: "list-group-flush", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.ListGroup.Item, { children: "Dificuldade:  " }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.ListGroup.Item, { children: [
+        "Dificuldade:  ",
+        props?.dificuldade
+      ] }, void 0, !0, {
         fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-        lineNumber: 47,
+        lineNumber: 59,
         columnNumber: 9
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.ListGroup.Item, { children: " Por\xE7\xF5es" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.ListGroup.Item, { children: [
+        props?.porcao,
+        " Por\xE7\xF5es"
+      ] }, void 0, !0, {
         fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-        lineNumber: 48,
+        lineNumber: 60,
         columnNumber: 9
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-      lineNumber: 46,
+      lineNumber: 58,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Body, { children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
-        "button",
-        {
-          type: "button",
-          title: "Excluir",
-          className: "buttonCards",
-          onClick: handleDelete,
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("i", { className: "px-2 fa-solid fa-trash apagarDetalheDieta" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Card.Body, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+      import_react_bootstrap6.OverlayTrigger,
+      {
+        trigger: "click",
+        placement: "auto",
+        overlay: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover, { id: "popover-basic", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover.Header, { as: "h3", children: props?.title }, void 0, !1, {
             fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-            lineNumber: 59,
-            columnNumber: 11
-          }, this)
-        },
-        void 0,
-        !1,
-        {
-          fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-          lineNumber: 54,
-          columnNumber: 9
-        },
-        this
-      ),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
-        import_react_bootstrap6.OverlayTrigger,
-        {
-          trigger: "click",
-          placement: "auto",
-          overlay: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover, { id: "popover-basic", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover.Header, { as: "h3", children: "Receita" }, void 0, !1, {
+            lineNumber: 71,
+            columnNumber: 15
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover.Body, { children: [
+            "Calorias: ",
+            props.calorias,
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
               fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-              lineNumber: 66,
-              columnNumber: 15
+              lineNumber: 74,
+              columnNumber: 17
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(import_react_bootstrap6.Popover.Body, { children: [
-              "Calorias:",
-              /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
-                fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-                lineNumber: 69,
-                columnNumber: 17
-              }, this),
-              "Carboidratos: g",
-              /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
-                fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-                lineNumber: 71,
-                columnNumber: 17
-              }, this),
-              "Gorduras: g",
-              /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
-                fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-                lineNumber: 73,
-                columnNumber: 17
-              }, this),
-              "Proteinas: g",
-              /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "border-bottom border-dark my-1" }, void 0, !1, {
-                fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-                lineNumber: 75,
-                columnNumber: 17
-              }, this)
-            ] }, void 0, !0, {
+            "Carboidratos: ",
+            props.carboidratos,
+            "g",
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
               fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-              lineNumber: 67,
-              columnNumber: 15
-            }, this)
+              lineNumber: 76,
+              columnNumber: 17
+            }, this),
+            "Gorduras: ",
+            props.gordura,
+            "g",
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("br", {}, void 0, !1, {
+              fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+              lineNumber: 78,
+              columnNumber: 17
+            }, this),
+            "Proteinas: ",
+            props.prote\u00EDna,
+            "g",
+            /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("div", { className: "border-bottom border-dark my-1" }, void 0, !1, {
+              fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+              lineNumber: 80,
+              columnNumber: 17
+            }, this),
+            props.ingredientes.length < 1 ? "N\xE3o h\xE1 ingredientes salvos" : props.ingredientes.map((i, index) => /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("span", { children: [
+              i.nome,
+              " - ",
+              i.qtd
+            ] }, index, !0, {
+              fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+              lineNumber: 87,
+              columnNumber: 25
+            }, this))
           ] }, void 0, !0, {
             fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-            lineNumber: 65,
-            columnNumber: 13
-          }, this),
-          rootClose: !0,
-          children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("button", { type: "button", title: "Opcoes", className: "buttonCards float-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
-            "i",
-            {
-              className: "px-2 fa-solid fa-ellipsis iconeCardDetalheMais",
-              title: "Opcoes"
-            },
-            void 0,
-            !1,
-            {
-              fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-              lineNumber: 92,
-              columnNumber: 13
-            },
-            this
-          ) }, void 0, !1, {
-            fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-            lineNumber: 91,
-            columnNumber: 11
+            lineNumber: 72,
+            columnNumber: 15
           }, this)
-        },
-        void 0,
-        !1,
-        {
+        ] }, void 0, !0, {
           fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-          lineNumber: 61,
-          columnNumber: 9
-        },
-        this
-      )
-    ] }, void 0, !0, {
+          lineNumber: 70,
+          columnNumber: 13
+        }, this),
+        rootClose: !0,
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)("button", { type: "button", title: "Opcoes", className: "buttonCards float-end", children: /* @__PURE__ */ (0, import_jsx_dev_runtime16.jsxDEV)(
+          "i",
+          {
+            className: "px-2 fa-solid fa-ellipsis iconeCardDetalheMais",
+            title: "Opcoes"
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+            lineNumber: 97,
+            columnNumber: 13
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+          lineNumber: 96,
+          columnNumber: 11
+        }, this)
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
+        lineNumber: 66,
+        columnNumber: 9
+      },
+      this
+    ) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-      lineNumber: 50,
+      lineNumber: 62,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Profile.dietasDetalhes/CardDietaDetalhe.tsx",
-    lineNumber: 39,
+    lineNumber: 50,
     columnNumber: 5
   }, this);
 }
 
 // app/routes/Profile.dietasDetalhes/CardRefeicao.tsx
-var import_carousel = require("primereact/carousel"), import_jsx_dev_runtime17 = require("react/jsx-dev-runtime");
+var import_carousel = require("primereact/carousel"), import_react15 = require("react"), import_jsx_dev_runtime17 = require("react/jsx-dev-runtime");
 function CardRefeicao(props) {
+  let [recipe, setRecipe] = (0, import_react15.useState)([]);
+  (0, import_react15.useEffect)(() => {
+    setRecipe(JSON.parse(localStorage.getItem("RecipesLocalStorage") || ""));
+  }, []);
   let responsiveOptions = [
     {
       breakpoint: "1199px",
@@ -2859,23 +2861,40 @@ function CardRefeicao(props) {
       numScroll: 1
     }
   ];
-  function cardTemplate() {
-    return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(CardDietaDetalhe, {}, void 0, !1, {
-      fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 33,
-      columnNumber: 7
-    }, this);
+  function cardTemplate(recipe2) {
+    return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
+      CardDietaDetalhe,
+      {
+        title: recipe2.titulo,
+        dificuldade: "F\xE1cil",
+        porcao: "1",
+        descricao: "N\xE3o esque\xE7a do sal",
+        calorias: recipe2.calorias,
+        carboidratos: recipe2.carboidratos,
+        gordura: recipe2.gordura,
+        prote\u00EDna: recipe2.prote\u00EDna,
+        ingredientes: recipe2.ingredientes
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
+        lineNumber: 46,
+        columnNumber: 7
+      },
+      this
+    );
   }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_jsx_dev_runtime17.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("h2", { className: "dietaNome", children: "Caf\xE9 da Manh\xE3" }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 38,
+      lineNumber: 61,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "container-fluid d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
+    /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "container-fliu d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(
       import_carousel.Carousel,
       {
-        value: Array.from({ length: props.qtdReceita }),
+        value: recipe,
         numVisible: 3,
         numScroll: 3,
         responsiveOptions,
@@ -2885,39 +2904,39 @@ function CardRefeicao(props) {
       !1,
       {
         fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-        lineNumber: 42,
+        lineNumber: 65,
         columnNumber: 11
       },
       this
     ) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 40,
+      lineNumber: 63,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 39,
+      lineNumber: 62,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "d-flex justify-content-center align-items-center py-5 me-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("div", { className: "row gap-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)(import_react14.Link, { to: `/adicionarReceitas/dietaId=${props.idDieta}&periodoRef=${props.titulo}`, children: /* @__PURE__ */ (0, import_jsx_dev_runtime17.jsxDEV)("button", { className: "ms-5 buttonForm col btn btn-primary btn-lg", children: "Adicionar outras" }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 57,
+      lineNumber: 80,
       columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 56,
+      lineNumber: 79,
       columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 55,
+      lineNumber: 78,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-      lineNumber: 54,
+      lineNumber: 77,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Profile.dietasDetalhes/CardRefeicao.tsx",
-    lineNumber: 37,
+    lineNumber: 60,
     columnNumber: 5
   }, this);
 }
@@ -2979,7 +2998,7 @@ __export(route_exports5, {
   meta: () => meta7
 });
 var import_chart2 = require("chart.js"), import_react_chartjs_22 = require("react-chartjs-2");
-var import_react16 = require("react"), import_react_bootstrap9 = require("react-bootstrap");
+var import_react17 = require("react"), import_react_bootstrap9 = require("react-bootstrap");
 
 // app/routes/controleConsumo.$date/CardInfos.tsx
 var import_sweetalert23 = __toESM(require("sweetalert2")), import_jsx_dev_runtime19 = require("react/jsx-dev-runtime");
@@ -3086,10 +3105,10 @@ function CardInfos(props) {
 }
 
 // app/routes/controleConsumo.$date/ModalInsert.tsx
-var import_react15 = require("react"), import_react_bootstrap8 = require("react-bootstrap"), import_jsx_dev_runtime20 = require("react/jsx-dev-runtime");
+var import_react16 = require("react"), import_react_bootstrap8 = require("react-bootstrap"), import_jsx_dev_runtime20 = require("react/jsx-dev-runtime");
 function ModalInsert(props) {
-  let [measure, setMeasure] = (0, import_react15.useState)("");
-  (0, import_react15.useEffect)(() => {
+  let [measure, setMeasure] = (0, import_react16.useState)("");
+  (0, import_react16.useEffect)(() => {
     props.formFor == "\xC1gua" ? setMeasure("Ml") : setMeasure("Kcal");
   }, [props.formFor]);
   function handleSubmit(e) {
@@ -3172,7 +3191,7 @@ function ModalInsert(props) {
 }
 
 // app/routes/controleConsumo.$date/route.tsx
-var import_react17 = require("@remix-run/react"), import_core5 = require("@hookstate/core");
+var import_react18 = require("@remix-run/react"), import_core5 = require("@hookstate/core");
 var import_jsx_dev_runtime21 = require("react/jsx-dev-runtime");
 import_chart2.Chart.register(import_chart2.ArcElement, import_chart2.Tooltip, import_chart2.Legend, import_chart2.Title);
 async function loader2({
@@ -3189,12 +3208,12 @@ var meta7 = ({
   title: "Dia: " + data
 }), links8 = () => [{ rel: "stylesheet", href: controleConsumo_default }];
 function ControleConsumo2() {
-  let data = (0, import_react17.useLoaderData)(), [show, setShow] = (0, import_react16.useState)(!1), [contentModal, setContentModal] = (0, import_react16.useState)(""), [updateOrInsert, setUpdateOrInsert] = (0, import_react16.useState)("insert"), handleClose = () => setShow(!1), changeTheme = (0, import_core5.useHookstate)(themePage);
+  let data = (0, import_react18.useLoaderData)(), [show, setShow] = (0, import_react17.useState)(!1), [contentModal, setContentModal] = (0, import_react17.useState)(""), [updateOrInsert, setUpdateOrInsert] = (0, import_react17.useState)("insert"), handleClose = () => setShow(!1), changeTheme = (0, import_core5.useHookstate)(themePage);
   function handleShow(typeOperation) {
     setShow(!0), setContentModal(typeOperation);
   }
-  let [diet, setDiet] = (0, import_react16.useState)("");
-  (0, import_react16.useEffect)(() => {
+  let [diet, setDiet] = (0, import_react17.useState)("");
+  (0, import_react17.useEffect)(() => {
     localStorage.getItem("selectedDiet") && setDiet(localStorage.getItem("selectedDiet") || "");
   }, []);
   let options = {
@@ -3797,10 +3816,10 @@ var route_exports6 = {};
 __export(route_exports6, {
   default: () => dietasProfile
 });
-var import_react19 = require("@remix-run/react");
+var import_react20 = require("@remix-run/react");
 
 // app/routes/Profile._index/Card_Dieta.tsx
-var import_react18 = require("@remix-run/react"), import_sweetalert24 = __toESM(require("sweetalert2")), import_jsx_dev_runtime23 = require("react/jsx-dev-runtime");
+var import_react19 = require("@remix-run/react"), import_sweetalert24 = __toESM(require("sweetalert2")), import_jsx_dev_runtime23 = require("react/jsx-dev-runtime");
 function CardDieta(props) {
   function changeAnimation(e) {
     e.currentTarget.className += " fa-shake";
@@ -3819,7 +3838,7 @@ function CardDieta(props) {
       result.isConfirmed ? import_sweetalert24.default.fire("Deletado!", "", "success") : result.isDenied && import_sweetalert24.default.fire("N\xE3o deletado", "", "info");
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(import_react18.Link, { to: "/profile/dietasDetalhes", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "card", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)(import_react19.Link, { to: "/profile/dietasDetalhes", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "card", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "card-top", children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("div", { className: "ImageAdress", children: /* @__PURE__ */ (0, import_jsx_dev_runtime23.jsxDEV)("img", { src: "/PastaIcon.png", alt: "Imagem Dieta" }, void 0, !1, {
       fileName: "app/routes/Profile._index/Card_Dieta.tsx",
       lineNumber: 44,
@@ -3968,7 +3987,7 @@ function dietasProfile() {
       lineNumber: 7,
       columnNumber: 13
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "container-fluid mb-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(import_react19.Link, { to: "/CalculadoraNutricional", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("button", { className: "float-end stylebutton me-4 p-0 px-4 py-2", type: "button", children: "Adicionar Dieta" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("div", { className: "container-fluid mb-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)(import_react20.Link, { to: "/CalculadoraNutricional", children: /* @__PURE__ */ (0, import_jsx_dev_runtime24.jsxDEV)("button", { className: "float-end stylebutton me-4 p-0 px-4 py-2", type: "button", children: "Adicionar Dieta" }, void 0, !1, {
       fileName: "app/routes/Profile._index/route.tsx",
       lineNumber: 22,
       columnNumber: 21
@@ -4000,13 +4019,13 @@ __export(route_exports7, {
 var cadastro_default = "/build/_assets/cadastro-AXW2Z574.css";
 
 // app/routes/alterarDados/route.tsx
-var import_react21 = require("@remix-run/react");
+var import_react22 = require("@remix-run/react");
 
 // app/routes/alterarDados/modalConfirmacao.tsx
-var import_react20 = require("react"), import_react_bootstrap10 = require("react-bootstrap"), import_jsx_dev_runtime25 = require("react/jsx-dev-runtime");
+var import_react21 = require("react"), import_react_bootstrap10 = require("react-bootstrap"), import_jsx_dev_runtime25 = require("react/jsx-dev-runtime");
 function ModalConfirmacao() {
-  let [show, setShow] = (0, import_react20.useState)(!1), handleClose = () => setShow(!1);
-  return (0, import_react20.useEffect)(() => {
+  let [show, setShow] = (0, import_react21.useState)(!1), handleClose = () => setShow(!1);
+  return (0, import_react21.useEffect)(() => {
     setShow(!0);
   }, []), /* @__PURE__ */ (0, import_jsx_dev_runtime25.jsxDEV)(
     import_react_bootstrap10.Modal,
@@ -4089,7 +4108,7 @@ function alterarDados() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "box", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "box-img fundoPossivel", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react21.Link, { className: "nav-link", to: "/", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react22.Link, { className: "nav-link", to: "/", children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { children: [
           "Healthy",
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("br", {}, void 0, !1, {
             fileName: "app/routes/alterarDados/route.tsx",
@@ -4254,8 +4273,8 @@ var import_chartjs_plugin_datalabels = __toESM(require("chartjs-plugin-datalabel
 var macro_default = "/build/_assets/macro-CZA4FPNL.css";
 
 // app/routes/Macros.$type/route.tsx
-var import_react22 = require("@remix-run/react"), import_core6 = require("@hookstate/core");
-var import_react23 = require("react"), import_jsx_dev_runtime27 = require("react/jsx-dev-runtime");
+var import_react23 = require("@remix-run/react"), import_core6 = require("@hookstate/core");
+var import_react24 = require("react"), import_jsx_dev_runtime27 = require("react/jsx-dev-runtime");
 import_chart3.Chart.register(import_chart3.ArcElement, import_chart3.Tooltip, import_chart3.Legend, import_chartjs_plugin_datalabels.default);
 async function loader3({ params }) {
   if (new URLSearchParams(params.type).has("dietaId") || params.type == "notSaved")
@@ -4266,7 +4285,7 @@ var links11 = () => [{ rel: "stylesheet", href: macro_default }], meta10 = () =>
   title: "Macros"
 });
 function Index2() {
-  let dataParams = (0, import_react22.useLoaderData)(), [valores, setValores] = (0, import_react23.useState)({
+  let dataParams = (0, import_react23.useLoaderData)(), [valores, setValores] = (0, import_react24.useState)({
     calorias: 0,
     proteina: {
       calorias: 0,
@@ -4300,7 +4319,7 @@ function Index2() {
       valores2.calorias += r.calorias, valores2.carboidratos.gramas += r.carboidratos, valores2.proteina.gramas += r.prote\u00EDna, valores2.gordura.gramas += r.gordura;
     }), valores2.gordura.calorias = valores2.gordura.gramas * 9 / 0.25, valores2.proteina.calorias = valores2.proteina.gramas * 4 / 0.3, valores2.carboidratos.calorias = valores2.carboidratos.gramas * 4 / 0.45, setValores(valores2);
   };
-  (0, import_react23.useEffect)(() => {
+  (0, import_react24.useEffect)(() => {
     if (dataParams == "notSaved") {
       let recipes = JSON.parse(
         localStorage.getItem("RecipesLocalStorage") || ""
@@ -4335,7 +4354,7 @@ function Index2() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "container-fluid py-5", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "container-fluid mb-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "row", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "barraHoriz col-2 mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(import_react22.Link, { to: "/receitas", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "barraHoriz col-2 mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(import_react23.Link, { to: "/receitas", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(
           "button",
           {
             type: "button",
@@ -4550,9 +4569,9 @@ __export(route_exports9, {
 });
 
 // app/routes/Exercicios/Exercicio_Base.tsx
-var import_react24 = require("@remix-run/react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime");
+var import_react25 = require("@remix-run/react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime");
 function ExercicioBase(props) {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(import_react24.Link, { to: `/ExercicioDetalhes/exercise=${props.id}`, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(import_react25.Link, { to: `/ExercicioDetalhes/exercise=${props.id}`, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card-top", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "ImageAdress", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: `/treino/${props.imgSrc}`, alt: props.altImg }, void 0, !1, {
       fileName: "app/routes/Exercicios/Exercicio_Base.tsx",
       lineNumber: 24,
@@ -5114,7 +5133,7 @@ __export(cadastro_exports, {
   links: () => links13,
   meta: () => meta12
 });
-var import_react25 = require("@remix-run/react"), import_jsx_dev_runtime31 = require("react/jsx-dev-runtime"), links13 = () => [
+var import_react26 = require("@remix-run/react"), import_jsx_dev_runtime31 = require("react/jsx-dev-runtime"), links13 = () => [
   { rel: "stylesheet", href: cadastro_default }
 ], meta12 = () => ({
   title: "Cadastro"
@@ -5227,7 +5246,7 @@ function Index3() {
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("p", { className: "link-login", children: [
           "J\xE1 \xE9 um membro?",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(import_react25.Link, { to: "/login", children: "Login" }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(import_react26.Link, { to: "/login", children: "Login" }, void 0, !1, {
             fileName: "app/routes/cadastro.tsx",
             lineNumber: 47,
             columnNumber: 54
@@ -5420,7 +5439,7 @@ function CardReceita(props) {
 }
 
 // app/routes/Receitas/route.tsx
-var import_react_bootstrap12 = require("react-bootstrap"), import_react26 = require("@remix-run/react");
+var import_react_bootstrap12 = require("react-bootstrap"), import_react27 = require("@remix-run/react");
 
 // node_modules/axios/lib/helpers/bind.js
 function bind(fn, thisArg) {
@@ -7479,11 +7498,11 @@ axiosHealthyApi.interceptors.response.use(
 );
 
 // app/routes/Receitas/route.tsx
-var import_react27 = require("react"), import_carousel2 = require("primereact/carousel"), import_jsx_dev_runtime33 = require("react/jsx-dev-runtime"), links14 = () => [{ rel: "stylesheet", href: receitas_default }], meta13 = () => ({
+var import_react28 = require("react"), import_carousel2 = require("primereact/carousel"), import_jsx_dev_runtime33 = require("react/jsx-dev-runtime"), links14 = () => [{ rel: "stylesheet", href: receitas_default }], meta13 = () => ({
   title: "Receitas"
 });
 function Receitas() {
-  let navigate = (0, import_react26.useNavigate)(), [recipesFiltered, setRecipesFiltered] = (0, import_react27.useState)([]), responsiveOptions = [
+  let navigate = (0, import_react27.useNavigate)(), [recipesFiltered, setRecipesFiltered] = (0, import_react28.useState)([]), responsiveOptions = [
     {
       breakpoint: "1199px",
       numVisible: 1,
@@ -7532,14 +7551,14 @@ function Receitas() {
       return localStorage.setItem("RecipesLocalStorage", JSON.stringify(r)), setRecipesFiltered(r);
     }
   }
-  let handleGet = (0, import_react27.useCallback)(async () => {
+  let handleGet = (0, import_react28.useCallback)(async () => {
     await axiosHealthyApi.get("/recipes/recipesWIthNoUser").then((r) => {
       generateRecipe(r.data);
     }).catch(() => {
       throw new Error("N\xE3o foi poss\xEDvel conectar");
     });
   }, []);
-  (0, import_react27.useEffect)(() => {
+  (0, import_react28.useEffect)(() => {
     if (!localStorage.getItem("RecipesLocalStorage"))
       handleGet();
     else {
@@ -7795,7 +7814,7 @@ __export(route_exports11, {
   links: () => links15,
   meta: () => meta14
 });
-var import_react28 = require("@remix-run/react");
+var import_react29 = require("@remix-run/react");
 
 // app/styles/profile.css
 var profile_default = "/build/_assets/profile-52WQLABW.css";
@@ -7812,7 +7831,7 @@ function Profile() {
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("nav", { className: "d-flex container-fluid justify-content-center align-items-center my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "row barraPerfil text-center border rounded pt-3 textNav", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react28.Link, { to: "/Profile", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Dietas Salvas" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react29.Link, { to: "/Profile", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Dietas Salvas" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 31,
         columnNumber: 15
@@ -7825,7 +7844,7 @@ function Profile() {
         lineNumber: 29,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react28.Link, { to: "/Profile/acompanharProg", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Acompanhar Progresso" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react29.Link, { to: "/Profile/acompanharProg", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Acompanhar Progresso" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 36,
         columnNumber: 15
@@ -7838,7 +7857,7 @@ function Profile() {
         lineNumber: 34,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react28.Link, { to: "/alterarDados", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Configura\xE7\xF5es" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react29.Link, { to: "/alterarDados", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)("h6", { children: "Configura\xE7\xF5es" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 41,
         columnNumber: 15
@@ -7860,7 +7879,7 @@ function Profile() {
       lineNumber: 27,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react28.Outlet, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime34.jsxDEV)(import_react29.Outlet, {}, void 0, !1, {
       fileName: "app/routes/Profile/route.tsx",
       lineNumber: 48,
       columnNumber: 7
@@ -7889,7 +7908,7 @@ __export(route_exports12, {
 var home_default = "/build/_assets/home-O7XMENOY.css";
 
 // app/routes/_index/CardsHome.tsx
-var import_react29 = require("@remix-run/react"), import_jsx_dev_runtime35 = require("react/jsx-dev-runtime");
+var import_react30 = require("@remix-run/react"), import_jsx_dev_runtime35 = require("react/jsx-dev-runtime");
 function CardsHome() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "row m-auto cardBox", children: [
     {
@@ -7913,7 +7932,7 @@ function CardsHome() {
       textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
       link: "/profile"
     }
-  ].map((card) => /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "column my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)(import_react29.Link, { to: card.link, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "card", children: [
+  ].map((card) => /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "column my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)(import_react30.Link, { to: card.link, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("div", { className: "card", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime35.jsxDEV)("img", { src: `/home/${card.imgSrc}`, className: "card-img-top", alt: card.altImg }, void 0, !1, {
       fileName: "app/routes/_index/CardsHome.tsx",
       lineNumber: 35,
@@ -8041,7 +8060,7 @@ __export(login_exports, {
 var login_default = "/build/_assets/login-EFHWHQTZ.css";
 
 // app/routes/login.tsx
-var import_react30 = require("@remix-run/react"), import_jsx_dev_runtime37 = require("react/jsx-dev-runtime"), links17 = () => [{ rel: "stylesheet", href: login_default }], meta16 = () => ({
+var import_react31 = require("@remix-run/react"), import_jsx_dev_runtime37 = require("react/jsx-dev-runtime"), links17 = () => [{ rel: "stylesheet", href: login_default }], meta16 = () => ({
   title: "Login"
 });
 function Index5() {
@@ -8132,7 +8151,7 @@ function Index5() {
         lineNumber: 40,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react30.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react31.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
         fileName: "app/routes/login.tsx",
         lineNumber: 50,
         columnNumber: 15
@@ -8152,7 +8171,7 @@ function Index5() {
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("p", { className: "link-login", children: [
         "N\xE3o \xE9 um membro?",
-        /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react30.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react31.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
           fileName: "app/routes/login.tsx",
           lineNumber: 58,
           columnNumber: 15
@@ -8183,7 +8202,7 @@ function Index5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-2224ZUNJ.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-UCJ2WXGJ.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-NUICH3LQ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-V4J6JFBL.js", imports: ["/build/_shared/chunk-V2EACV4J.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-VTMT3VDH.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-MTKZRR6O.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-EYILCTHP.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-MG375ZFI.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-WSZU5HXR.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-UYDNYQFC.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-XTW5DKK6.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-IXPC5XXR.js", imports: ["/build/_shared/chunk-GKUL633R.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-XHSKAWNW.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-V2EACV4J.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-GNT6XJN6.js", imports: ["/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-EZAYWE5A.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-LI7KMSU5.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-CH6D2BQR.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-4U3HBCFR.js", imports: ["/build/_shared/chunk-OZVKPABT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-CNDEA6GT.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-PPLIGYFP.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-EMA5SJ3Q.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "4c06b01e", hmr: { runtime: "/build/_shared\\chunk-NUICH3LQ.js", timestamp: 1700572712547 }, url: "/build/manifest-4C06B01E.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-2224ZUNJ.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-UCJ2WXGJ.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-NUICH3LQ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-V4J6JFBL.js", imports: ["/build/_shared/chunk-V2EACV4J.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-VTMT3VDH.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-MTKZRR6O.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-EYILCTHP.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-MG375ZFI.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-WSZU5HXR.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-UYDNYQFC.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-XTW5DKK6.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-IXPC5XXR.js", imports: ["/build/_shared/chunk-GKUL633R.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-XHSKAWNW.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-V2EACV4J.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-WRSDZPLA.js", imports: ["/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-EZAYWE5A.js", imports: ["/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-LI7KMSU5.js", imports: ["/build/_shared/chunk-76FNSAYS.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-CH6D2BQR.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-4U3HBCFR.js", imports: ["/build/_shared/chunk-OZVKPABT.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-CNDEA6GT.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-PPLIGYFP.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-76FNSAYS.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-EMA5SJ3Q.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "8c5ea212", hmr: { runtime: "/build/_shared\\chunk-NUICH3LQ.js", timestamp: 1700575350991 }, url: "/build/manifest-8C5EA212.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

@@ -1,6 +1,8 @@
 import { Link } from "@remix-run/react";
 import { CardDietaDetalhe } from "./CardDietaDetalhe";
 import { Carousel } from 'primereact/carousel';
+import type { RecipeInterface } from "../Receitas/route";
+import { useEffect, useState } from "react";
 
 interface CardRefeicao {
   titulo: string
@@ -9,6 +11,17 @@ interface CardRefeicao {
 }
 
 export function CardRefeicao(props: CardRefeicao) {
+
+  const [recipe, setRecipe] = useState<RecipeInterface[]>([])
+
+  useEffect(() => {
+
+    setRecipe(JSON.parse(localStorage.getItem("RecipesLocalStorage") || ""))
+  }, [])
+
+
+
+
 
   const responsiveOptions = [
     {
@@ -28,20 +41,30 @@ export function CardRefeicao(props: CardRefeicao) {
     }
   ];
 
-  function cardTemplate() {
+  function cardTemplate(recipe: RecipeInterface) {
     return (
-      <CardDietaDetalhe />
+      <CardDietaDetalhe
+        title={recipe.titulo}
+        dificuldade="Fácil"
+        porcao="1"
+        descricao="Não esqueça do sal"
+        calorias={recipe.calorias}
+        carboidratos={recipe.carboidratos}
+        gordura={recipe.gordura}
+        proteína={recipe.proteína}
+        ingredientes={recipe.ingredientes}
+      />
     )
   }
   return (
     <>
       <h2 className="dietaNome">Café da Manhã</h2>
-      <div className="container-fluid d-flex justify-content-center align-items-center">
+      <div className="container-fliu d-flex justify-content-center align-items-center">
         <section className="card-container container-fluid">
 
           <Carousel
             value={
-              Array.from({ length: props.qtdReceita })
+              recipe
             }
             numVisible={3}
             numScroll={3}
