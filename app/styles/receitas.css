@@ -106,21 +106,8 @@
   color: var(--preto-icones) !important;
 }
 
-
-
-
-
-
-
 .card-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.5rem;
-  width: 100%;
-  max-width: 75rem;
   height: auto;
-  margin: 1.25rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;

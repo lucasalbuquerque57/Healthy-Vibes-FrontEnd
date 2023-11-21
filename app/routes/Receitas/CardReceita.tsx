@@ -9,14 +9,14 @@ interface CardsProps {
   carboidratos: number;
   gordura: number;
   proteína: number;
-  ingredientes?: [{ nome: string, qtd: string }];
+  ingredientes: [{ nome: string, qtd: string }];
 }
 
 export function CardReceita(props: CardsProps) {
 
   return (
 
-    <Card style={{ width: '18rem' }} className="cardDetalheDieta">
+    <Card className="cardDetalheDieta mx-md-5">
       <Card.Img variant="top" src="/IconeLogo.png" />
       <Card.Body>
         <Card.Title>{props?.title}</Card.Title>
@@ -48,7 +48,7 @@ export function CardReceita(props: CardsProps) {
                 Proteinas: {props.proteína}g
                 <div className="border-bottom border-dark my-1" />
                 {
-                  props.ingredientes == null ?
+                  props.ingredientes.length < 1 ?
                     "Não há ingredientes salvos"
                     :
                     props.ingredientes.map((i, index) => {

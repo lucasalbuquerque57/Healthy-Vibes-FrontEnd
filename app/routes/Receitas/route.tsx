@@ -7,6 +7,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "@remix-run/react";
 import { axiosHealthyApi } from "~/configs/https";
 import { useCallback, useEffect, useState } from "react";
+import { Carousel } from 'primereact/carousel';
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: receitas }];
@@ -34,7 +35,23 @@ export default function Receitas() {
   const navigate = useNavigate();
   const [recipesFiltered, setRecipesFiltered] = useState<RecipeInterface[]>([]);
 
-
+  const responsiveOptions = [
+    {
+      breakpoint: '1199px',
+      numVisible: 1,
+      numScroll: 1
+    },
+    {
+      breakpoint: '991px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '767px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ];
 
   function generateRecipe(recipes: RecipeInterface[]) {
     if (localStorage.getItem("resultsCalc")) {
@@ -118,6 +135,22 @@ export default function Receitas() {
     }
   }, [handleGet]);
 
+  function cardTemplate(recipe: RecipeInterface) {
+    return (
+      <CardReceita
+        title={recipe.titulo}
+        dificuldade="Fácil"
+        porcao="1"
+        descricao="Não esqueça do sal"
+        calorias={recipe.calorias}
+        carboidratos={recipe.carboidratos}
+        gordura={recipe.gordura}
+        proteína={recipe.proteína}
+        ingredientes={recipe.ingredientes}
+      />
+    )
+  }
+
   return (
     <main>
       <Header />
@@ -130,95 +163,66 @@ export default function Receitas() {
         <>
           <h2 className="dietaNome">Café da Manhã</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container">
+            <section className="card-container container-fluid">
 
-
-
-              {recipesFiltered
-                .filter((recipe) => recipe.periodoRef.includes("Café da Manhã"))
-                .map((recipe, index) => {
-                  return (
-                    <CardReceita
-                      key={`${recipe._id}${index}`}
-                      title={recipe.titulo}
-                      dificuldade="Fácil"
-                      porcao="1"
-                      descricao="Não esqueça do sal"
-                      calorias={recipe.calorias}
-                      carboidratos={recipe.carboidratos}
-                      gordura={recipe.gordura}
-                      proteína={recipe.proteína}
-                      ingredientes={[{ qtd: "1L", nome: "Água" }]}
-                    />
-                  );
-                })}
+              <Carousel
+                value={
+                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã"))
+                }
+                numVisible={3}
+                numScroll={3}
+                responsiveOptions={responsiveOptions}
+                itemTemplate={cardTemplate}
+              />
 
             </section>
           </div>
           <h2 className="dietaNome">Almoço</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container">
-              {recipesFiltered
-                .filter((recipe) => recipe.periodoRef.includes("Almoço"))
-                .map((recipe, index) => {
-                  return (
-                    <CardReceita
-                      key={`${recipe._id}${index}`}
-                      title={recipe.titulo}
-                      dificuldade="Fácil"
-                      porcao="1"
-                      descricao="Não esqueça do sal"
-                      calorias={recipe.calorias}
-                      carboidratos={recipe.carboidratos}
-                      gordura={recipe.gordura}
-                      proteína={recipe.proteína}
-                    />
-                  );
-                })}
+            <section className="card-container container-fluid">
+
+              <Carousel
+                value={
+                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço"))
+                }
+                numVisible={3}
+                numScroll={3}
+                responsiveOptions={responsiveOptions}
+                itemTemplate={cardTemplate}
+              />
+
             </section>
           </div>
           <h2 className="dietaNome">Lanche</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container">
-              {recipesFiltered
-                .filter((recipe) => recipe.periodoRef.includes("Lanche"))
-                .map((recipe, index) => {
-                  return (
-                    <CardReceita
-                      key={`${recipe._id}${index}`}
-                      title={recipe.titulo}
-                      dificuldade="Fácil"
-                      porcao="1"
-                      descricao="Não esqueça do sal"
-                      calorias={recipe.calorias}
-                      carboidratos={recipe.carboidratos}
-                      gordura={recipe.gordura}
-                      proteína={recipe.proteína}
-                    />
-                  );
-                })}
+            <section className="card-container container-fluid">
+
+              <Carousel
+                value={
+                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche"))
+                }
+                numVisible={3}
+                numScroll={3}
+                responsiveOptions={responsiveOptions}
+                itemTemplate={cardTemplate}
+              />
+
             </section>
           </div>
           <h2 className="dietaNome">Janta</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container">
-              {recipesFiltered
-                .filter((recipe) => recipe.periodoRef.includes("Janta"))
-                .map((recipe, index) => {
-                  return (
-                    <CardReceita
-                      key={`${recipe._id}${index}`}
-                      title={recipe.titulo}
-                      dificuldade="Fácil"
-                      porcao="1"
-                      descricao="Não esqueça do sal"
-                      calorias={recipe.calorias}
-                      carboidratos={recipe.carboidratos}
-                      gordura={recipe.gordura}
-                      proteína={recipe.proteína}
-                    />
-                  );
-                })}
+            <section className="card-container container-fluid">
+
+              <Carousel
+                value={
+                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta"))
+                }
+                numVisible={3}
+                numScroll={3}
+                responsiveOptions={responsiveOptions}
+                itemTemplate={cardTemplate}
+              />
+
             </section>
           </div>
         </>

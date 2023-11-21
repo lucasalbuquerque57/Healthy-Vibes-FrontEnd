@@ -10,6 +10,7 @@ import Swal from "sweetalert2";
   id: string
 } */
 
+
 export function CardDietaDetalhe() {
 
   function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
@@ -17,40 +18,39 @@ export function CardDietaDetalhe() {
     // Vou colocar os bglhs do axios aqui
     e.preventDefault();
     Swal.fire({
-        title: 'Quer deletar?',
-        showDenyButton: true,
-        /* showCancelButton: true, */
-        denyButtonText: `Cancelar`,
-        confirmButtonText: 'Deletar',
+      title: 'Quer deletar?',
+      showDenyButton: true,
+      /* showCancelButton: true, */
+      denyButtonText: `Cancelar`,
+      confirmButtonText: 'Deletar',
     }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            Swal.fire('Deletado!', '', 'success')
-        } else if (result.isDenied) {
-            Swal.fire('Não deletado', '', 'info')
-        }
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Deletado!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Não deletado', '', 'info')
+      }
     })
 
-}
+  }
 
   return (
-    <Card className="cardDetalheDieta col">
-      <Card.Img variant="top" src="/IconeLogo.png" />
+
+    <Card className="cardDetalheDieta mx-md-5">
+      < Card.Img variant="top" src="/IconeLogo.png" />
       <Card.Body>
         <Card.Title>Receita Genérica</Card.Title>
-        <Card.Text>Torrada integral com Salsa</Card.Text>
+        <Card.Text>
+        </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Dificuldade: Fácil</ListGroup.Item>
-        <ListGroup.Item>2 Porções</ListGroup.Item>
+        <ListGroup.Item>Dificuldade:  </ListGroup.Item>
+        <ListGroup.Item> Porções</ListGroup.Item>
       </ListGroup>
-      <Card.Body className="d-flex justify-content-end">
-        <button type="button" title="Favoritar" className="buttonCards">
-          {/* <i
-            className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav"
-            title="Favoritar"
-          ></i> */}
-        </button>
+      <Card.Body>
+        {/* <button type="button" title="Favoritar" className="buttonCards">
+              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
+            </button>   vou engavetar essa ideia*/}
         <button
           type="button"
           title="Excluir"
@@ -63,15 +63,26 @@ export function CardDietaDetalhe() {
           placement="auto"
           overlay={
             <Popover id="popover-basic">
-              <Popover.Header as="h3">Receita Genérica</Popover.Header>
+              <Popover.Header as="h3">Receita</Popover.Header>
               <Popover.Body>
                 Calorias:
-                <br/>
-                Carboidratos:
-                <br/>
-                Lipídios:
-                <br/>
-                Proteina:
+                <br />
+                Carboidratos: g
+                <br />
+                Gorduras: g
+                <br />
+                Proteinas: g
+                <div className="border-bottom border-dark my-1" />
+                {/*                 {
+                  props.ingredientes.length < 1 ?
+                    "Não há ingredientes salvos"
+                    :
+                    props.ingredientes.map((i, index) => {
+                      return (
+                        <span key={index}>{i.nome} - {i.qtd}</span>
+                      )
+                    })
+                } */}
               </Popover.Body>
             </Popover>
           }
@@ -84,8 +95,15 @@ export function CardDietaDetalhe() {
             ></i>
           </button>
         </OverlayTrigger>
-        
+        {/* <button type="button" title="Regerar" className="buttonCards float-end">
+              <i
+                className="px-2 fa-solid fa-arrows-rotate iconeCardDetalheMais"
+                title="Regerar"
+              ></i>
+            </button>  */}
       </Card.Body>
-    </Card>
+    </Card >
+
+
   );
 }

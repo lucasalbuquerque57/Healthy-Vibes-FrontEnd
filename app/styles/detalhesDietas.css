@@ -1,83 +1,263 @@
-.dietaNome{
-    text-align: center;
-    font-weight: bold;
-    color: var(--text-octonary);
-    margin-top: 4rem;
+.dietaNome {
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-octonary);
+  margin-top: 4rem;
 }
 
-.cardDetalheDieta{
-    height: auto !important;
-    box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
-    background-color: var(--background-primary);
-    color: var(--text-octonary);
+.cardDetalheDieta {
+  height: auto !important;
+  box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
 }
 
-.list-group-item{
-    background-color: var(--background-primary);
-    color: var(--text-octonary);
+.list-group-item {
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
 }
 
-.botaoBackdropDieta{
-    background-color: none;
+.botaoBackdropDieta {
+  background-color: none;
 }
 
-.card p{
-    color: var(--text-duodenary);
+.card p {
+  color: var(--text-duodenary);
 }
 
-.iconeCardDetalheFav{
-    color: var(--rouge-princip) !important;
+.iconeCardDetalheFav {
+  color: var(--rouge-princip) !important;
 }
 
-.iconeCardDetalheMais{
-    color: var(--preto-icones) !important;
+.iconeCardDetalheMais {
+  color: var(--preto-icones) !important;
 }
 
 .buttonForm {
-    background-color: var(--button-tertiary);
-    font-weight: 700;
-    color: var(--branco);
-    border-radius: 1rem;
-    border-color: var(--misc-quinary);
-    width: 10rem;
+  background-color: var(--button-tertiary);
+  font-weight: 700;
+  color: var(--branco);
+  border-radius: 1rem;
+  border-color: var(--misc-quinary);
+  width: 10rem;
 }
 
 .buttonForm:hover {
-    background-color: var(--button-quaternary);
-    border: 1px solid var(--sombra-oportunista);
-    color: var(--branco);
+  background-color: var(--button-quaternary);
+  border: 1px solid var(--sombra-oportunista);
+  color: var(--branco);
 }
 
 @media screen and (max-width: 331px) {
-    .card-container {
-        justify-items: left;
-    }
+  .card-container {
+    justify-items: left;
+  }
 
-    .conjuntoRefeicoes {
-        padding-right: 0 !important;
-        padding-left: 0 !important;
-    }
+  .conjuntoRefeicoes {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .card-container {
-        justify-items: center;
-    }
-} 
+  .card-container {
+    justify-items: center;
+  }
+}
 
 .fw-bold.text-center.toast-body {
-    background-color: var(--background-vigintenary);
-    color: var(--text-octonary);
+  background-color: var(--background-vigintenary);
+  color: var(--text-octonary);
 }
 
-
-.apagarDetalheDieta{
-    color: var(--background-primary) !important;
-    -webkit-text-stroke-width: 1.5px; 
-    -webkit-text-stroke-color: var(--preto-icones); 
-    
+.apagarDetalheDieta {
+  color: var(--background-primary) !important;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--preto-icones);
 }
 
-.buttonCards{
-    font-size: 1.2rem;
+.buttonCards {
+  font-size: 1.2rem;
 }
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.blocoReceitas {
+  align-items: center;
+
+  border: 1px solid var(--background-denary);
+  justify-content: center;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 3rem;
+}
+
+/*.blocoReceitas.h1 {
+    position: fixed;
+  }*/
+
+.gerarNov {
+  margin-left: 20rem;
+  margin-right: -20rem;
+}
+
+.container-receita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-gerar {
+  display: flex;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.container-gerar.p {
+  font-size: 100px;
+}
+
+.card-titulo-botoes {
+  display: flex;
+}
+
+.opcoes {
+  background: none;
+  border: none;
+}
+
+.card-title {
+  padding-right: 1rem;
+}
+
+.buttonForm {
+  background-color: var(--button-tertiary);
+  font-weight: bold;
+  color: var(--branco);
+  border-radius: 1rem;
+  border-color: var(--misc-quinary);
+  width: 10rem;
+}
+
+.buttonForm:hover {
+  background-color: var(--button-quaternary);
+  border: 1px solid var(--sombra-oportunista);
+  color: var(--branco);
+}
+
+/* os bglhs abaixo eu adicionei junto com a atualizacao dessa tela */
+
+.dietaNome {
+  text-align: center;
+  font-weight: bold;
+  color: var(--text-octonary);
+  margin-top: 4rem;
+}
+
+.cardDetalheDieta {
+  height: auto !important;
+  width: auto;
+  box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+}
+
+.list-group-item {
+  background-color: var(--background-primary);
+  color: var(--text-octonary);
+}
+
+.botaoBackdropDieta {
+  background-color: none;
+}
+
+.card p {
+  color: var(--text-duodenary);
+}
+
+.iconeCardDetalheFav {
+  color: var(--rouge-princip) !important;
+}
+
+.iconeCardDetalheMais {
+  color: var(--preto-icones) !important;
+}
+
+.card-container {
+  height: auto;
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #303336;
+}
+
+.buttonCards {
+  border: none;
+  background: none;
+}
+
+.card {
+  height: 29.3rem;
+  border-radius: 0.7rem;
+  box-shadow: 0rem 2.5rem 2.5rem -1.25rem var(--blue-light);
+  overflow: hidden;
+  border-color: #a6a6a6;
+}
+
+.card .card-top {
+  height: 14.75rem;
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #303336;
+  background-color: #d1e8ee;
+  overflow: hidden;
+}
+
+.card .card-top .ImageAdress {
+  display: block;
+  height: 100%;
+}
+
+.card .card-top .ImageAdress img {
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
+  object-position: center;
+  transition: 300ms;
+}
+
+.card .card-content {
+  background-color: var(--background-primary);
+  padding: 1.875rem;
+}
+
+.card .card-content .tag {
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+}
+
+.card .tag-travel {
+  color: var(--text-verde);
+}
+
+.card .title {
+  color: var(--text-quidenary);
+  font-weight: 700;
+  transition: 300ms;
+}
+
+.card p {
+  color: #7b8591;
+  margin-top: 1.25rem;
+}
+
+/* fim da atualizacao q fiz da tela */
