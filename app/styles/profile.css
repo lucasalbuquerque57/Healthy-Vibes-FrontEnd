@@ -94,7 +94,7 @@ input[type="password"],
 /* EstiloCardDieta */
 .card-container {
   position: relative;
-  display: grid;
+  /* display: grid;  isso era oq tava quebrando a exibicao do carousel no dietas detalhes*/
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2.5rem;
   width: 100%;

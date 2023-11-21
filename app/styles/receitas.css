@@ -180,3 +180,43 @@
 }
 
 /* fim da atualizacao q fiz da tela */
+
+/* Carousel de Cards*/
+
+@layer primereact {
+  .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    background-color: var(--background-vigintidenary);
+  }
+}
+
+@layer primereact {
+  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button, .p-galleria .p-galleria-indicators .p-galleria-indicator.p-highlight button {
+    background-color: var(--background-quinary) !important;
+  }
+}
+
+@layer primereact {
+  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    
+  }
+}
+
+@layer primereact {
+  .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
+    background: var(--background-nonary);
+  }
+}
+
+@layer primereact {
+  .p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next {
+    color: var(--misc-octonary);
+  }
+}
+
+@layer primereact {
+  .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover, .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
+    color: var(--background-undenary);
+    border-color: transparent;
+    background: var(--background-vigintidenary);
+  }
+}

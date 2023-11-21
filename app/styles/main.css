@@ -18,7 +18,7 @@
   --background-octodenary: #efbbba;
   --background-nonadenary: #989898;
   --background-vigintenary: #faebd7;
-  /* --background-vigintidenary: #  */
+  --background-vigintidenary: #cecaca;
 
   --background-card: #d9d9d9;
 
@@ -116,11 +116,13 @@
   --background-undenary: #ff0;
   --background-duodenary: #000;
   --background-tridenary: #fff;
+  --background-quatordenary: #000;
   --background-quinodenary: #ff0;
   --background-senodenary: #000;
   --background-octodenary: #000;
   --background-nonadenary: #2a2a2a;
   --background-vigintenary: #000;
+  --background-vigintidenary: #2a2a2a;
 
   --button-secondary: #ff0;
   --button-tertiary: #ff0;

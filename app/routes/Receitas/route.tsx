@@ -174,7 +174,7 @@ export default function Receitas() {
                 responsiveOptions={responsiveOptions}
                 itemTemplate={cardTemplate}
               />
-
+              
             </section>
           </div>
           <h2 className="dietaNome">Almoço</h2>
