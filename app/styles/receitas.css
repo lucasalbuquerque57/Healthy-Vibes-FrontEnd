@@ -85,8 +85,8 @@
   color: var(--text-octonary);
 }
 
-.teste{
- width: fit-content;
+.adaptLenght{
+  width: fit-content;
 }
 
 .list-group-item{

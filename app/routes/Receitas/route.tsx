@@ -53,6 +53,8 @@ const responsiveOptions = [
 export default function Receitas() {
   const navigate = useNavigate();
   const [recipesFiltered, setRecipesFiltered] = useState<RecipeInterface[]>([]);
+  const [numVisible, setNumVisible] = useState(0)
+  const [numScroll, setNumScroll] = useState(0)
 
   function generateRecipe(recipes: RecipeInterface[]) {
     if (localStorage.getItem("resultsCalc")) {
@@ -136,6 +138,23 @@ export default function Receitas() {
       setRecipesFiltered(recipes)
     }
 
+    if (window.innerWidth < 1199) {
+      setNumScroll(1)
+      setNumVisible(1)
+    }
+    else if (window.innerWidth < 991) {
+      setNumScroll(1)
+      setNumVisible(2)
+    }
+    else if (window.innerWidth < 767) {
+      setNumScroll(1)
+      setNumVisible(1)
+    }
+    else {
+      setNumScroll(3)
+      setNumVisible(3)
+    }
+
 
   }, [handleGet]);
 
@@ -168,68 +187,99 @@ export default function Receitas() {
         <>
           <h2 className="dietaNome">Café da Manhã</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid d-flex justify-content-center">
+            <section className="card-container container-fluid">
 
-              <Carousel
-                value={
-                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã"))
-                }
-                numVisible={3}
-                numScroll={3}
-                responsiveOptions={responsiveOptions}
-                itemTemplate={cardTemplate}
-                contentClassName="teste"
-              />
+              <div className={`
+              ${recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã")).length < 3 && "d-flex"} 
+              justify-content-center align-items-center`
+              }>
+                <Carousel
+                  value={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã"))
+                  }
+                  numVisible={numVisible}
+                  numScroll={numScroll}
+                  responsiveOptions={responsiveOptions}
+                  itemTemplate={cardTemplate}
+                  className={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã")).length < 3 ?
+                      "adaptLenght" : ""
+                  }
+                />
+              </div>
 
             </section>
           </div>
           <h2 className="dietaNome">Almoço</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid d-flex justify-content-center">
+            <section className="card-container container-fluid">
 
-              <Carousel
-                value={
-                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço"))
-                }
-                numVisible={3}
-                numScroll={3}
-                responsiveOptions={responsiveOptions}
-                itemTemplate={cardTemplate}
-                contentClassName="teste"
-              />
+              <div className={`
+              ${recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço")).length < 3 && "d-flex"} 
+              justify-content-center align-items-center`
+              }>
+                <Carousel
+                  value={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço"))
+                  }
+                  numVisible={numVisible}
+                  numScroll={numScroll}
+                  responsiveOptions={responsiveOptions}
+                  itemTemplate={cardTemplate}
+                  className={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço")).length < 3 ?
+                      "adaptLenght" : ""
+                  }
+                />
+              </div>
 
             </section>
           </div>
           <h2 className="dietaNome">Lanche</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid d-flex justify-content-center">
+            <section className="card-container container-fluid">
 
-              <Carousel
-                value={
-                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche"))
-                }
-                numVisible={3}
-                numScroll={3}
-                responsiveOptions={responsiveOptions}
-                itemTemplate={cardTemplate}
-                contentClassName="teste"
-              />
+              <div className={`
+              ${recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche")).length < 3 && "d-flex"} 
+              justify-content-center align-items-center`
+              }>
+                <Carousel
+                  value={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche"))
+                  }
+                  numVisible={numVisible}
+                  numScroll={numScroll}
+                  responsiveOptions={responsiveOptions}
+                  itemTemplate={cardTemplate}
+                  className={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche")).length < 3 ?
+                      "adaptLenght" : ""
+                  }
+                />
+              </div>
 
             </section>
           </div>
           <h2 className="dietaNome">Janta</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid d-flex justify-content-center">
+            <section className="card-container container-fluid">
 
-              <div className="d-flex justify-content-center">
+              <div className={`
+              ${recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta")).length < 3 && "d-flex"} 
+              justify-content-center align-items-center`
+              }>
                 <Carousel
                   value={
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta"))
                   }
-                  numVisible={3} numScroll={3}
+                  numVisible={numVisible}
+                  numScroll={numScroll}
                   responsiveOptions={responsiveOptions}
                   itemTemplate={cardTemplate}
-                  contentClassName="teste"
+                  className={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta")).length < 3 ?
+                      "adaptLenght" : ""
+                  }
                 />
               </div>
 
