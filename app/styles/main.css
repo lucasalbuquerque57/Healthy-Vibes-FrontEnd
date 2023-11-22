@@ -77,6 +77,7 @@
   --sombra-clara-effect: #edede8;
   --verde-efeito: #D3F0D7;
   --verde-efeito2: #9cae95;
+  --cinza-efeito: #262626;
 
   --verde-princip: #0a9906;
   --salmao-princip: #ff785a;
@@ -160,6 +161,7 @@
 
   --verde-efeito: #ff0;
   --verde-efeito2: #655205a3;
+  --cinza-efeito: #655205a3;
 
   --transparent-primary: none;
   --transparent-secondary: none;
@@ -369,8 +371,29 @@ header .nav-link:hover {
 }
 
 .imagemPerfil {
-  width: 6vh !important;
+  margin-right: 1rem;
   /* height: 6vh !important; */ /*   Se deixar o width e o height juntos, ele fica com as proporcoes estranhas (ss vzs)    */
+}
+
+.perfilDropdownSummoner{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.perfilDropdown{
+  
+  background-color: var(--background-denary);
+  color: var(--text-secondary);
+  border: solid var(--text-undenary) 1px;
+}
+
+.ItemDropdown{
+  color: var(--text-tridenary);
+}
+
+.dropdown-item:focus, .dropdown-item:hover{
+  background-color: var(--cinza-efeito);
+  color: var(--text-tridenary);
 }
 
 .itensAcessibilidade {

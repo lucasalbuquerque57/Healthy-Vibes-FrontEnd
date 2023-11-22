@@ -147,7 +147,7 @@ __export(root_exports, {
 var import_react2 = require("@remix-run/react");
 
 // app/styles/main.css
-var main_default = "/build/_assets/main-727P5KNB.css";
+var main_default = "/build/_assets/main-YLX2TL2F.css";
 
 // app/root.tsx
 var import_react_vlibras = __toESM(require("@moreiraste/react-vlibras")), import_core2 = require("@hookstate/core");
@@ -546,153 +546,241 @@ function Header() {
     setTheme(theme === "contraOn" ? "contraOff" : "contraOn");
   };
   return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("header", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("nav", { className: "navbar navbar-expand-xl", id: "topo", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "container-fluid baseNav", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "navbar-brand trapezio", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: "/IconeLogo.png", alt: "Logo do Healthy Vibes", className: "logoHeader" }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "navbar-brand trapezio", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+      "img",
+      {
+        src: "/IconeLogo.png",
+        alt: "Logo do Healthy Vibes",
+        className: "logoHeader"
+      },
+      void 0,
+      !1,
+      {
+        fileName: "app/components/Header.tsx",
+        lineNumber: 45,
+        columnNumber: 15
+      },
+      this
+    ) }, void 0, !1, {
       fileName: "app/components/Header.tsx",
-      lineNumber: 52,
-      columnNumber: 29
+      lineNumber: 44,
+      columnNumber: 13
     }, this) }, void 0, !1, {
       fileName: "app/components/Header.tsx",
-      lineNumber: 51,
-      columnNumber: 25
-    }, this) }, void 0, !1, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 50,
-      columnNumber: 21
+      lineNumber: 43,
+      columnNumber: 11
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "navbar-toggler navBarButton", type: "button", "data-bs-toggle": "collapse", "data-bs-target": "#collapsibleNavbar", "aria-controls": "collapsibleNavbar", "aria-expanded": "false", "aria-label": "Toggle navigation", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("i", { className: "fa-solid fa-bars navBarIcon" }, void 0, !1, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 56,
-      columnNumber: 25
-    }, this) }, void 0, !1, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 55,
-      columnNumber: 21
-    }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "collapse navbar-collapse navSla", id: "collapsibleNavbar", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "navbar-nav me-auto mb-2 mb-lg-0", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/profile", children: "Dietas" }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 62,
-          columnNumber: 33
-        }, this) }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+      "button",
+      {
+        className: "navbar-toggler navBarButton",
+        type: "button",
+        "data-bs-toggle": "collapse",
+        "data-bs-target": "#collapsibleNavbar",
+        "aria-controls": "collapsibleNavbar",
+        "aria-expanded": "false",
+        "aria-label": "Toggle navigation",
+        children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("i", { className: "fa-solid fa-bars navBarIcon" }, void 0, !1, {
           fileName: "app/components/Header.tsx",
           lineNumber: 61,
-          columnNumber: 29
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/CalculadoraNutricional", children: "Calculadora" }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 65,
-          columnNumber: 33
-        }, this) }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 64,
-          columnNumber: 29
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/Exercicios", children: "Exerc\xEDcios" }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 68,
-          columnNumber: 33
-        }, this) }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 67,
-          columnNumber: 29
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/controleConsumo", children: "Controle de Consumo" }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 71,
-          columnNumber: 33
-        }, this) }, void 0, !1, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 70,
-          columnNumber: 29
+          columnNumber: 13
         }, this)
-      ] }, void 0, !0, {
+      },
+      void 0,
+      !1,
+      {
         fileName: "app/components/Header.tsx",
-        lineNumber: 59,
-        columnNumber: 25
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("hr", { className: "nav-item-divider w-100 d-block d-lg-none mx-2" }, void 0, !1, {
-        fileName: "app/components/Header.tsx",
-        lineNumber: 75,
-        columnNumber: 25
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "profile nav-item", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "logCadButtons", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Login", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "btn  loginButton", children: "Entrar" }, void 0, !1, {
+        lineNumber: 52,
+        columnNumber: 11
+      },
+      this
+    ),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+      "div",
+      {
+        className: "collapse navbar-collapse navSla",
+        id: "collapsibleNavbar",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("ul", { className: "navbar-nav me-auto mb-2 mb-lg-0", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/profile", children: "Dietas" }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 69,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 68,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/CalculadoraNutricional", children: "Calculadora" }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 74,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 73,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/Exercicios", children: "Exerc\xEDcios" }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 79,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 78,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("li", { className: "nav-item", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { className: "nav-link", to: "/controleConsumo", children: "Controle de Consumo" }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 84,
+              columnNumber: 17
+            }, this) }, void 0, !1, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 83,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/components/Header.tsx",
-            lineNumber: 80,
-            columnNumber: 51
-          }, this) }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 80,
-            columnNumber: 33
+            lineNumber: 67,
+            columnNumber: 13
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Cadastro", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "btn  cadButton", children: "Cadastre-se" }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 82,
-            columnNumber: 54
-          }, this) }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 82,
-            columnNumber: 33
-          }, this)
-        ] }, void 0, !0, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 78,
-          columnNumber: 29
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "itensAcessibilidade", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: "/AcessFontSizeBiggerV2.png", className: "iconeAcessibilidade", title: "Aumentar Fonte", alt: "Aumentar fonte", onClick: () => changeFontSize("aumentar") }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 87,
-            columnNumber: 33
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: "/AcessFontSizeLowerV2.png", className: "iconeAcessibilidade", title: "Diminuir Fonte", alt: "Diminuir Fonte", onClick: () => changeFontSize("diminuir") }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 88,
-            columnNumber: 33
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: `/AcessFontHighConrV2${theme == "contraOn" ? "-inverso" : ""}.png`, className: "iconeAcessibilidade", title: "Alto contraste", alt: "Alto contraste", onClick: switchContraste }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("hr", { className: "nav-item-divider w-100 d-block d-lg-none mx-2" }, void 0, !1, {
             fileName: "app/components/Header.tsx",
             lineNumber: 89,
-            columnNumber: 33
+            columnNumber: 13
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Acessibilidade", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("img", { src: "/AcessFontInfoV2.png", className: "iconeAcessibilidade infoAcess", alt: "acesso a acessibilidae" }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "profile nav-item", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "logCadButtons", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Login", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "btn  loginButton", children: "Entrar" }, void 0, !1, {
+                fileName: "app/components/Header.tsx",
+                lineNumber: 125,
+                columnNumber: 19
+              }, this) }, void 0, !1, {
+                fileName: "app/components/Header.tsx",
+                lineNumber: 124,
+                columnNumber: 18
+              }, this),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Cadastro", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("button", { className: "btn  cadButton", children: "Cadastre-se" }, void 0, !1, {
+                fileName: "app/components/Header.tsx",
+                lineNumber: 129,
+                columnNumber: 19
+              }, this) }, void 0, !1, {
+                fileName: "app/components/Header.tsx",
+                lineNumber: 128,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, !0, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 91,
+              columnNumber: 15
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "itensAcessibilidade", children: [
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+                "img",
+                {
+                  src: "/AcessFontSizeBiggerV2.png",
+                  className: "iconeAcessibilidade",
+                  title: "Aumentar Fonte",
+                  alt: "Aumentar fonte",
+                  onClick: () => changeFontSize("aumentar")
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/Header.tsx",
+                  lineNumber: 134,
+                  columnNumber: 17
+                },
+                this
+              ),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+                "img",
+                {
+                  src: "/AcessFontSizeLowerV2.png",
+                  className: "iconeAcessibilidade",
+                  title: "Diminuir Fonte",
+                  alt: "Diminuir Fonte",
+                  onClick: () => changeFontSize("diminuir")
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/Header.tsx",
+                  lineNumber: 141,
+                  columnNumber: 17
+                },
+                this
+              ),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+                "img",
+                {
+                  src: `/AcessFontHighConrV2${theme == "contraOn" ? "-inverso" : ""}.png`,
+                  className: "iconeAcessibilidade",
+                  title: "Alto contraste",
+                  alt: "Alto contraste",
+                  onClick: switchContraste
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/Header.tsx",
+                  lineNumber: 148,
+                  columnNumber: 17
+                },
+                this
+              ),
+              /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/Acessibilidade", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(
+                "img",
+                {
+                  src: "/AcessFontInfoV2.png",
+                  className: "iconeAcessibilidade infoAcess",
+                  alt: "acesso a acessibilidae"
+                },
+                void 0,
+                !1,
+                {
+                  fileName: "app/components/Header.tsx",
+                  lineNumber: 158,
+                  columnNumber: 19
+                },
+                this
+              ) }, void 0, !1, {
+                fileName: "app/components/Header.tsx",
+                lineNumber: 157,
+                columnNumber: 17
+              }, this)
+            ] }, void 0, !0, {
+              fileName: "app/components/Header.tsx",
+              lineNumber: 133,
+              columnNumber: 15
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/components/Header.tsx",
             lineNumber: 90,
-            columnNumber: 60
-          }, this) }, void 0, !1, {
-            fileName: "app/components/Header.tsx",
-            lineNumber: 90,
-            columnNumber: 33
+            columnNumber: 13
           }, this)
-        ] }, void 0, !0, {
-          fileName: "app/components/Header.tsx",
-          lineNumber: 85,
-          columnNumber: 29
-        }, this)
-      ] }, void 0, !0, {
+        ]
+      },
+      void 0,
+      !0,
+      {
         fileName: "app/components/Header.tsx",
-        lineNumber: 76,
-        columnNumber: 25
-      }, this)
-    ] }, void 0, !0, {
-      fileName: "app/components/Header.tsx",
-      lineNumber: 58,
-      columnNumber: 21
-    }, this)
+        lineNumber: 63,
+        columnNumber: 11
+      },
+      this
+    )
   ] }, void 0, !0, {
     fileName: "app/components/Header.tsx",
-    lineNumber: 49,
-    columnNumber: 17
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Header.tsx",
-    lineNumber: 48,
-    columnNumber: 13
-  }, this) }, void 0, !1, {
-    fileName: "app/components/Header.tsx",
-    lineNumber: 47,
+    lineNumber: 42,
     columnNumber: 9
+  }, this) }, void 0, !1, {
+    fileName: "app/components/Header.tsx",
+    lineNumber: 41,
+    columnNumber: 7
+  }, this) }, void 0, !1, {
+    fileName: "app/components/Header.tsx",
+    lineNumber: 40,
+    columnNumber: 5
   }, this);
 }
 
@@ -8307,7 +8395,7 @@ function Index5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-EYBY2B52.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-UCJ2WXGJ.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-NUICH3LQ.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-HK43OSIZ.js", imports: ["/build/_shared/chunk-DWEXQPFO.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-DYZDDIBU.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-I227RQEI.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-EZOK6UL7.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-RBWI3CPO.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-T5UHZPP5.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-5ETIVLBM.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-TBHKZBF5.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-OWRHKPMQ.js", imports: ["/build/_shared/chunk-GKUL633R.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-CBNQG4RK.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-DWEXQPFO.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-6WBXCJ4V.js", imports: ["/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-LMRXWLOE.js", imports: ["/build/_shared/chunk-36KPUIZC.js", "/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-J3JSQGHD.js", imports: ["/build/_shared/chunk-PC6V7MZQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-ALM532NR.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-WBR3LCUQ.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-36KPUIZC.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-TX72UX46.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-ZGN4J74C.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-PC6V7MZQ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-EMA5SJ3Q.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "6e64c28e", hmr: { runtime: "/build/_shared\\chunk-NUICH3LQ.js", timestamp: 1700658878867 }, url: "/build/manifest-6E64C28E.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-FYICVPKF.js", imports: ["/build/_shared/chunk-JXHNNPNR.js", "/build/_shared/chunk-V75ELX2M.js", "/build/_shared/chunk-H36SQQE5.js", "/build/_shared/chunk-JKUASME7.js", "/build/_shared/chunk-KXGQR6J5.js", "/build/_shared/chunk-N4FG5RPV.js", "/build/_shared/chunk-TVZC3ZTX.js", "/build/_shared/chunk-RODUX5XG.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-RQ3CHVXO.js", imports: ["/build/_shared/chunk-NH37YFB2.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-HKQIW5W7.js", imports: ["/build/_shared/chunk-YOUP546H.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-NUHXSXLL.js", imports: ["/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-UELWPNEM.js", imports: ["/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-EJ4SPYPD.js", imports: ["/build/_shared/chunk-YOUP546H.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-OWCZQ2P3.js", imports: ["/build/_shared/chunk-YOUP546H.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-XOJG3D4H.js", imports: ["/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-K3BC2FNT.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-LYDBTFFN.js", imports: ["/build/_shared/chunk-YOUP546H.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-4K4QWIUO.js", imports: ["/build/_shared/chunk-GKUL633R.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-PKNFP52U.js", imports: ["/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-NH37YFB2.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-D7HLIRQB.js", imports: ["/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-PYNHDLDJ.js", imports: ["/build/_shared/chunk-JHXZEQ4T.js", "/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-J47KQDCJ.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-4ZXYBIIP.js", imports: ["/build/_shared/chunk-YOUP546H.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-EIUMDWWF.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-7DAPTMM4.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-JHXZEQ4T.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-MFJOEPJ5.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-K3BC2FNT.js", "/build/_shared/chunk-GKUL633R.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-4YQICWZ2.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-YOUP546H.js", "/build/_shared/chunk-QH3VOKBT.js", "/build/_shared/chunk-FBV552CG.js", "/build/_shared/chunk-WQFJ2CRD.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-PFSZAZDK.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "eff5fd22", hmr: { runtime: "/build/_shared\\chunk-KXGQR6J5.js", timestamp: 1700691684827 }, url: "/build/manifest-EFF5FD22.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
