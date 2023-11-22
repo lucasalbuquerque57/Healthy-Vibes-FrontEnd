@@ -4,6 +4,7 @@ import { Carousel } from 'primereact/carousel';
 import type { RecipeInterface } from "../Receitas/route";
 import { useEffect, useState } from "react";
 
+
 interface CardRefeicao {
   titulo: string
   qtdReceita: number

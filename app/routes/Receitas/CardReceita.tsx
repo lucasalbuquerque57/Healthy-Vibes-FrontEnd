@@ -17,7 +17,7 @@ export function CardReceita(props: CardsProps) {
   return (
 
     <Card className="cardDetalheDieta mx-md-5">
-      <Card.Img variant="top" src="/IconeLogo.png" />
+      <Card.Img variant="top" src="/IconeLogo.png" width="200px" height="200px" />
       <Card.Body>
         <Card.Title>{props?.title}</Card.Title>
         <Card.Text>
@@ -29,9 +29,6 @@ export function CardReceita(props: CardsProps) {
         <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        {/* <button type="button" title="Favoritar" className="buttonCards">
-              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
-            </button>   vou engavetar essa ideia*/}
         <OverlayTrigger
           trigger="click"
           placement="auto"

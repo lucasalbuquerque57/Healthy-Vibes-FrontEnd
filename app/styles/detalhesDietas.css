@@ -300,3 +300,7 @@
     background: var(--background-vigintidenary);
   }
 }
+
+.p-items-hidden .p-carousel-item{
+  visibility: visible !important;
+}

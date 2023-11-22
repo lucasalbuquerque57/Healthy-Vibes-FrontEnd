@@ -5,7 +5,7 @@ export default function dietasProfile() {
     return (
         <main>
             <div className="container-fluid d-flex justify-content-center align-items-center">
-                <section className="card-container">
+                <section className="card-container cardDiet">
                     <CardDieta
                         title="Dieta Sla"
                     />

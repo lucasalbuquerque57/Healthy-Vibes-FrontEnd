@@ -109,6 +109,9 @@ input[type="password"],
   color: #303336;
 }
 
+.cardDiet{
+  display: grid;
+}
 .buttonCards {
   border: none;
   background: none;

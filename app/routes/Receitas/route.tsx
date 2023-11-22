@@ -9,6 +9,7 @@ import { axiosHealthyApi } from "~/configs/https";
 import { useCallback, useEffect, useState } from "react";
 import { Carousel } from 'primereact/carousel';
 
+
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: receitas }];
 };
@@ -31,27 +32,27 @@ export interface RecipeInterface {
   image: string;
 }
 
+const responsiveOptions = [
+  {
+    breakpoint: '1199px',
+    numVisible: 1,
+    numScroll: 1
+  },
+  {
+    breakpoint: '991px',
+    numVisible: 2,
+    numScroll: 1
+  },
+  {
+    breakpoint: '767px',
+    numVisible: 1,
+    numScroll: 1
+  }
+];
+
 export default function Receitas() {
   const navigate = useNavigate();
   const [recipesFiltered, setRecipesFiltered] = useState<RecipeInterface[]>([]);
-
-  const responsiveOptions = [
-    {
-      breakpoint: '1199px',
-      numVisible: 1,
-      numScroll: 1
-    },
-    {
-      breakpoint: '991px',
-      numVisible: 2,
-      numScroll: 1
-    },
-    {
-      breakpoint: '767px',
-      numVisible: 1,
-      numScroll: 1
-    }
-  ];
 
   function generateRecipe(recipes: RecipeInterface[]) {
     if (localStorage.getItem("resultsCalc")) {
@@ -127,16 +128,20 @@ export default function Receitas() {
       });
   }, []);
 
+
   useEffect(() => {
     if (!localStorage.getItem("RecipesLocalStorage")) handleGet();
     else {
       const recipes: RecipeInterface[] = JSON.parse(localStorage.getItem("RecipesLocalStorage") || "");
       setRecipesFiltered(recipes)
     }
+
+
   }, [handleGet]);
 
   function cardTemplate(recipe: RecipeInterface) {
     return (
+
       <CardReceita
         title={recipe.titulo}
         dificuldade="Fácil"
@@ -163,7 +168,7 @@ export default function Receitas() {
         <>
           <h2 className="dietaNome">Café da Manhã</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid">
+            <section className="card-container container-fluid d-flex justify-content-center">
 
               <Carousel
                 value={
@@ -173,13 +178,14 @@ export default function Receitas() {
                 numScroll={3}
                 responsiveOptions={responsiveOptions}
                 itemTemplate={cardTemplate}
+                contentClassName="teste"
               />
-              
+
             </section>
           </div>
           <h2 className="dietaNome">Almoço</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid">
+            <section className="card-container container-fluid d-flex justify-content-center">
 
               <Carousel
                 value={
@@ -189,13 +195,14 @@ export default function Receitas() {
                 numScroll={3}
                 responsiveOptions={responsiveOptions}
                 itemTemplate={cardTemplate}
+                contentClassName="teste"
               />
 
             </section>
           </div>
           <h2 className="dietaNome">Lanche</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid">
+            <section className="card-container container-fluid d-flex justify-content-center">
 
               <Carousel
                 value={
@@ -205,23 +212,26 @@ export default function Receitas() {
                 numScroll={3}
                 responsiveOptions={responsiveOptions}
                 itemTemplate={cardTemplate}
+                contentClassName="teste"
               />
 
             </section>
           </div>
           <h2 className="dietaNome">Janta</h2>
           <div className="container-fluid d-flex justify-content-center align-items-center">
-            <section className="card-container container-fluid">
+            <section className="card-container container-fluid d-flex justify-content-center">
 
-              <Carousel
-                value={
-                  recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta"))
-                }
-                numVisible={3}
-                numScroll={3}
-                responsiveOptions={responsiveOptions}
-                itemTemplate={cardTemplate}
-              />
+              <div className="d-flex justify-content-center">
+                <Carousel
+                  value={
+                    recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta"))
+                  }
+                  numVisible={3} numScroll={3}
+                  responsiveOptions={responsiveOptions}
+                  itemTemplate={cardTemplate}
+                  contentClassName="teste"
+                />
+              </div>
 
             </section>
           </div>
