@@ -12,6 +12,7 @@ interface CardsProps {
   ingredientes: [{ nome: string, qtd: string }];
 }
 
+
 export function CardReceita(props: CardsProps) {
 
   return (

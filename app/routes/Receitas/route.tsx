@@ -138,6 +138,9 @@ export default function Receitas() {
       setRecipesFiltered(recipes)
     }
 
+  }, [handleGet]);
+
+  useEffect(() => {
     if (window.innerWidth < 1199) {
       setNumScroll(1)
       setNumVisible(1)
@@ -155,8 +158,8 @@ export default function Receitas() {
       setNumVisible(3)
     }
 
+  }, [])
 
-  }, [handleGet]);
 
   function cardTemplate(recipe: RecipeInterface) {
     return (

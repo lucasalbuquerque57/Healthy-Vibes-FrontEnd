@@ -1,8 +1,8 @@
-interface CardsProps {
-
+interface FiltroProps {
+    update: Function
 }
 
-export function FiltroBarra(props: CardsProps) {
+export function FiltroBarra(props: FiltroProps) {
 
 
     return (
@@ -23,7 +23,10 @@ export function FiltroBarra(props: CardsProps) {
                     <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small grupoCategoria">
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input className="form-check-input" type="checkbox" id="flexCheckDefault"
+                                    value="alongamento"
+                                    onChange={(e) => props.update(e.target.checked, "alongamento")}
+                                />
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                     Alongamento
                                 </label>
