@@ -1,6 +1,5 @@
 
 import controleConsumo from "~/styles/controleConsumo.css";
-import type { CalendarDateTemplateEvent } from 'primereact/calendar';
 import { Calendar } from 'primereact/calendar';
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
@@ -19,17 +18,29 @@ export const meta: MetaFunction = () => ({
 export const links: LinksFunction = () => {
     return [{ rel: "stylesheet", href: controleConsumo }];
 };
+
+
 export default function ControleConsumo() {
     const [date, setDate] = useState<Date>(new Date())
     const navigate = useNavigate();
 
-    const dateTemplate = (date: CalendarDateTemplateEvent) => {
-        if (date.day > 10 && date.day < 15) {
-            return <strong className="border border-3 border-selecionado rounded-circle px-1">{date.day}</strong>;
-        }
+    /* const handleGet = useCallback(async () => {
+        await axiosHealthyApi
+            .get("/consumptions")
+            .then((r) => {
+                setDateComnsuption(r.data);
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+    }, []);
 
-        return date.day;
-    };
+    useEffect(() => {
+        handleGet()
+
+    }, [handleGet]) */
+
+
 
     function useHandleSearch(e: FormEvent) {
 
@@ -54,7 +65,7 @@ export default function ControleConsumo() {
                         <Card.Body>
                             <Card.Title>Instrução </Card.Title>
                             <Card.Text>
-                                Os dias circulados em verde possuem dados registrados
+                                Seleciona a data e pesquise
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -68,7 +79,6 @@ export default function ControleConsumo() {
                             }}
                             dateFormat="dd/mm/yy"
                             inline
-                            dateTemplate={dateTemplate}
                         />
                     </div>
                     <div className="row">
