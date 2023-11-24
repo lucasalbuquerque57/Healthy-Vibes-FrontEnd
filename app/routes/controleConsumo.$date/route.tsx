@@ -6,13 +6,14 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import controleConsumo from "~/styles/controleConsumo.css";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
 import ModalInsert from "./ModalInsert";
 import { useLoaderData } from "@remix-run/react";
 import { useHookstate } from "@hookstate/core";
 import { themePage } from "~/script/changeTheme";
+import { axiosHealthyApi } from "~/configs/https";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -23,11 +24,11 @@ export async function loader({
 
     const urlParams = new URLSearchParams(params.date)
 
-    if (params.date?.includes(".") && urlParams.has('date')) {
+    const diaMes = new Date(urlParams.get("date") || "")
 
-        const diaMes = urlParams.get("date") || ""
+    if (diaMes.getDate() > 0) {
 
-        return diaMes.replaceAll(".", "/");
+        return diaMes
     } else {
         throw new Error("Url inválida")
     }
@@ -37,14 +38,27 @@ export async function loader({
 
 export const meta: MetaFunction<typeof loader> = ({
     data,
-}) =>
-({
-    title: "Dia: " + data
-});
+}) => {
+
+    const actualDate = new Date(data)
+
+    return ({
+        title: "Dia: " + actualDate.getDate() + "/" + actualDate.getMonth() + "/" + actualDate.getFullYear()
+    })
+
+};
 
 export const links: LinksFunction = () => {
     return [{ rel: "stylesheet", href: controleConsumo }];
 };
+
+interface ConsumptionInterface {
+    id: string,
+    quantidade: number,
+    tipoConsumo: string,
+    user: string,
+    createdAt: string
+}
 
 
 export default function ControleConsumo() {
@@ -66,6 +80,34 @@ export default function ControleConsumo() {
         if (localStorage.getItem("selectedDiet"))
             setDiet(localStorage.getItem("selectedDiet") || "")
     }, [])
+
+
+    const actualDate = new Date(data)
+
+
+    const [consumptions, setConsumptions] = useState<ConsumptionInterface[]>([])
+
+    const handleGet = useCallback(async () => {
+        const actualDate = new Date(data)
+        await axiosHealthyApi
+            .get("/consumptions/myConsumptions")
+            .then((r) => {
+                const filterConsumptions: ConsumptionInterface[] = r.data
+                setConsumptions(
+                    filterConsumptions.filter((c) => {
+                        const date = new Date(c.createdAt)
+                        return (date.getDate() == actualDate.getDate() && date.getMonth() == actualDate.getMonth() && date.getFullYear() == actualDate.getFullYear())
+                    })
+                );
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+    }, [data]);
+
+    useEffect(() => {
+        handleGet()
+    }, [handleGet])
 
     const options = {
         responsive: true,
@@ -129,15 +171,13 @@ export default function ControleConsumo() {
         ],
     };
 
-    // Requisição de users para saber as dietas
-
     return (
         <main>
             <Header />
             <div id="conteudo" className="container-fluid texto">
 
                 <h1 className='first-title'>Controle de Consumo</h1>
-                <h2 className='first-title'>{data}</h2>
+                <h2 className='first-title'>{actualDate.getDate() + "/" + actualDate.getMonth() + "/" + actualDate.getFullYear()}</h2>
 
                 <div className='graphics row mt-3'>
                     <div className="controlwater col">
@@ -151,22 +191,30 @@ export default function ControleConsumo() {
                         <div className='container d-flex justify-content-center align-items-center'>
 
                             <div className="row g-2 pt-3">
+                                {
+                                    consumptions.filter((c) => c.tipoConsumo == "Água")
+                                        .map((c, index) => {
+                                            const dateC = new Date(c.createdAt)
+                                            const time =
+                                                `
+                                            ${dateC.getHours() < 10 ? "0" : ""}
+                                            ${dateC.getHours()}
+                                            :${dateC.getMinutes() < 10 ? "0" : ""}
+                                            ${dateC.getMinutes()}
+                                            `
+                                            return (
+                                                <CardInfos
+                                                    key={`${c.id}${index}`}
+                                                    horario={time.replaceAll(/\s/g, '')}
+                                                    quantidade={`${c.quantidade} Ml`}
+                                                    setUpdateOrInsert={setUpdateOrInsert}
+                                                    handleShow={handleShow}
+                                                    typeCard="Água"
+                                                />
+                                            )
+                                        })
+                                }
 
-                                <CardInfos
-                                    // Falta pegar o id
-                                    horario="15:00"
-                                    quantidade="300 Ml"
-                                    setUpdateOrInsert={setUpdateOrInsert}
-                                    handleShow={handleShow}
-                                    typeCard="Água"
-                                />
-                                <CardInfos
-                                    horario="12:20"
-                                    quantidade="200 Ml"
-                                    setUpdateOrInsert={setUpdateOrInsert}
-                                    handleShow={handleShow}
-                                    typeCard="Água"
-                                />
 
                                 <div className="col">
                                     <Button variant="success" className="m-md-4 float-end float-md-none"

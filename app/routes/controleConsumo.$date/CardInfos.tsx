@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 
 interface CardsProps {
+    id?: string
     horario: string;
     quantidade: string;
     typeCard: string;

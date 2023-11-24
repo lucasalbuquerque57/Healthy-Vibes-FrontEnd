@@ -1,5 +1,6 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
-import { useState } from "react";
+import { useNavigate } from "@remix-run/react";
+import { useCallback, useEffect, useState } from "react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -7,6 +8,8 @@ import { ExercicioBase } from "~/routes/Exercicios/Exercicio_Base";
 import { FiltroBarra } from "~/routes/Exercicios/Filtro_Barra";
 
 import exercicios from "~/styles/exercicios.css";
+import { axiosHealthyApi } from "~/configs/https";
+
 
 export const links: LinksFunction = () => {
     return [
@@ -28,20 +31,22 @@ export const meta: MetaFunction = () => ({
     "Peito",
 ]; */
 
-const allExercises = [
+/* const allExercises = [
     {
         id: "a",
         imgSrc: "pernas.png",
         altImg: "Mulher_agachamentoCurto",
+        duracao: "Curto",
         cardTitle: "Agachamento - Curto",
-        textoCard: "Trabalha os membros e músculos inferiores de uma forma bem completa.",
+        descricaoCurta: "Trabalha os membros e músculos inferiores de uma forma bem completa.",
     },
-];
+]; */
 
 interface ExerciseInterface {
     id: string,
     nome: string,
     descricao: string,
+    descricaoCurta: string,
     video: string,
     area: string,
     intensidade: number,
@@ -66,10 +71,32 @@ export default function Exercicios() {
             });
     }
 
+
+
+
+    const [exercicio, setExercicio] = useState<ExerciseInterface[]>([])
+
+    const handleGet = useCallback(async () => {
+        await axiosHealthyApi
+            .get("/exercises")
+            .then((r) => {
+                setExercicio(r.data);
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+    }, []);
+
+    useEffect(() => {
+        handleGet()
+    }, [handleGet])
+
     const filteredExercises =
         categoryFilters.size === 0
-            ? allExercises
-            : allExercises.filter((p) => categoryFilters.has(p.area));
+            ? exercicio
+            : exercicio
+                .filter((p) => categoryFilters.has(p.area))
+    /* .filter((p) => categoryFilters.has(p.intensidade)) */
 
 
     return (
@@ -88,18 +115,21 @@ export default function Exercicios() {
 
                                 <ExercicioBase
                                     id={prod.id}
-                                    imgSrc={prod.imgSrc}
-                                    altImg={prod.altImg}
-                                    cardTitle={prod.cardTitle}
-                                    textoCard={prod.textoCard}
+                                    imgSrc={prod.image}
+                                    altImg={prod.nome}
+                                    duracao={prod.duracao}
+                                    cardTitle={prod.nome}
+                                    textoCard={prod.descricaoCurta}
                                 />
-                                {/* <ExercicioBase
-                                id="1"
-                                imgSrc="abraco.png"
-                                altImg="Mulher_BracoCurto"
-                                cardTitle="Braço - Curto"
-                                textoCard="Treinar os braços evita problemas futuros de mobilidade."
-                            />
+
+                                <ExercicioBase
+                                    id="1"
+                                    imgSrc="abraco.png"
+                                    altImg="Mulher_BracoCurto"
+                                    cardTitle="Braço - Curto"
+                                    textoCard="Treinar os braços evita problemas futuros de mobilidade."
+                                />
+                                {/*
                             <ExercicioBase
                                 id="1"
                                 imgSrc="pernas.png"
@@ -181,3 +211,7 @@ export default function Exercicios() {
         </main >
     );
 }
+function setCreatedAt(data: any) {
+    throw new Error("Function not implemented.");
+}
+

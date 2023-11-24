@@ -1,14 +1,15 @@
 
 import controleConsumo from "~/styles/controleConsumo.css";
+import type { CalendarDateTemplateEvent } from 'primereact/calendar';
 import { Calendar } from 'primereact/calendar';
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import type { FormEvent } from "react";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "@remix-run/react";
-import { handleControleConsumo } from "~/script/handleData";
+import { axiosHealthyApi } from "~/configs/https";
 
 
 export const meta: MetaFunction = () => ({
@@ -19,16 +20,20 @@ export const links: LinksFunction = () => {
     return [{ rel: "stylesheet", href: controleConsumo }];
 };
 
+interface consumptionDate {
+    createdAt: string
+}
 
 export default function ControleConsumo() {
     const [date, setDate] = useState<Date>(new Date())
     const navigate = useNavigate();
+    const [createdAt, setCreatedAt] = useState<consumptionDate[]>([])
 
-    /* const handleGet = useCallback(async () => {
+    const handleGet = useCallback(async () => {
         await axiosHealthyApi
-            .get("/consumptions")
+            .get("/consumptions/myConsumptions")
             .then((r) => {
-                setDateComnsuption(r.data);
+                setCreatedAt(r.data);
             })
             .catch((e) => {
                 console.log(e)
@@ -37,16 +42,25 @@ export default function ControleConsumo() {
 
     useEffect(() => {
         handleGet()
+    }, [handleGet])
 
-    }, [handleGet]) */
-
+    const dateTemplate = (date: CalendarDateTemplateEvent) => {
+        if (createdAt) {
+            for (let index = 0; index < createdAt.length; index++) {
+                const dateC = new Date(createdAt[index].createdAt)
+                if (dateC.getDate() == date.day && dateC.getMonth() == date.month && dateC.getFullYear() == date.year)
+                    return <strong className="border border-3 border-selecionado rounded-circle px-1">{date.day}</strong>;
+            }
+        }
+        return date.day;
+    };
 
 
     function useHandleSearch(e: FormEvent) {
 
         e.preventDefault();
 
-        navigate(handleControleConsumo(date))
+        navigate(`date=${date.toDateString()}`)
     }
 
     return (
@@ -65,7 +79,7 @@ export default function ControleConsumo() {
                         <Card.Body>
                             <Card.Title>Instrução </Card.Title>
                             <Card.Text>
-                                Seleciona a data e pesquise
+                                Os dias circulados em verde possuem dados registrados
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -78,6 +92,7 @@ export default function ControleConsumo() {
                                 setDate(new Date(e.target.value || ""))
                             }}
                             dateFormat="dd/mm/yy"
+                            dateTemplate={dateTemplate}
                             inline
                         />
                     </div>
