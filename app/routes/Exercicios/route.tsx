@@ -122,13 +122,13 @@ export default function Exercicios() {
                                     textoCard={prod.descricaoCurta}
                                 />
 
-                                <ExercicioBase
+                                {/*                                 <ExercicioBase
                                     id="1"
                                     imgSrc="abraco.png"
                                     altImg="Mulher_BracoCurto"
                                     cardTitle="Braço - Curto"
                                     textoCard="Treinar os braços evita problemas futuros de mobilidade."
-                                />
+                                /> */}
                                 {/*
                             <ExercicioBase
                                 id="1"
@@ -210,8 +210,5 @@ export default function Exercicios() {
             <Footer />
         </main >
     );
-}
-function setCreatedAt(data: any) {
-    throw new Error("Function not implemented.");
 }
 

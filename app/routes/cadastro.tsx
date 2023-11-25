@@ -3,7 +3,6 @@ import cadastro from "~/styles/cadastro.css";
 import { Link, useNavigate } from "@remix-run/react";
 import { useState, type FormEvent } from "react";
 import { axiosHealthyApi } from "~/configs/https";
-import type { AxiosError } from "axios";
 
 export const links: LinksFunction = () => {
   return [
@@ -46,8 +45,8 @@ export default function Index() {
         .then(() => {
           navigate("/login")
         })
-        .catch((e: AxiosError) => {
-          if (e.message == "Email já cadastrado")
+        .catch((e) => {
+          if (e.response?.data.message == "Email já cadastrado")
             setCarregandoEmailMessagem(true)
 
           console.log(e)

@@ -53,7 +53,7 @@ export const links: LinksFunction = () => {
 };
 
 interface ConsumptionInterface {
-    id: string,
+    _id: string,
     quantidade: number,
     tipoConsumo: string,
     user: string,
@@ -66,6 +66,7 @@ export default function ControleConsumo() {
     const [show, setShow] = useState(false);
     const [contentModal, setContentModal] = useState("");
     const [updateOrInsert, setUpdateOrInsert] = useState("insert");
+    const [actualId, setActualId] = useState("");
     const handleClose = () => setShow(false);
     const changeTheme = useHookstate(themePage);
 
@@ -204,12 +205,14 @@ export default function ControleConsumo() {
                                             `
                                             return (
                                                 <CardInfos
-                                                    key={`${c.id}${index}`}
+                                                    id={c._id}
+                                                    key={`${c._id}${index}`}
                                                     horario={time.replaceAll(/\s/g, '')}
                                                     quantidade={`${c.quantidade} Ml`}
                                                     setUpdateOrInsert={setUpdateOrInsert}
                                                     handleShow={handleShow}
                                                     typeCard="Água"
+                                                    setId={setActualId}
                                                 />
                                             )
                                         })
@@ -242,20 +245,32 @@ export default function ControleConsumo() {
                         </div>
                         <div className='container d-flex justify-content-center align-items-center'>
                             <div className="row g-2 pt-3 ">
-                                <CardInfos
-                                    horario="15:00"
-                                    quantidade="300 Kcal"
-                                    setUpdateOrInsert={setUpdateOrInsert}
-                                    handleShow={handleShow}
-                                    typeCard="Calorias"
-                                />
-                                <CardInfos
-                                    horario="12:20"
-                                    quantidade="200 Kcal"
-                                    setUpdateOrInsert={setUpdateOrInsert}
-                                    handleShow={handleShow}
-                                    typeCard="Calorias"
-                                />
+                                {
+                                    consumptions.filter((c) => c.tipoConsumo == "Calorias")
+                                        .map((c, index) => {
+                                            const dateC = new Date(c.createdAt)
+                                            const time =
+                                                `
+                                            ${dateC.getHours() < 10 ? "0" : ""}
+                                            ${dateC.getHours()}
+                                            :${dateC.getMinutes() < 10 ? "0" : ""}
+                                            ${dateC.getMinutes()}
+                                            `
+                                            return (
+                                                <CardInfos
+                                                    id={c._id}
+                                                    key={`${c._id}${index}`}
+                                                    horario={time.replaceAll(/\s/g, '')}
+                                                    quantidade={`${c.quantidade} cal`}
+                                                    setUpdateOrInsert={setUpdateOrInsert}
+                                                    handleShow={handleShow}
+                                                    typeCard="Calorias"
+                                                    setId={setActualId}
+                                                />
+                                            )
+                                        })
+                                }
+
 
                                 <div className="col">
                                     <Button variant="success" className="m-md-4 float-end float-md-none"
@@ -298,6 +313,8 @@ export default function ControleConsumo() {
                 }}
                 formFor={contentModal}
                 updateOrInsert={updateOrInsert}
+                handleClose={handleClose}
+                id={actualId}
             />
 
             <Footer />

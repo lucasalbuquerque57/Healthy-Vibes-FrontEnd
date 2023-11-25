@@ -1,11 +1,13 @@
 import Swal from "sweetalert2";
+import { axiosHealthyApi } from "~/configs/https";
 
 interface CardsProps {
-    id?: string
+    id: string
     horario: string;
     quantidade: string;
     typeCard: string;
     setUpdateOrInsert: React.Dispatch<string>;
+    setId: React.Dispatch<string>;
     handleShow: Function
 }
 
@@ -13,6 +15,7 @@ export function CardInfos(props: CardsProps) {
 
     function handleClickUpdate() {
         props.setUpdateOrInsert("Atualizar")
+        props.setId(props.id)
         props.handleShow(props.typeCard)
     }
 
@@ -34,10 +37,13 @@ export function CardInfos(props: CardsProps) {
             /* showCancelButton: true, */
             denyButtonText: `Cancelar`,
             confirmButtonText: 'Deletar',
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
+        }).then(async (result) => {
+
             if (result.isConfirmed) {
-                Swal.fire('Deletado!', '', 'success')
+                await axiosHealthyApi.delete(`/consumptions/${props.id}`)
+                    .catch((e) => { console.log(e) })
+                    .then(() => { Swal.fire('Deletado!', '', 'success').then(() => { window.location.reload() }) })
+
             } else if (result.isDenied) {
                 Swal.fire('Não deletado', '', 'info')
             }

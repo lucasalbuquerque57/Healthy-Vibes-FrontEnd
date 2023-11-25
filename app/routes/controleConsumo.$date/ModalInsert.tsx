@@ -1,11 +1,14 @@
 import { useEffect, type FormEvent, useState } from "react";
 import { Button, Modal, type ModalProps } from "react-bootstrap";
+import { axiosHealthyApi } from "~/configs/https";
 
 
 interface ModalInsert_AguaProps {
     modal: ModalProps
     formFor: string
     updateOrInsert: string
+    handleClose: Function
+    id: string
 }
 
 export default function ModalInsert(props: ModalInsert_AguaProps) {
@@ -19,9 +22,25 @@ export default function ModalInsert(props: ModalInsert_AguaProps) {
     }, [props.formFor])
 
 
-    function handleSubmit(e: FormEvent) {
+    async function handleSubmit(e: FormEvent) {
         e.preventDefault()
-        // depois eu boto se é atualizar ou n
+        const formData = new FormData(e.target as HTMLFormElement)
+        const data = Object.fromEntries(formData)
+
+        if (props.updateOrInsert == "Inserir") {
+            await axiosHealthyApi.post("/consumptions", {
+                quantidade: data.quantidade,
+                tipoConsumo: props.formFor
+            }).catch((e) => { console.log(e) })
+        } else {
+            await axiosHealthyApi.patch(`/consumptions/${props.id}`, {
+                quantidade: data.quantidade,
+                tipoConsumo: props.formFor
+            }).catch((e) => { console.log(e) })
+        }
+
+        props.handleClose()
+        window.location.reload()
     }
 
     return (
