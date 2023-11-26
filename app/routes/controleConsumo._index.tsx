@@ -21,7 +21,7 @@ export const links: LinksFunction = () => {
 };
 
 interface consumptionDate {
-    createdAt: string
+    belongDate: Date
 }
 
 export default function ControleConsumo() {
@@ -47,7 +47,7 @@ export default function ControleConsumo() {
     const dateTemplate = (date: CalendarDateTemplateEvent) => {
         if (createdAt) {
             for (let index = 0; index < createdAt.length; index++) {
-                const dateC = new Date(createdAt[index].createdAt)
+                const dateC = new Date(createdAt[index].belongDate)
                 if (dateC.getDate() == date.day && dateC.getMonth() == date.month && dateC.getFullYear() == date.year)
                     return <strong className="border border-3 border-selecionado rounded-circle px-1">{date.day}</strong>;
             }

@@ -57,7 +57,8 @@ interface ConsumptionInterface {
     quantidade: number,
     tipoConsumo: string,
     user: string,
-    createdAt: string
+    createdAt: string,
+    belongDate: Date
 }
 
 
@@ -96,7 +97,7 @@ export default function ControleConsumo() {
                 const filterConsumptions: ConsumptionInterface[] = r.data
                 setConsumptions(
                     filterConsumptions.filter((c) => {
-                        const date = new Date(c.createdAt)
+                        const date = new Date(c.belongDate)
                         return (date.getDate() == actualDate.getDate() && date.getMonth() == actualDate.getMonth() && date.getFullYear() == actualDate.getFullYear())
                     })
                 );
@@ -148,7 +149,11 @@ export default function ControleConsumo() {
         datasets: [
             {
                 label: 'Controle de Água',
-                data: [500, 2000],
+                data: [
+                    consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0),
+                    consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) < 200 ?
+                        2000 - consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) : 0
+                ],
                 color: [changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"],
                 backgroundColor: [
                     changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(51,69,155, 0.61)",
@@ -163,7 +168,7 @@ export default function ControleConsumo() {
         datasets: [
             {
                 label: 'Controle de Calorias',
-                data: [932, 2500],
+                data: [932, 2500], // preciso fazer o dietas ainda
                 backgroundColor: [
                     changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(10,153,6,0.60)",
                     changeTheme.get() == "contraOn" ? "rgba(30,30,30)" : "rgba(211, 211, 211, 1.0)",
@@ -315,6 +320,7 @@ export default function ControleConsumo() {
                 updateOrInsert={updateOrInsert}
                 handleClose={handleClose}
                 id={actualId}
+                actualDate={actualDate}
             />
 
             <Footer />

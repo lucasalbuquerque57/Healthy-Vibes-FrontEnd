@@ -8,7 +8,8 @@ interface ModalInsert_AguaProps {
     formFor: string
     updateOrInsert: string
     handleClose: Function
-    id: string
+    id: string,
+    actualDate: Date
 }
 
 export default function ModalInsert(props: ModalInsert_AguaProps) {
@@ -30,7 +31,8 @@ export default function ModalInsert(props: ModalInsert_AguaProps) {
         if (props.updateOrInsert == "Inserir") {
             await axiosHealthyApi.post("/consumptions", {
                 quantidade: data.quantidade,
-                tipoConsumo: props.formFor
+                tipoConsumo: props.formFor,
+                belongDate: props.actualDate
             }).catch((e) => { console.log(e) })
         } else {
             await axiosHealthyApi.patch(`/consumptions/${props.id}`, {
