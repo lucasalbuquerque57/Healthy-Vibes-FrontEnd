@@ -151,7 +151,7 @@ export default function ControleConsumo() {
                 label: 'Controle de Água',
                 data: [
                     consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0),
-                    consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) < 200 ?
+                    consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) <= 2000 ?
                         2000 - consumptions.filter((c) => c.tipoConsumo == "Água").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) : 0
                 ],
                 color: [changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)"],
@@ -183,7 +183,7 @@ export default function ControleConsumo() {
             <div id="conteudo" className="container-fluid texto">
 
                 <h1 className='first-title'>Controle de Consumo</h1>
-                <h2 className='first-title'>{actualDate.getDate() + "/" + actualDate.getMonth() + "/" + actualDate.getFullYear()}</h2>
+                <h2 className='first-title'>{actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()}</h2>
 
                 <div className='graphics row mt-3'>
                     <div className="controlwater col">

@@ -1,10 +1,35 @@
 import { Link } from "@remix-run/react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { themePage } from "../script/changeTheme";
 import { useHookstate } from "@hookstate/core";
 import Hotjar from "@hotjar/browser";
+import { axiosHealthyApi } from "~/configs/https";
+import Swal from "sweetalert2";
+
+export interface UserInterface {
+  nome: string,
+}
 
 export function Header() {
+
+  const [user, setUser] = useState<UserInterface>()
+
+  const handleGet = useCallback(async () => {
+    await axiosHealthyApi
+      .get("/users/myuser")
+      .then((r) => {
+        setUser(r.data);
+      })
+      .catch((e) => {
+        console.log(e)
+      });
+  }, []);
+
+  useEffect(() => {
+    handleGet()
+  }, [handleGet])
+
+
   const siteId = 3702227;
   const hotjarVersion = 6;
 
@@ -35,6 +60,26 @@ export function Header() {
     const newTheme = theme === "contraOn" ? "contraOff" : "contraOn";
     setTheme(newTheme);
   };
+
+  function logout() {
+    Swal.fire({
+      title: 'Quer realmente sair?',
+      showCancelButton: true,
+      confirmButtonText: 'Deslogar',
+    }).then((result) => {
+
+      if (result.isConfirmed) {
+        localStorage.removeItem("access-token")
+        Swal.fire({
+          title: "Deslogado",
+          allowEscapeKey: false,
+          allowOutsideClick: false,
+          icon: "success"
+        }).then(() => { window.location.reload() })
+      }
+    })
+
+  }
 
   return (
     <header>
@@ -89,45 +134,42 @@ export function Header() {
             <hr className="nav-item-divider w-100 d-block d-lg-none mx-2" />
             <div className="profile nav-item">
               <div className="logCadButtons">
-                
-                  {/* <div className="nav-item dropdown perfilDropdownSummoner">
+
+                {user?.nome == null ?
+                  <>
+                    <Link to="/Login">
+                      <button className="btn  loginButton">Entrar</button>
+                    </Link>
+
+                    <Link to="/Cadastro">
+                      <button className="btn  cadButton">Cadastre-se</button>
+                    </Link>
+                  </>
+                  :
+                  < div className="nav-item dropdown perfilDropdownSummoner">
                     <button
                       className="nav-link dropleft dropdown-toggle"
                       data-bs-toggle="dropdown"
                     >
-                      <img
-                        src="/SchwarzIcon.jpg"
-                        alt="Foto de Perfil"
-                        className="imagemPerfil"
-                      />
-                      Arnaldo
+                      Olá, {user?.nome}
                     </button>
                     <div className="dropdown-menu dropdown-menu-end perfilDropdown">
-                      <Link className="dropdown-item ItemDropdown" to="/perfil">
-                        <i className="fa fa-user-o"></i> Meu Perfil
+                      <Link className="dropdown-item ItemDropdown" to="/profile">
+                        <i className="fa fa-user-o"></i> Minhas coisas
                       </Link>{" "}
-                      
-                      <Link className="dropdown-item ItemDropdown" to="/Build/MyBuild">
-                        <i className="fa-solid fa-bowl-food"></i> Minhas Coisas (???)
-                      </Link>{" "}
-                     
-                      <form action="/logout" method="post">
-                        <button className="dropdown-item ItemDropdown">
-                          <i className="fa fa-sign-out" aria-hidden="true"></i>{" "}
-                          Logout
-                        </button>
-                      </form>
+
+
+                      <button className="dropdown-item ItemDropdown" onClick={logout}>
+                        <i className="fa fa-sign-out" aria-hidden="true"></i>{" "}
+                        Logout
+                      </button>
+
                     </div>
-                  </div> */}
-                
+                  </div>
+                }
 
-                 <Link to="/Login">
-                  <button className="btn  loginButton">Entrar</button>
-                </Link>
 
-                <Link to="/Cadastro">
-                  <button className="btn  cadButton">Cadastre-se</button>
-                </Link>
+
 
               </div>
               <div className="itensAcessibilidade">
@@ -146,9 +188,8 @@ export function Header() {
                   onClick={() => changeFontSize("diminuir")}
                 />
                 <img
-                  src={`/AcessFontHighConrV2${
-                    theme == "contraOn" ? "-inverso" : ""
-                  }.png`}
+                  src={`/AcessFontHighConrV2${theme == "contraOn" ? "-inverso" : ""
+                    }.png`}
                   className="iconeAcessibilidade"
                   title="Alto contraste"
                   alt="Alto contraste"
@@ -166,6 +207,6 @@ export function Header() {
           </div>
         </div>
       </nav>
-    </header>
+    </header >
   );
 }

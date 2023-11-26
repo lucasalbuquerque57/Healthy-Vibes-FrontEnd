@@ -42,8 +42,16 @@ export default function Index() {
           senha: data.senha,
         })
           .then(r => {
-            localStorage.setItem("access-token", r.data.accessToken)
-            return navigate("/")
+            Swal.fire({
+              title: "Logado",
+              allowEscapeKey: false,
+              allowOutsideClick: false,
+              icon: "success"
+            }).then(() => {
+              localStorage.setItem("access-token", r.data.accessToken)
+              return navigate("/")
+            })
+
           })
           .catch(e => {
             Swal.fire({
