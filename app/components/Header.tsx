@@ -6,7 +6,7 @@ import Hotjar from "@hotjar/browser";
 import { axiosHealthyApi } from "~/configs/https";
 import Swal from "sweetalert2";
 
-export interface UserInterface {
+interface UserInterface {
   nome: string,
 }
 

@@ -79,11 +79,11 @@
 }
 
 .cardDetalheDieta{
-  height: auto;
   box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
   background-color: var(--background-primary);
   color: var(--text-octonary);
 }
+
 
 .adaptLenght{
   width: fit-content;

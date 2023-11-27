@@ -1,34 +1,53 @@
-import { Card, ListGroup, OverlayTrigger, Popover } from "react-bootstrap";
+import { Card, OverlayTrigger, Popover } from "react-bootstrap";
+
 
 interface CardsProps {
   title: string;
-  dificuldade: string;
-  porcao: string;
   descricao: string;
   calorias: number,
   carboidratos: number;
   gordura: number;
   proteína: number;
   ingredientes: [{ nome: string, qtd: string }];
+  image: ImageInterface;
 }
 
+export interface ImageInterface {
+
+  name: string,
+  img: {
+    data: Buffer,
+    contentType: string
+  }
+
+}
 
 export function CardReceita(props: CardsProps) {
 
+  function image() {
+    if (props.image != null) {
+
+      return `data:image/png;base64,${Buffer.from(props.image.img.data).toString('base64')}`
+    } else {
+      return "/IconeLogo.png"
+    }
+  }
+
+
   return (
 
-    <Card className="cardDetalheDieta mx-md-5">
-      <Card.Img variant="top" src="/IconeLogo.png" width="200px" height="200px" />
+    <Card className="cardDetalheDieta mx-md-5 h-100">
+      <Card.Img variant="top"
+        width="200px" height="200px"
+        src={
+          image()
+        } alt={props.title} />
       <Card.Body>
         <Card.Title>{props?.title}</Card.Title>
         <Card.Text>
           {props?.descricao}
         </Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
-        <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>
-      </ListGroup>
       <Card.Body>
         <OverlayTrigger
           trigger="click"
@@ -51,7 +70,7 @@ export function CardReceita(props: CardsProps) {
                     :
                     props.ingredientes.map((i, index) => {
                       return (
-                        <span key={index}>{i.nome} - {i.qtd}</span>
+                        <div key={index}>{i.nome} - {i.qtd}</div>
                       )
                     })
                 }

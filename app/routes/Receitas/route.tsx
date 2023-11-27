@@ -2,7 +2,7 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import receitas from "~/styles/receitas.css";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
-import { CardReceita } from "./CardReceita";
+import { CardReceita, ImageInterface } from "./CardReceita";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "@remix-run/react";
 import { axiosHealthyApi } from "~/configs/https";
@@ -22,6 +22,7 @@ export interface RecipeInterface {
   _id: string;
   periodoRef: string;
   titulo: string;
+  descricao: string;
   ingredientes: [{ nome: string, qtd: string }];
   calorias: number;
   carboidratos: number;
@@ -29,7 +30,7 @@ export interface RecipeInterface {
   proteína: number;
   user: string;
   modoDePreparo: string;
-  image: string;
+  image: ImageInterface;
 }
 
 const responsiveOptions = [
@@ -166,16 +167,19 @@ export default function Receitas() {
 
       <CardReceita
         title={recipe.titulo}
-        dificuldade="Fácil"
-        porcao="1"
-        descricao="Não esqueça do sal"
+        descricao={recipe.descricao}
         calorias={recipe.calorias}
         carboidratos={recipe.carboidratos}
         gordura={recipe.gordura}
         proteína={recipe.proteína}
         ingredientes={recipe.ingredientes}
+        image={recipe.image}
       />
     )
+  }
+
+  function handlePostDiet(params: type) {
+
   }
 
   return (
@@ -208,6 +212,7 @@ export default function Receitas() {
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã")).length < 3 ?
                       "adaptLenght" : ""
                   }
+                  containerClassName="mx-lg-5 px-lg-5"
                 />
               </div>
 
@@ -233,6 +238,7 @@ export default function Receitas() {
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço")).length < 3 ?
                       "adaptLenght" : ""
                   }
+                  containerClassName="mx-lg-5 px-lg-5"
                 />
               </div>
 
@@ -258,6 +264,7 @@ export default function Receitas() {
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche")).length < 3 ?
                       "adaptLenght" : ""
                   }
+                  containerClassName="mx-lg-5 px-lg-5"
                 />
               </div>
 
@@ -283,6 +290,7 @@ export default function Receitas() {
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta")).length < 3 ?
                       "adaptLenght" : ""
                   }
+                  containerClassName="mx-lg-5 px-lg-5"
                 />
               </div>
 
