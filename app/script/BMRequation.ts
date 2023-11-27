@@ -58,9 +58,9 @@ export function BRMequation(values: BRMequation): Resultados {
     else if (values.opcaoPeso == "Ganhar músculo") {
         caloriasNivelAtiv *= 1.15
     }
-    const carboidratos = (caloriasNivelAtiv * 0.45) / 4
-    const gorduras = (caloriasNivelAtiv * 0.25) / 9
-    const proteinas = (caloriasNivelAtiv * 0.3) / 4
+    const carboidratos = (caloriasNivelAtiv * 0.25) / 4
+    const gorduras = (caloriasNivelAtiv * 0.45) / 9
+    const proteinas = (caloriasNivelAtiv * 0.30) / 4
 
     return {
         calorias: caloriasNivelAtiv,

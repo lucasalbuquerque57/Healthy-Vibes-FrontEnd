@@ -167,3 +167,9 @@ svg {
   color: var(--preto-branco);
   background: var(--misc-nonary);
 }
+
+.buttonCards {
+  /* color: var(--text-quardenary); */
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+}

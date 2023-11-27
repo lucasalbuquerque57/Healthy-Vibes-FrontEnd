@@ -22,7 +22,7 @@ export function ExercicioBase(props: CardsProps) {
         <div className="card">
           <div className="card-top">
             <div className="ImageAdress">
-              <img src={`/treino/${props.imgSrc}`} alt={props.altImg} />
+              <img src={`/treino/abdominal.png`} alt={props.altImg} />
             </div>
           </div>
           <div className="card-content">

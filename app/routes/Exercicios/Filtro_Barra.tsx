@@ -34,7 +34,7 @@ export function FiltroBarra(props: FiltroProps) {
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault2"
+                                <input className="form-check-input" type="checkbox" id="flexCheckDefault2"
                                     value="perna"
                                     onChange={(e) => props.update(e.target.checked, "perna")}
                                 />
@@ -45,7 +45,7 @@ export function FiltroBarra(props: FiltroProps) {
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault3"
+                                <input className="form-check-input" type="checkbox" id="flexCheckDefault3"
                                     value="braco"
                                     onChange={(e) => props.update(e.target.checked, "braco")}
                                 />
@@ -56,7 +56,7 @@ export function FiltroBarra(props: FiltroProps) {
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault4"
+                                <input className="form-check-input" type="checkbox" id="flexCheckDefault4"
                                     value="triceps"
                                     onChange={(e) => props.update(e.target.checked, "triceps")} />
                                 <label className="form-check-label" htmlFor="flexCheckDefault4">
@@ -66,7 +66,7 @@ export function FiltroBarra(props: FiltroProps) {
                         </li>
                         <li>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault5"
+                                <input className="form-check-input" type="checkbox" id="flexCheckDefault5"
                                     value="peito"
                                     onChange={(e) => props.update(e.target.checked, "peito")}
                                 />

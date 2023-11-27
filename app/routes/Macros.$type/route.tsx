@@ -74,10 +74,9 @@ export default function Index() {
             valores.gordura.gramas += r.gordura
         })
 
-        valores.gordura.calorias = (valores.gordura.gramas * 9) / 0.25
-        valores.proteina.calorias = (valores.proteina.gramas * 4) / 0.3
-        valores.carboidratos.calorias = (valores.carboidratos.gramas * 4) / 0.45
-
+        valores.gordura.calorias = (valores.gordura.gramas * 9)
+        valores.proteina.calorias = (valores.proteina.gramas * 4)
+        valores.carboidratos.calorias = (valores.carboidratos.gramas * 4)
         setValores(valores)
     }
 
@@ -182,15 +181,15 @@ export default function Index() {
                                     </tr>
                                     <tr>
                                         <td>Proteínas</td>
-                                        <td>{valores.proteina.gramas} g</td>
+                                        <td>{valores.proteina.gramas.toFixed(2)} g</td>
                                     </tr>
                                     <tr>
                                         <td>Carboidratos</td>
-                                        <td>{valores.carboidratos.gramas} g</td>
+                                        <td>{valores.carboidratos.gramas.toFixed(2)} g</td>
                                     </tr>
                                     <tr>
                                         <td>Gorduras</td>
-                                        <td>{valores.gordura.gramas} g</td>
+                                        <td>{valores.gordura.gramas.toFixed(2)} g</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -178,10 +178,6 @@ export default function Receitas() {
     )
   }
 
-  function handlePostDiet(params: type) {
-
-  }
-
   return (
     <main>
       <Header />

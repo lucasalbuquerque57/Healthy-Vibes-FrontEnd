@@ -10,7 +10,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { CardInfos } from "./CardInfos";
 import ModalInsert from "./ModalInsert";
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import { useHookstate } from "@hookstate/core";
 import { themePage } from "~/script/changeTheme";
 import { axiosHealthyApi } from "~/configs/https";
@@ -181,9 +181,30 @@ export default function ControleConsumo() {
         <main>
             <Header />
             <div id="conteudo" className="container-fluid texto">
+                <div className="container-fluid mb-5">
+                    <div className="row">
+                        <div className="barraHoriz col-2 mt-4">
+                            <Link to="/controleConsumo">
+                                <button
+                                    type="button"
+                                    title="Excluir"
+                                    className="buttonCards m-2 "
+                                >
+                                    <i
+                                        className="px-2 fa-solid fa-arrow-left fa-2xl"
+                                        style={{ color: "var(--text-quadenary)" }}
+                                    ></i>
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="headline text col-8">
+                            <h1 className='first-title'>Controle de Consumo</h1>
+                            <h2 className='first-title'>{actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()}</h2>
+                        </div>
+                    </div>
+                </div>
 
-                <h1 className='first-title'>Controle de Consumo</h1>
-                <h2 className='first-title'>{actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()}</h2>
+
 
                 <div className='graphics row mt-3'>
                     <div className="controlwater col">

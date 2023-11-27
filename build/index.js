@@ -3482,7 +3482,7 @@ function BRMequation(values) {
       break;
   }
   values.opcaoPeso == "Perder Peso" ? caloriasNivelAtiv *= 0.8 : values.opcaoPeso == "Ganhar m\xFAsculo" && (caloriasNivelAtiv *= 1.15);
-  let carboidratos = caloriasNivelAtiv * 0.45 / 4, gorduras = caloriasNivelAtiv * 0.25 / 9, proteinas = caloriasNivelAtiv * 0.3 / 4;
+  let carboidratos = caloriasNivelAtiv * 0.25 / 4, gorduras = caloriasNivelAtiv * 0.45 / 9, proteinas = caloriasNivelAtiv * 0.3 / 4;
   return {
     calorias: caloriasNivelAtiv,
     carboidratos,
@@ -4322,7 +4322,7 @@ __export(controleConsumo_index_exports, {
 });
 
 // app/styles/controleConsumo.css
-var controleConsumo_default = "/build/_assets/controleConsumo-L7MF7AUJ.css";
+var controleConsumo_default = "/build/_assets/controleConsumo-HWPNFFDM.css";
 
 // app/routes/controleConsumo._index.tsx
 var import_calendar = require("primereact/calendar");
@@ -5566,30 +5566,85 @@ function ControleConsumo2() {
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { id: "conteudo", className: "container-fluid texto", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h1", { className: "first-title", children: "Controle de Consumo" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "container-fluid mb-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "row", children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "barraHoriz col-2 mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_react18.Link, { to: "/controleConsumo", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+          "button",
+          {
+            type: "button",
+            title: "Excluir",
+            className: "buttonCards m-2 ",
+            children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
+              "i",
+              {
+                className: "px-2 fa-solid fa-arrow-left fa-2xl",
+                style: { color: "var(--text-quadenary)" }
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/controleConsumo.$date/route.tsx",
+                lineNumber: 193,
+                columnNumber: 37
+              },
+              this
+            )
+          },
+          void 0,
+          !1,
+          {
+            fileName: "app/routes/controleConsumo.$date/route.tsx",
+            lineNumber: 188,
+            columnNumber: 33
+          },
+          this
+        ) }, void 0, !1, {
+          fileName: "app/routes/controleConsumo.$date/route.tsx",
+          lineNumber: 187,
+          columnNumber: 29
+        }, this) }, void 0, !1, {
+          fileName: "app/routes/controleConsumo.$date/route.tsx",
+          lineNumber: 186,
+          columnNumber: 25
+        }, this),
+        /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "headline text col-8", children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h1", { className: "first-title", children: "Controle de Consumo" }, void 0, !1, {
+            fileName: "app/routes/controleConsumo.$date/route.tsx",
+            lineNumber: 201,
+            columnNumber: 29
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h2", { className: "first-title", children: actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear() }, void 0, !1, {
+            fileName: "app/routes/controleConsumo.$date/route.tsx",
+            lineNumber: 202,
+            columnNumber: 29
+          }, this)
+        ] }, void 0, !0, {
+          fileName: "app/routes/controleConsumo.$date/route.tsx",
+          lineNumber: 200,
+          columnNumber: 25
+        }, this)
+      ] }, void 0, !0, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
         lineNumber: 185,
-        columnNumber: 17
-      }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h2", { className: "first-title", children: actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear() }, void 0, !1, {
+        columnNumber: 21
+      }, this) }, void 0, !1, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 186,
+        lineNumber: 184,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "graphics row mt-3", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "controlwater col", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h1", { className: "title text-center my-3", children: "E a\xED, j\xE1 bebeu \xE1gua?" }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 191,
+            lineNumber: 212,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "graphicwater d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_react_chartjs_22.Doughnut, { options, data: water }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 194,
+            lineNumber: 215,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 193,
+            lineNumber: 214,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "container d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "row g-2 pt-3", children: [
@@ -5615,7 +5670,7 @@ function ControleConsumo2() {
                 !1,
                 {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 212,
+                  lineNumber: 233,
                   columnNumber: 21
                 },
                 this
@@ -5631,7 +5686,7 @@ function ControleConsumo2() {
                 },
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("i", { className: "fa-solid fa-circle-plus fa-2xl" }, void 0, !1, {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 234,
+                  lineNumber: 255,
                   columnNumber: 41
                 }, this)
               },
@@ -5639,42 +5694,42 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 228,
+                lineNumber: 249,
                 columnNumber: 37
               },
               this
             ) }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 227,
+              lineNumber: 248,
               columnNumber: 33
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 199,
+            lineNumber: 220,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 197,
+            lineNumber: 218,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/controleConsumo.$date/route.tsx",
-          lineNumber: 189,
+          lineNumber: 210,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "controlfood col", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("h1", { className: "titlefood text-center my-3", children: "O que voc\xEA comeu?" }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 246,
+            lineNumber: 267,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "graphicfood d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(import_react_chartjs_22.Doughnut, { options: optionsfood, data: food }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 249,
+            lineNumber: 270,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 248,
+            lineNumber: 269,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "container d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "row g-2 pt-3 ", children: [
@@ -5700,7 +5755,7 @@ function ControleConsumo2() {
                 !1,
                 {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 265,
+                  lineNumber: 286,
                   columnNumber: 21
                 },
                 this
@@ -5716,7 +5771,7 @@ function ControleConsumo2() {
                 },
                 children: /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("i", { className: "fa-solid fa-circle-plus fa-2xl" }, void 0, !1, {
                   fileName: "app/routes/controleConsumo.$date/route.tsx",
-                  lineNumber: 287,
+                  lineNumber: 308,
                   columnNumber: 41
                 }, this)
               },
@@ -5724,28 +5779,28 @@ function ControleConsumo2() {
               !1,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 281,
+                lineNumber: 302,
                 columnNumber: 37
               },
               this
             ) }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 280,
+              lineNumber: 301,
               columnNumber: 33
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 252,
+            lineNumber: 273,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 251,
+            lineNumber: 272,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("div", { className: "d-flex justify-content-center align-items-center my-3", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("label", { htmlFor: "Diet", className: "mx-3", children: "Escolha a Dieta:" }, void 0, !1, {
               fileName: "app/routes/controleConsumo.$date/route.tsx",
-              lineNumber: 294,
+              lineNumber: 315,
               columnNumber: 29
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(
@@ -5761,22 +5816,22 @@ function ControleConsumo2() {
                 children: [
                   /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("option", { value: "", disabled: !0, children: "Escolha uma para base" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 302,
+                    lineNumber: 323,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("option", { value: "salve", children: "One" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 303,
+                    lineNumber: 324,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("option", { value: "2", children: "Two" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 304,
+                    lineNumber: 325,
                     columnNumber: 33
                   }, this),
                   /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)("option", { value: "3", children: "Three" }, void 0, !1, {
                     fileName: "app/routes/controleConsumo.$date/route.tsx",
-                    lineNumber: 305,
+                    lineNumber: 326,
                     columnNumber: 33
                   }, this)
                 ]
@@ -5785,24 +5840,24 @@ function ControleConsumo2() {
               !0,
               {
                 fileName: "app/routes/controleConsumo.$date/route.tsx",
-                lineNumber: 295,
+                lineNumber: 316,
                 columnNumber: 29
               },
               this
             )
           ] }, void 0, !0, {
             fileName: "app/routes/controleConsumo.$date/route.tsx",
-            lineNumber: 293,
+            lineNumber: 314,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/controleConsumo.$date/route.tsx",
-          lineNumber: 245,
+          lineNumber: 266,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 188,
+        lineNumber: 209,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
@@ -5827,14 +5882,14 @@ function ControleConsumo2() {
       !1,
       {
         fileName: "app/routes/controleConsumo.$date/route.tsx",
-        lineNumber: 314,
+        lineNumber: 335,
         columnNumber: 13
       },
       this
     ),
     /* @__PURE__ */ (0, import_jsx_dev_runtime21.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/controleConsumo.$date/route.tsx",
-      lineNumber: 326,
+      lineNumber: 347,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
@@ -6591,7 +6646,7 @@ function Index2() {
     };
     recipes.forEach((r) => {
       valores2.calorias += r.calorias, valores2.carboidratos.gramas += r.carboidratos, valores2.proteina.gramas += r.prote\u00EDna, valores2.gordura.gramas += r.gordura;
-    }), valores2.gordura.calorias = valores2.gordura.gramas * 9 / 0.25, valores2.proteina.calorias = valores2.proteina.gramas * 4 / 0.3, valores2.carboidratos.calorias = valores2.carboidratos.gramas * 4 / 0.45, setValores(valores2);
+    }), valores2.gordura.calorias = valores2.gordura.gramas * 9, valores2.proteina.calorias = valores2.proteina.gramas * 4, valores2.carboidratos.calorias = valores2.carboidratos.gramas * 4, setValores(valores2);
   };
   (0, import_react24.useEffect)(() => {
     if (dataParams == "notSaved") {
@@ -6623,7 +6678,7 @@ function Index2() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/Macros.$type/route.tsx",
-      lineNumber: 139,
+      lineNumber: 138,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "container-fluid py-5", children: [
@@ -6644,7 +6699,7 @@ function Index2() {
               !1,
               {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 151,
+                lineNumber: 150,
                 columnNumber: 37
               },
               this
@@ -6654,35 +6709,35 @@ function Index2() {
           !1,
           {
             fileName: "app/routes/Macros.$type/route.tsx",
-            lineNumber: 146,
+            lineNumber: 145,
             columnNumber: 33
           },
           this
         ) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 145,
+          lineNumber: 144,
           columnNumber: 29
         }, this) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 144,
+          lineNumber: 143,
           columnNumber: 25
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "headline text col-8", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("h1", { className: "title text-center py-3 labelSimples fw-bold", children: "Macros" }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 159,
+          lineNumber: 158,
           columnNumber: 29
         }, this) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 158,
+          lineNumber: 157,
           columnNumber: 25
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/Macros.$type/route.tsx",
-        lineNumber: 143,
+        lineNumber: 142,
         columnNumber: 21
       }, this) }, void 0, !1, {
         fileName: "app/routes/Macros.$type/route.tsx",
-        lineNumber: 142,
+        lineNumber: 141,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "row my-5", children: [
@@ -6699,137 +6754,137 @@ function Index2() {
           }
         }, className: "graficoPizza" }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 169,
+          lineNumber: 168,
           columnNumber: 29
         }, this) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 168,
+          lineNumber: 167,
           columnNumber: 25
         }, this) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 167,
+          lineNumber: 166,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "col d-flex flex-column justify-content-start align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "end", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "px-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("h4", { className: "fw-semibold fs-2 valTotais", children: "Valores totais" }, void 0, !1, {
             fileName: "app/routes/Macros.$type/route.tsx",
-            lineNumber: 175,
+            lineNumber: 174,
             columnNumber: 33
           }, this) }, void 0, !1, {
             fileName: "app/routes/Macros.$type/route.tsx",
-            lineNumber: 174,
+            lineNumber: 173,
             columnNumber: 29
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("table", { className: "table fs-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("tbody", { children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("tr", { children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: "Calorias" }, void 0, !1, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 180,
+                lineNumber: 179,
                 columnNumber: 41
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: valores.calorias }, void 0, !1, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 181,
+                lineNumber: 180,
                 columnNumber: 41
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/Macros.$type/route.tsx",
-              lineNumber: 179,
+              lineNumber: 178,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("tr", { children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: "Prote\xEDnas" }, void 0, !1, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 184,
+                lineNumber: 183,
                 columnNumber: 41
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: [
-                valores.proteina.gramas,
+                valores.proteina.gramas.toFixed(2),
                 " g"
               ] }, void 0, !0, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 185,
+                lineNumber: 184,
                 columnNumber: 41
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/Macros.$type/route.tsx",
-              lineNumber: 183,
+              lineNumber: 182,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("tr", { children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: "Carboidratos" }, void 0, !1, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 188,
+                lineNumber: 187,
                 columnNumber: 41
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: [
-                valores.carboidratos.gramas,
+                valores.carboidratos.gramas.toFixed(2),
                 " g"
               ] }, void 0, !0, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 189,
+                lineNumber: 188,
                 columnNumber: 41
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/Macros.$type/route.tsx",
-              lineNumber: 187,
+              lineNumber: 186,
               columnNumber: 37
             }, this),
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("tr", { children: [
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: "Gorduras" }, void 0, !1, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 192,
+                lineNumber: 191,
                 columnNumber: 41
               }, this),
               /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("td", { children: [
-                valores.gordura.gramas,
+                valores.gordura.gramas.toFixed(2),
                 " g"
               ] }, void 0, !0, {
                 fileName: "app/routes/Macros.$type/route.tsx",
-                lineNumber: 193,
+                lineNumber: 192,
                 columnNumber: 41
               }, this)
             ] }, void 0, !0, {
               fileName: "app/routes/Macros.$type/route.tsx",
-              lineNumber: 191,
+              lineNumber: 190,
               columnNumber: 37
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/Macros.$type/route.tsx",
-            lineNumber: 178,
+            lineNumber: 177,
             columnNumber: 33
           }, this) }, void 0, !1, {
             fileName: "app/routes/Macros.$type/route.tsx",
-            lineNumber: 177,
+            lineNumber: 176,
             columnNumber: 29
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 173,
+          lineNumber: 172,
           columnNumber: 25
         }, this) }, void 0, !1, {
           fileName: "app/routes/Macros.$type/route.tsx",
-          lineNumber: 172,
+          lineNumber: 171,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/Macros.$type/route.tsx",
-        lineNumber: 166,
+        lineNumber: 165,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Macros.$type/route.tsx",
-      lineNumber: 141,
+      lineNumber: 140,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Macros.$type/route.tsx",
-      lineNumber: 202,
+      lineNumber: 201,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Macros.$type/route.tsx",
-    lineNumber: 138,
+    lineNumber: 137,
     columnNumber: 5
   }, this);
 }
@@ -6847,7 +6902,7 @@ var import_react26 = require("react");
 var import_react25 = require("@remix-run/react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime");
 function ExercicioBase(props) {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(import_react25.Link, { to: `/ExercicioDetalhes/exercise=${props.id}`, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card", children: [
-    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card-top", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "ImageAdress", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: `/treino/${props.imgSrc}`, alt: props.altImg }, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "card-top", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "ImageAdress", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("img", { src: "/treino/abdominal.png", alt: props.altImg }, void 0, !1, {
       fileName: "app/routes/Exercicios/Exercicio_Base.tsx",
       lineNumber: 25,
       columnNumber: 15
@@ -6969,7 +7024,6 @@ function FiltroBarra(props) {
               {
                 className: "form-check-input",
                 type: "checkbox",
-                value: "",
                 id: "flexCheckDefault2",
                 value: "perna",
                 onChange: (e) => props.update(e.target.checked, "perna")
@@ -7003,7 +7057,6 @@ function FiltroBarra(props) {
               {
                 className: "form-check-input",
                 type: "checkbox",
-                value: "",
                 id: "flexCheckDefault3",
                 value: "braco",
                 onChange: (e) => props.update(e.target.checked, "braco")
@@ -7037,7 +7090,6 @@ function FiltroBarra(props) {
               {
                 className: "form-check-input",
                 type: "checkbox",
-                value: "",
                 id: "flexCheckDefault4",
                 value: "triceps",
                 onChange: (e) => props.update(e.target.checked, "triceps")
@@ -7071,7 +7123,6 @@ function FiltroBarra(props) {
               {
                 className: "form-check-input",
                 type: "checkbox",
-                value: "",
                 id: "flexCheckDefault5",
                 value: "peito",
                 onChange: (e) => props.update(e.target.checked, "peito")
@@ -7236,7 +7287,7 @@ function Exercicios() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/Exercicios/route.tsx",
-      lineNumber: 104,
+      lineNumber: 102,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("div", { className: "row", children: [
@@ -7249,51 +7300,51 @@ function Exercicios() {
         !1,
         {
           fileName: "app/routes/Exercicios/route.tsx",
-          lineNumber: 108,
+          lineNumber: 106,
           columnNumber: 21
         },
         this
       ),
-      filteredExercises.map((prod) => /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("section", { className: "card-container col-md", children: /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
+      /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)("section", { className: "card-container col-md", children: filteredExercises.map((prod) => /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(
         ExercicioBase,
         {
-          id: prod.id,
+          id: prod._id,
           imgSrc: prod.image,
           altImg: prod.nome,
           duracao: prod.duracao,
           cardTitle: prod.nome,
           textoCard: prod.descricaoCurta
         },
-        void 0,
+        prod._id,
         !1,
         {
           fileName: "app/routes/Exercicios/route.tsx",
-          lineNumber: 116,
-          columnNumber: 33
+          lineNumber: 114,
+          columnNumber: 17
         },
         this
-      ) }, prod.id, !1, {
+      )) }, void 0, !1, {
         fileName: "app/routes/Exercicios/route.tsx",
-        lineNumber: 114,
-        columnNumber: 15
-      }, this))
+        lineNumber: 109,
+        columnNumber: 21
+      }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Exercicios/route.tsx",
-      lineNumber: 107,
+      lineNumber: 105,
       columnNumber: 17
     }, this) }, void 0, !1, {
       fileName: "app/routes/Exercicios/route.tsx",
-      lineNumber: 106,
+      lineNumber: 104,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime30.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Exercicios/route.tsx",
-      lineNumber: 210,
+      lineNumber: 131,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Exercicios/route.tsx",
-    lineNumber: 103,
+    lineNumber: 101,
     columnNumber: 5
   }, this);
 }
@@ -7775,22 +7826,20 @@ function Receitas() {
       this
     );
   }
-  function handlePostDiet(params) {
-  }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 187,
+      lineNumber: 183,
       columnNumber: 7
     }, this),
     recipesFiltered.length == 0 ? /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("h1", { className: "py-5 my-5 text-center container-fluid", children: "N\xE3o h\xE1 valores, use a Calculadora Nutricional para obter" }, void 0, !1, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 190,
+      lineNumber: 186,
       columnNumber: 7
     }, this) : /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(import_jsx_dev_runtime33.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("h2", { className: "dietaNome", children: "Caf\xE9 da Manh\xE3" }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 195,
+        lineNumber: 191,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "container-fluid d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: `
@@ -7810,26 +7859,26 @@ function Receitas() {
         !1,
         {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 203,
+          lineNumber: 199,
           columnNumber: 17
         },
         this
       ) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 199,
+        lineNumber: 195,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 197,
+        lineNumber: 193,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 196,
+        lineNumber: 192,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("h2", { className: "dietaNome", children: "Almo\xE7o" }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 221,
+        lineNumber: 217,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "container-fluid d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: `
@@ -7849,26 +7898,26 @@ function Receitas() {
         !1,
         {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 229,
+          lineNumber: 225,
           columnNumber: 17
         },
         this
       ) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 225,
+        lineNumber: 221,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 223,
+        lineNumber: 219,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 222,
+        lineNumber: 218,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("h2", { className: "dietaNome", children: "Lanche" }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 247,
+        lineNumber: 243,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "container-fluid d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: `
@@ -7888,26 +7937,26 @@ function Receitas() {
         !1,
         {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 255,
+          lineNumber: 251,
           columnNumber: 17
         },
         this
       ) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 251,
+        lineNumber: 247,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 249,
+        lineNumber: 245,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 248,
+        lineNumber: 244,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("h2", { className: "dietaNome", children: "Janta" }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 273,
+        lineNumber: 269,
         columnNumber: 11
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "container-fluid d-flex justify-content-center align-items-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("section", { className: "card-container container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: `
@@ -7927,26 +7976,26 @@ function Receitas() {
         !1,
         {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 281,
+          lineNumber: 277,
           columnNumber: 17
         },
         this
       ) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 277,
+        lineNumber: 273,
         columnNumber: 15
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 275,
+        lineNumber: 271,
         columnNumber: 13
       }, this) }, void 0, !1, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 274,
+        lineNumber: 270,
         columnNumber: 11
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 194,
+      lineNumber: 190,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "container-fluid", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "d-flex justify-content-center align-items-center py-5 me-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)("div", { className: "row gap-3", children: [
@@ -7965,7 +8014,7 @@ function Receitas() {
         !1,
         {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 304,
+          lineNumber: 300,
           columnNumber: 13
         },
         this
@@ -7986,42 +8035,42 @@ function Receitas() {
           !1,
           {
             fileName: "app/routes/Receitas/route.tsx",
-            lineNumber: 317,
+            lineNumber: 313,
             columnNumber: 17
           },
           this
         ),
         /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(import_react_bootstrap12.Button, { type: "button", className: "ms-5 buttonForm col", size: "lg", children: "Salvar Dieta" }, void 0, !1, {
           fileName: "app/routes/Receitas/route.tsx",
-          lineNumber: 328,
+          lineNumber: 324,
           columnNumber: 17
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/Receitas/route.tsx",
-        lineNumber: 316,
+        lineNumber: 312,
         columnNumber: 13
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 303,
+      lineNumber: 299,
       columnNumber: 11
     }, this) }, void 0, !1, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 302,
+      lineNumber: 298,
       columnNumber: 9
     }, this) }, void 0, !1, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 301,
+      lineNumber: 297,
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime33.jsxDEV)(Footer, {}, void 0, !1, {
       fileName: "app/routes/Receitas/route.tsx",
-      lineNumber: 336,
+      lineNumber: 332,
       columnNumber: 7
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/Receitas/route.tsx",
-    lineNumber: 186,
+    lineNumber: 182,
     columnNumber: 5
   }, this);
 }
@@ -8455,7 +8504,7 @@ function Index5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-I2DD2QDU.js", imports: ["/build/_shared/chunk-64WBDZMO.js", "/build/_shared/chunk-UL7NLB72.js", "/build/_shared/chunk-DSMJMTHW.js", "/build/_shared/chunk-J4QDNQJS.js", "/build/_shared/chunk-SJBEQ4F6.js", "/build/_shared/chunk-DBC5GNZQ.js", "/build/_shared/chunk-K5OIIMCN.js", "/build/_shared/chunk-PMEQ6IKM.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-BUHT6YOM.js", imports: ["/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-J6N2MOXQ.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-5ELYK7N2.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-7KVBCIJW.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-XYABQE2E.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-J6SWNUFD.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-KAC5SDHP.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-ONUOBVMH.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-LEH6WDBV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-3IINIZZZ.js", imports: ["/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-6YRXKZMF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-DLF7Q7GC.js", imports: ["/build/_shared/chunk-4YJZCEPE.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-YBMBYHJ4.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-4YJZCEPE.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-TSC2QG2H.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-PDBFWIVP.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-DQKGI4IP.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-MRBCA3CF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-ZATPSKTS.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-P2FC7MBS.js", imports: ["/build/_shared/chunk-7OQLPDCG.js", "/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-2HZNKC3N.js", imports: ["/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "7cda219a", hmr: { runtime: "/build/_shared\\chunk-SJBEQ4F6.js", timestamp: 1701051230266 }, url: "/build/manifest-7CDA219A.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-I2DD2QDU.js", imports: ["/build/_shared/chunk-64WBDZMO.js", "/build/_shared/chunk-UL7NLB72.js", "/build/_shared/chunk-DSMJMTHW.js", "/build/_shared/chunk-J4QDNQJS.js", "/build/_shared/chunk-SJBEQ4F6.js", "/build/_shared/chunk-DBC5GNZQ.js", "/build/_shared/chunk-K5OIIMCN.js", "/build/_shared/chunk-PMEQ6IKM.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-BUHT6YOM.js", imports: ["/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-J6N2MOXQ.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-5ELYK7N2.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-LZMB2ZY3.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-XYABQE2E.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-NFXJ2PSP.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-Y6UKPPGD.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-ONUOBVMH.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-LEH6WDBV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-3IINIZZZ.js", imports: ["/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-6YRXKZMF.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes": { id: "routes/Profile.dietasDetalhes", parentId: "routes/Profile", path: "dietasDetalhes", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes-DLF7Q7GC.js", imports: ["/build/_shared/chunk-4YJZCEPE.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-D66LZL34.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-4YJZCEPE.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-TSC2QG2H.js", imports: ["/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-PDBFWIVP.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-DQKGI4IP.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-MRBCA3CF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-EVS7DQ4G.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-KONI5W2G.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-L3NZ6HJZ.js", "/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-NCKGLTPE.js", "/build/_shared/chunk-XUTFPQZF.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-2HZNKC3N.js", imports: ["/build/_shared/chunk-MRBCA3CF.js", "/build/_shared/chunk-D33E6Q5E.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "87c1e7f2", hmr: { runtime: "/build/_shared\\chunk-SJBEQ4F6.js", timestamp: 1701055247553 }, url: "/build/manifest-87C1E7F2.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = {}, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
