@@ -1,17 +1,25 @@
 import { Link } from "@remix-run/react";
+import type { ImageInterface } from "../Receitas/CardReceita";
 
 
 interface CardsProps {
-  imgSrc: string
-  altImg: string
   cardTitle: string
   textoCard: string
   duracao: string
-  id: string
+  id: string,
+  image: ImageInterface
 }
 
 export function ExercicioBase(props: CardsProps) {
 
+  function image() {
+    if (props.image != null) {
+
+      return `data:image/png;base64,${Buffer.from(props.image.img.data).toString('base64')}`
+    } else {
+      return `/treino/abdominal.png`
+    }
+  }
 
 
   return (
@@ -22,7 +30,7 @@ export function ExercicioBase(props: CardsProps) {
         <div className="card">
           <div className="card-top">
             <div className="ImageAdress">
-              <img src={`/treino/abdominal.png`} alt={props.altImg} />
+              <img src={image()} alt={props.cardTitle} className="teste" />
             </div>
           </div>
           <div className="card-content">

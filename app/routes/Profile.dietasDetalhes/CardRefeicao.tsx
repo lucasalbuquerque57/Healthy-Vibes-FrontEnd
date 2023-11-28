@@ -15,14 +15,6 @@ export function CardRefeicao(props: CardRefeicao) {
 
   const [recipe, setRecipe] = useState<RecipeInterface[]>([])
 
-  useEffect(() => {
-
-    setRecipe(JSON.parse(localStorage.getItem("RecipesLocalStorage") || ""))
-  }, [])
-
-
-
-
 
   const responsiveOptions = [
     {

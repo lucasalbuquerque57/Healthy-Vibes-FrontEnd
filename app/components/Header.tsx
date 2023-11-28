@@ -146,7 +146,7 @@ export function Header() {
                     </Link>
                   </>
                   :
-                  < div className="nav-item dropdown perfilDropdownSummoner">
+                  < div className="nav-item dropdown perfilDropdownSummoner mt-3">
                     <button
                       className="nav-link dropleft dropdown-toggle"
                       data-bs-toggle="dropdown"

@@ -1,5 +1,4 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
-import { useNavigate } from "@remix-run/react";
 import { useCallback, useEffect, useState } from "react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
@@ -9,6 +8,7 @@ import { FiltroBarra } from "~/routes/Exercicios/Filtro_Barra";
 
 import exercicios from "~/styles/exercicios.css";
 import { axiosHealthyApi } from "~/configs/https";
+import type { ImageInterface } from "../Receitas/CardReceita";
 
 
 export const links: LinksFunction = () => {
@@ -23,25 +23,6 @@ export const meta: MetaFunction = () => ({
 });
 
 
-/* const categories = [
-    "Alongamento",
-    "Perna",
-    "Braço",
-    "Tríceps",
-    "Peito",
-]; */
-
-/* const allExercises = [
-    {
-        id: "a",
-        imgSrc: "pernas.png",
-        altImg: "Mulher_agachamentoCurto",
-        duracao: "Curto",
-        cardTitle: "Agachamento - Curto",
-        descricaoCurta: "Trabalha os membros e músculos inferiores de uma forma bem completa.",
-    },
-]; */
-
 interface ExerciseInterface {
     _id: string,
     nome: string,
@@ -49,10 +30,9 @@ interface ExerciseInterface {
     descricaoCurta: string,
     video: string,
     area: string,
-    intensidade: number,
     sets: string,
     duracao: string,
-    image: string
+    image: ImageInterface
 }
 
 
@@ -76,7 +56,7 @@ export default function Exercicios() {
 
     const handleGet = useCallback(async () => {
         await axiosHealthyApi
-            .get("/exercises")
+            .get("/exercises/withImage")
             .then((r) => {
                 setExercicio(r.data);
             })
@@ -89,24 +69,34 @@ export default function Exercicios() {
         handleGet()
     }, [handleGet])
 
+    const [duracaoEx, setduracaoEx] = useState("Todos")
+
+    const filteredArea =
+        duracaoEx == "Todos" ?
+            exercicio : exercicio.filter((p) => {
+                return p.duracao == duracaoEx
+            })
+
+
     const filteredExercises =
-        categoryFilters.size === 0
-            ? exercicio
-            : exercicio
+        categoryFilters.size == 0
+            ? filteredArea
+            : filteredArea
                 .filter((p) => categoryFilters.has(p.area))
-    /* .filter((p) => categoryFilters.has(p.intensidade)) */
+
 
 
     return (
         <main>
             <Header />
 
-            <div className="container-fluid">
+            <div className="container-fluid my-5">
                 <div className="row">
                     <FiltroBarra
+                        duracao={setduracaoEx}
                         update={updateFilters}
                     />
-                    <section className="card-container col-md">
+                    <section className="card-container col-md my-5">
                         {filteredExercises.map((prod) => {
                             return (
 
@@ -114,11 +104,10 @@ export default function Exercicios() {
                                 <ExercicioBase
                                     key={prod._id}
                                     id={prod._id}
-                                    imgSrc={prod.image}
-                                    altImg={prod.nome}
                                     duracao={prod.duracao}
                                     cardTitle={prod.nome}
                                     textoCard={prod.descricaoCurta}
+                                    image={prod.image}
                                 />
 
 

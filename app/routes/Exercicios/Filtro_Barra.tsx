@@ -1,5 +1,6 @@
 interface FiltroProps {
     update: Function
+    duracao: React.Dispatch<string>
 }
 
 export function FiltroBarra(props: FiltroProps) {
@@ -9,7 +10,7 @@ export function FiltroBarra(props: FiltroProps) {
 
         /* n to conseguindo fzr esse fdp ser do tamanho do body */
 
-        <div className="d-flex flex-column flex-shrink-0 p-3 bg-light barraDeFiltros col col-md-4" id="barraDeFiltros">
+        <div className="d-flex flex-column flex-shrink-0 p-3 bg-light barraDeFiltros col col-md-4 my-2" id="barraDeFiltros">
             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <svg className="bi me-2" width="40" height="32"></svg>
                 <span className="fs-4">Filtros</span>
@@ -80,31 +81,39 @@ export function FiltroBarra(props: FiltroProps) {
             </li>
             <hr />
             <li className="mb-1 listaCategoria">
-                <button className="btn btn-toggle align-items-center rounded btnCategoriaBarraFiltro" data-bs-toggle="collapse" data-bs-target="#intensidade-collapse" aria-expanded="true">
-                    Intensidade
-                </button>
-                <div className="collapse" id="intensidade-collapse" >
-                    <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small grupoCategoria">
-                        <input type="range" className="form-range" min="0" max="3" defaultValue={"0"} id="customRange2" />
-                    </ul>
-                </div>
-            </li>
-            <hr />
-            <li className="mb-1 listaCategoria">
                 <button className="btn btn-toggle align-items-center rounded btnCategoriaBarraFiltro" data-bs-toggle="collapse" data-bs-target="#duracao-collapse" aria-expanded="true">
                     Duração
                 </button>
                 <div className="collapse" id="duracao-collapse" >
                     <div className="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label className="form-check-label" htmlFor="flexRadioDefault1">
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="input1"
+                            value="Curto"
+                            onChange={(e) => {
+                                if (e.target.checked)
+                                    props.duracao(e.target.value)
+                            }}
+                        />
+                        <label className="form-check-label" htmlFor="input1">
                             Curto
                         </label>
                     </div>
                     <div className="form-check">
-                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
-                        <label className="form-check-label" htmlFor="flexRadioDefault1">
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="input2"
+                            value="Longo"
+                            onChange={(e) => props.duracao(e.target.value)}
+
+                        />
+                        <label className="form-check-label" htmlFor="input2">
                             Longo
+                        </label>
+                    </div>
+                    <div className="form-check">
+                        <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" defaultChecked
+                            value="Todos"
+                            onChange={(e) => props.duracao(e.target.value)}
+                        />
+                        <label className="form-check-label" htmlFor="flexRadioDefault3">
+                            Todos
                         </label>
                     </div>
                 </div>

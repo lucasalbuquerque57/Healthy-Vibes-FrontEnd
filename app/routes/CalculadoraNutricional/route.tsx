@@ -31,8 +31,8 @@ export interface Resultados {
 export default function CalculadoraNutricional() {
 
   const [show, setShow] = useState(false);
-  const [resultados, setResultados] = useState<Resultados>();
   const handleClose = () => setShow(false);
+  const [resultados, setResultados] = useState<Resultados>();
 
   return (
     <main>

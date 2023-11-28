@@ -8,6 +8,7 @@ import { useNavigate } from "@remix-run/react";
 import { axiosHealthyApi } from "~/configs/https";
 import { useCallback, useEffect, useState } from "react";
 import { Carousel } from 'primereact/carousel';
+import ModalInserDiet from "./ModalInsertDiet";
 
 
 export const links: LinksFunction = () => {
@@ -56,6 +57,8 @@ export default function Receitas() {
   const [recipesFiltered, setRecipesFiltered] = useState<RecipeInterface[]>([]);
   const [numVisible, setNumVisible] = useState(0)
   const [numScroll, setNumScroll] = useState(0)
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
 
   function generateRecipe(recipes: RecipeInterface[]) {
     if (localStorage.getItem("resultsCalc")) {
@@ -321,11 +324,19 @@ export default function Receitas() {
                   Detalhes Macro
                 </Button>
 
-                <Button type="button" className="ms-5 buttonForm col" size="lg">
+                <Button type="button" className="ms-5 buttonForm col" size="lg" onClick={() => setShow(true)}>
                   Salvar Dieta
                 </Button>
               </>
             )}
+
+            <ModalInserDiet
+              modal={{
+                show: show,
+                onHide: handleClose
+              }}
+            />
+
           </div>
         </div>
       </div>
