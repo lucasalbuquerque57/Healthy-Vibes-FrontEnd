@@ -159,7 +159,6 @@
 }
 
 .cardDetalheDieta {
-  height: auto !important;
   box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
   background-color: var(--background-primary);
   color: var(--text-octonary);
@@ -275,11 +274,6 @@
   }
 }
 
-@layer primereact {
-  .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-    
-  }
-}
 
 @layer primereact {
   .p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
@@ -303,4 +297,12 @@
 
 .p-items-hidden .p-carousel-item{
   visibility: visible !important;
+}
+
+.adaptLenght{
+  width: 25rem;
+}
+
+.limiteAltura{
+  height: 20rem;
 }

@@ -1,31 +1,25 @@
 import type { FormEvent } from "react";
 import type { ModalProps } from "react-bootstrap";
 import { Modal, Button } from "react-bootstrap";
-import type { RecipeInterface } from "./route";
 import { axiosHealthyApi } from "~/configs/https";
 import Swal from "sweetalert2";
-import { useNavigate } from "@remix-run/react";
 
 interface ModalDietProps {
     modal: ModalProps;
+    id: string;
 }
 
-export default function ModalInserDiet(props: ModalDietProps) {
+export default function ModalUpdateDiet(props: ModalDietProps) {
 
-    const navigate = useNavigate();
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault()
 
         const formData = new FormData(e.target as HTMLFormElement)
         const data = Object.fromEntries(formData)
 
-        const recipes: RecipeInterface[] = JSON.parse(localStorage.getItem("RecipesLocalStorage") || "");
-        const result = JSON.parse(localStorage.getItem("resultsCalc") || "");
 
-        await axiosHealthyApi.post('/diets', {
+        await axiosHealthyApi.patch(`/diets/${props.id}`, {
             nome: data.nome,
-            recipes: recipes.map(r => { return r._id }),
-            opcaoPeso: result.opcaoPeso,
             descricao: data.descricao
         })
             .then(() => {
@@ -35,8 +29,7 @@ export default function ModalInserDiet(props: ModalDietProps) {
                     allowOutsideClick: false,
                     icon: "success"
                 }).then(() => {
-                    localStorage.removeItem("RecipesLocalStorage")
-                    return navigate("/Profile")
+                    window.location.reload()
                 })
             })
             .catch((e) => {
@@ -49,7 +42,7 @@ export default function ModalInserDiet(props: ModalDietProps) {
         <Modal {...props.modal} centered>
             <form onSubmit={handleSubmit}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Salvar Dieta</Modal.Title>
+                    <Modal.Title>Editar Dieta</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="mb-3">

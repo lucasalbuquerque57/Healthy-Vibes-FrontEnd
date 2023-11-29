@@ -1,6 +1,6 @@
-import { Link } from "@remix-run/react";
-import { Card, ListGroup, OverlayTrigger, Popover } from "react-bootstrap";
+import { Card, OverlayTrigger, Popover } from "react-bootstrap";
 import Swal from "sweetalert2";
+import type { ImageInterface } from "../Receitas/CardReceita";
 
 /* interface CardsProps {
   imgSrc: string
@@ -12,17 +12,25 @@ import Swal from "sweetalert2";
 
 interface CardsProps {
   title: string;
-  dificuldade: string;
-  porcao: string;
   descricao: string;
   calorias: number,
   carboidratos: number;
   gordura: number;
   proteína: number;
   ingredientes: [{ nome: string, qtd: string }];
+  image: ImageInterface;
 }
 
 export function CardDietaDetalhe(props: CardsProps) {
+
+  function image() {
+    if (props.image != null) {
+
+      return `data:image/png;base64,${Buffer.from(props.image.img.data).toString('base64')}`
+    } else {
+      return "/IconeLogo.png"
+    }
+  }
 
   function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 
@@ -47,18 +55,14 @@ export function CardDietaDetalhe(props: CardsProps) {
 
   return (
 
-    <Card className="cardDetalheDieta mx-md-5">
-      <Card.Img variant="top" src="/IconeLogo.png" />
+    <Card className="cardDetalheDieta mx-3 limiteAltura">
+      <Card.Img variant="top" src={image()} width="200px" height="200px" />
       <Card.Body>
         <Card.Title>{props?.title}</Card.Title>
         <Card.Text>
           {props?.descricao}
         </Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-        <ListGroup.Item>Dificuldade:  {props?.dificuldade}</ListGroup.Item>
-        <ListGroup.Item>{props?.porcao} Porções</ListGroup.Item>
-      </ListGroup>
       <Card.Body>
         {/* <button type="button" title="Favoritar" className="buttonCards">
               <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
@@ -84,7 +88,7 @@ export function CardDietaDetalhe(props: CardsProps) {
                     :
                     props.ingredientes.map((i, index) => {
                       return (
-                        <span key={index}>{i.nome} - {i.qtd}</span>
+                        <div key={index}>{i.nome} - {i.qtd}</div>
                       )
                     })
                 }
