@@ -48,7 +48,7 @@ export default function ControleConsumo() {
         if (createdAt) {
             for (let index = 0; index < createdAt.length; index++) {
                 const dateC = new Date(createdAt[index].belongDate)
-                if (dateC.getUTCDay() == date.day && dateC.getMonth() == date.month && dateC.getFullYear() == date.year)
+                if (dateC.getDate() == date.day && dateC.getMonth() == date.month && dateC.getFullYear() == date.year)
                     return <strong className="border border-3 border-selecionado rounded-circle px-1">{date.day}</strong>;
             }
         }
