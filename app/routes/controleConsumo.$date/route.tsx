@@ -199,7 +199,7 @@ export default function ControleConsumo() {
                         </div>
                         <div className="headline text col-8">
                             <h1 className='first-title'>Controle de Consumo</h1>
-                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + actualDate.getUTCMonth()  + "/" + actualDate.getFullYear()}</h2>
+                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + (actualDate.getUTCMonth() + 1)  + "/" + actualDate.getFullYear()}</h2>
                         </div>
                     </div>
                 </div>
