@@ -6,7 +6,7 @@
 }
 
 .cardDetalheDieta {
-  height: auto !important;
+  height: 28rem !important;
   box-shadow: 0 2.5rem 2.5rem -3rem var(--efeitos-salmao) !important;
   background-color: var(--background-primary);
   color: var(--text-octonary);
@@ -207,7 +207,6 @@
 }
 
 .card .card-top {
-  height: 14.75rem;
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -224,7 +223,6 @@
 }
 
 .card .card-top .ImageAdress img {
-  width: 100%;
   height: inherit;
   object-fit: contain;
   object-position: center;
@@ -300,7 +298,13 @@
 }
 
 .adaptLenght{
-  width: 25rem;
+  width: 20rem;
+}
+
+@media screen and (min-width: 768px) {
+  .adaptLenght{
+    width: 25rem;
+  }
 }
 
 .limiteAltura{

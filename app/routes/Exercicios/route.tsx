@@ -23,7 +23,7 @@ export const meta: MetaFunction = () => ({
 });
 
 
-interface ExerciseInterface {
+export interface ExerciseInterface {
     _id: string,
     nome: string,
     descricao: string,

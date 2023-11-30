@@ -1,6 +1,7 @@
 import { Card, OverlayTrigger, Popover } from "react-bootstrap";
 import Swal from "sweetalert2";
 import type { ImageInterface } from "../Receitas/CardReceita";
+import { axiosHealthyApi } from "~/configs/https";
 
 /* interface CardsProps {
   imgSrc: string
@@ -19,6 +20,9 @@ interface CardsProps {
   proteína: number;
   ingredientes: [{ nome: string, qtd: string }];
   image: ImageInterface;
+  idsReceitas: string[] | undefined
+  id: string;
+  idDiet: string | undefined;
 }
 
 export function CardDietaDetalhe(props: CardsProps) {
@@ -34,8 +38,9 @@ export function CardDietaDetalhe(props: CardsProps) {
 
   function handleDelete(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 
-    // Vou colocar os bglhs do axios aqui
     e.preventDefault();
+
+
     Swal.fire({
       title: 'Quer deletar?',
       showDenyButton: true,
@@ -45,7 +50,19 @@ export function CardDietaDetalhe(props: CardsProps) {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        Swal.fire('Deletado!', '', 'success')
+
+        if (props.idsReceitas) {
+          for (let i = 0; i < props.idsReceitas.length; i++) {
+            if (props.id == props.idsReceitas[i])
+              props.idsReceitas?.splice(i, 1)
+          }
+        }
+
+        axiosHealthyApi.patch(`/diets/${props.idDiet}`, {
+          recipes: props.idsReceitas
+        })
+          .then(() => { Swal.fire('Deletado!', '', 'success').then(() => { window.location.reload() }) })
+          .catch((e) => { console.log(e) })
       } else if (result.isDenied) {
         Swal.fire('Não deletado', '', 'info')
       }
@@ -55,7 +72,7 @@ export function CardDietaDetalhe(props: CardsProps) {
 
   return (
 
-    <Card className="cardDetalheDieta mx-3 limiteAltura">
+    <Card className="cardDetalheDieta mx-3">
       <Card.Img variant="top" src={image()} width="200px" height="200px" />
       <Card.Body>
         <Card.Title>{props?.title}</Card.Title>
@@ -64,9 +81,6 @@ export function CardDietaDetalhe(props: CardsProps) {
         </Card.Text>
       </Card.Body>
       <Card.Body>
-        {/* <button type="button" title="Favoritar" className="buttonCards">
-              <i className="px-2 fa-regular fa-heart text-danger iconeCardDetalheFav" title="Favoritar"></i>
-            </button>   vou engavetar essa ideia*/}
         <OverlayTrigger
           trigger="click"
           placement="auto"
@@ -104,12 +118,13 @@ export function CardDietaDetalhe(props: CardsProps) {
             ></i>
           </button>
         </OverlayTrigger>
-        {/* <button type="button" title="Regerar" className="buttonCards float-end">
-              <i
-                className="px-2 fa-solid fa-arrows-rotate iconeCardDetalheMais"
-                title="Regerar"
-              ></i>
-            </button>  */}
+        <button
+          type="button"
+          title="Excluir"
+          className="buttonCards" onClick={handleDelete}
+        >
+          <i className="px-2 fa-solid fa-trash apagarDetalheDieta" ></i>
+        </button>
       </Card.Body>
     </Card>
 

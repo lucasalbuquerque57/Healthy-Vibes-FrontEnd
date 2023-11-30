@@ -36,8 +36,7 @@ export function CardDieta(props: CardsProps) {
       if (result.isConfirmed) {
         axiosHealthyApi.delete(`/diets/${props.id}`)
           .then(() => {
-            Swal.fire('Deletado!', '', 'success')
-            window.location.reload()
+            Swal.fire('Deletado!', '', 'success').then(() => { window.location.reload() })
           })
           .catch(e => { console.log(e) })
 

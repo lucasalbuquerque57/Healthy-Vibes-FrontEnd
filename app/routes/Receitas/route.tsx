@@ -34,23 +34,6 @@ export interface RecipeInterface {
   image: ImageInterface;
 }
 
-const responsiveOptions = [
-  {
-    breakpoint: '1199px',
-    numVisible: 1,
-    numScroll: 1
-  },
-  {
-    breakpoint: '991px',
-    numVisible: 2,
-    numScroll: 1
-  },
-  {
-    breakpoint: '767px',
-    numVisible: 1,
-    numScroll: 1
-  }
-];
 
 export default function Receitas() {
   const navigate = useNavigate();
@@ -205,7 +188,6 @@ export default function Receitas() {
                   }
                   numVisible={numVisible}
                   numScroll={numScroll}
-                  responsiveOptions={responsiveOptions}
                   itemTemplate={cardTemplate}
                   className={
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Café da Manhã")).length < 3 ?
@@ -231,7 +213,6 @@ export default function Receitas() {
                   }
                   numVisible={numVisible}
                   numScroll={numScroll}
-                  responsiveOptions={responsiveOptions}
                   itemTemplate={cardTemplate}
                   className={
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Almoço")).length < 3 ?
@@ -257,7 +238,6 @@ export default function Receitas() {
                   }
                   numVisible={numVisible}
                   numScroll={numScroll}
-                  responsiveOptions={responsiveOptions}
                   itemTemplate={cardTemplate}
                   className={
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Lanche")).length < 3 ?
@@ -283,7 +263,6 @@ export default function Receitas() {
                   }
                   numVisible={numVisible}
                   numScroll={numScroll}
-                  responsiveOptions={responsiveOptions}
                   itemTemplate={cardTemplate}
                   className={
                     recipesFiltered.filter((recipe) => recipe.periodoRef.includes("Janta")).length < 3 ?

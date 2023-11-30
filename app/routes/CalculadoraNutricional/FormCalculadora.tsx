@@ -180,17 +180,17 @@ export default function FormCalculadora(props: FormCalculadoraProps) {
 
                     <div className="pt-2">
                         <label>Idade:</label>
-                        <input className="form-control border border-secondary " type="number" name="idade" placeholder="Idade" required />
+                        <input className="form-control border border-secondary " type="number" name="idade" placeholder="Idade" required min="0" />
                     </div>
 
                     <div className="pt-2">
                         <label>Altura</label>
-                        <input className="form-control border border-secondary" type="number" name="altura" placeholder="Altura em Cm" required />
+                        <input className="form-control border border-secondary" type="number" name="altura" placeholder="Altura em Cm" required min="0" />
                     </div>
 
                     <div className="pt-2">
                         <label>Peso</label>
-                        <input className="form-control border border-secondary" type="number" name="peso" placeholder="Peso em Kg" required step="0.01" />
+                        <input className="form-control border border-secondary" type="number" name="peso" placeholder="Peso em Kg" required step="0.01" min="0" />
                     </div>
 
                 </div>

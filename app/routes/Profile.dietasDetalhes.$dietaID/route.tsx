@@ -2,13 +2,13 @@ import type { LinksFunction, LoaderArgs, MetaFunction } from "@remix-run/node";
 
 import dietaDetalhes from "~/styles/detalhesDietas.css";
 
-import { CardRefeicao } from "./CardRefeicao";
 import { Toast, ToastContainer } from "react-bootstrap";
 import { axiosHealthyApi } from "~/configs/https";
 import type { DietInterface } from "../Profile._index/route";
 import type { RecipeInterface } from "../Receitas/route";
 import { useState, useCallback, useEffect } from "react";
 import { useLoaderData } from "@remix-run/react";
+import CardRefeicao from "./CardRefeicao";
 
 
 export async function loader({
@@ -50,6 +50,7 @@ export default function DietasDetalhes() {
   const [diet, setDiet] = useState<DietInterfaceWithRecipes>()
 
 
+
   const handleGet = useCallback(async () => {
     await axiosHealthyApi
       .get(`/diets/${data}`)
@@ -64,9 +65,7 @@ export default function DietasDetalhes() {
 
   useEffect(() => {
     handleGet()
-
   }, [handleGet])
-
 
 
 
@@ -83,9 +82,12 @@ export default function DietasDetalhes() {
       </ToastContainer>
 
       <CardRefeicao titulo="Café da Manhã" diet={diet} />
-      {/* <CardRefeicao titulo="Al Mossar" diet={diet} /> */}
+      <CardRefeicao titulo="Almoço" diet={diet} />
+      <CardRefeicao titulo="Lanche" diet={diet} />
+      <CardRefeicao titulo="Janta" diet={diet} />
+
 
 
     </main>
-  );
+  )
 }
