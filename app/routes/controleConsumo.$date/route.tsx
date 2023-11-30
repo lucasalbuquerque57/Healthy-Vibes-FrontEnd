@@ -43,7 +43,7 @@ export const meta: MetaFunction<typeof loader> = ({
     const actualDate = new Date(data)
 
     return ({
-        title: "Dia: " + actualDate.getDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()
+        title: "Dia: " + actualDate.getUTCDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()
     })
 
 };
