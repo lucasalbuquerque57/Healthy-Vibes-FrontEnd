@@ -9,7 +9,7 @@ interface ModalInsert_AguaProps {
     updateOrInsert: string
     handleClose: Function
     id: string,
-    actualDate: Date
+    actualDate: string
 }
 
 export default function ModalInsert(props: ModalInsert_AguaProps) {

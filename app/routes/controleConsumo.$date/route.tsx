@@ -98,7 +98,7 @@ export default function ControleConsumo() {
                 setConsumptions(
                     filterConsumptions.filter((c) => {
                         const date = new Date(c.belongDate)
-                        return (date.getDate() == actualDate.getUTCDate() && date.getMonth() == actualDate.getMonth() && date.getFullYear() == actualDate.getFullYear())
+                        return (date.getDate() == actualDate.getUTCDate() && date.getMonth() == actualDate.getUTCMonth() && date.getFullYear() == actualDate.getUTCFullYear())
                     })
                 );
             })
@@ -199,7 +199,7 @@ export default function ControleConsumo() {
                         </div>
                         <div className="headline text col-8">
                             <h1 className='first-title'>Controle de Consumo</h1>
-                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + (actualDate.getMonth() + 1) + "/" + actualDate.getFullYear()}</h2>
+                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + actualDate.getUTCMonth()  + "/" + actualDate.getFullYear()}</h2>
                         </div>
                     </div>
                 </div>
@@ -341,7 +341,7 @@ export default function ControleConsumo() {
                 updateOrInsert={updateOrInsert}
                 handleClose={handleClose}
                 id={actualId}
-                actualDate={actualDate}
+                actualDate={actualDate.toLocaleDateString()}
             />
 
             <Footer />
