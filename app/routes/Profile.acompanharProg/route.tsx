@@ -15,9 +15,10 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import type { FormEvent} from "react";
-import { useState } from "react";
+import type { FormEvent } from "react";
+import { useCallback, useEffect, useState } from "react";
 import ModalInsertAcompanharProg from "./ModalInsert";
+import { axiosHealthyApi } from "~/configs/https";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 );
@@ -27,6 +28,12 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: acompanharProgresso },
   ];
 };
+
+export interface ImcInterface {
+  _id: string,
+  valor: number,
+  createdAt: Date
+}
 
 export default function AcompanharProgresso() {
   const changeTheme = useHookstate(themePage);
@@ -83,10 +90,35 @@ export default function AcompanharProgresso() {
     }
   }
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-  }
+  const [imcs, setImcs] = useState<ImcInterface[]>([])
 
+  const handleGet = useCallback(async () => {
+    await axiosHealthyApi
+      .get("/imcs/myImcs")
+      .then((r) => {
+        setImcs(r.data);
+      })
+      .catch((e) => {
+        console.log(e)
+      });
+  }, []);
+
+  useEffect(() => {
+    handleGet()
+  }, [handleGet])
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement)
+    const data = Object.fromEntries(formData)
+
+    await axiosHealthyApi.post('/imcs', {
+      peso: Number(data.peso),
+      altura: Number(data.altura)
+    })
+      .then(() => { window.location.reload() })
+      .catch(e => { console.log(e) })
+  }
 
 
   return (
@@ -102,13 +134,13 @@ export default function AcompanharProgresso() {
                 <div>
                   <label className="rotulo">Altura</label>
                 </div>
-                <input className="inpProg" type="number" id="altura" name="nome" placeholder="Altura em Cm" />
+                <input className="inpProg" type="number" id="altura" name="altura" placeholder="Altura em Cm" min={0} />
               </div>
               <div className="campo-prog col p-0">
                 <div>
                   <label className="rotulo">Peso</label>
                 </div>
-                <input className="inpProg" type="number" id="peso" name="text" placeholder="Peso em Kg" step="0.01" />
+                <input className="inpProg" type="number" id="peso" name="peso" placeholder="Peso em Kg" step="0.01" min={0} />
               </div>
               <div className="buttonAdd col my-2 p-0">
                 <button type="submit" className="stylebuttonadd">Adicionar</button>
@@ -120,24 +152,22 @@ export default function AcompanharProgresso() {
         <div className="container-fluid d-flex justify-content-center align-items-center mt-4 ">
 
           <div className="row mx-1 gap-2">
-            <CardIMC
-              IMC="23.2"
-              data="23/12/2022"
-              imcId={setImcId}
-              handleShow={handleShow}
-            />
-            <CardIMC
-              IMC="22.2"
-              data="13/02/2023"
-              imcId={setImcId}
-              handleShow={handleShow}
-            />
-            <CardIMC
-              IMC="20.2"
-              data="25/03/2023"
-              imcId={setImcId}
-              handleShow={handleShow}
-            />
+            {
+              imcs.map(i => {
+                const date = new Date(i.createdAt)
+                return (
+                  <CardIMC
+                    key={i._id}
+                    IMC={i.valor}
+                    data={date.getUTCDate() + "/" + (date.getUTCMonth() + 1) + "/" + date.getFullYear()}
+                    imcId={setImcId}
+                    handleShow={handleShow}
+                  />
+                )
+              })
+
+            }
+
           </div>
 
         </div>

@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 interface CardsProps {
-    IMC: string;
+    IMC: number;
     data: string;
     handleShow: Function;
     imcId: React.Dispatch<string>;

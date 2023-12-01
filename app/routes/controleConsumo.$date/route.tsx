@@ -106,7 +106,7 @@ export default function ControleConsumo() {
                 setConsumptions(
                     filterConsumptions.filter((c) => {
                         const date = new Date(c.belongDate)
-                        return (date.getDate() == actualDate.getDate() && date.getMonth() == actualDate.getMonth() && date.getFullYear() == actualDate.getFullYear())
+                        return (date.getUTCDate() == actualDate.getUTCDate() && date.getUTCMonth() == actualDate.getUTCMonth() && date.getUTCFullYear() == actualDate.getUTCFullYear())
                     })
                 );
             })
