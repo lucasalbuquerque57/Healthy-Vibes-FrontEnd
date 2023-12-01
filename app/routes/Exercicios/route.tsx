@@ -99,8 +99,6 @@ export default function Exercicios() {
                     <section className="card-container col-md my-5">
                         {filteredExercises.map((prod) => {
                             return (
-
-
                                 <ExercicioBase
                                     key={prod._id}
                                     id={prod._id}
@@ -109,8 +107,6 @@ export default function Exercicios() {
                                     textoCard={prod.descricaoCurta}
                                     image={prod.image}
                                 />
-
-
                             );
                         })}
                     </section>

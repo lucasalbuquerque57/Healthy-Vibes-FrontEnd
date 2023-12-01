@@ -36,6 +36,7 @@ export default function ModalInserDiet(props: ModalDietProps) {
                     icon: "success"
                 }).then(() => {
                     localStorage.removeItem("RecipesLocalStorage")
+                    localStorage.removeItem("resultsCalc")
                     return navigate("/Profile")
                 })
             })

@@ -14,6 +14,7 @@ import { Link, useLoaderData } from "@remix-run/react";
 import { useHookstate } from "@hookstate/core";
 import { themePage } from "~/script/changeTheme";
 import { axiosHealthyApi } from "~/configs/https";
+import { DietInterfaceWithRecipes } from "../Profile.dietasDetalhes.$dietaID/route";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
@@ -76,16 +77,23 @@ export default function ControleConsumo() {
         setContentModal(typeOperation)
     }
 
-    const [diet, setDiet] = useState("");
+    const [actualDiet, setDietActualDiet] = useState("")
+    const [diet, setDiet] = useState<DietInterfaceWithRecipes[]>([])
+    const [totalCal, setTotalCal] = useState(0)
+
 
     useEffect(() => {
-        if (localStorage.getItem("selectedDiet"))
-            setDiet(localStorage.getItem("selectedDiet") || "")
-    }, [])
-
+        for (let i = 0; i < diet.length; i++) {
+            if (actualDiet == diet[i]._id) {
+                const dietaEscolhida = diet[i].recipes;
+                const CalCount = dietaEscolhida.reduce((accumulator, object) => { return accumulator + object.calorias }, 0)
+                setTotalCal(CalCount)
+                break;
+            }
+        }
+    }, [actualDiet, diet])
 
     const actualDate = new Date(data)
-
 
     const [consumptions, setConsumptions] = useState<ConsumptionInterface[]>([])
 
@@ -107,9 +115,22 @@ export default function ControleConsumo() {
             });
     }, [data]);
 
+
+    const handleGetDiet = useCallback(async () => {
+        await axiosHealthyApi
+            .get("/diets/myDiets")
+            .then((r) => {
+                setDiet(r.data);
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+    }, []);
+
     useEffect(() => {
         handleGet()
-    }, [handleGet])
+        handleGetDiet()
+    }, [handleGet, handleGetDiet])
 
     const options = {
         responsive: true,
@@ -132,7 +153,7 @@ export default function ControleConsumo() {
         plugins: {
             title: {
                 display: true,
-                text: 'Quantidade de Calorias desejadas: 20Kcal',
+                text: `${totalCal == 0 ? "Selecione uma dieta para basear o gráfico" : `Quantidade de Calorias desejadas: ${totalCal / 1000}kcal`}`,
                 color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
             legend: {
@@ -168,7 +189,11 @@ export default function ControleConsumo() {
         datasets: [
             {
                 label: 'Controle de Calorias',
-                data: [932, 2500], // preciso fazer o dietas ainda
+                data: [
+                    consumptions.filter((c) => c.tipoConsumo == "Calorias").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0),
+                    consumptions.filter((c) => c.tipoConsumo == "Calorias").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) <= totalCal ?
+                        totalCal - consumptions.filter((c) => c.tipoConsumo == "Calorias").reduce((accumulator, object) => { return accumulator + object.quantidade }, 0) : 0
+                ],
                 backgroundColor: [
                     changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(10,153,6,0.60)",
                     changeTheme.get() == "contraOn" ? "rgba(30,30,30)" : "rgba(211, 211, 211, 1.0)",
@@ -199,7 +224,7 @@ export default function ControleConsumo() {
                         </div>
                         <div className="headline text col-8">
                             <h1 className='first-title'>Controle de Consumo</h1>
-                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + (actualDate.getUTCMonth() + 1)  + "/" + actualDate.getFullYear()}</h2>
+                            <h2 className='first-title'>{actualDate.getUTCDate() + "/" + (actualDate.getUTCMonth() + 1) + "/" + actualDate.getFullYear()}</h2>
                         </div>
                     </div>
                 </div>
@@ -313,17 +338,15 @@ export default function ControleConsumo() {
                         </div>
                         <div className="d-flex justify-content-center align-items-center my-3">
                             <label htmlFor="Diet" className="mx-3">Escolha a Dieta:</label>
-                            <select className="form-select selectConsumo" aria-label="Default select example" value={diet} id="Diet"
+                            <select className="form-select selectConsumo" aria-label="Default select example" value={actualDiet} id="Diet"
                                 onChange={(e) => {
-                                    setDiet(e.target.value)
-                                    localStorage.setItem("selectedDiet", e.target.value)
+                                    setDietActualDiet(e.target.value)
                                 }}
-
                             >
                                 <option value="" disabled>Escolha uma para base</option>
-                                <option value="salve">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                {diet.map((d) => {
+                                    return (<option key={d._id} value={d._id}>{d.nome}</option>)
+                                })}
                             </select>
                         </div>
                     </div>
