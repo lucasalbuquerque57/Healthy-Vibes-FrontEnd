@@ -17,8 +17,8 @@ import {
 import { Line } from 'react-chartjs-2';
 import type { FormEvent } from "react";
 import { useCallback, useEffect, useState } from "react";
-import ModalInsertAcompanharProg from "./ModalInsert";
 import { axiosHealthyApi } from "~/configs/https";
+import ModalUpdateAcompanharProg from "./ModalUpdate";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend
 );
@@ -39,20 +39,23 @@ export default function AcompanharProgresso() {
   const changeTheme = useHookstate(themePage);
 
   const [imcID, setImcId] = useState("");
+  const [imcValue, setImcValue] = useState(0)
 
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+  const [imcs, setImcs] = useState<ImcInterface[]>([])
 
-  const labels = ['Dezembro (2022)', 'Janeiro', 'Fevereiro', 'Abril', 'Maio'];
+  const totalDados = imcs.map((i, idx) => { return ("imc nº: " + (idx + 1)) }, 0);
 
+  const labels = totalDados
   const data = {
     labels,
     datasets: [
       {
         label: "IMC",
-        data: [23.3, 22.2, 20.2, 23, 21.4],
+        data: imcs.map((imc) => { return imc.valor }),
         borderColor: changeTheme.get() == "contraOn" ? "rgba(101,87,5,0.8)" : "rgba(10,153,6,0.60)",
         backgroundColor: [changeTheme.get() == "contraOn" ? "rgba(255,255,000)" : "rgba(10,50,6,0.60)"],
         color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(70,0,70,1)",
@@ -90,7 +93,6 @@ export default function AcompanharProgresso() {
     }
   }
 
-  const [imcs, setImcs] = useState<ImcInterface[]>([])
 
   const handleGet = useCallback(async () => {
     await axiosHealthyApi
@@ -134,13 +136,13 @@ export default function AcompanharProgresso() {
                 <div>
                   <label className="rotulo">Altura</label>
                 </div>
-                <input className="inpProg" type="number" id="altura" name="altura" placeholder="Altura em Cm" min={0} />
+                <input className="inpProg" type="number" id="altura" name="altura" placeholder="Altura em Cm" min={0} required />
               </div>
               <div className="campo-prog col p-0">
                 <div>
                   <label className="rotulo">Peso</label>
                 </div>
-                <input className="inpProg" type="number" id="peso" name="peso" placeholder="Peso em Kg" step="0.01" min={0} />
+                <input className="inpProg" type="number" id="peso" name="peso" placeholder="Peso em Kg" step="0.01" min={0} required />
               </div>
               <div className="buttonAdd col my-2 p-0">
                 <button type="submit" className="stylebuttonadd">Adicionar</button>
@@ -158,10 +160,12 @@ export default function AcompanharProgresso() {
                 return (
                   <CardIMC
                     key={i._id}
+                    id={i._id}
                     IMC={i.valor}
                     data={date.getUTCDate() + "/" + (date.getUTCMonth() + 1) + "/" + date.getFullYear()}
                     imcId={setImcId}
                     handleShow={handleShow}
+                    setImcValue={setImcValue}
                   />
                 )
               })
@@ -172,12 +176,13 @@ export default function AcompanharProgresso() {
 
         </div>
 
-        <ModalInsertAcompanharProg
+        <ModalUpdateAcompanharProg
           imcId={imcID}
           modal={{
             show: show,
             onHide: handleClose
           }}
+          imcValue={imcValue}
         />
 
         <div className='container-fluid d-flex justify-content-center align-items-center graphic-imc mt-4 w-md-50'>

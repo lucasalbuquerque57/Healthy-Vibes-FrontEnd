@@ -1,10 +1,13 @@
 import Swal from "sweetalert2";
+import { axiosHealthyApi } from "~/configs/https";
 
 interface CardsProps {
     IMC: number;
     data: string;
+    id: string;
     handleShow: Function;
     imcId: React.Dispatch<string>;
+    setImcValue: React.Dispatch<number>;
 }
 
 export function CardIMC(props: CardsProps) {
@@ -28,10 +31,13 @@ export function CardIMC(props: CardsProps) {
             /* showCancelButton: true, */
             denyButtonText: `Cancelar`,
             confirmButtonText: 'Deletar',
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
+        }).then(async (result) => {
             if (result.isConfirmed) {
-                Swal.fire('Deletado!', '', 'success')
+
+                await axiosHealthyApi.delete(`/imcs/${props.id}`)
+                    .then(() => { Swal.fire('Deletado!', '', 'success').then(() => window.location.reload()) })
+                    .catch(e => console.log(e))
+
             } else if (result.isDenied) {
                 Swal.fire('Não deletado', '', 'info')
             }
@@ -40,7 +46,8 @@ export function CardIMC(props: CardsProps) {
     }
 
     function handleUpdate() {
-        props.imcId("")
+        props.imcId(props.id)
+        props.setImcValue(props.IMC)
         props.handleShow(true)
 
     }

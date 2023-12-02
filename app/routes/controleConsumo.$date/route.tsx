@@ -153,7 +153,7 @@ export default function ControleConsumo() {
         plugins: {
             title: {
                 display: true,
-                text: `${totalCal == 0 ? "Selecione uma dieta para basear o gráfico" : `Quantidade de Calorias desejadas: ${totalCal / 1000}kcal`}`,
+                text: `${totalCal == 0 ? "Selecione uma dieta para basear o gráfico" : `Quantidade de Calorias desejadas: ${totalCal}cal`}`,
                 color: changeTheme.get() == "contraOn" ? "rgba(255,255,255)" : "rgba(30,000,000, 1.0)",
             },
             legend: {

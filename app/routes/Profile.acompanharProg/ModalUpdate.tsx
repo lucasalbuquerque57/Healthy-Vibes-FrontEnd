@@ -1,25 +1,37 @@
 import type { FormEvent } from "react";
 import { Button, Modal, type ModalProps } from "react-bootstrap";
+import { axiosHealthyApi } from "~/configs/https";
 
 
-interface ModalInsert_AguaProps {
+interface ModalUpdate_AguaProps {
     modal: ModalProps
     imcId: string
+    imcValue: number
 
 }
 
-export default function ModalInsertAcompanharProg(props: ModalInsert_AguaProps) {
+export default function ModalUpdateAcompanharProg(props: ModalUpdate_AguaProps) {
 
-    function handleSubmit(e: FormEvent) {
+    async function handleSubmit(e: FormEvent) {
         e.preventDefault()
 
+
+        const formData = new FormData(e.target as HTMLFormElement)
+        const data = Object.fromEntries(formData)
+
+        await axiosHealthyApi.patch(`/imcs/${props.imcId}`, {
+            peso: Number(data.peso),
+            altura: Number(data.altura)
+        })
+            .then(() => { window.location.reload() })
+            .catch(e => { console.log(e) })
     }
 
     return (
         <Modal {...props.modal} size="sm" centered>
             <form onSubmit={handleSubmit}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Editar IMC 20.2</Modal.Title>
+                    <Modal.Title>Editar IMC {props.imcValue}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="mb-3">

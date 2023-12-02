@@ -8,8 +8,9 @@ interface CardsProps {
   carboidratos: number;
   gordura: number;
   proteína: number;
-  ingredientes: [{ nome: string, qtd: string }];
+  ingredientes: [{ _id: string, nome: string, qtd: string }];
   image: ImageInterface;
+  modoDePreparo: string
 }
 
 export interface ImageInterface {
@@ -33,6 +34,15 @@ export function CardReceita(props: CardsProps) {
     }
   }
 
+  const addLineBreak = (str: string) =>
+    str.split(';').map((subStr) => {
+      return (
+        <>
+          {subStr}
+          <br />
+        </>
+      );
+    });
 
   return (
 
@@ -64,16 +74,22 @@ export function CardReceita(props: CardsProps) {
                 <br />
                 Proteinas: {props.proteína}g
                 <div className="border-bottom border-dark my-1" />
+                <strong>Igredientes</strong>
                 {
                   props.ingredientes.length < 1 ?
                     "Não há ingredientes salvos"
                     :
                     props.ingredientes.map((i, index) => {
+                      const key = i._id + index
+
                       return (
-                        <div key={index}>{i.nome} - {i.qtd}</div>
+                        <div key={key}>{i.nome} - {i.qtd}</div>
                       )
                     })
                 }
+                <div className="border-bottom border-dark my-1" />
+                <strong>Modo de Preparo</strong><br />
+                {addLineBreak(props.modoDePreparo)}
               </Popover.Body>
             </Popover>
           }

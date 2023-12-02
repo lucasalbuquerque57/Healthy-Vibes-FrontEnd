@@ -1,5 +1,9 @@
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "react-bootstrap"
 import { useFieldArray, useForm } from "react-hook-form";
+import { axiosHealthyApi } from "~/configs/https";
+import type { RecipeInterface } from "../Receitas/route";
+import { useNavigate } from "@remix-run/react";
 
 
 interface FormularioReceitaProps {
@@ -9,6 +13,7 @@ interface FormularioReceitaProps {
 
 
 export default function FormularioReceita(props: FormularioReceitaProps) {
+    const navigate = useNavigate();
 
 
     type FormValues = {
@@ -22,7 +27,8 @@ export default function FormularioReceita(props: FormularioReceitaProps) {
         carboidratos: number
         gordura: number
         proteína: number
-        user: string
+        periodoRef: string
+        descricao: string
     };
     // Botar bglh de imagem no formulario
 
@@ -42,11 +48,41 @@ export default function FormularioReceita(props: FormularioReceitaProps) {
         control
     });
 
+    const [dietRecipes, setDietRecipes] = useState<RecipeInterface[]>([])
 
-    function onSubmit(data: FormValues) {
-        console.log(data)
-        // vou ter que postar a receita dp, botar o id nela na dieta
-        // vou ter que postar a imagem primeiro, antes da receita, FAZ O L
+    const handleGet = useCallback(async () => {
+        await axiosHealthyApi
+            .get(`/diets/${props.dietaId}`)
+            .then((r) => {
+                setDietRecipes(r.data.recipes);
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+
+    }, [props.dietaId]);
+
+    useEffect(() => {
+        handleGet()
+    }, [handleGet])
+
+    async function onSubmit(data: FormValues) {
+        data.periodoRef = props.periodoRef
+
+
+        await axiosHealthyApi.post('/recipes', data)
+            .then(async (r) => {
+                const idrecipe = r.data.savedID
+                const newrecipe = dietRecipes.map((r) => { return r._id }).concat(idrecipe)
+
+                await axiosHealthyApi.patch(`/diets/${props.dietaId}`, {
+                    recipes: newrecipe
+                })
+                    .then(() => { navigate(`/profile/dietasDetalhes/dietaId=${props.dietaId}`) })
+                    .catch(e => console.log(e))
+
+            })
+            .catch(e => console.log(e))
     }
 
     return (
@@ -138,6 +174,12 @@ export default function FormularioReceita(props: FormularioReceitaProps) {
                         </div>
 
 
+                    </div>
+                    <div className="py-md-2 mb-3">
+                        <p className="fs-4 tituloInput">Qual descrição?</p>
+                        <div className="form-floating">
+                            <textarea className="form-control caixaTexto" placeholder="Descrição da receita" id="floatingTextarea" {...register(`descricao`)} style={{ height: "10rem" }}></textarea>
+                        </div>
                     </div>
                 </div>
 

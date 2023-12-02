@@ -35,6 +35,7 @@ export default function CardRefeicao(props: CardRefeicao) {
         image={recipe.image}
         idsReceitas={props.diet?.recipes.map((r) => { return r._id })}
         idDiet={props.diet?._id}
+        modoDePreparo={recipe.modoDePreparo}
       />
     )
   }

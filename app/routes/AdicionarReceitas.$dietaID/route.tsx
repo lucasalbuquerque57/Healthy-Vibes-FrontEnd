@@ -34,15 +34,13 @@ export default function Index() {
 
     const urlParams = new URLSearchParams(data)
 
-    console.log(urlParams.get('dietaId'))
-
     return (
         <main>
             <Header />
 
             <div className="container-fluid pt-5">
                 <FormularioReceita
-                    dietaId={`${urlParams.get('receitaId')}`}
+                    dietaId={`${urlParams.get('dietaId')}`}
                     periodoRef={`${urlParams.get('periodoRef')}`}
                 />
             </div>

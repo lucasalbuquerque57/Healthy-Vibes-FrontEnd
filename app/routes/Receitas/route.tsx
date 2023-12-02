@@ -24,7 +24,7 @@ export interface RecipeInterface {
   periodoRef: string;
   titulo: string;
   descricao: string;
-  ingredientes: [{ nome: string, qtd: string }];
+  ingredientes: [{ _id: string, nome: string, qtd: string }];
   calorias: number;
   carboidratos: number;
   gordura: number;
@@ -160,6 +160,7 @@ export default function Receitas() {
         proteína={recipe.proteína}
         ingredientes={recipe.ingredientes}
         image={recipe.image}
+        modoDePreparo={recipe.modoDePreparo}
       />
     )
   }
