@@ -163,3 +163,10 @@ form .input-group button:active{
 .form .input-group label{
     color: var(--color-octonary);
 }
+
+.bg-danger{
+    background-color: var(--background-primary) !important;
+    border: solid 1px vaR(--rouge-princip) !important;
+    color: var(--preto-branco) !important;
+    font-weight: var(--bold-oportunista) !important;
+}

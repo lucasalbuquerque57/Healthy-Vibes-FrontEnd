@@ -146,6 +146,7 @@
 
 input[type="radio"] {
   background-color: var(--background-primary);
+  border: solid 1px var(--preto-branco);
 }
 
 input[type="radio"]:checked {

@@ -805,3 +805,8 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus{
 div:where(.swal2-icon).swal2-success .swal2-success-ring{
   border: .25em solid var(--background-quinary) !important;
 }
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-deny{
+  background-color: var(--rouge-princip) !important;
+  color: var(--branco-preto) !important;
+}
