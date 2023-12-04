@@ -162,7 +162,7 @@ export default function AcompanharProgresso() {
                     key={i._id}
                     id={i._id}
                     IMC={i.valor}
-                    data={date.getUTCDate() + "/" + (date.getUTCMonth() + 1) + "/" + date.getFullYear()}
+                    data={date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()}
                     imcId={setImcId}
                     handleShow={handleShow}
                     setImcValue={setImcValue}
