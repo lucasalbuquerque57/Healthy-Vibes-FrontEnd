@@ -3,7 +3,7 @@
 }
 @media screen and (min-width: 768px) {
   main {
-    background-image: url("/backgroundLoginTemp.png");
+    background-image: var(--imgLogin);
     background-repeat: repeat;
   }
 }
@@ -129,17 +129,17 @@ form .input-group button:active {
 .form-box a {
   margin-bottom: 1rem;
   padding-left: 1rem;
-  color: var(--text-tertiary);
+  color: var(--background-quinary);
   text-decoration: none;
 }
 
 form .input-group button {
   width: 100%;
   height: 3rem;
-  background: var(--text-tertiary);
+  background: var(--background-quinary);
   cursor: pointer;
   font-size: 1rem;
-  color: var(--background-text-primary);
+  color: var(--branco-preto);
   margin-top: 2rem;
   border: none;
   outline: none;
@@ -159,7 +159,7 @@ form .input-group button {
 }
 
 .form-box .link-login a {
-  color: var(--text-tertiary);
+  color: var(--background-quinary);
 }
 
 .cadRedirect {

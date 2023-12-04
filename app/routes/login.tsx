@@ -71,11 +71,9 @@ export default function Index() {
     <main>
       <div className="container-fluid d-flex justify-content-center align-items-center box">
         <div className="img-box">
-          <p>
-            Healthy
-            <br />
-            Vibes
-          </p>
+          <Link className="nav-link" to="/">
+            <p>Healthy<br />Vibes</p>
+          </Link>
           <img src="/treino/mulherLogin.jpg" alt="mulher" />
         </div>
         <div className="form-box">

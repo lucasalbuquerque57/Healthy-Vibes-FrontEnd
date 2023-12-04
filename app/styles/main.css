@@ -104,6 +104,7 @@
 
   --eu-sinto-o-shadow: #c1b9b9;
   --filter-svgs: invert(10%) sepia(9%) saturate(907%) hue-rotate(169deg) brightness(99%) contrast(90%);
+  --imgLogin: url("/backgroundLoginTemp.png");
 }
 
 [data-theme="contraOn"] {
@@ -212,6 +213,7 @@
 
   --eu-sinto-o-shadow: #ff0;
   --filter-svgs: invert(86%) sepia(100%) saturate(6435%) hue-rotate(354deg) brightness(104%) contrast(103%);
+  --imgLogin: none;
 }
 
 * {
@@ -764,4 +766,42 @@ div:where(.swal2-icon).swal2-info {
   background-color: var(--background-primary);
   color: var(--text-octonary);
   /* border-color: ; */
+}
+
+.swal2-popup.swal2-modal.swal2-show {
+  background-color: var(--background-primary);
+  border: solid 1px var(--branco-oportunista);
+  color: var(--text-octonary);
+}
+
+.swal2-confirm.swal2-styled {
+  background-color: var(--background-primary);
+  color: var(--preto-branco) !important;
+  border: solid 1px var(--background-quinary) ;
+}
+
+.swal2-cancel.swal2-styled{
+  background-color: var(--background-quinary);
+  color: var(--branco-preto);
+  font-weight: var(--bold-oportunista);
+}
+
+.swal2-confirm.swal2-styled:focus {
+  background-color: none;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus{
+  box-shadow: none !important;
+}
+
+.swal2-success-circular-line-left, .swal2-success-circular-line-right{
+  background-color: var(--background-primary) !important;
+}
+
+.swal2-success-fix{
+  background-color: var(--background-primary) !important;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring{
+  border: .25em solid var(--background-quinary) !important;
 }
