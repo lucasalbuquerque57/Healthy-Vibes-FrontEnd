@@ -160,7 +160,7 @@ export function Header() {
 
 
                       <button className="dropdown-item ItemDropdown" onClick={logout}>
-                        <i className="fa fa-sign-out" aria-hidden="true"></i>{" "}
+                        <i className="fa fa-sign-out"></i>{" "}
                         Logout
                       </button>
 

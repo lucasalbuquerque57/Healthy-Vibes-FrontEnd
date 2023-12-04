@@ -3199,7 +3199,7 @@ function Header() {
                 }, this),
                 " ",
                 /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("button", { className: "dropdown-item ItemDropdown", onClick: logout, children: [
-                  /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("i", { className: "fa fa-sign-out", "aria-hidden": "true" }, void 0, !1, {
+                  /* @__PURE__ */ (0, import_jsx_dev_runtime7.jsxDEV)("i", { className: "fa fa-sign-out" }, void 0, !1, {
                     fileName: "app/components/Header.tsx",
                     lineNumber: 163,
                     columnNumber: 25
@@ -6621,7 +6621,7 @@ function DietasProfile() {
 // app/routes/alterarDados/route.tsx
 var route_exports7 = {};
 __export(route_exports7, {
-  default: () => alterarDados,
+  default: () => AlterarDados,
   links: () => links10,
   meta: () => meta9
 });
@@ -6633,9 +6633,22 @@ var cadastro_default = "/build/_assets/cadastro-AXW2Z574.css";
 var import_react28 = require("@remix-run/react");
 
 // app/routes/alterarDados/modalConfirmacao.tsx
-var import_react27 = require("react"), import_react_bootstrap11 = require("react-bootstrap"), import_jsx_dev_runtime26 = require("react/jsx-dev-runtime");
+var import_react27 = require("react"), import_react_bootstrap11 = require("react-bootstrap");
+var import_jsx_dev_runtime26 = require("react/jsx-dev-runtime");
 function ModalConfirmacao() {
-  let [show, setShow] = (0, import_react27.useState)(!1), handleClose = () => setShow(!1);
+  let [show, setShow] = (0, import_react27.useState)(!1), [invalidFeedback, setInvalidFeedback] = (0, import_react27.useState)(!1);
+  async function handleForm(e) {
+    e.preventDefault();
+    let formData = new FormData(e.target), data = Object.fromEntries(formData);
+    await axiosHealthyApi.post("/users/verifyPassword", {
+      senha: data.senha
+    }).then(() => {
+      setShow(!1);
+    }).catch((e2) => {
+      e2.response?.data.message == "Senha inv\xE1lida" && setInvalidFeedback(!0), console.log(e2);
+    });
+  }
+  let handleClose = () => setShow(!1);
   return (0, import_react27.useEffect)(() => {
     setShow(!0);
   }, []), /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(
@@ -6650,50 +6663,57 @@ function ModalConfirmacao() {
         /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Header, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Title, { className: "text-center warning-diferenciado fw-bold", children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("i", { className: "fa-solid fa-triangle-exclamation" }, void 0, !1, {
             fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-            lineNumber: 24,
+            lineNumber: 49,
             columnNumber: 21
           }, this),
           " Confirme sua senha original"
         ] }, void 0, !0, {
           fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 23,
+          lineNumber: 48,
           columnNumber: 17
         }, this) }, void 0, !1, {
           fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 22,
+          lineNumber: 47,
           columnNumber: 13
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Body, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("form", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "input-group", children: [
-          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("label", { htmlFor: "senha", children: "Confirme sua Senha" }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("form", { onSubmit: handleForm, children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Body, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("div", { className: "input-group", children: [
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("label", { htmlFor: "senha", children: "Confirme sua Senha" }, void 0, !1, {
+              fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
+              lineNumber: 55,
+              columnNumber: 25
+            }, this),
+            /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("input", { type: "password", name: "senha", placeholder: "Digite sua Senha", required: !0 }, void 0, !1, {
+              fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
+              lineNumber: 56,
+              columnNumber: 25
+            }, this),
+            invalidFeedback && /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("p", { className: "text-danger", children: "Senha inv\xE1lida" }, void 0, !1, {
+              fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
+              lineNumber: 58,
+              columnNumber: 29
+            }, this)
+          ] }, void 0, !0, {
             fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-            lineNumber: 30,
-            columnNumber: 25
+            lineNumber: 54,
+            columnNumber: 21
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
+            lineNumber: 53,
+            columnNumber: 17
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)("input", { type: "password", name: "senha", placeholder: "Digite sua Senha", required: !0 }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Footer, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Button, { className: "btn-comum", type: "submit", children: "Confirmo" }, void 0, !1, {
             fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-            lineNumber: 31,
-            columnNumber: 25
+            lineNumber: 63,
+            columnNumber: 21
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
+            lineNumber: 62,
+            columnNumber: 17
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 29,
-          columnNumber: 21
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 28,
-          columnNumber: 17
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 27,
-          columnNumber: 13
-        }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Modal.Footer, { children: /* @__PURE__ */ (0, import_jsx_dev_runtime26.jsxDEV)(import_react_bootstrap11.Button, { className: "btn-comum", onClick: handleClose, children: "Confirmo" }, void 0, !1, {
-          fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 36,
-          columnNumber: 17
-        }, this) }, void 0, !1, {
-          fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-          lineNumber: 35,
+          lineNumber: 52,
           columnNumber: 13
         }, this)
       ]
@@ -6702,7 +6722,7 @@ function ModalConfirmacao() {
     !0,
     {
       fileName: "app/routes/alterarDados/modalConfirmacao.tsx",
-      lineNumber: 16,
+      lineNumber: 41,
       columnNumber: 9
     },
     this
@@ -6710,12 +6730,51 @@ function ModalConfirmacao() {
 }
 
 // app/routes/alterarDados/route.tsx
-var import_jsx_dev_runtime27 = require("react/jsx-dev-runtime"), links10 = () => [
+var import_sweetalert27 = __toESM(require("sweetalert2")), import_react29 = require("react"), import_jsx_dev_runtime27 = require("react/jsx-dev-runtime"), links10 = () => [
   { rel: "stylesheet", href: cadastro_default }
 ], meta9 = () => ({
   title: "Atualiza\xE7\xE3o de Dados"
-});
-function alterarDados() {
+}), UserUpdate = class {
+  nome;
+  senha;
+  email;
+};
+function AlterarDados() {
+  let navigate = (0, import_react28.useNavigate)(), [senha, setSenha] = (0, import_react29.useState)(""), [confirmaSenha, setConfirmaSenha] = (0, import_react29.useState)(""), [carregandoConfirmaSenhaMenssagem, setCarregandoConfirmaSenhaMessagem] = (0, import_react29.useState)(!1), [errorValidate, setErrorValidate] = (0, import_react29.useState)(!1);
+  function validaSenha() {
+    return setCarregandoConfirmaSenhaMessagem(!1), senha != confirmaSenha ? (setCarregandoConfirmaSenhaMessagem(!0), !1) : !0;
+  }
+  async function onSubmit(e) {
+    e.preventDefault();
+    let formData = new FormData(e.target), data = Object.fromEntries(formData), userUpdate = new UserUpdate();
+    data.nome && (userUpdate.nome = data.nome.toString()), data.senha && (userUpdate.senha = data.senha.toString()), data.email && (userUpdate.senha = data.email.toString()), data.senha != data.confirmarsenha ? setErrorValidate(!0) : await axiosHealthyApi.patch("/users/myuser", userUpdate).then(() => {
+      import_sweetalert27.default.fire({
+        title: "Atualizado",
+        allowEscapeKey: !1,
+        allowOutsideClick: !1,
+        icon: "success"
+      }).then(() => navigate("/"));
+    }).catch((e2) => {
+      console.log(e2), import_sweetalert27.default.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${e2.code == 401 ? e2.response?.data.message : e2.message}`
+      });
+    });
+  }
+  function handleDelete() {
+    import_sweetalert27.default.fire({
+      title: "Quer deletar?",
+      showDenyButton: !0,
+      /* showCancelButton: true, */
+      denyButtonText: "Cancelar",
+      confirmButtonText: "Deletar"
+    }).then(async (result) => {
+      result.isConfirmed ? await axiosHealthyApi.delete("/users/myuser").then(() => {
+        import_sweetalert27.default.fire("Deletado!", "", "success").then(() => (localStorage.removeItem("access-token"), navigate("/")));
+      }).catch((e) => console.log(e)) : result.isDenied && import_sweetalert27.default.fire("N\xE3o deletado", "", "info");
+    });
+  }
   return /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "box", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "box-img fundoPossivel", children: [
@@ -6723,148 +6782,164 @@ function alterarDados() {
           "Healthy",
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("br", {}, void 0, !1, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 26,
+            lineNumber: 122,
             columnNumber: 35
           }, this),
           "Vibes"
         ] }, void 0, !0, {
           fileName: "app/routes/alterarDados/route.tsx",
-          lineNumber: 26,
+          lineNumber: 122,
           columnNumber: 25
         }, this) }, void 0, !1, {
           fileName: "app/routes/alterarDados/route.tsx",
-          lineNumber: 25,
+          lineNumber: 121,
           columnNumber: 21
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("img", { src: "/cadImg1.jpg", alt: "img temporaria" }, void 0, !1, {
           fileName: "app/routes/alterarDados/route.tsx",
-          lineNumber: 28,
+          lineNumber: 124,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/alterarDados/route.tsx",
-        lineNumber: 24,
+        lineNumber: 120,
         columnNumber: 17
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "form-box", children: [
         /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("h1", { children: "Atualiza\xE7\xE3o de Dados" }, void 0, !1, {
           fileName: "app/routes/alterarDados/route.tsx",
-          lineNumber: 31,
+          lineNumber: 127,
           columnNumber: 21
         }, this),
-        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("form", { children: [
+        /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("form", { onSubmit, children: [
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("label", { htmlFor: "nome", children: "Nome" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 34,
+              lineNumber: 130,
               columnNumber: 29
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "text", name: "nome", placeholder: "Digite seu nome atualizado" }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "text", placeholder: "Digite seu nome atualizado", name: "nome" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 35,
+              lineNumber: 131,
               columnNumber: 29
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 33,
+            lineNumber: 129,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("label", { htmlFor: "email", children: "E-mail*" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 38,
+              lineNumber: 134,
               columnNumber: 29
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "email", name: "email", placeholder: "Digite seu novo e-mail" }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "email", placeholder: "Digite seu novo e-mail", name: "email" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 39,
+              lineNumber: 135,
               columnNumber: 29
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 37,
-            columnNumber: 25
-          }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: [
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("label", { htmlFor: "email", children: "Confirmar E-mail*" }, void 0, !1, {
-              fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 42,
-              columnNumber: 29
-            }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "email", name: "email", placeholder: "Confirme seu novo e-mail" }, void 0, !1, {
-              fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 43,
-              columnNumber: 29
-            }, this)
-          ] }, void 0, !0, {
-            fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 41,
+            lineNumber: 133,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("label", { htmlFor: "senha", children: "Senha*" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 46,
+              lineNumber: 138,
               columnNumber: 29
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "password", name: "senha", placeholder: "Digite nova senha" }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "password", placeholder: "Digite nova senha", name: "senha", onChange: (e) => setSenha(e.target.value) }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 47,
+              lineNumber: 139,
               columnNumber: 29
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 45,
+            lineNumber: 137,
             columnNumber: 25
           }, this),
           /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: [
             /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("label", { htmlFor: "senha", children: "Confirmar Senha*" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 50,
+              lineNumber: 142,
               columnNumber: 29
             }, this),
-            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("input", { type: "password", name: "senha", placeholder: "Confirme a senha" }, void 0, !1, {
+            /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(
+              "input",
+              {
+                type: "password",
+                placeholder: "Confirme a senha",
+                name: "confirmarSenha",
+                onChange: (e) => setConfirmaSenha(e.target.value),
+                onBlur: validaSenha
+              },
+              void 0,
+              !1,
+              {
+                fileName: "app/routes/alterarDados/route.tsx",
+                lineNumber: 143,
+                columnNumber: 29
+              },
+              this
+            ),
+            carregandoConfirmaSenhaMenssagem && /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("p", { className: "text-danger", children: "As senhas precisam ser iguais" }, void 0, !1, {
               fileName: "app/routes/alterarDados/route.tsx",
-              lineNumber: 51,
-              columnNumber: 29
+              lineNumber: 146,
+              columnNumber: 15
             }, this)
           ] }, void 0, !0, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 49,
+            lineNumber: 141,
             columnNumber: 25
           }, this),
-          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("button", { children: "Salvar" }, void 0, !1, {
+          errorValidate && /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("p", { className: "text-danger text-end", children: "Senha n\xE3o conferem" }, void 0, !1, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 54,
+            lineNumber: 150,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("button", { type: "submit", children: "Salvar" }, void 0, !1, {
+            fileName: "app/routes/alterarDados/route.tsx",
+            lineNumber: 154,
             columnNumber: 29
           }, this) }, void 0, !1, {
             fileName: "app/routes/alterarDados/route.tsx",
-            lineNumber: 53,
+            lineNumber: 153,
+            columnNumber: 25
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)("button", { type: "submit", className: "bg-danger", onClick: handleDelete, children: "Apagar conta" }, void 0, !1, {
+            fileName: "app/routes/alterarDados/route.tsx",
+            lineNumber: 157,
+            columnNumber: 29
+          }, this) }, void 0, !1, {
+            fileName: "app/routes/alterarDados/route.tsx",
+            lineNumber: 156,
             columnNumber: 25
           }, this)
         ] }, void 0, !0, {
           fileName: "app/routes/alterarDados/route.tsx",
-          lineNumber: 32,
+          lineNumber: 128,
           columnNumber: 21
         }, this)
       ] }, void 0, !0, {
         fileName: "app/routes/alterarDados/route.tsx",
-        lineNumber: 30,
+        lineNumber: 126,
         columnNumber: 17
       }, this)
     ] }, void 0, !0, {
       fileName: "app/routes/alterarDados/route.tsx",
-      lineNumber: 23,
+      lineNumber: 119,
       columnNumber: 13
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime27.jsxDEV)(ModalConfirmacao, {}, void 0, !1, {
       fileName: "app/routes/alterarDados/route.tsx",
-      lineNumber: 60,
+      lineNumber: 163,
       columnNumber: 13
     }, this)
   ] }, void 0, !0, {
     fileName: "app/routes/alterarDados/route.tsx",
-    lineNumber: 21,
+    lineNumber: 117,
     columnNumber: 5
   }, this);
 }
@@ -6884,8 +6959,8 @@ var import_chartjs_plugin_datalabels = __toESM(require("chartjs-plugin-datalabel
 var macro_default = "/build/_assets/macro-CZA4FPNL.css";
 
 // app/routes/Macros.$type/route.tsx
-var import_react29 = require("@remix-run/react"), import_core6 = require("@hookstate/core");
-var import_react30 = require("react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime");
+var import_react30 = require("@remix-run/react"), import_core6 = require("@hookstate/core");
+var import_react31 = require("react"), import_jsx_dev_runtime28 = require("react/jsx-dev-runtime");
 import_chart3.Chart.register(import_chart3.ArcElement, import_chart3.Tooltip, import_chart3.Legend, import_chartjs_plugin_datalabels.default);
 async function loader5({ params }) {
   if (new URLSearchParams(params.type).has("dietaId") || params.type == "notSaved")
@@ -6896,7 +6971,7 @@ var links11 = () => [{ rel: "stylesheet", href: macro_default }], meta10 = () =>
   title: "Macros"
 });
 function Index2() {
-  let dataParams = (0, import_react29.useLoaderData)(), [valores, setValores] = (0, import_react30.useState)({
+  let dataParams = (0, import_react30.useLoaderData)(), [valores, setValores] = (0, import_react31.useState)({
     calorias: 0,
     proteina: {
       calorias: 0,
@@ -6930,7 +7005,7 @@ function Index2() {
       valores2.calorias += r.calorias, valores2.carboidratos.gramas += r.carboidratos, valores2.proteina.gramas += r.prote\u00EDna, valores2.gordura.gramas += r.gordura;
     }), valores2.gordura.calorias = valores2.gordura.gramas * 9, valores2.proteina.calorias = valores2.proteina.gramas * 4, valores2.carboidratos.calorias = valores2.carboidratos.gramas * 4, setValores(valores2);
   };
-  (0, import_react30.useEffect)(() => {
+  (0, import_react31.useEffect)(() => {
     if (dataParams == "notSaved") {
       let recipes = JSON.parse(
         localStorage.getItem("RecipesLocalStorage") || ""
@@ -6965,7 +7040,7 @@ function Index2() {
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "container-fluid py-5", children: [
       /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "container-fluid mb-5", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "row", children: [
-        /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "barraHoriz col-2 mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(import_react29.Link, { to: "/receitas", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(
+        /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)("div", { className: "barraHoriz col-2 mt-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(import_react30.Link, { to: "/receitas", children: /* @__PURE__ */ (0, import_jsx_dev_runtime28.jsxDEV)(
           "button",
           {
             type: "button",
@@ -7178,15 +7253,15 @@ __export(route_exports9, {
   links: () => links12,
   meta: () => meta11
 });
-var import_react32 = require("react");
+var import_react33 = require("react");
 
 // app/routes/Exercicios/Exercicio_Base.tsx
-var import_react31 = require("@remix-run/react"), import_jsx_dev_runtime29 = require("react/jsx-dev-runtime");
+var import_react32 = require("@remix-run/react"), import_jsx_dev_runtime29 = require("react/jsx-dev-runtime");
 function ExercicioBase(props) {
   function image() {
     return props.image != null ? `data:image/png;base64,${Buffer.from(props.image.img.data).toString("base64")}` : "/treino/abdominal.png";
   }
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "card", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react31.Link, { to: `/ExercicioDetalhes/exercise=${props.id}`, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "card", children: [
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "card", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)(import_react32.Link, { to: `/ExercicioDetalhes/exercise=${props.id}`, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "card", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "card-top", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("div", { className: "ImageAdress", children: /* @__PURE__ */ (0, import_jsx_dev_runtime29.jsxDEV)("img", { src: image(), alt: props.cardTitle, className: "teste" }, void 0, !1, {
       fileName: "app/routes/Exercicios/Exercicio_Base.tsx",
       lineNumber: 33,
@@ -7583,24 +7658,24 @@ var import_jsx_dev_runtime31 = require("react/jsx-dev-runtime"), links12 = () =>
   title: "Exerc\xEDcios"
 });
 function Exercicios() {
-  let [categoryFilters, setcategoryFilters] = (0, import_react32.useState)(/* @__PURE__ */ new Set());
+  let [categoryFilters, setcategoryFilters] = (0, import_react33.useState)(/* @__PURE__ */ new Set());
   function updateFilters(checked, categoryFilter) {
     checked && setcategoryFilters((prev) => new Set(prev).add(categoryFilter)), checked || setcategoryFilters((prev) => {
       let next = new Set(prev);
       return next.delete(categoryFilter), next;
     });
   }
-  let [exercicio, setExercicio] = (0, import_react32.useState)([]), handleGet = (0, import_react32.useCallback)(async () => {
+  let [exercicio, setExercicio] = (0, import_react33.useState)([]), handleGet = (0, import_react33.useCallback)(async () => {
     await axiosHealthyApi.get("/exercises/withImage").then((r) => {
       setExercicio(r.data);
     }).catch((e) => {
       console.log(e);
     });
   }, []);
-  (0, import_react32.useEffect)(() => {
+  (0, import_react33.useEffect)(() => {
     handleGet();
   }, [handleGet]);
-  let [duracaoEx, setduracaoEx] = (0, import_react32.useState)("Todos"), filteredArea = duracaoEx == "Todos" ? exercicio : exercicio.filter((p) => p.duracao == duracaoEx), filteredExercises = categoryFilters.size == 0 ? filteredArea : filteredArea.filter((p) => categoryFilters.has(p.area));
+  let [duracaoEx, setduracaoEx] = (0, import_react33.useState)("Todos"), filteredArea = duracaoEx == "Todos" ? exercicio : exercicio.filter((p) => p.duracao == duracaoEx), filteredExercises = categoryFilters.size == 0 ? filteredArea : filteredArea.filter((p) => categoryFilters.has(p.area));
   return /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)("main", { children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime31.jsxDEV)(Header, {}, void 0, !1, {
       fileName: "app/routes/Exercicios/route.tsx",
@@ -7673,14 +7748,14 @@ __export(cadastro_exports, {
   links: () => links13,
   meta: () => meta12
 });
-var import_react33 = require("@remix-run/react"), import_react34 = require("react");
+var import_react34 = require("@remix-run/react"), import_react35 = require("react");
 var import_jsx_dev_runtime32 = require("react/jsx-dev-runtime"), links13 = () => [
   { rel: "stylesheet", href: cadastro_default }
 ], meta12 = () => ({
   title: "Cadastro"
 });
 function Index3() {
-  let navigate = (0, import_react33.useNavigate)(), [errorValidate, setErrorValidate] = (0, import_react34.useState)(!1), [carregandoEmailMenssagem, setCarregandoEmailMessagem] = (0, import_react34.useState)(!1), [senha, setSenha] = (0, import_react34.useState)(""), [confirmaSenha, setConfirmaSenha] = (0, import_react34.useState)(""), [carregandoConfirmaSenhaMenssagem, setCarregandoConfirmaSenhaMessagem] = (0, import_react34.useState)(!1);
+  let navigate = (0, import_react34.useNavigate)(), [errorValidate, setErrorValidate] = (0, import_react35.useState)(!1), [carregandoEmailMenssagem, setCarregandoEmailMessagem] = (0, import_react35.useState)(!1), [senha, setSenha] = (0, import_react35.useState)(""), [confirmaSenha, setConfirmaSenha] = (0, import_react35.useState)(""), [carregandoConfirmaSenhaMenssagem, setCarregandoConfirmaSenhaMessagem] = (0, import_react35.useState)(!1);
   async function handleForm(e) {
     e.preventDefault();
     let formData = new FormData(e.target), data = Object.fromEntries(formData);
@@ -7862,7 +7937,7 @@ function Index3() {
         }, this),
         /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)("p", { className: "link-login", children: [
           "J\xE1 \xE9 um membro?",
-          /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(import_react33.Link, { to: "/login", children: "Login" }, void 0, !1, {
+          /* @__PURE__ */ (0, import_jsx_dev_runtime32.jsxDEV)(import_react34.Link, { to: "/login", children: "Login" }, void 0, !1, {
             fileName: "app/routes/cadastro.tsx",
             lineNumber: 121,
             columnNumber: 54
@@ -8085,14 +8160,14 @@ function CardReceita(props) {
 }
 
 // app/routes/Receitas/route.tsx
-var import_react_bootstrap14 = require("react-bootstrap"), import_react36 = require("@remix-run/react");
-var import_react37 = require("react"), import_carousel2 = require("primereact/carousel");
+var import_react_bootstrap14 = require("react-bootstrap"), import_react37 = require("@remix-run/react");
+var import_react38 = require("react"), import_carousel2 = require("primereact/carousel");
 
 // app/routes/Receitas/ModalInsertDiet.tsx
 var import_react_bootstrap13 = require("react-bootstrap");
-var import_sweetalert27 = __toESM(require("sweetalert2")), import_react35 = require("@remix-run/react"), import_jsx_dev_runtime34 = require("react/jsx-dev-runtime");
+var import_sweetalert28 = __toESM(require("sweetalert2")), import_react36 = require("@remix-run/react"), import_jsx_dev_runtime34 = require("react/jsx-dev-runtime");
 function ModalInserDiet(props) {
-  let navigate = (0, import_react35.useNavigate)();
+  let navigate = (0, import_react36.useNavigate)();
   async function handleSubmit(e) {
     e.preventDefault();
     let formData = new FormData(e.target), data = Object.fromEntries(formData), recipes = JSON.parse(localStorage.getItem("RecipesLocalStorage") || ""), result = JSON.parse(localStorage.getItem("resultsCalc") || "");
@@ -8102,7 +8177,7 @@ function ModalInserDiet(props) {
       opcaoPeso: result.opcaoPeso,
       descricao: data.descricao
     }).then(() => {
-      import_sweetalert27.default.fire({
+      import_sweetalert28.default.fire({
         title: "Salvo com sucesso",
         allowEscapeKey: !1,
         allowOutsideClick: !1,
@@ -8204,7 +8279,7 @@ var import_jsx_dev_runtime35 = require("react/jsx-dev-runtime"), links14 = () =>
   title: "Receitas"
 });
 function Receitas() {
-  let navigate = (0, import_react36.useNavigate)(), [recipesFiltered, setRecipesFiltered] = (0, import_react37.useState)([]), [numVisible, setNumVisible] = (0, import_react37.useState)(0), [numScroll, setNumScroll] = (0, import_react37.useState)(0), [show, setShow] = (0, import_react37.useState)(!1), handleClose = () => setShow(!1);
+  let navigate = (0, import_react37.useNavigate)(), [recipesFiltered, setRecipesFiltered] = (0, import_react38.useState)([]), [numVisible, setNumVisible] = (0, import_react38.useState)(0), [numScroll, setNumScroll] = (0, import_react38.useState)(0), [show, setShow] = (0, import_react38.useState)(!1), handleClose = () => setShow(!1);
   function generateRecipe(recipes) {
     if (localStorage.getItem("resultsCalc")) {
       let result = JSON.parse(localStorage.getItem("resultsCalc") || ""), r = [], caloriasPorRefeicao = {
@@ -8237,21 +8312,21 @@ function Receitas() {
       return localStorage.setItem("RecipesLocalStorage", JSON.stringify(r)), setRecipesFiltered(r);
     }
   }
-  let handleGet = (0, import_react37.useCallback)(async () => {
+  let handleGet = (0, import_react38.useCallback)(async () => {
     await axiosHealthyApi.get("/recipes/recipesWIthNoUser").then((r) => {
       generateRecipe(r.data);
     }).catch(() => {
       throw new Error("N\xE3o foi poss\xEDvel conectar");
     });
   }, []);
-  (0, import_react37.useEffect)(() => {
+  (0, import_react38.useEffect)(() => {
     if (!localStorage.getItem("RecipesLocalStorage"))
       handleGet();
     else {
       let recipes = JSON.parse(localStorage.getItem("RecipesLocalStorage") || "");
       setRecipesFiltered(recipes);
     }
-  }, [handleGet]), (0, import_react37.useEffect)(() => {
+  }, [handleGet]), (0, import_react38.useEffect)(() => {
     window.innerWidth < 1199 ? (setNumScroll(1), setNumVisible(1)) : window.innerWidth < 991 ? (setNumScroll(1), setNumVisible(2)) : window.innerWidth < 767 ? (setNumScroll(1), setNumVisible(1)) : (setNumScroll(3), setNumVisible(3));
   }, []);
   function cardTemplate(recipe) {
@@ -8547,7 +8622,7 @@ __export(route_exports11, {
   links: () => links15,
   meta: () => meta14
 });
-var import_react38 = require("@remix-run/react");
+var import_react39 = require("@remix-run/react");
 
 // app/styles/profile.css
 var profile_default = "/build/_assets/profile-DPSMQRIL.css";
@@ -8564,7 +8639,7 @@ function Profile() {
       columnNumber: 7
     }, this),
     /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("nav", { className: "d-flex container-fluid justify-content-center align-items-center my-4", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "row barraPerfil text-center border rounded pt-3 textNav", children: [
-      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react38.Link, { to: "/Profile", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Dietas Salvas" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react39.Link, { to: "/Profile", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Dietas Salvas" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 31,
         columnNumber: 15
@@ -8577,7 +8652,7 @@ function Profile() {
         lineNumber: 29,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react38.Link, { to: "/Profile/acompanharProg", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Acompanhar Progresso" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react39.Link, { to: "/Profile/acompanharProg", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Acompanhar Progresso" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 36,
         columnNumber: 15
@@ -8590,7 +8665,7 @@ function Profile() {
         lineNumber: 34,
         columnNumber: 11
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react38.Link, { to: "/alterarDados", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Configura\xE7\xF5es" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("div", { className: "col py-2 pt-md-0", children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react39.Link, { to: "/alterarDados", style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)("h6", { children: "Configura\xE7\xF5es" }, void 0, !1, {
         fileName: "app/routes/Profile/route.tsx",
         lineNumber: 41,
         columnNumber: 15
@@ -8612,7 +8687,7 @@ function Profile() {
       lineNumber: 27,
       columnNumber: 7
     }, this),
-    /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react38.Outlet, {}, void 0, !1, {
+    /* @__PURE__ */ (0, import_jsx_dev_runtime36.jsxDEV)(import_react39.Outlet, {}, void 0, !1, {
       fileName: "app/routes/Profile/route.tsx",
       lineNumber: 48,
       columnNumber: 7
@@ -8641,7 +8716,7 @@ __export(route_exports12, {
 var home_default = "/build/_assets/home-O7XMENOY.css";
 
 // app/routes/_index/CardsHome.tsx
-var import_react39 = require("@remix-run/react"), import_jsx_dev_runtime37 = require("react/jsx-dev-runtime");
+var import_react40 = require("@remix-run/react"), import_jsx_dev_runtime37 = require("react/jsx-dev-runtime");
 function CardsHome() {
   return /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "row m-auto cardBox", children: [
     {
@@ -8665,7 +8740,7 @@ function CardsHome() {
       textoCard: "Monitore seu IMC, consumo de \xE1gua e calorias",
       link: "/profile"
     }
-  ].map((card) => /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "column my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react39.Link, { to: card.link, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "card", children: [
+  ].map((card) => /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "column my-3", children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)(import_react40.Link, { to: card.link, style: { textDecoration: "none" }, children: /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("div", { className: "card", children: [
     /* @__PURE__ */ (0, import_jsx_dev_runtime37.jsxDEV)("img", { src: `/home/${card.imgSrc}`, className: "card-img-top", alt: card.altImg }, void 0, !1, {
       fileName: "app/routes/_index/CardsHome.tsx",
       lineNumber: 35,
@@ -8793,37 +8868,37 @@ __export(login_exports, {
 var login_default = "/build/_assets/login-EFHWHQTZ.css";
 
 // app/routes/login.tsx
-var import_react40 = require("@remix-run/react");
-var import_sweetalert28 = __toESM(require("sweetalert2")), import_jsx_dev_runtime39 = require("react/jsx-dev-runtime"), links17 = () => [{ rel: "stylesheet", href: login_default }], meta16 = () => ({
+var import_react41 = require("@remix-run/react");
+var import_sweetalert29 = __toESM(require("sweetalert2")), import_jsx_dev_runtime39 = require("react/jsx-dev-runtime"), links17 = () => [{ rel: "stylesheet", href: login_default }], meta16 = () => ({
   title: "Login"
 });
 function Index5() {
-  let navigate = (0, import_react40.useNavigate)();
+  let navigate = (0, import_react41.useNavigate)();
   async function handleForm(e) {
     e.preventDefault();
     let formData = new FormData(e.target), data = Object.fromEntries(formData);
-    import_sweetalert28.default.fire({
+    import_sweetalert29.default.fire({
       title: "Realizando Login",
       timer: 1e3,
       timerProgressBar: !0,
       allowEscapeKey: !1,
       allowOutsideClick: !1,
       didOpen: () => {
-        import_sweetalert28.default.showLoading(null);
+        import_sweetalert29.default.showLoading(null);
       }
     }).then(async (result) => {
-      result.dismiss === import_sweetalert28.default.DismissReason.timer && await axiosHealthyApi.post("/users/login", {
+      result.dismiss === import_sweetalert29.default.DismissReason.timer && await axiosHealthyApi.post("/users/login", {
         email: data.email,
         senha: data.senha
       }).then((r) => {
-        import_sweetalert28.default.fire({
+        import_sweetalert29.default.fire({
           title: "Logado",
           allowEscapeKey: !1,
           allowOutsideClick: !1,
           icon: "success"
         }).then(() => (localStorage.setItem("access-token", r.data.accessToken), navigate("/")));
       }).catch((e2) => {
-        import_sweetalert28.default.fire({
+        import_sweetalert29.default.fire({
           icon: "error",
           title: "Oops...",
           text: `${e2.code == 401 ? e2.response?.data.message : e2.message}`
@@ -8918,7 +8993,7 @@ function Index5() {
         lineNumber: 94,
         columnNumber: 13
       }, this),
-      /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)(import_react40.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
+      /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)("div", { className: "input-group", children: /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)(import_react41.Link, { to: "#", children: "Esqueceu a senha?" }, void 0, !1, {
         fileName: "app/routes/login.tsx",
         lineNumber: 104,
         columnNumber: 15
@@ -8938,7 +9013,7 @@ function Index5() {
       }, this),
       /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)("p", { className: "link-login", children: [
         "N\xE3o \xE9 um membro?",
-        /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)(import_react40.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
+        /* @__PURE__ */ (0, import_jsx_dev_runtime39.jsxDEV)(import_react41.Link, { to: "/cadastro", className: "cadRedirect", children: "Cadastre-se" }, void 0, !1, {
           fileName: "app/routes/login.tsx",
           lineNumber: 112,
           columnNumber: 15
@@ -8969,7 +9044,7 @@ function Index5() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { entry: { module: "/build/entry.client-FCTN6WIX.js", imports: ["/build/_shared/chunk-64WBDZMO.js", "/build/_shared/chunk-FALC3FAV.js", "/build/_shared/chunk-DSMJMTHW.js", "/build/_shared/chunk-J4QDNQJS.js", "/build/_shared/chunk-SJBEQ4F6.js", "/build/_shared/chunk-DBC5GNZQ.js", "/build/_shared/chunk-K5OIIMCN.js", "/build/_shared/chunk-PMEQ6IKM.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MBIWWYEE.js", imports: ["/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-CXJ6DMOT.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-SUNEJ5VC.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-LZO5EQ7X.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-QNOK5LHS.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-OWHTTGWU.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-6YFWAX4E.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-L2FLOKVA.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-7ZIGIM7R.js", imports: ["/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-GJXCVDNL.js", imports: ["/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes.$dietaID": { id: "routes/Profile.dietasDetalhes.$dietaID", parentId: "routes/Profile", path: "dietasDetalhes/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes.$dietaID-WTFXIKLZ.js", imports: ["/build/_shared/chunk-5T2TWAF3.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-ZUH64MWM.js", imports: ["/build/_shared/chunk-5T2TWAF3.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-4TGOC6DU.js", imports: ["/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-OMD4LE6B.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-3BGTER4J.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-FNYTLOYP.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-3EJOMIX5.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-AXNH6S53.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-RS2RSBJV.js", imports: ["/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "53330c79", hmr: { runtime: "/build/_shared\\chunk-SJBEQ4F6.js", timestamp: 1701481347304 }, url: "/build/manifest-53330C79.js" };
+var assets_manifest_default = { entry: { module: "/build/entry.client-FCTN6WIX.js", imports: ["/build/_shared/chunk-64WBDZMO.js", "/build/_shared/chunk-FALC3FAV.js", "/build/_shared/chunk-DSMJMTHW.js", "/build/_shared/chunk-J4QDNQJS.js", "/build/_shared/chunk-SJBEQ4F6.js", "/build/_shared/chunk-DBC5GNZQ.js", "/build/_shared/chunk-K5OIIMCN.js", "/build/_shared/chunk-PMEQ6IKM.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-MBIWWYEE.js", imports: ["/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !0 }, "routes/Acessibilidade": { id: "routes/Acessibilidade", parentId: "root", path: "Acessibilidade", index: void 0, caseSensitive: void 0, module: "/build/routes/Acessibilidade-4SD6OORF.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/AdicionarReceitas.$dietaID": { id: "routes/AdicionarReceitas.$dietaID", parentId: "root", path: "AdicionarReceitas/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/AdicionarReceitas.$dietaID-CXHZD6G7.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/CalculadoraNutricional": { id: "routes/CalculadoraNutricional", parentId: "root", path: "CalculadoraNutricional", index: void 0, caseSensitive: void 0, module: "/build/routes/CalculadoraNutricional-G6IS7F7A.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/ExercicioDetalhes.$excId": { id: "routes/ExercicioDetalhes.$excId", parentId: "root", path: "ExercicioDetalhes/:excId", index: void 0, caseSensitive: void 0, module: "/build/routes/ExercicioDetalhes.$excId-QTX3RLHT.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Exercicios": { id: "routes/Exercicios", parentId: "root", path: "Exercicios", index: void 0, caseSensitive: void 0, module: "/build/routes/Exercicios-VC6HEAZW.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Macros.$type": { id: "routes/Macros.$type", parentId: "root", path: "Macros/:type", index: void 0, caseSensitive: void 0, module: "/build/routes/Macros.$type-2KCXLYBD.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Profile": { id: "routes/Profile", parentId: "root", path: "Profile", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile-OXGGVVOD.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile._index": { id: "routes/Profile._index", parentId: "routes/Profile", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/Profile._index-7ZIGIM7R.js", imports: ["/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.acompanharProg": { id: "routes/Profile.acompanharProg", parentId: "routes/Profile", path: "acompanharProg", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.acompanharProg-GJXCVDNL.js", imports: ["/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-6YRXKZMF.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/Profile.dietasDetalhes.$dietaID": { id: "routes/Profile.dietasDetalhes.$dietaID", parentId: "routes/Profile", path: "dietasDetalhes/:dietaID", index: void 0, caseSensitive: void 0, module: "/build/routes/Profile.dietasDetalhes.$dietaID-WTFXIKLZ.js", imports: ["/build/_shared/chunk-5T2TWAF3.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/Receitas": { id: "routes/Receitas", parentId: "root", path: "Receitas", index: void 0, caseSensitive: void 0, module: "/build/routes/Receitas-SP7T4ZGG.js", imports: ["/build/_shared/chunk-5T2TWAF3.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-VKEOC7TG.js", imports: ["/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/alterarDados": { id: "routes/alterarDados", parentId: "root", path: "alterarDados", index: void 0, caseSensitive: void 0, module: "/build/routes/alterarDados-TQB32V75.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/cadastro": { id: "routes/cadastro", parentId: "root", path: "cadastro", index: void 0, caseSensitive: void 0, module: "/build/routes/cadastro-3BGTER4J.js", imports: ["/build/_shared/chunk-OZVKPABT.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/controleConsumo.$date": { id: "routes/controleConsumo.$date", parentId: "root", path: "controleConsumo/:date", index: void 0, caseSensitive: void 0, module: "/build/routes/controleConsumo.$date-AMF7BT77.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-UBUNFJCV.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !0, hasErrorBoundary: !1 }, "routes/controleConsumo._index": { id: "routes/controleConsumo._index", parentId: "root", path: "controleConsumo", index: !0, caseSensitive: void 0, module: "/build/routes/controleConsumo._index-5ROZJVHX.js", imports: ["/build/_shared/chunk-V4IBMFZP.js", "/build/_shared/chunk-PNC7QCQB.js", "/build/_shared/chunk-AV3SO6BE.js", "/build/_shared/chunk-OQ7N6Z2B.js", "/build/_shared/chunk-X2MRA3PQ.js", "/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 }, "routes/login": { id: "routes/login", parentId: "root", path: "login", index: void 0, caseSensitive: void 0, module: "/build/routes/login-RS2RSBJV.js", imports: ["/build/_shared/chunk-M6UI6LEF.js", "/build/_shared/chunk-FAWJALZN.js"], hasAction: !1, hasLoader: !1, hasErrorBoundary: !1 } }, version: "9688020d", hmr: { runtime: "/build/_shared\\chunk-SJBEQ4F6.js", timestamp: 1701650960875 }, url: "/build/manifest-9688020D.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var mode = "development", assetsBuildDirectory = "public\\build", future = { v3_fetcherPersist: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
