@@ -140,7 +140,7 @@ export default function AlterarDados() {
                         </div>
                         <div className="input-group">
                             <label htmlFor="senha">Confirmar Senha*</label>
-                            <input type="password" placeholder="Confirme a senha" name="confirmarSenha" onChange={(e) => setConfirmaSenha(e.target.value)}
+                            <input type="password" placeholder="Confirme a senha" name="confirmarsenha" onChange={(e) => setConfirmaSenha(e.target.value)}
                                 onBlur={validaSenha} />
                             {carregandoConfirmaSenhaMenssagem && (
                                 <p className='text-danger'>As senhas precisam ser iguais</p>
