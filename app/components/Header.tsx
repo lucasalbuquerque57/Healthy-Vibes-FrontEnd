@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 import { useCallback, useEffect, useState } from "react";
 import { themePage } from "../script/changeTheme";
 import { useHookstate } from "@hookstate/core";
-import Hotjar from "@hotjar/browser";
+/* import Hotjar from "@hotjar/browser"; */
 import { axiosHealthyApi } from "~/configs/https";
 import Swal from "sweetalert2";
 
@@ -30,12 +30,12 @@ export function Header() {
   }, [handleGet])
 
 
-  const siteId = 3702227;
+  /* const siteId = 3702227;
   const hotjarVersion = 6;
 
   Hotjar.init(siteId, hotjarVersion, {
     debug: true,
-  });
+  }); */
 
   const [size, setSize] = useState(1);
 
