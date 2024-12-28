@@ -53,7 +53,7 @@ export function BRMequation(values: BRMequation): Resultados {
     }
 
     if (values.opcaoPeso == "Perder Peso") {
-        caloriasNivelAtiv *= 0.8
+        caloriasNivelAtiv *= 0.81
     }
     else if (values.opcaoPeso == "Ganhar músculo") {
         caloriasNivelAtiv *= 1.15
