@@ -45,7 +45,7 @@ export function BRMequation(values: BRMequation): Resultados {
             caloriasNivelAtiv *= 1.55
             break;
         case 4:
-            caloriasNivelAtiv *= 1.725
+            caloriasNivelAtiv *= 1.73
             break;
         case 5:
             caloriasNivelAtiv *= 1.9
